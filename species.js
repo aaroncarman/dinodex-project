@@ -1,0 +1,2682 @@
+var SPECIES = [
+{
+  id:"coelophysis", name:"Coelophysis", epithet:"C. bauri", pron:"see-loh-FY-sis",
+  period:"triassic", clade:"Coelophysoid theropod", diet:"carnivore",
+  age:"~215–208 Ma (Late Triassic)", startMa:215, endMa:208, length:"3 m", mass:"~20 kg", place:"New Mexico, USA",
+  img:"images/species/coelophysis.jpg",
+  overview:"A slender, lightly built coelophysoid theropod from the Late Triassic of New Mexico, Coelophysis was a fast, bipedal carnivore around 3 metres long and one of the earliest dinosaurs known from abundant material. Hundreds of individuals preserved together at Ghost Ranch allow study of this species across age classes and in population-scale detail unusual for any Triassic animal.",
+  insights:[
+    ["A population, not a specimen","Most early dinosaurs are known from a single broken skeleton; the Ghost Ranch quarry yielded <b>hundreds together</b>, so we can measure variation, growth and sex the way biologists study a herd of living deer."],
+    ["The blueprint arrived early","Hollow bones and long shins mark a <b>committed sprinter</b> - strikingly, the theropod body plan was already near-complete here, and would barely change in concept across the 150 million years leading to Tyrannosaurus."],
+    ["A cannibal myth, corrected","Small skeletons inside adult ribcages looked like cannibalism until re-study showed they were <b>swallowed crocodile-relatives</b> - a clean example of a vivid story collapsing under a second look."],
+    ["One species wearing two builds","'Gracile' and 'robust' forms once tempted a split into two species; they are now read as <b>intraspecific variation</b> - possibly sexual dimorphism, possibly growth-related differences - no longer a reason to split the species."]
+  ],
+  behaviour:"<p>Coelophysis was a lightly built pursuit predator that ran down insects, small reptiles and early mammal relatives across a seasonally arid floodplain, snapping with a narrow, finely serrated jaw rather than grappling. In its ecosystem it filled the <b>small-agile-hunter niche</b> that later dinosaurs would hand to dromaeosaurs like Velociraptor, while larger crocodile-line predators of the Triassic took the role of top carnivore.</p><p>The Ghost Ranch mass death may record a single drought or flood, which keeps alive the open question of whether these animals truly <b>moved as a group</b> - a crowd in death is not proof of a herd in life.</p>",
+  evolution:"<p>Coelophysis sits near the <b>base of Theropoda</b>, the lineage running through Allosaurus and Tyrannosaurus to living birds. It shows the predatory dinosaur 'recipe' - bipedal, hollow-boned, fast - was essentially fixed almost the moment dinosaurs appeared.</p>",
+  study:[
+    {q:"Did Coelophysis live and hunt in groups?",
+     why:"Mass death assemblages can form without social behaviour, so the bonebed alone can't settle it.",
+     interps:[
+       ["Social packs","conf-moderate","A concentration of one lightly built pursuit predator hints at tolerant grouping or cooperation."],
+       ["Drought trap","conf-moderate","Animals may have crowded a shrinking waterhole independently and died together by chance."]
+     ]}
+  ],
+  matters:"Because we have so many individuals, Coelophysis turns 'what did this animal look like' into 'how did it vary, grow and differ by sex' - the shift from describing a fossil to studying a population is one of the quiet revolutions of modern paleontology."
+,
+  fossilRecord:{
+    knownFrom:"Hundreds of associated skeletons from the Ghost Ranch mass-death quarry, New Mexico; additional material from the Coelophysis Quarry at Petrified Forest, Arizona",
+    evidenceLevel:"Rich",
+    locality:"Ghost Ranch, New Mexico; Petrified Forest, Arizona, USA",
+    formation:"Chinle Formation",
+    material:["Multiple skeletons","Bonebed","Skull","Limb bones","Vertebrae"],
+    note:"The Ghost Ranch site (Whitaker Quarry, discovered 1947) yielded well over a thousand individual bones representing dozens to hundreds of individuals - an extraordinary concentration that allows population-level study of growth, sex ratios, and individual variation in a way almost unmatched in the Triassic. Bone microstructure confirms relatively rapid growth. The sheer number of specimens gives <b>Coelophysis</b> one of the best-documented anatomies of any early dinosaur, and the assemblage itself is a geological puzzle: whether the animals died together or were transported to one place by a flood is still argued. The 'cannibalism' episode visible in some specimens has been re-examined and reinterpreted as swallowed crocodile-relatives, illustrating how even apparently clear fossil evidence can be reversed."
+  },
+  hook: "Hundreds of individuals found together at Ghost Ranch make Coelophysis the best-evidenced population study of any Triassic animal.",
+  learnerLevel: "beginner",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["theropod","triassic","bonebed","taphonomy","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"eoraptor", name:"Eoraptor", epithet:"E. lunensis", pron:"EE-oh-rap-tor",
+  period:"triassic", clade:"Basal sauropodomorph", diet:"omnivore",
+  age:"~231 Ma (Late Triassic)", startMa:232, endMa:229, length:"1 m", mass:"~10 kg", place:"Ischigualasto, Argentina",
+  img:"images/species/eoraptor.png", cardImgPosition:"50% 100%",
+  overview:"A small, early dinosaur from the Late Triassic Ischigualasto Formation of Argentina, Eoraptor is among the oldest members of the group and dates to within a few million years of the dinosaur lineage's origin. At roughly 1 metre long, it retains a generalist body plan - currently classified as a basal sauropodomorph, though its exact position is still debated - that sits close to the common ancestor of the great sauropod and theropod lineages.",
+  insights:[
+    ["Two diets in one jaw","It carries <b>pointed meat-eating teeth and leaf-shaped plant teeth together</b> - anatomy frozen at an evolutionary fork, before its lineage had chosen a side."],
+    ["Reclassified by its mouth","First called a primitive theropod, its teeth and skull moved it onto the <b>sauropodomorph line</b> - meaning this 10 kg omnivore is an ancestor-grade relative of the 70-tonne Argentinosaurus."],
+    ["Hands that could seize","A partly opposable thumb on a five-fingered hand suggests it could <b>grab varied food</b>, the hallmark of a generalist rather than a specialist."],
+    ["A bit-player at the start","It comes from one of the <b>earliest dinosaur communities</b>, where dinosaurs were minor figures among more numerous crocodile-relatives - dominance was earned later, not given."]
+  ],
+  behaviour:"<p>Eoraptor was a small, quick biped that ate whatever it could crop or catch, its mixed dentition pointing to a flexible <b>opportunist</b>. Crucially, it was not the ruler of its world: it shared ground with crocodile-line reptiles and mammal forerunners that were, at the time, just as successful, so it likely avoided competition by staying <b>small, fast and unfussy</b> while larger archosaurs dominated.</p><p>That ecological modesty is the point - dinosaurs began at the margins and only inherited the planet after later extinctions cleared their rivals.</p>",
+  evolution:"<p>Eoraptor shows the <b>sauropodomorph lineage beginning as a tiny omnivore</b> - the same branch that produced the largest land animals ever. The road from this animal to Argentinosaurus is among the most extreme size transformations in the history of life.</p>",
+  study:[
+    {q:"Was Eoraptor an early meat-eater or an early plant-eater's ancestor?",
+     why:"Its transitional teeth genuinely straddle the diets of two major lineages.",
+     interps:[
+       ["Basal sauropodomorph","conf-strong","Skull and dental details align it with the long-neck lineage; the leading view."],
+       ["Basal theropod","conf-low","The original interpretation, kept by a minority stressing its predatory traits."]
+     ]}
+  ],
+  matters:"Eoraptor is a snapshot of dinosaurs before they were special - small, flexible and outnumbered. It quietly dismantles the assumption that evolutionary dominance is present from the start; far more often, it is a late inheritance."
+,
+  fossilRecord:{
+    knownFrom:"Several nearly complete skulls and partial skeletons from the Ischigualasto Formation",
+    evidenceLevel:"Rich",
+    locality:"Ischigualasto Provincial Park, San Juan, Argentina",
+    formation:"Ischigualasto Formation",
+    material:["Skull","Partial skeleton","Teeth","Limb bones"],
+    note:"<b>Eoraptor</b> is represented by multiple specimens including at least two well-preserved skulls, giving palaeontologists detailed anatomical information for such an early dinosaur. Its teeth and skull anatomy have been scrutinised closely because they bear directly on whether it belongs to the sauropodomorph or theropod line - a debate that illustrates how even good fossil material can leave phylogenetic placement genuinely uncertain. The Ischigualasto Formation is one of the world's key Triassic dinosaur-bearing units, and its fossils come from a time-stamped volcanic context that allows reliable radiometric dating."
+  },
+  hook: "Eoraptor carries pointed meat-eating teeth and leaf-shaped plant teeth in the same jaw — anatomy frozen at an evolutionary fork before its lineage had chosen a diet.",
+  learnerLevel: "intermediate",
+  conceptTags: ["missing-link"],
+  glossaryLinks: ["triassic","sauropod","phylogeny","taxonomy","fossil-record","specimen","dinosauria"],
+  researchLinks: ["family-tree"]
+},
+{
+  id:"herrerasaurus", name:"Herrerasaurus", epithet:"H. ischigualastensis", pron:"huh-RAIR-uh-SAW-rus",
+  period:"triassic", clade:"Early saurischian", diet:"carnivore",
+  age:"~231–229 Ma (Late Triassic)", startMa:231, endMa:229, length:"~6 m", mass:"~350 kg", place:"Ischigualasto, Argentina",
+  img:"images/species/herrerasaurus.jpg", cardImgPosition:"right center",
+  overview:"A large, early predatory saurischian from the Late Triassic Ischigualasto Formation of Argentina, Herrerasaurus reached around 6 metres at a time when most dinosaurs were still small, making it one of the earliest known large predators within the group. Its exact position in the dinosaur family tree has been long debated, with some analyses placing it near the base of the theropod line and others at a deeper node in the saurischian tree.",
+  insights:[
+    ["Big before dinosaurs ruled","While Eoraptor shared its world at house-cat size, Herrerasaurus reached <b>6 metres</b> - proof that large body size evolved in dinosaurs almost immediately, not only after they took over."],
+    ["A flexible, sliding jaw","A hinge midway along its lower jaw let it <b>grip struggling prey</b>, an early experiment in the kill mechanics theropods would refine for the next 160 million years."],
+    ["Hard to place on the tree","Its mix of features has had scientists debating whether it's a <b>very early theropod or a saurischian outsider</b> - a living reminder that the base of the dinosaur tree is still being untangled."],
+    ["Outranked despite its size","It hunted alongside, and was likely outcompeted by, large <b>crocodile-line predators</b> - being a big dinosaur in the Triassic was no guarantee of being top predator."]
+  ],
+  behaviour:"<p>Herrerasaurus was the leading dinosaurian predator of the Ischigualasto fauna, taking small reptiles and early plant-eaters with a fast bite and grasping hands. But its ecosystem was ruled by <b>rauisuchian crocodile-relatives</b> larger than itself, so it occupied a mid-tier predatory role rather than the apex - the same kind of subordinate position dinosaurs held throughout the Triassic.</p><p>Its world was a monsoonal floodplain of rivers and ferns, where it shared space with Eoraptor and the very first sauropodomorphs.</p>",
+  evolution:"<p>Herrerasaurus sits near the <b>origin of the meat-eating lineage</b>, and its uncertain placement makes it a key test case for how Theropoda began. It shows large size was an early option for dinosaurs, decoupling 'getting big' from 'taking over'.</p>",
+  study:[
+    {q:"Is Herrerasaurus a true theropod or an early offshoot?",
+     why:"It blends primitive saurischian traits with theropod-like predatory features.",
+     interps:[
+       ["Early theropod","conf-moderate","Predatory specialisations align it with the meat-eating lineage."],
+       ["Basal saurischian outside Theropoda","conf-moderate","Primitive features suggest it branched before the theropod line proper."]
+     ]}
+  ],
+  matters:"Herrerasaurus corrects a tidy myth of progress: dinosaurs didn't start small and slowly build to giants and apex predators. Large hunters existed at the very beginning - they simply hadn't yet inherited a world still run by other reptiles."
+,
+  fossilRecord:{
+    knownFrom:"Several partial skeletons including a well-preserved skull discovered in 1988 by Paul Sereno",
+    evidenceLevel:"Partial",
+    locality:"Ischigualasto Provincial Park, San Juan, Argentina",
+    formation:"Ischigualasto Formation",
+    material:["Skull","Partial skeleton","Limb bones","Vertebrae"],
+    note:"Early <b>Herrerasaurus</b> material was fragmentary, but the 1988 discovery of a skull-bearing skeleton substantially improved our understanding of its anatomy. Even so, its position on the dinosaur family tree remains debated: it lacks some features shared by true theropods, yet its predatory toolkit is clearly theropod-like. The skull shows a mid-jaw hinge inferred to aid prey-gripping, though behavioural inferences from a single anatomical feature should be treated cautiously. Its temporal context - one of the oldest known large predatory dinosaurs - is well-established by the dated volcanic beds of the Ischigualasto."
+  },
+  hook: "Herrerasaurus was already 6 metres long in a Triassic world still ruled by crocodile-relatives — proof that large dinosaurs existed almost immediately, not only after rivals were swept away.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["triassic","theropod","phylogeny","taxonomy","specimen","fossil-record","dinosauria"],
+  researchLinks: ["family-tree"]
+},
+{
+  id:"plateosaurus", name:"Plateosaurus", epithet:"P. trossingensis", pron:"PLAT-ee-oh-SAW-rus",
+  period:"triassic", clade:"Basal sauropodomorph", diet:"herbivore",
+  age:"~214–204 Ma (Late Triassic)", startMa:214, endMa:204, length:"8 m", mass:"~600–4000 kg", place:"Central Europe",
+  img:"images/species/plateosaurus.png",
+  overview:"A large basal sauropodomorph from the Late Triassic of Central Europe, Plateosaurus was a bipedal-to-quadrupedal herbivore reaching around 8 metres and one of the first dinosaurs to achieve truly large body size. Known from hundreds of individuals across Germany, Switzerland, and Scandinavia, it also reveals that its growth pattern was fundamentally reptilian - slow and size-dependent - rather than the rapid, sustained growth seen in later dinosaurs.",
+  insights:[
+    ["Gigantism, first draft","Long before the all-fours giants, Plateosaurus reached 8 metres on <b>two legs</b> - the sauropod project's prototype, proving 'large' was solved before 'colossal'."],
+    ["A biped that couldn't cheat","Its forelimbs couldn't rotate palm-down, so unlike Diplodocus or Brachiosaurus it was <b>physically unable to walk on all fours</b> and had to rear up to feed."],
+    ["Reptile-like growth","Same-aged adults vary wildly in size, pointing to <b>food- and climate-driven growth</b> more like a crocodile than the fast, fixed growth of birds and later dinosaurs."],
+    ["Mired by its own weight","Many skeletons sit in floodplain mud, best explained by heavy adults <b>sinking where lighter juveniles escaped</b> - a built-in size filter in the fossil record."]
+  ],
+  behaviour:"<p>Plateosaurus reared up to crop foliage other Triassic herbivores couldn't reach, swallowing stones to grind tough plants in its gut. By exploiting <b>high browse</b>, it sidestepped competition with the low-feeding reptiles around it - the same niche-splitting logic that would later let Brachiosaurus and Diplodocus share one landscape by feeding at different heights.</p><p>It roamed seasonal European floodplains in apparent numbers, and the muddy mass graves suggest these were animals of open, low-lying ground.</p>",
+  evolution:"<p>Plateosaurus previews the <b>sauropod body plan</b> - long neck, bulky body, fermenting gut - and shows that gigantism in this lineage began bipedally, with descendants only later dropping to all fours to carry even greater mass.</p>",
+  study:[
+    {q:"Why do same-aged individuals differ so much in size?",
+     why:"Growth rings in the bones don't track neatly with body size, which is unusual.",
+     interps:[
+       ["Developmental plasticity","conf-strong","Growth flexed with food and climate, decoupling age from size - the favoured view."],
+       ["Multiple species","conf-low","Size classes might be different species, but most workers now reject this."]
+     ]}
+  ],
+  matters:"Plateosaurus is the proof-of-concept for sauropod gigantism: before the 30-metre giants, evolution first had to solve merely being large - and this two-legged animal shows that solution in its earliest form."
+,
+  fossilRecord:{
+    knownFrom:"Dozens of partial to nearly complete skeletons from multiple European sites; one of the best-known early sauropodomorphs",
+    evidenceLevel:"Rich",
+    locality:"Trossingen and Halberstadt, Germany; Frick, Switzerland; other Central European sites",
+    formation:"Löwenstein Formation (Trossingen Beds); Knollenmergel",
+    material:["Multiple skeletons","Skull","Vertebrae","Limb bones"],
+    note:"<b>Plateosaurus</b> is represented by over 100 individuals from many European localities, making it among the best-sampled early sauropodomorphs. This abundance has enabled bone histology studies revealing its distinctive developmental plasticity - individuals of the same skeletal age vary dramatically in body size, unlike the more clock-like growth of later dinosaurs. Mass-death sites where heavy individuals became mired in mud while lighter ones escaped suggest a taphonomic size filter that must be accounted for when interpreting the population data. The fossil record is good enough that the anatomy is well-constrained, though cranial material is less plentiful than postcranial."
+  },
+  hook: "Same-aged Plateosaurus adults vary wildly in body size, showing that growth flexed with food and climate — a reptile's plasticity in what would become a giant's lineage.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["triassic","sauropod","bipedal","quadrupedal","specimen","fossil-record"],
+  researchLinks: ["cretaceous-sauropods","family-tree"]
+},
+{
+  id:"dilophosaurus", name:"Dilophosaurus", epithet:"D. wetherilli", pron:"dy-LOH-foh-SAW-rus",
+  period:"jurassic", clade:"Early theropod", diet:"carnivore",
+  age:"~193 Ma (Early Jurassic)", startMa:195, endMa:190, length:"7 m", mass:"~400 kg", place:"Arizona, USA",
+  img:"images/species/dilophosaurus.png",
+  overview:"An early theropod from the Early Jurassic of Arizona, Dilophosaurus reached around 7 metres and is recognisable by two thin parallel crests running along the top of its skull, likely used for display or species recognition rather than combat. It was among the largest land predators of its time and place, and its actual anatomy - robust build, large teeth, capable forelimbs - is considerably more impressive than its cautious popular depictions.",
+  insights:[
+    ["The film got it backwards","The neck frill and venom spit are <b>pure invention</b> - there is no fossil evidence for either; the real animal was simply a large, powerful apex predator."],
+    ["Crests too thin to fight with","Twin head crests were paper-thin and useless as weapons, marking them as <b>display structures</b> - an early instance of the visual signalling seen later in Parasaurolophus and pachycephalosaurs."],
+    ["Stronger than we thought","A 2020 redescription found it <b>more robustly built</b> than the weak-jawed scavenger of older reconstructions, with heavy neck and jaw muscle attachments."],
+    ["A crocodile's notch","A kink behind its front teeth echoes the snouts of <b>fish-eating crocodiles</b>, hinting at a waterside diet - a faint preview of the spinosaur strategy."]
+  ],
+  behaviour:"<p>Dilophosaurus hunted along Early Jurassic riverbanks, its powerful neck and jaws suited to delivering strong bites to fish and land prey alike. As the biggest predator in its environment, it held the <b>apex role</b> that Allosaurus would inherit later in the Jurassic, dominating ecosystems still recovering from the end-Triassic extinction.</p><p>Its fragile, conspicuous crests are textbook signalling gear - used to recognise its own kind or compete for mates, not to wound.</p>",
+  evolution:"<p>Dilophosaurus marks the <b>first wave of large-bodied theropods</b>, showing predators scaled up quickly once Triassic rivals vanished. Its display crests are an early chapter in the long dinosaur story of investing in ornament over armament.</p>",
+  study:[],
+  matters:"Dilophosaurus is a case study in popular culture overwriting science. Strip away the fictional frill and venom and you find something better: an early apex predator whose real anatomy records how big carnivores first re-evolved after a mass extinction."
+,
+  fossilRecord:{
+    knownFrom:"Four partial skeletons from Arizona, with the best specimen including skull material; a 2020 redescription based on re-examination of all known material",
+    evidenceLevel:"Partial",
+    locality:"Navajo Nation, Arizona, USA",
+    formation:"Kayenta Formation",
+    material:["Skull","Partial skeleton","Vertebrae","Limb bones","Teeth"],
+    note:"The four known <b>Dilophosaurus</b> specimens vary in completeness; the best-preserved skull has been re-studied in detail, leading to a 2020 monograph (Marsh &amp; Rowe) that substantially revised our understanding of its musculature and build - producing a more robustly proportioned animal than earlier reconstructions. The delicate cranial crests are preserved but fragile, and their exact shape requires careful interpretation. No soft-tissue impressions are known, so the fictional frill and venom apparatus have no basis in the fossil record whatsoever. Footprints attributed to animals of this general size and period are known from the region but cannot be confidently assigned to this species."
+  },
+  hook: "The neck frill and venom of Jurassic Park are pure invention — the real Dilophosaurus was a large, robustly built apex predator whose thin twin crests were almost certainly for display.",
+  learnerLevel: "beginner",
+  conceptTags: ["display"],
+  glossaryLinks: ["theropod","jurassic","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"allosaurus", name:"Allosaurus", epithet:"A. fragilis", pron:"AL-oh-SAW-rus",
+  period:"jurassic", clade:"Allosauroid theropod", diet:"carnivore",
+  age:"~155–145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"8.5 m", mass:"~1.7–2.3 t", place:"Western USA",
+  img:"images/species/allosaurus.jpg",
+  overview:"An allosauroid theropod of the Late Jurassic Morrison Formation, Allosaurus was the most abundant large predator of western North America, reaching around 8-9 metres with a deep skull, blade-like serrated teeth, and three-fingered hands bearing large curved claws. Known from dozens of specimens across a wide size range, it is one of the best-studied large Jurassic carnivores, and its skull biomechanics - a hatchet-strike impact rather than a sustained crushing bite - have been modelled in detail.",
+  insights:[
+    ["A skull that swung like an axe","Engineering models show a skull weak in a steady clamp but strong against downward force - so it likely <b>struck like a hatchet</b>, a killing style no living animal uses, and the opposite of Tyrannosaurus's crushing bite."],
+    ["Jaws built to gape","Its lower jaw could swing exceptionally wide, reinforcing the slashing-strike model over a bone-crushing grip."],
+    ["A body covered in scars","Cleveland-Lloyd specimens carry abundant <b>healed injuries</b>, evidence of a violent life and a surprising ability to survive and recover from serious wounds."],
+    ["A predator trap","One quarry holds dozens of Allosaurus against few prey animals - a <b>death trap</b> that concentrated predators - one hypothesis likens it to a La Brea-style carnivore trap, though a drought-kill event has also been proposed."]
+  ],
+  behaviour:"<p>Allosaurus was the apex hunter of the Morrison Formation, sharing its world with Stegosaurus, Diplodocus and Apatosaurus. Biomechanics suggest it drove its upper jaw down into prey, then withdrew to let wounds work - a <b>strike-and-retreat</b> tactic suited to attacking animals far larger than itself, and the reason Stegosaurus tail spikes left healed punctures in Allosaurus bone.</p><p>That predator–prey arms race, recorded directly in matching wounds, is some of the clearest evidence of Mesozoic combat we have.</p>",
+  evolution:"<p>Allosaurus represents the <b>allosauroids</b>, the dominant large predators of the Jurassic before tyrannosaurs rose to fill the role in the north. Its specialised skull mechanics show theropods reaching very different solutions to the same problem of killing big prey.</p>",
+  study:[
+    {q:"How did Allosaurus kill prey much larger than itself?",
+     why:"Its skull is strong vertically but weak against twisting, ruling out a simple powerful clamp.",
+     interps:[
+       ["Hatchet strike","conf-strong","Finite-element models support driving the upper jaw down as an axe-like blow."],
+       ["Pack hunting of sauropods","conf-low","Sometimes proposed, but direct evidence for cooperation is thin."]
+     ]}
+  ],
+  matters:"Allosaurus shows a predator's skull is a machine that can be reverse-engineered. By modelling its stresses, scientists reconstructed a hunting style with no modern equivalent - proof that deep time contains genuinely alien biology, not just bigger versions of today's animals."
+,
+  fossilRecord:{
+    knownFrom:"Hundreds of bones from many individuals at the Cleveland-Lloyd Dinosaur Quarry, Utah; additional material from multiple Morrison Formation sites across western North America",
+    evidenceLevel:"Exceptional",
+    locality:"Cleveland-Lloyd Quarry, Utah; Dry Mesa, Colorado; many Morrison sites, USA",
+    formation:"Morrison Formation",
+    material:["Bonebed","Multiple skeletons","Skull","Teeth","Limb bones","Vertebrae"],
+    note:"<b>Allosaurus</b> has one of the richest theropod fossil records anywhere. The Cleveland-Lloyd quarry alone has yielded over 10,000 bones representing at least 46 individuals - an extraordinary concentration that has made it a testbed for hypotheses about predator-trap dynamics, though what drew so many animals to one site is still debated. Healed bones showing injuries and pathologies are documented across the sample, providing direct evidence of a violent life and the animal's capacity for recovery. Finite-element analysis of the skull has been applied to constrain bite mechanics. This abundance means its anatomy and growth trajectory are well understood, though aspects of its behaviour are inferred from the bones rather than directly recorded."
+  },
+  hook: "Allosaurus's skull was engineered for a hatchet-strike — strong vertically but weak against twisting — a killing method with no living equivalent, reverse-engineered from the bone.",
+  learnerLevel: "beginner",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["theropod","jurassic","bonebed","specimen","fossil-record","fossil-formation"],
+  researchLinks: ["theropod-hunting"]
+},
+{
+  id:"stegosaurus", name:"Stegosaurus", epithet:"S. stenops", pron:"STEG-oh-SAW-rus",
+  period:"jurassic", clade:"Stegosaurian ornithischian", diet:"herbivore",
+  age:"~155–145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"7 m", mass:"~3.5–4 t", place:"Western USA",
+  img:"images/species/stegosaurus.png",
+  overview:"A stegosaurian ornithischian of the Late Jurassic Morrison Formation, Stegosaurus was a large slow-moving herbivore with a distinctive double row of upright bony plates along its back and a cluster of sharp spikes at the tail tip. The function of those plates - whether for thermoregulation, display, species recognition, or some combination - has been debated for decades without a settled answer, partly because no living animal offers a clear anatomical analogue.",
+  insights:[
+    ["Armour that isn't armour","The back plates were <b>thin and laced with blood vessels</b> - badly placed to stop a bite, far better suited to display or shedding heat. The 'obvious' reading is the wrong one."],
+    ["A weapon with a kill record","The four tail spikes, nicknamed the 'thagomizer', left <b>puncture wounds matching their size in Allosaurus bone</b> - rare direct proof of which animal fought which."],
+    ["The walnut brain, overstated","Its brain was small but adequate; the famous 'second brain' over the hips was just a <b>nerve enlargement</b>, not a backup mind."],
+    ["A dedicated low-feeder","Its head hung near the ground, so it grazed ferns and cycads while the tall sauropods took the canopy - the height-based niche-splitting that defined Morrison plant-eaters."]
+  ],
+  behaviour:"<p>Stegosaurus processed large volumes of low, low-nutrient vegetation through a barrel-shaped gut, cropping with a weak beak. By feeding at ground level it avoided competing with Diplodocus and Brachiosaurus overhead, and when threatened by Allosaurus it could <b>swing its spiked tail with bone-piercing force</b> - the two species' fossils literally record their conflict.</p><p>Whether the plates flushed with blood to signal mood or regulate temperature still colours how we picture the living animal.</p>",
+  evolution:"<p>Stegosaurus is the flagship of the <b>stegosaurs</b>, an ornithischian experiment in vertical display and tail weaponry. It illustrates a recurring dinosaur theme: structures that look like armour usually turn out to be about <b>communication</b> instead.</p>",
+  study:[
+    {q:"What were the back plates actually for?",
+     why:"Their structure fits several functions, and they may have served more than one.",
+     interps:[
+       ["Display / species recognition","conf-strong","Large, conspicuous and variable - strong signs of a visual signal."],
+       ["Thermoregulation","conf-moderate","Blood-vessel channels could shed or gather heat, though this is debated."],
+       ["Defense","conf-low","Too thin and poorly placed to be real armour; few now favour this."]
+     ]}
+  ],
+  matters:"Stegosaurus teaches the core lesson of paleontology: the obvious interpretation is often wrong. The plates 'look like' armour and the spikes 'look like' decoration, yet careful study reverses both - display on the back, a lethal weapon at the tail."
+,
+  fossilRecord:{
+    knownFrom:"Several partial to nearly complete skeletons from Colorado and Wyoming; the best specimen (from Colorado) preserves plate arrangement",
+    evidenceLevel:"Rich",
+    locality:"Garden Park, Colorado; Como Bluff, Wyoming; Tendaguru, Tanzania",
+    formation:"Morrison Formation; Tendaguru Beds (Tanzania)",
+    material:["Partial skeleton","Skull","Limb bones","Vertebrae","Skin impressions"],
+    note:"Multiple <b>Stegosaurus</b> specimens are known, and the overall body plan is well-established. The arrangement and internal structure of the dorsal plates - showing channels interpreted as blood-vessel pathways - are preserved in sufficient detail to fuel the ongoing thermoregulation vs. display debate, though the evidence is compatible with both. The tail spikes (thagomizer) have matched puncture marks in <b>Allosaurus</b> bone from the same formation, providing direct physical evidence of predator–prey interaction: a rare case of behaviour recorded in fossils. Stegosaurus material from Tanzania's Tendaguru Beds confirms a wide geographic range. The skull is relatively poorly represented compared to the postcranium."
+  },
+  hook: "The plates that look like armour are built for display, and the tail spikes that look like decoration left matching puncture wounds in Allosaurus bone — Stegosaurus reverses every intuition.",
+  learnerLevel: "beginner",
+  conceptTags: ["display"],
+  glossaryLinks: ["ornithischian","jurassic","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"brachiosaurus", name:"Brachiosaurus", epithet:"B. altithorax", pron:"BRACK-ee-oh-SAW-rus",
+  period:"jurassic", clade:"Macronarian sauropod", diet:"herbivore",
+  age:"~154 Ma (Late Jurassic)", startMa:156, endMa:150, length:"22 m", mass:"~30–50 t", place:"Western USA",
+  img:"images/species/brachiosaurus.png", cardImgPosition:"right center", modalImgFit:"contain",
+  overview:"A large macronarian sauropod of the Late Jurassic Morrison Formation, Brachiosaurus was unusual among sauropods in having forelimbs longer than its hindlimbs, which tilted its body forward and directed its neck steeply upward in the manner of a giraffe. At an estimated 22 metres and up to 50 tonnes, it was one of the heaviest dinosaurs known from North America, and sustaining blood pressure to a head held some 9 metres above the ground would have required a powerful cardiovascular system.",
+  insights:[
+    ["Giraffe posture at sauropod scale","Uniquely <b>longer forelimbs</b> tilted its body upward, lifting its head into treetops no other Morrison herbivore could reach - the high-browse counterpart to ground-feeding Diplodocus."],
+    ["A circulation problem","Raising blood several metres to a lifted head demands <b>blood pressure beyond any living animal's</b>, the physiological catch that fuels debate over how high it truly held its neck."],
+    ["Not the swamp-dweller of old books","High nostrils once suggested a snorkelling, water-bound life; it's now firmly a <b>dry-land high-browser</b> - an early misreading long since overturned."],
+    ["Breathing like a bird","Hollow vertebrae housed an <b>air-sac lung system like a bird's</b>, lightening the skeleton and helping oxygenate a vast body - evidence that avian breathing evolved deep in dinosaurs, long before flight."]
+  ],
+  behaviour:"<p>Brachiosaurus raked high conifer and cycad foliage with chisel-like teeth, swallowing it whole for a huge fermenting gut. Its entire niche was <b>vertical reach</b>: by feeding where almost nothing else could, it avoided competing with the low, wide-sweeping diplodocids that shared its floodplain.</p><p>The avian air-sac system it carried - the same one that makes living birds efficient breathers - was part of what made such bulk physiologically possible; here, gigantism was as much about <b>lungs and bone</b> as about food.</p>",
+  evolution:"<p>Brachiosaurus exemplifies the <b>macronarian</b> sauropods and the high-browsing answer to sauropod coexistence. Its skeleton is key evidence that the <b>bird-style air-sac lung</b> arose far down the dinosaur tree.</p>",
+  study:[
+    {q:"How high did Brachiosaurus actually hold its neck?",
+     why:"A fully raised neck is costly to supply with blood, pitting skeleton against physiology.",
+     interps:[
+       ["Habitually high","conf-moderate","Limb proportions and high-browser teeth suggest genuine canopy feeding."],
+       ["More horizontal at rest","conf-moderate","Blood-pressure costs imply it may have raised the neck only to feed."]
+     ]}
+  ],
+  matters:"Brachiosaurus forces biology and physics into one conversation. You can't understand it from bones alone - you have to ask whether a heart could even do what the skeleton demands, and that unresolved tension is exactly where the science lives."
+,
+  fossilRecord:{
+    knownFrom:"Partial postcranial skeleton from Colorado (the type specimen); additional material including a well-known mounted skeleton in Berlin originally attributed to this genus but now assigned to the African species Giraffatitan",
+    evidenceLevel:"Partial",
+    locality:"Grand Junction, Colorado, USA; Tendaguru, Tanzania (Giraffatitan)",
+    formation:"Morrison Formation",
+    material:["Partial skeleton","Limb bones","Vertebrae"],
+    note:"True North American <b>Brachiosaurus</b> material is less complete than is commonly assumed - the iconic Berlin mount and many popular illustrations are based largely on the African relative <b>Giraffatitan brancai</b>, which is far better represented. The type specimen of <em>B. altithorax</em> consists of dorsal vertebrae, coracoid, humerus, femur, and ribs - enough to establish its distinctive long-forelimbed proportions but not a complete picture. Cranial material of the true North American species is essentially unknown. The assignment of fragmentary material to this taxon is uncertain in many cases, so size and mass estimates carry wider error bars than popular accounts suggest."
+  },
+  hook: "Sustaining blood pressure to a head held 9 metres above the ground would require a heart unlike anything living — Brachiosaurus forces biology and physics into one conversation.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","jurassic","pneumaticity","specimen","fossil-record"],
+  researchLinks: ["cretaceous-sauropods"]
+},
+{
+  id:"diplodocus", name:"Diplodocus", epithet:"D. carnegii", pron:"dih-PLOD-oh-kus",
+  period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
+  age:"~154–152 Ma (Late Jurassic)", startMa:154, endMa:152, length:"26 m", mass:"~12–15 t", place:"Western USA",
+  img:"images/species/diplodocus.jpg",
+  overview:"A diplodocid sauropod of the Late Jurassic Morrison Formation, Diplodocus was one of the longest land animals known, stretching around 26 metres with a slender build, an extremely long whip-like tail, and a small head equipped only with pencil-like peg teeth for raking and stripping vegetation rather than chewing it. It is one of the best-known sauropods, thanks in part to Barnum Brown's 1899 excavation; casts of the Carnegie Museum skeleton were distributed to major museums worldwide in the early 20th century.",
+  insights:[
+    ["A rake, not a mouth","Slender pencil teeth bunched at the front of the jaw suggest it <b>stripped leaves off branches</b> by drawing them through - a sharp contrast to Brachiosaurus's chisel-bite plucking."],
+    ["A tail that may have cracked","Its whip-thin tail has been modelled as snapping <b>faster than sound</b>, potentially as a noise-maker or deterrent rather than a club."],
+    ["Built to stand still and reach","Likely holding its long neck near-horizontal, it could sweep a <b>wide arc of low vegetation</b> without moving its bulk - feeding by reach, not by walking, to save energy."],
+    ["Teeth on a fortnightly schedule","It replaced each tooth every few weeks, an <b>extreme turnover</b> betraying a diet of gritty, abrasive plants that wore teeth out fast."]
+  ],
+  behaviour:"<p>Diplodocus harvested huge volumes of low-to-mid vegetation from a near-stationary stance, an energy-saving tactic for so massive an animal, while its rapid tooth replacement tracked a tough, abrasive diet. Sharing the Morrison floodplain with high-feeding Brachiosaurus and ground-grazing Stegosaurus, it occupied the <b>wide-sweep low-browser</b> slot - three giants partitioning one landscape by how and where they fed.</p><p>The whip-tail may have served to signal, deter rivals, or defend against Allosaurus, even if it never truly broke the sound barrier.</p>",
+  evolution:"<p>Diplodocus typifies the <b>diplodocids</b> and their low-browsing strategy, the mirror image of Brachiosaurus's high reach. Together they show how sauropods <b>divided the plant world by neck posture</b>, letting multiple colossi coexist.</p>",
+  study:[
+    {q:"Could the tail really crack like a whip?",
+     why:"Models suggest it's possible, but the soft tail-tip that would matter is never preserved.",
+     interps:[
+       ["Supersonic whip","conf-low","Simulations allow it, but the fragile tip needed to confirm it is always lost."],
+       ["Signalling / defence","conf-moderate","The tail was likely used to deter or communicate even without a sonic 'crack'."]
+     ]}
+  ],
+  matters:"Diplodocus shows that size is a strategy, not just spectacle. Long neck, raking teeth and fast-replacing dentition are all organised around one principle - move the least while eating the most - a solution evolution reached at colossal scale."
+,
+  fossilRecord:{
+    knownFrom:"Multiple partial to complete skeletons; the Carnegie Museum specimen (CM 84) is one of the most reproduced sauropod skeletons in history, cast for museums worldwide",
+    evidenceLevel:"Rich",
+    locality:"Wyoming, Colorado, Utah, USA",
+    formation:"Morrison Formation",
+    material:["Multiple skeletons","Skull","Vertebrae","Limb bones","Teeth"],
+    note:"<b>Diplodocus</b> is among the best-known sauropods. CM 84 was excavated in 1899 and formally described by Hatcher in 1901; the original skeleton was mounted at the Carnegie Museum in 1907, and casts were gifted to museums across the world - making it the most widely distributed sauropod skeleton of the early 20th century. Multiple specimens allow assessment of individual variation and growth. Pencil-like teeth replaced rapidly - confirmed by tooth-wear and replacement patterns in the fossil material - directly supporting a high-volume, abrasive-plant diet. The whip-tail hypothesis is based on the extreme thinning of tail vertebrae; the actual soft-tissue tip that would confirm a sonic crack is never preserved, making that claim inferential."
+  },
+  hook: "Diplodocus replaced each tooth every few weeks — extreme wear from an abrasive plant diet confirmed in fossil dentition — and its tail may have cracked faster than sound.",
+  learnerLevel: "beginner",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","jurassic","specimen","fossil-record","taxonomy"],
+  researchLinks: ["cretaceous-sauropods","family-tree"]
+},
+{
+  id:"archaeopteryx", name:"Archaeopteryx", epithet:"A. lithographica", pron:"ar-kee-OP-ter-iks",
+  period:"jurassic", clade:"Avialan theropod", diet:"carnivore",
+  age:"~150 Ma (Late Jurassic)", startMa:152, endMa:148, length:"0.5 m", mass:"~1 kg", place:"Bavaria, Germany",
+  img:"images/species/archaeopteryx.png",
+  overview:"A crow-sized avialan theropod from the Late Jurassic lagoons of Bavaria, Archaeopteryx combined asymmetric flight feathers with a suite of ancestral features - toothed jaws, clawed fingers, and a long bony tail - that its non-flying dinosaurian relatives still carried. Known from twelve or thirteen specimens in the Solnhofen limestone, some preserving individual feather vanes and partial colour evidence from melanosomes, it sits at the boundary between non-avian dinosaurs and birds; the precise mode of its flight - how capable, and whether originating from the trees or the ground - remains actively debated.",
+  insights:[
+    ["Half-reptile, half-bird, literally","It has <b>teeth, a bony tail and clawed fingers</b> like its dromaeosaur cousins, but flight feathers laid out exactly as in a living pigeon - the intermediate made flesh."],
+    ["Preserved feather by feather","The ultra-fine Solnhofen limestone captured <b>individual feather impressions</b>, which is why its 1861 discovery, two years after Darwin, landed like a thunderclap."],
+    ["An awkward flier","Asymmetric feathers prove some aerodynamic function, but a <b>weak shoulder and small breastbone</b> mean it lacked the muscle anchor for strong, sustained flapping."],
+    ["A 150-million-year-old colour","Fossilised pigment structures reveal at least <b>partly black plumage</b> - recovering an actual colour from the Jurassic, not just a shape."]
+  ],
+  behaviour:"<p>Archaeopteryx was likely a glider and burst-flier rather than a sustained flapper, using slopes, trees or running starts to get airborne, and hunting insects and small animals with clawed hands and toothed jaws. It lived on a subtropical archipelago fringing a warm sea, moving between ground and low vegetation - a small predator filling the <b>agile-insectivore</b> role alongside the similarly sized Compsognathus on those same islands.</p><p>Its delicate build paints an animal of edges and undergrowth, not the open sky.</p>",
+  evolution:"<p>Archaeopteryx is the keystone evidence that <b>birds are dinosaurs</b>. It handed Victorian science a literal intermediate and still anchors debates over whether powered flight began in the trees or on the ground.</p>",
+  study:[
+    {q:"How did flight begin - from the trees down or the ground up?",
+     why:"It had wings but lacked a modern bird's full flight apparatus, leaving its capability ambiguous.",
+     interps:[
+       ["Arboreal (trees-down)","conf-moderate","Gliding from heights could have preceded flapping flight."],
+       ["Cursorial (ground-up)","conf-moderate","Running and leaping with proto-wings may have led to flight."],
+       ["Wing-assisted incline running","conf-moderate","Flapping to scramble up slopes, as living birds do, offers a middle path."]
+     ]}
+  ],
+  matters:"Archaeopteryx made evolution visible. Arriving just after Darwin's Origin, it supplied the exact 'missing link' critics demanded - and 160 years on it still does real scientific work, anchoring the link between dinosaurs and the birds outside the window."
+,
+  fossilRecord:{
+    knownFrom:"Twelve or thirteen specimens from the Solnhofen Limestone including feather impressions; the London specimen (1861) and Berlin specimen (1877) are the most complete",
+    evidenceLevel:"Exceptional",
+    locality:"Solnhofen, Bavaria, Germany",
+    formation:"Solnhofen Limestone (Plattenkalk)",
+    material:["Nearly complete skeleton","Skull","Feathers","Teeth","Limb bones","Claw"],
+    note:"The Solnhofen Limestone is one of the finest Lagerstätten in the world, preserving soft tissues - including individual feather vanes - with extraordinary fidelity in lithographic-quality limestone. This means <b>Archaeopteryx</b> is known not just from bone but from asymmetric flight feathers whose aerodynamic implications can be studied directly. Preserved melanosomes in at least the London specimen have allowed researchers to infer partial black colouration. The 1861 discovery - two years after Darwin's <em>Origin</em> - meant its transitional anatomy had immediate and lasting impact. Despite this exceptional record, the skeleton's functional interpretation remains debated: shoulder geometry and breastbone size are consistent with limited or awkward flight, though the exact flight capability is still argued. The bone itself shows a mix of reptile and bird features visible in the original material, not inferred from reconstruction."
+  },
+  hook: "Discovered two years after Darwin's Origin, Archaeopteryx supplied the exact half-dinosaur, half-bird intermediate that critics demanded.",
+  learnerLevel: "intermediate",
+  conceptTags: ["bird-origins","missing-link","feathers","colour"],
+  glossaryLinks: ["theropod","paravian","maniraptoran","transitional-fossil","phylogeny","jurassic","integument","lagerstaette","fossil-formation","mosaic-evolution"],
+  researchLinks: ["feathers","dinosaur-colours","family-tree","soft-tissue"]
+},
+{
+  id:"compsognathus", name:"Compsognathus", epithet:"C. longipes", pron:"komp-SOG-na-thus",
+  period:"jurassic", clade:"Compsognathid theropod", diet:"carnivore",
+  age:"~150 Ma (Late Jurassic)", startMa:152, endMa:148, length:"1 m", mass:"~2–3 kg", place:"Germany / France",
+  img:"images/species/compsognathus.jpg",
+  overview:"A small compsognathid theropod from the Late Jurassic Solnhofen lagoons of Bavaria, Compsognathus was roughly the size of a chicken and one of the smallest non-avian dinosaurs known at the time of its description. One specimen preserves a swallowed lizard in its gut region, providing a direct record of its diet, and its close resemblance to Archaeopteryx from the same formation was historically important in linking small carnivorous theropods to the bird lineage.",
+  insights:[
+    ["Its last meal, fossilised","A skeleton preserves a <b>swallowed lizard whole</b> in its gut - direct, undeniable evidence of diet, the kind of detail a thousand ordinary bones never give."],
+    ["Speed in miniature","Long legs and a feather-light frame mark it as a <b>fast, darting hunter</b>, the small-game specialist of its island world."],
+    ["A 19th-century bird clue","Its close resemblance to Archaeopteryx helped early scientists argue that <b>birds descend from small theropods</b> - two animals from the same lagoon bracketing the bird transition."],
+    ["A dinosaur the size of a hen","At 2–3 kg it punctures the giants-only image of dinosaurs; most Mesozoic ecosystems, like modern ones, ran mostly on <b>small animals</b>."]
+  ],
+  behaviour:"<p>Compsognathus chased lizards and insects across the dry islands ringing the Solnhofen lagoon, its preserved gut lizard showing it took relatively large, swift prey for its size. In that island ecosystem it was the <b>small-predator counterpart</b> to Archaeopteryx, the two dividing small prey while leaving larger game to bigger hunters elsewhere.</p><p>Its presence is a reminder that the famous giants were the minority - the base of every food web is small and fast.</p>",
+  evolution:"<p>Compsognathus was historically vital for connecting <b>birds to small theropods</b>, its skeleton resembling Archaeopteryx minus the feathers. It anchors the small-bodied end of the predatory dinosaur spectrum.</p>",
+  study:[],
+  matters:"Compsognathus corrects a deep bias: dinosaurs are remembered as enormous, yet most ecosystems were built on small animals. And its intact last meal shows how a single exceptional fossil can reveal what countless ordinary ones cannot."
+,
+  fossilRecord:{
+    knownFrom:"Two specimens: a juvenile or sub-adult from Bavaria (Germany) and an adult from Canjuers, France; the German specimen preserves gut contents",
+    evidenceLevel:"Partial",
+    locality:"Solnhofen, Bavaria, Germany; Canjuers, Var, France",
+    formation:"Solnhofen Limestone (Germany); Portlandian limestones (France)",
+    material:["Partial skeleton","Skull","Teeth","Limb bones"],
+    note:"Only two <b>Compsognathus</b> specimens are known, limiting what can be said about individual variation or population biology. The German specimen is famously associated with the remains of a small lizard (<em>Bavariasaurus</em>) in its gut region, providing direct dietary evidence - one of the clearest examples of preserved last-meal contents in the fossil record. Size differences between the two specimens once prompted multiple-species hypotheses; these are now generally interpreted as growth stage differences rather than separate species. Its small size in the Solnhofen fauna places it as one of the smallest known non-avian dinosaurs, though the juvenile German specimen may underrepresent adult dimensions."
+  },
+  hook: "A fossilised lizard preserved inside a Compsognathus skeleton is one of the clearest direct diet records in the entire fossil record — one small chicken-sized theropod caught mid-meal.",
+  learnerLevel: "beginner",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["theropod","jurassic","lagerstaette","fossil-formation","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"yiqi", name:"Yi qi", epithet:"Yi qi", pron:"EE-chee",
+  period:"jurassic", clade:"Scansoriopterygid theropod", diet:"omnivore",
+  age:"~159 Ma (Late Jurassic)", startMa:161, endMa:157, length:"~0.3 m", mass:"~0.4 kg", place:"Hebei, China",
+  img:"images/species/yi_qi.jpg", modalImgFit:"contain",
+  overview:"A pigeon-sized scansoriopterygid theropod from the Late Jurassic of Hebei, China, Yi qi is remarkable for an elongated rod-like wrist bone that appears to have supported a bat-like wing membrane rather than the feathered wings seen in other paravian dinosaurs. Known from a single specimen, it represents a unique experiment in dinosaurian aerial locomotion that has no known descendants.",
+  insights:[
+    ["Bat wings on a dinosaur","Instead of a feathered airfoil, it stretched <b>skin membranes</b> supported by a bizarre extra wrist rod - flight gear more like a bat or flying squirrel than a bird."],
+    ["A failed alternative timeline","While Archaeopteryx's feathered design led to all living birds, Yi qi's membrane route was an <b>evolutionary dead end</b> - a glimpse of how flight could have gone, but didn't."],
+    ["A bone no one expected","That long styliform wrist bone has no parallel in other dinosaurs, making the animal hard to reconstruct and its <b>exact wing shape genuinely uncertain</b>."],
+    ["Probably a glider, not a flapper","Its anatomy suggests <b>gliding between trees</b> rather than powered flight, like a modern flying squirrel rather than a sparrow."]
+  ],
+  behaviour:"<p>Yi qi likely clambered through Jurassic forests and glided between trees on membrane wings, feeding on insects and small fare. It occupied an <b>arboreal glider</b> niche that no surviving lineage inherited, exploiting the canopy in parallel with the feathered proto-birds experimenting nearby - two rival blueprints for getting airborne, tested at the same time.</p><p>Because the membrane and its support are so unusual, even how it held its wings remains debated.</p>",
+  evolution:"<p>Yi qi shows that the origin of flight involved <b>more than one design</b>, not a single inevitable march toward birds. Its skin wings are a reminder that evolution explores blind alleys - and that the bird solution was one option among several, not a foregone conclusion.</p>",
+  study:[
+    {q:"Could Yi qi truly fly, or only glide?",
+     why:"Its membrane wing is unlike anything living, so its aerodynamic limits are hard to model.",
+     interps:[
+       ["Gliding only","conf-moderate","Limited flight muscle suggests passive gliding between trees."],
+       ["Limited flapping flight","conf-low","Some argue the membranes allowed brief powered flight, but evidence is thin."]
+     ]}
+  ],
+  matters:"Yi qi reframes the origin of flight as a series of experiments rather than a straight line. Birds feel inevitable only in hindsight; this membrane-winged oddity shows the path was contingent, branching, and full of designs that simply didn't last."
+,
+  fossilRecord:{
+    knownFrom:"A single specimen preserving the unusual styliform wrist element and feather impressions",
+    evidenceLevel:"Partial",
+    locality:"Qinglong County, Hebei, China",
+    formation:"Tiaojishan Formation",
+    material:["Partial skeleton","Feathers","Limb bones","Skull"],
+    note:"<b>Yi qi</b> is known from one specimen (STM 31-2), described in 2015. The preserved styliform wrist bone - the rod-like extension that would have supported a wing membrane - has no parallel in other theropods and cannot be fully interpreted by analogy with living animals. Whether the membrane was more bat-like or flying-squirrel-like, and how it was held during flight or gliding, must be inferred from the bone geometry alone. Because this is a single specimen, individual variation cannot be assessed and some unusual features might reflect individual pathology. The Tiaojishan Formation has produced excellent preservation, but this specimen alone cannot resolve exactly how <em>Yi qi</em> moved through the air."
+  },
+  hook: "Yi qi stretched bat-like skin membranes on a unique wrist bone rather than growing feathered wings — a parallel experiment in dinosaurian flight that left no descendants.",
+  learnerLevel: "intermediate",
+  conceptTags: ["feathers","bird-origins"],
+  glossaryLinks: ["theropod","paravian","jurassic","integument","fossil-formation","specimen","fossil-record"],
+  researchLinks: ["feathers"]
+},
+{
+  id:"spinosaurus", name:"Spinosaurus", epithet:"S. aegyptiacus", pron:"SPY-noh-SAW-rus",
+  period:"cretaceous", clade:"Spinosaurid theropod", diet:"carnivore",
+  age:"~99–94 Ma (Late Cretaceous)", startMa:99, endMa:94, length:"~15 m", mass:"~6–7 t", place:"North Africa",
+  img:"images/species/spinosaurus.png",
+  overview:"A spinosaurid theropod from Late Cretaceous North Africa, Spinosaurus reached an estimated 15 metres in length - among the longest known predatory dinosaurs - and is recognised by a long, narrow fish-catching skull, cone-shaped unserrated teeth, and a tall dorsal sail of elongated bony spines. Its bone density and oxygen isotope chemistry both point to a life more closely tied to water than any other large theropod, but whether it was an active swimmer or hunted from the shallows remains one of the most actively contested questions in the field, complicated by the wartime loss of the original type specimen.",
+  insights:[
+    ["A sail no one can fully explain","A tall sail of bony spines ran down its back, argued to be for <b>display, heat exchange, or fat storage</b> - its function remains one of the genuinely open questions in the field."],
+    ["A crocodile's mouth on a giant","Cone-shaped, unserrated teeth and a long narrow snout are built to <b>grip slippery fish</b>, not slice flesh - convergent with the same design seen in its smaller relative Baryonyx."],
+    ["Diving bones","Unusually dense, solid bones echo those of <b>diving animals</b> like penguins and hippos, a leading argument for a genuinely water-based life."],
+    ["The skeleton lost to war","The first good specimen was <b>destroyed in a 1944 bombing raid</b>, so today's fierce debate rests on newer, frustratingly incomplete finds."]
+  ],
+  behaviour:"<p>Spinosaurus clearly centred its life on water - teeth, snout, and oxygen isotope ratios in its bones - a signature of time spent in water - all point to a life centred on aquatic environments and fish prey. Whether it pursued prey by swimming or stalked it like a colossal heron is the live question. Either way, it was <b>tied to rivers</b> in a way no other huge theropod was, hunting the giant fish and crocodile relatives of a vast Saharan river system and sidestepping competition with land-based predators by exploiting an aquatic larder they couldn't reach.</p><p>That riverine specialisation is the most extreme ecological departure in the whole theropod story.</p>",
+  evolution:"<p>Spinosaurus shows theropods <b>invading the water</b>, the sharpest break from the standard land-predator body plan in the group. It demonstrates how far a lineage can be pushed from its ancestral way of life.</p>",
+  study:[
+    {q:"Was Spinosaurus an active swimmer or a shoreline wader?",
+     why:"Bone density and tail shape suggest swimming, but limb proportions and balance complicate it - and key fossils were lost in 1944.",
+     interps:[
+       ["Pursuit swimmer","conf-moderate","Dense bones and a paddle-like tail suggest it chased fish underwater."],
+       ["Wading ambusher","conf-moderate","Biomechanics hint it was an unstable swimmer that hunted from the shallows."],
+       ["Riverbank generalist","conf-moderate","It may have done both, feeding in and beside the water as chance allowed."]
+     ]}
+  ],
+  matters:"Spinosaurus is paleontology unfolding in real time. With a lost original skeleton and dramatic new finds, specialists openly disagree in print - vivid proof that the science is not settled history but an active, contested investigation."
+,
+  fossilRecord:{
+    knownFrom:"Original North African skeleton (Bahariya, Egypt) described by Stromer in 1915 and destroyed in a 1944 Allied bombing raid; partial new specimens from the Kem Kem region of Morocco recovered since 2008, including vertebrae, a partial skull, and most significantly a 2020 specimen providing tail material",
+    evidenceLevel:"Fragments",
+    locality:"Bahariya Oasis, Egypt (lost); Kem Kem Beds, southeastern Morocco",
+    formation:"Bahariya Formation (lost material); Kem Kem Group",
+    material:["Vertebrae","Skull","Teeth","Limb bones"],
+    note:"The fate of the original type specimen - lost to war - is genuinely central to understanding what we do and do not know about <b>Spinosaurus</b>. Stromer's original descriptions and drawings are the only record of that material. New specimens from the Kem Kem are real and important but fragmentary; the 2014 reconstruction by Ibrahim et al. that proposed short hindlimbs and aquatic locomotion was based on partial material and a composite reconstruction that attracted significant peer criticism regarding how individual bones were assigned to one animal. The 2020 tail specimen showed paddle-like vertebral proportions supporting some aquatic use. But the overall body proportions, exact size, and locomotory mode of this animal remain among the most contested issues in current palaeontology - an unusually honest reflection of how limited the physical evidence actually is."
+  },
+  hook: "Spinosaurus's best specimen was destroyed in a 1944 bombing raid — every debate about its lifestyle rests on what has been found since.",
+  learnerLevel: "intermediate",
+  conceptTags: ["aquatic","diet-debate","convergent-evolution"],
+  glossaryLinks: ["theropod","cretaceous","specimen","fossil-record","convergent-evolution"],
+  researchLinks: ["spinosaurus","theropod-hunting"]
+},
+{
+  id:"tyrannosaurus", name:"Tyrannosaurus rex", epithet:"T. rex", pron:"tie-RAN-oh-SAW-rus",
+  period:"cretaceous", clade:"Tyrannosaurid theropod", diet:"carnivore",
+  age:"~68–66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~12 m", mass:"~8–9 t", place:"Western North America",
+  img:"images/species/tyrannosaurus_rex.jpg",
+  overview:"A massive tyrannosaurid theropod of the latest Cretaceous, Tyrannosaurus rex was the apex predator of western North America, built around an enormous skull with thick bone-crushing teeth, binocular vision, and acute olfaction. More than fifty known specimens make it one of the best-quantified Mesozoic animals: its bite force, growth rate, and sensory capabilities have all been measured directly, giving the most iconic predatory dinosaur an unusually rigorous scientific foundation.",
+  insights:[
+    ["The strongest bite of any land animal","Modelled at several tonnes of force, its bite could <b>crush bone outright</b> - the opposite strategy to Allosaurus's slashing axe-strike, and one few animals before or since have matched."],
+    ["Teeth like railroad spikes","Thick, banana-shaped teeth weren't for slicing but for <b>shattering carcasses</b>, letting it extract nutrients from bone that other predators left behind."],
+    ["A teenage growth spurt","Bone rings show it gained <b>over 600 kg a year</b> through its teens - explosive, bird-and-mammal-like growth utterly unlike the slow reptilian pattern of Plateosaurus."],
+    ["Senses tuned for hunting","A huge olfactory region and forward-facing, binocular eyes gave it <b>keen smell and depth perception</b> - the toolkit of an active hunter, not merely a scavenger."]
+  ],
+  behaviour:"<p>Tyrannosaurus was the apex predator of its world, almost certainly both hunting live prey and scavenging - its bone-crushing bite let it exploit carcasses no rival could fully use, a competitive edge as much as a weapon. It preyed on the herbivores sharing its landscape, Triceratops and the duck-billed hadrosaurs, and frill injuries on Triceratops hint at <b>encounters that didn't always go the predator's way</b>.</p><p>Possible juvenile and adult feeding differences suggest a single species may have split the food supply <b>by age</b>, young rexes taking smaller, faster prey than the bone-crushing adults.</p>",
+  evolution:"<p>Tyrannosaurus caps the <b>tyrannosaurids</b>, which evolved giant size in the north independently of the southern carcharodontosaurs like Giganotosaurus - two lineages converging on the apex role with completely different jaws. It is the benchmark against which other giant predators are measured.</p>",
+  study:[
+    {q:"Was T. rex primarily a hunter or a scavenger?",
+     why:"It has features cited for both, and the truth is likely a mix that's hard to weight precisely.",
+     interps:[
+       ["Active hunter","conf-strong","Binocular vision, speed and healed prey injuries point to genuine predation."],
+       ["Opportunistic scavenger too","conf-strong","Its bone-crushing bite and acute smell suit exploiting carcasses as well."]
+     ]}
+  ],
+  matters:"Tyrannosaurus shows that fame and rigour can coincide. Behind the icon is one of the best-quantified animals in all of paleontology - its bite force, growth rate and senses measured, not imagined - proving that even the most mythologised fossil can be pinned down by evidence."
+,
+  fossilRecord:{
+    knownFrom:"Over 50 specimens of varying completeness including several nearly complete skeletons; 'Sue' (FMNH PR2081) at Chicago's Field Museum is the largest and most complete known individual",
+    evidenceLevel:"Exceptional",
+    locality:"Montana, South Dakota, Wyoming, Colorado, USA; Saskatchewan, Canada",
+    formation:"Hell Creek Formation; Lance Formation; Scollard Formation",
+    material:["Nearly complete skeleton","Skull","Teeth","Limb bones","Vertebrae","Bonebed"],
+    note:"<b>Tyrannosaurus rex</b> is one of the best-represented large theropods in the fossil record. The sample is large enough to study growth trajectories through bone rings, document pathologies and healed injuries, examine sexual dimorphism hypotheses, and - controversially - identify possible soft-tissue preservation in medullary bone (the 'B-rex' specimen, MOR 1125). Bite marks attributed to <em>T. rex</em> are preserved on hadrosaur and ceratopsian bones, providing physical evidence of feeding and even predation attempts (healed bites show the prey survived). The size range across specimens has fuelled debate about whether robust and gracile morphs represent sex differences or separate species. For all this material, <b>behaviour</b> beyond feeding is inferred, not directly recorded."
+  },
+  hook: "Over 50 known specimens make T. rex one of the best-quantified predators ever — bite force, growth rate, and senses all measured, not guessed.",
+  learnerLevel: "beginner",
+  conceptTags: ["extinction-event","diet-debate","soft-tissue"],
+  glossaryLinks: ["theropod","cretaceous","maastrichtian","kpg-boundary","mass-extinction","specimen","fossil-record"],
+  researchLinks: ["nanotyrannus","theropod-hunting","polar-dinosaurs","pre-asteroid-decline","soft-tissue"]
+},
+{
+  id:"giganotosaurus", name:"Giganotosaurus", epithet:"G. carolinii", pron:"jig-a-NOTE-oh-SAW-rus",
+  period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
+  age:"~99 Ma (Late Cretaceous)", startMa:100, endMa:97, length:"~13 m", mass:"~7–8 t", place:"Patagonia, Argentina",
+  img:"images/species/giganotosaurus.jpg",
+  overview:"A large carcharodontosaurid theropod from the Late Cretaceous of Patagonia, Giganotosaurus was one of the longest known predatory dinosaurs at an estimated 13 metres, sharing its world with the giant titanosaur sauropods that were likely its main prey. Unlike Tyrannosaurus, it carried narrow blade-like teeth suited to slashing and wounding rather than shattering bone - a different approach to large-prey predation, independently evolved on a different continent.",
+  insights:[
+    ["Same size, opposite weapon","It matched Tyrannosaurus in length but carried <b>thin, blade-like slicing teeth</b> instead of bone-crushers - two giants, two entirely different killing systems, on two continents."],
+    ["A hint of pack life","Its close relative Mapusaurus is known from <b>many individuals together</b>, raising the real possibility these slashers hunted cooperatively against giant prey."],
+    ["Big but lightly built","Longer and taller than T. rex yet more <b>gracile</b>, it traded crushing power for reach and slashing speed."],
+    ["Sized to wound titans","It shared its world with colossal long-necks, and its slicing bite suits <b>opening deep wounds</b> in huge prey rather than killing in a single blow."]
+  ],
+  behaviour:"<p>Giganotosaurus likely attacked large sauropods with slashing bites that bled prey out, and the herd evidence from Mapusaurus suggests its family may have <b>hunted in groups</b> to bring down animals many times their mass - a strategy that could overcome titanosaurs no solitary predator could tackle. It ruled Patagonia tens of millions of years before T. rex appeared in the north, so the two were never rivals.</p><p>Instead they are <b>parallel experiments</b>: the same ecological job filled by separate lineages reaching the same scale.</p>",
+  evolution:"<p>Giganotosaurus is a flagship <b>carcharodontosaurid</b>, the slashing giant predators that ruled the southern continents. Its existence proves tyrannosaur-scale carnivory evolved <b>more than once, independently</b>.</p>",
+  study:[
+    {q:"Did Giganotosaurus and its relatives hunt in groups?",
+     why:"Group evidence comes mainly from a related species, so applying it here is an inference.",
+     interps:[
+       ["Cooperative pack hunters","conf-moderate","The multi-individual Mapusaurus site hints at social hunting in the family."],
+       ["Solitary giants","conf-moderate","Aggregations can form without cooperation; solitary hunting can't be ruled out."]
+     ]}
+  ],
+  matters:"Giganotosaurus breaks the assumption that T. rex was the template for all giant predators. A different lineage, on a different continent, reached the same size with completely different jaws - convergence on giants, divergence in how they killed."
+,
+  fossilRecord:{
+    knownFrom:"A single partial skeleton (MUCPv-Ch1) representing roughly 70% of the skeleton, described in 1995; a second fragmentary maxilla (jaw fragment) assigned to this genus",
+    evidenceLevel:"Partial",
+    locality:"Neuquén Province, Patagonia, Argentina",
+    formation:"Candeleros Formation (Río Limay Subgroup)",
+    material:["Partial skeleton","Skull","Teeth","Limb bones","Vertebrae"],
+    note:"The holotype of <b>Giganotosaurus</b> is substantial enough to confirm the general body plan and establish it as one of the largest known theropods, but it is a single individual and some elements are incomplete. Size comparisons with <em>T. rex</em> depend on scaling from partial material, so precise length and mass figures carry real uncertainty - claims of it being 'larger than T. rex' should be read with that caveat. The closely related <em>Mapusaurus roseae</em> is known from a multi-individual bonebed, and evidence of gregarious behaviour is sometimes attributed by extension to <em>Giganotosaurus</em>; this is an inference, not directly evidenced for this taxon."
+  },
+  hook: "Giganotosaurus matched Tyrannosaurus in length but carried blade-like slicing teeth instead of bone-crushers — two continents, same ecological job, completely different solution.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["theropod","cretaceous","convergent-evolution","specimen","fossil-record"],
+  researchLinks: ["spinosaurus","theropod-hunting"]
+},
+{
+  id:"carnotaurus", name:"Carnotaurus", epithet:"C. sastrei", pron:"KAR-noh-TAW-rus",
+  period:"cretaceous", clade:"Abelisaurid theropod", diet:"carnivore",
+  age:"~72–70 Ma (Late Cretaceous)", startMa:72, endMa:70, length:"~8 m", mass:"~1.5 t", place:"Patagonia, Argentina",
+  img:"images/species/carnotaurus.jpg",
+  overview:"An abelisaurid theropod from Late Cretaceous Patagonia, Carnotaurus was a medium-sized predator with two stout brow horns, forelimbs reduced nearly to vestigial stubs, and a build that points to unusual speed for a carnivore its size. Known from a single but exceptionally complete skeleton - one of the few large theropods with extensive fossilised skin impressions - it is the best-documented abelisaurid and the most familiar representative of the large carnivores that dominated Gondwana's southern continents through the Cretaceous.",
+  insights:[
+    ["Arms even smaller than T. rex's","Its forelimbs were so <b>reduced as to be near-useless</b>, with the bones almost fused - taking the tiny-arm trend of big theropods to its absurd extreme."],
+    ["Built to run","Enormous tail muscles, revealed by its vertebrae, powered a <b>fast-running build</b> unusual for so large a predator - speed as its primary weapon."],
+    ["The only horned big predator","Paired brow horns, unique among large carnivores, were likely for <b>head-to-head shoving</b> between rivals rather than killing prey."],
+    ["We know its skin","Fossilised skin impressions show a hide of <b>non-overlapping scales with larger studs</b> - rare direct evidence of a predatory dinosaur's actual texture."]
+  ],
+  behaviour:"<p>Carnotaurus was a lightweight, fast pursuit predator that likely ran down agile prey and delivered quick slashing bites, its weak neck and small teeth suiting rapid strikes over prolonged grappling. As the dominant abelisaurid of southern South America, it filled the apex role that tyrannosaurs held in the north - another case of <b>different lineages, same job</b>, echoing Giganotosaurus before it.</p><p>The brow horns most plausibly settled contests between Carnotaurus rather than serving against prey, the southern equivalent of the head-butting and frill-jousting seen in herbivores.</p>",
+  evolution:"<p>Carnotaurus is the most completely known <b>abelisaurid</b>, the predators that dominated Gondwana after it split from the northern continents. Its bizarre proportions show how isolation breeds specialisation - speed and horns up front, arms all but discarded.</p>",
+  study:[
+    {q:"What were the tiny arms and the horns actually for?",
+     why:"The arms are too reduced for obvious use, and the horns are unique among big predators.",
+     interps:[
+       ["Arms: vestigial","conf-strong","So reduced they likely had little function - a lineage shedding unused structure."],
+       ["Horns: rival combat / display","conf-moderate","Best explained as tools for shoving matches or signalling between Carnotaurus."]
+     ]}
+  ],
+  matters:"Carnotaurus shows how geographic isolation drives evolution down strange roads. Cut off on a southern landmass, the abelisaurids built an apex predator around speed and horns while letting the arms wither - a body no northern lineage ever produced."
+,
+  fossilRecord:{
+    knownFrom:"A single specimen (MACN-CH 894) that is unusually complete for a large theropod, including well-preserved skin impressions",
+    evidenceLevel:"Rich",
+    locality:"Chubut Province, Patagonia, Argentina",
+    formation:"La Colonia Formation",
+    material:["Nearly complete skeleton","Skull","Skin impressions","Limb bones","Vertebrae","Teeth"],
+    note:"The single known <b>Carnotaurus</b> skeleton is remarkable for its exceptional skin preservation: extensive patches of non-overlapping scales with larger bony studs are preserved across much of the body, giving us direct evidence of the hide texture that most dinosaur reconstructions can only guess at. This places it among a small group of large theropods for which we have skin evidence. The brow horns are preserved in place, confirming their general position and relative size. Being a single individual limits what can be said about growth or variation. The forelimbs are so reduced that the preserved elements show near-fusion of bones, directly confirming the functional redundancy of the arms that postcranial anatomy implies."
+  },
+  hook: "Carnotaurus is the only large predator known from directly preserved skin impressions, giving us the actual hide texture of an apex hunter — not a guess.",
+  learnerLevel: "intermediate",
+  conceptTags: ["soft-tissue","display"],
+  glossaryLinks: ["theropod","cretaceous","integument","preservation","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"baryonyx", name:"Baryonyx", epithet:"B. walkeri", pron:"bah-ree-ON-iks",
+  period:"cretaceous", clade:"Spinosaurid theropod", diet:"carnivore",
+  age:"~130–125 Ma (Early Cretaceous)", startMa:130, endMa:125, length:"~9 m", mass:"~1.5–2 t", place:"England",
+  img:"images/species/baryonyx.jpg",
+  overview:"A spinosaurid theropod from the Early Cretaceous of England, Baryonyx was around 9 metres long with a long, narrow, crocodile-like skull, conical teeth, and a large curved thumb claw. Its preserved stomach contents include fish scales and bones of a young Iguanodon, providing direct physical evidence of a mixed diet that placed the spinosaurid fish-eating hypothesis on solid empirical ground.",
+  insights:[
+    ["The smoking gun for fish-eating","Fish scales and a young <b>Iguanodon's bones</b> preserved in its gut directly proved a mixed diet - the physical evidence that grounds the whole Spinosaurus debate."],
+    ["A thumb claw like a gaff","A huge curved hand claw likely worked as a <b>fishing hook</b>, flicking prey from the water the way a grizzly bear hooks salmon."],
+    ["A crocodile's snout, again","Its long narrow jaw with conical teeth mirrors a fish-eating crocodile's - the same convergent design that reappears, scaled up, in its relative Spinosaurus."],
+    ["Found by an amateur","An amateur collector spotted the giant claw in a clay pit in 1983, a reminder that <b>major discoveries still come from outside academia</b>."]
+  ],
+  behaviour:"<p>Baryonyx hunted along Early Cretaceous rivers, snatching fish with its narrow jaws and hooked claw while also taking land prey - the swallowed Iguanodon shows it was no strict fish-eater but a <b>riverbank generalist</b>. By working the water's edge it tapped a food supply the purely terrestrial predators of its lush wetland largely ignored, easing competition.</p><p>Its discovery reframed spinosaurids from baffling oddities into comprehensible semi-aquatic hunters.</p>",
+  evolution:"<p>Baryonyx is the spinosaurid whose <b>preserved stomach contents</b> confirmed the group's fish-eating habits, anchoring the larger Spinosaurus story in hard evidence and documenting a major theropod move toward <b>aquatic food</b>.</p>",
+  study:[],
+  matters:"Baryonyx proves how a single well-preserved gut can settle decades of speculation. Before it, fish-eating in big theropods was a guess; after it, the spinosaurid story stood on physical evidence rather than imagination."
+,
+  fossilRecord:{
+    knownFrom:"A single partial skeleton from the Smokejacks Pit (Weald Clay Formation), Surrey, England, including a large thumb claw; fish scales and juvenile Iguanodon bones preserved in the gut region",
+    evidenceLevel:"Partial",
+    locality:"Smokejacks Pit, Ockley, Surrey, England",
+    formation:"Wealden Supergroup (Weald Clay Formation, Surrey)",
+    material:["Partial skeleton","Skull","Claw","Teeth","Limb bones"],
+    note:"The holotype skeleton of <b>Baryonyx walkeri</b>, discovered by amateur collector William Walker in 1983, is the primary basis for everything we know about this animal. The gut contents - fish scales of <em>Lepidotes</em> and bones of a juvenile <em>Iguanodon</em> - are among the most direct dietary evidence in any theropod, establishing a mixed piscivorous and terrestrial diet beyond reasonable doubt. Additional spinosaurid material from the Iberian Peninsula and Portugal has been referred to closely related taxa, extending the family's range. The skull, while partial, shows the narrow crocodile-like snout clearly. Gaps in the skeleton mean that overall size estimates are extrapolated from the known material."
+  },
+  hook: "Fish scales and a young Iguanodon's bones preserved in Baryonyx's gut settled the spinosaurid diet debate with physical evidence rather than speculation.",
+  learnerLevel: "intermediate",
+  conceptTags: ["diet-debate"],
+  glossaryLinks: ["theropod","cretaceous","specimen","fossil-record"],
+  researchLinks: ["spinosaurus","theropod-hunting"]
+},
+{
+  id:"iguanodon", name:"Iguanodon", epithet:"I. bernissartensis", pron:"ig-WAH-noh-don",
+  period:"cretaceous", clade:"Iguanodontian ornithopod", diet:"herbivore",
+  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~10 m", mass:"~3 t", place:"Belgium / England",
+  img:"images/species/iguanodon.png",
+  overview:"A large iguanodontian ornithopod of the Early Cretaceous, Iguanodon was around 10 metres long and able to move on two or four legs, processing tough plant material with a well-developed beak and batteries of grinding teeth, plus a distinctive conical thumb spike. One of the first dinosaurs formally described, in 1825, its reconstruction changed dramatically over 150 years - from a four-legged iguana-like monster with a nose horn to a bipedal kangaroo posture to the more accurate modern depiction - tracing the history of how palaeontology built its picture of extinct animals.",
+  insights:[
+    ["A thumb mistaken for a horn","Its famous thumb spike was first stuck on the snout as a <b>nose horn</b> - a vivid lesson, paralleling Triceratops, in how easily isolated bones are misread."],
+    ["A Swiss-army hand","Its hand combined a defensive thumb spike, weight-bearing middle fingers and a grasping little finger - a single limb doing <b>feeding, walking and defence</b>."],
+    ["Two-legged or four, on demand","Trackways and limb proportions show it could <b>switch posture</b>, walking on four legs to travel and rearing on two to feed or flee."],
+    ["A herd in the coal","Dozens of skeletons from a Belgian mine suggest these animals <b>moved and died in groups</b>, unusual evidence of social life in an early ornithopod."]
+  ],
+  behaviour:"<p>Iguanodon was a bulk plant-processor whose skull flexed as it chewed, grinding tough vegetation with packed tooth batteries - an advanced system that foreshadowed the runaway success of the hadrosaurs like Parasaurolophus. Browsing low and mid-height plants and dropping to all fours to cover ground, it was the <b>dominant mid-sized herbivore</b> of its European wetlands, with its thumb spike a ready defence against predators such as Baryonyx.</p><p>The Bernissart mass grave points to genuinely gregarious behaviour, not just chance accumulation.</p>",
+  evolution:"<p>Iguanodon sits just below the <b>hadrosaurs</b>, the most successful Late Cretaceous plant-eaters, and shows their key chewing innovations taking shape. Named in 1825, it also helped <b>define the very concept</b> of a dinosaur.</p>",
+  study:[],
+  matters:"Iguanodon is the history of paleontology in one animal. From a misplaced nose-horn to a sophisticated reconstruction, its story shows our picture of the past is a self-correcting method that improves - not a fixed truth handed down."
+,
+  fossilRecord:{
+    knownFrom:"Dozens of partial to complete skeletons from the Bernissart coal mine, Belgium (1878), plus fragmentary material from across Europe; one of the earliest and most extensively studied dinosaurs",
+    evidenceLevel:"Exceptional",
+    locality:"Bernissart, Belgium; Wealden sites in England, Spain, Germany",
+    formation:"Wealden Supergroup; Sainte-Barbe Clays (Bernissart)",
+    material:["Multiple skeletons","Skull","Limb bones","Teeth","Vertebrae","Tracks"],
+    note:"The 1878 Bernissart discovery - 38 articulated skeletons extracted from a Belgian coal mine over four years - transformed palaeontology's ability to study a single dinosaur species. This material enabled direct comparison between individuals, study of growth, and the mounting of multiple complete skeletons. The famous misplaced thumb spike was identified as such once complete hand material from Bernissart made the anatomy clear - an early lesson in how isolated specimens mislead. <b>Iguanodon</b> tracks are known from several European sites. Being among the earliest named dinosaurs (1825), the history of its reconstruction charts the whole arc of changing understanding, from Mantell's initial fragments to the Bernissart bounty."
+  },
+  hook: "Iguanodon's thumb spike was first placed on its nose as a horn — one of palaeontology's most vivid object lessons in how isolated bones are misread before a whole skeleton is known.",
+  learnerLevel: "beginner",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["ornithischian","cretaceous","bonebed","taphonomy","taxonomy","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"deinonychus", name:"Deinonychus", epithet:"D. antirrhopus", pron:"dy-NON-ih-kus",
+  period:"cretaceous", clade:"Dromaeosaurid theropod", diet:"carnivore",
+  age:"~115–108 Ma (Early Cretaceous)", startMa:115, endMa:108, length:"~3.4 m", mass:"~70 kg", place:"Western USA",
+  img:"images/species/deinonychus.png",
+  overview:"A medium-sized dromaeosaurid theropod from the Early Cretaceous of the western USA, Deinonychus was around 3.4 metres long and built for active predation, with a large sickle-shaped claw on each second toe that was held raised off the ground and used to pin or slash prey. John Ostrom's 1969 description was pivotal in establishing that at least some dinosaurs were active and agile rather than slow and cold-blooded, helping to reorient the whole science.",
+  insights:[
+    ["The claw that overturned a stereotype","Its enlarged sickle claw implied an <b>agile, energetic hunter</b>, single-handedly toppling the 1960s image of dinosaurs as sluggish, cold-blooded failures."],
+    ["The discovery that revived birds","Its bird-like skeleton resurrected the idea that <b>birds are living dinosaurs</b> - once fringe, now overwhelmingly accepted, and visible in cousins like Velociraptor."],
+    ["A grip, not a slash","Long imagined as a slashing blade, the claw is now modelled as a <b>gripping spike that pinned prey</b> while the animal fed - the way a hawk holds a struggling rodent."],
+    ["A clue to teamwork","Several Deinonychus found with one large plant-eater hint at <b>group attacks</b>, though it may equally record a chaotic feeding frenzy."]
+  ],
+  behaviour:"<p>Deinonychus was a fast, athletic predator that likely used its sickle claws to pin prey while gripping with its hands and feeding, balancing through quick turns with a stiffened tail - the 'raptor prey restraint' model drawn directly from how modern birds of prey subdue victims. In its ecosystem it was the <b>mid-sized active hunter</b>, taking prey too large for small theropods but beneath the notice of giants.</p><p>Whether it truly coordinated in packs or simply mobbed kills is debated, but its energy and bird-like biology are not.</p>",
+  evolution:"<p>Deinonychus launched the <b>Dinosaur Renaissance</b>, reframing dinosaurs as dynamic and warm-blooded and cementing the <b>dinosaur–bird link</b>. Few single discoveries have so completely rewired a field's worldview.</p>",
+  study:[
+    {q:"Did Deinonychus hunt in coordinated packs?",
+     why:"Sites with several individuals and one prey animal are suggestive but can form by scavenging.",
+     interps:[
+       ["Coordinated pack","conf-low","The classic interpretation, but true cooperation is hard to prove from bones."],
+       ["Loose mobbing","conf-moderate","Like modern reptiles, they may have gathered at a kill without real teamwork."]
+     ]}
+  ],
+  matters:"Deinonychus is the clearest case of one fossil rewriting a science. Its claw didn't just name a new animal - it overturned the belief that dinosaurs were evolutionary dead ends and pointed straight at the birds alive today."
+,
+  fossilRecord:{
+    knownFrom:"Several partial skeletons from Montana, including material from a site associated with the herbivore Tenontosaurus; John Ostrom's 1969 description revolutionised theropod palaeontology",
+    evidenceLevel:"Partial",
+    locality:"Big Horn County, Montana; Carbon County, Montana, USA",
+    formation:"Cloverly Formation",
+    material:["Partial skeleton","Skull","Claw","Limb bones","Teeth","Vertebrae"],
+    note:"Multiple <b>Deinonychus</b> specimens are known but none is complete; the skull in particular is known from fragments across several individuals rather than one intact cranium. The sickle claw is well-preserved and its curvature and joint mechanics have been modelled to test the slashing vs. gripping hypotheses - the physical evidence favours gripping over slashing, matching prey-restraint models from living raptorial birds. The association of <em>Deinonychus</em> bones with <em>Tenontosaurus</em> at some sites has been interpreted as evidence for group hunting, but a single site taphonomy can equally reflect opportunistic scavenging or individual deaths at a food source over time. No direct evidence of cooperative behaviour exists in the fossils."
+  },
+  hook: "John Ostrom's 1969 description of Deinonychus overturned the image of dinosaurs as sluggish failures and pointed straight at the birds alive today.",
+  learnerLevel: "intermediate",
+  conceptTags: ["bird-origins","feathers"],
+  glossaryLinks: ["dromaeosaurid","maniraptoran","paravian","theropod","cretaceous","specimen","fossil-record"],
+  researchLinks: ["theropod-hunting"]
+},
+{
+  id:"microraptor", name:"Microraptor", epithet:"M. gui", pron:"MY-kroh-rap-tor",
+  period:"cretaceous", clade:"Dromaeosaurid theropod", diet:"carnivore",
+  age:"~125–120 Ma (Early Cretaceous)", startMa:125, endMa:120, length:"~0.8 m", mass:"~1 kg", place:"Liaoning, China",
+  img:"images/species/microraptor.png",
+  overview:"A crow-sized dromaeosaurid theropod from the Early Cretaceous of Liaoning, China, Microraptor bore long flight feathers on both its arms and hindlimbs - a four-winged configuration with no living parallel - and is widely interpreted as an arboreal glider or short-range flier. Preserved gut contents across different specimens record birds, mammals, and fish; melanosome analysis has identified an iridescent black plumage comparable to a modern starling, making it one of the few Mesozoic animals for which both diet and colour are directly evidenced.",
+  insights:[
+    ["Wings on its legs too","It bore long flight feathers on its <b>hindlimbs as well as its arms</b>, a 'four-winged' layout with no living parallel - flight being tried in a configuration evolution later abandoned."],
+    ["Its colour, recovered","Fossil pigment structures show it was <b>glossy black with an iridescent sheen</b>, like a starling - a rare, specific colour reading from 120 million years ago."],
+    ["Last meals on record","Different specimens preserve a bird, a mammal and a fish in the gut, revealing a <b>versatile small predator</b> that hunted across land, trees and water."],
+    ["Glider, in all likelihood","Its anatomy points to <b>gliding between trees</b> rather than powered flight - a small raptor exploiting the canopy that its larger cousin Deinonychus could not."]
+  ],
+  behaviour:"<p>Microraptor was an agile arboreal hunter that probably glided between trees on its four feathered wings, ambushing birds, mammals and fish - its varied gut contents prove genuine dietary breadth. By taking to the trees it carved out an <b>aerial-and-arboreal niche</b> distinct from ground-running dromaeosaurs, reducing competition with relatives that hunted below.</p><p>It belongs to the feathered-dinosaur treasure trove of Liaoning, where volcanic ash preserved soft tissue in extraordinary detail.</p>",
+  evolution:"<p>Microraptor shows the origin of flight was a <b>broad experiment</b>, not a single feathered-arm solution - the four-winged design sits alongside Yi qi's membranes and Archaeopteryx's two wings as rival attempts. It demonstrates feathers and aerial locomotion evolving in animals firmly within the dinosaur, not bird, fold.</p>",
+  study:[
+    {q:"How did Microraptor use its four wings?",
+     why:"No living animal flies this way, so the leg-wings' aerodynamic role is reconstructed indirectly.",
+     interps:[
+       ["Biplane-style glide","conf-moderate","Leg-wings may have added lift or stability in a tree-to-tree glide."],
+       ["Manoeuvring surfaces","conf-moderate","The hind wings could have aided steering and braking rather than pure lift."]
+     ]}
+  ],
+  matters:"Microraptor reveals that the road to flight branched in directions evolution didn't keep. A four-winged glider with iridescent black feathers shows the bird body plan emerged from a crowded field of experiments, not a tidy straight line."
+,
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens from the Yixian Formation, many preserving feathers; several individuals show preserved gut contents",
+    evidenceLevel:"Exceptional",
+    locality:"Liaoning Province, northeastern China",
+    formation:"Yixian Formation (Jiufotang Formation for some specimens)",
+    material:["Multiple skeletons","Feathers","Skull","Limb bones","Skin impressions"],
+    note:"<b>Microraptor</b> has one of the largest specimen samples of any Mesozoic feathered theropod, with hundreds of individuals known - a product of the extraordinary preservation in the Yixian Formation where volcanic ash buried animals in fine-grained lake sediments. This abundance has allowed detailed study of feather structure: melanosome analysis has revealed an iridescent structural colouration comparable to a modern starling, an exceptionally specific inference from physical evidence rather than guesswork. Gut contents in different specimens record a lizard, a bird, and a fish - directly evidencing dietary breadth. The four-winged configuration is physically preserved; the aerodynamic modelling of how those wings functioned is where inference enters."
+  },
+  hook: "Microraptor bore flight feathers on all four limbs, had iridescent black plumage like a starling, and is confirmed to have eaten birds, mammals, and fish — colour, anatomy, and diet all read from the same fossils.",
+  learnerLevel: "intermediate",
+  conceptTags: ["feathers","colour","bird-origins"],
+  glossaryLinks: ["dromaeosaurid","maniraptoran","paravian","theropod","cretaceous","integument","preservation","lagerstaette","fossil-formation","specimen"],
+  researchLinks: ["feathers","dinosaur-colours","soft-tissue"]
+},
+{
+  id:"therizinosaurus", name:"Therizinosaurus", epithet:"T. cheloniformis", pron:"THER-ih-ZIN-oh-SAW-rus",
+  period:"cretaceous", clade:"Therizinosaurid theropod", diet:"herbivore",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~10 m", mass:"~5 t", place:"Mongolia",
+  img:"images/species/therizinosaurus.png", cardImgPosition:"50% 100%", modalImgFit:"contain",
+  overview:"A large therizinosaurid theropod from the Late Cretaceous of Mongolia, Therizinosaurus belonged to the meat-eating theropod lineage yet evolved into a giant herbivore, with leaf-shaped teeth, a broad barrel torso for fermenting plant matter, and hand claws reaching nearly a metre in length - the longest known of any animal. Those claws were most likely used to hook and pull down vegetation rather than as weapons, though they would also have been formidable in defence against the tyrannosaurids sharing its world.",
+  insights:[
+    ["The longest claws in history","Its hand claws reached nearly a metre - the <b>largest known claws of any animal ever</b>, yet wielded by a vegetarian, not a killer."],
+    ["A carnivore's family turned vegan","It belongs to the theropods, Tyrannosaurus's own broad group, yet evolved <b>leaf-shaped teeth and a fermenting gut</b> - a meat-eating lineage that switched sides."],
+    ["A pot-bellied build","A wide pelvis and barrel torso housed a <b>big fermentation vat</b> for plants, utterly unlike the lean, deep-chested frame of its predatory relatives."],
+    ["Tools and deterrents, not weapons","The giant claws most plausibly <b>pulled down branches</b> and warded off predators, like a giant ground sloth's - function inferred from body shape, since the teeth tell the dietary story."]
+  ],
+  behaviour:"<p>Therizinosaurus stood and reached into trees, hooking foliage with its enormous claws, and fermented large volumes of low-quality plants in a capacious gut - a lifestyle convergent with the much later giant ground sloths. In a landscape patrolled by tyrannosaurs, those oversized claws also offered a <b>formidable defence</b>, letting even a slow herbivore deter attack.</p><p>It shared Cretaceous Asia with armoured and duck-billed herbivores, partitioning the plant supply by feeding high where they fed low.</p>",
+  evolution:"<p>Therizinosaurus is a dramatic case of <b>dietary reversal</b>: a member of the carnivorous theropods that re-evolved herbivory, complete with new teeth, gut and body shape. It shows how flexibly a lineage's basic body plan can be <b>repurposed</b> for an opposite way of life.</p>",
+  study:[],
+  matters:"Therizinosaurus demolishes the idea that ancestry locks in lifestyle. A family of meat-eaters produced a shaggy, pot-bellied, claw-handed vegetarian - proof that evolution constantly recycles old anatomy for entirely new jobs."
+,
+  fossilRecord:{
+    knownFrom:"Initially only enormous forelimb bones and claws; later material from closely related therizinosaurids (especially Beipiaosaurus and Falcarius) substantially informed reconstructions of the group",
+    evidenceLevel:"Fragments",
+    locality:"Nemegt Formation exposures, Ömnögovi Province, Mongolia",
+    formation:"Nemegt Formation",
+    material:["Limb bones","Claw"],
+    note:"The holotype of <b>Therizinosaurus</b> consists of forelimb elements including the spectacular claws, hind limb fragments, and a few other bones - no skull, no complete torso, no tail. Our confident image of a large, pot-bellied, leaf-eating theropod with metre-long claws comes substantially from better-preserved relatives such as <em>Beipiaosaurus</em> (which preserves feathers and a clear herbivore's gut), <em>Falcarius</em>, and <em>Erlikosaurus</em>. <em>Therizinosaurus</em> itself is inferred to resemble these relatives scaled up - a reasonable inference given shared anatomical features - but the direct fossil evidence for the icon is genuinely thin. The claws are real; nearly everything else in popular reconstructions is extrapolated."
+  },
+  hook: "Therizinosaurus belongs to the same theropod group as Tyrannosaurus, yet evolved the longest claws of any animal ever known — a carnivore's lineage that switched completely to plants.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["theropod","cretaceous","specimen","fossil-record","clade"],
+  researchLinks: []
+},
+{
+  id:"oviraptor", name:"Oviraptor", epithet:"O. philoceratops", pron:"OH-vih-rap-tor",
+  period:"cretaceous", clade:"Oviraptorid theropod", diet:"omnivore",
+  age:"~75 Ma (Late Cretaceous)", startMa:76, endMa:73, length:"~1.6 m", mass:"~30 kg", place:"Mongolia",
+  img:"images/species/oviraptor.png",
+  overview:"A small oviraptorid theropod from the Late Cretaceous of Mongolia, Oviraptor was a short-faced, crested, toothless bird-like dinosaur whose name - meaning 'egg thief' - was based on a misidentification: the eggs it was found near were its own, not stolen. Most of the famous brooding specimens now attributed to oviraptorids formally belong to the close relative Citipati, but the group as a whole has since been confirmed as attentive nesters.",
+  insights:[
+    ["Convicted by a coincidence","Found atop a nest, it was named 'egg seizer' on the assumption it was <b>raiding eggs</b> - until later finds revealed the eggs were its own."],
+    ["Caught in the act of brooding","Related specimens sit on nests in a <b>bird-like brooding posture</b>, arms spread over the clutch - direct evidence of parental care in a dinosaur."],
+    ["A toothless, powerful beak","Its deep, toothless beak could <b>crush hard food</b> - possibly shellfish, seeds, or eggs after all - marking it as a flexible omnivore."],
+    ["A crest for showing off","A tall head crest, varying between individuals, most likely served <b>display</b>, echoing the signalling structures seen across dinosaurs from Dilophosaurus to Parasaurolophus."]
+  ],
+  behaviour:"<p>Oviraptor was an agile, feathered omnivore, and oviraptorids as a group brooded their eggs much as a modern bird does - the clearest specimens (formally assigned to the close relative <em>Citipati</em>) show arms spread over the clutch in a posture identical to brooding birds. In its arid Mongolian ecosystem it occupied a <b>generalist niche</b>, its crushing beak letting it exploit foods, from seeds to shellfish, that more specialised predators and herbivores ignored.</p><p>The brooding fossils are among the most powerful demonstrations that bird behaviour has deep dinosaurian roots.</p>",
+  evolution:"<p>Oviraptor and its kin provide some of the clearest evidence that <b>avian-style brooding evolved within dinosaurs</b>, reinforcing the dinosaur–bird link that Deinonychus first reopened. Its toothless beak shows theropods experimenting with bird-like skulls well before modern birds.</p>",
+  study:[],
+  matters:"Oviraptor is the fossil record's most famous wrongful conviction, later overturned. The 'egg thief' was guarding its own nest - a reminder that a fossil's first interpretation can be not just incomplete but exactly backwards, and that science is willing to correct the record."
+,
+  fossilRecord:{
+    knownFrom:"Partial skull material of Oviraptor itself; most 'Oviraptor brooding' fossils formally belong to the closely related Citipati osmolskae; eggs, nests, and brooding posture specimens are known from the Djadokhta Formation",
+    evidenceLevel:"Partial",
+    locality:"Ömnögovi Province (Gobi Desert), Mongolia",
+    formation:"Djadokhta Formation",
+    material:["Skull","Eggs","Partial skeleton","Teeth"],
+    note:"A crucial distinction is often missed in popular accounts: the famous specimens of a dinosaur brooding over a nest - including the iconic image that overturned the 'egg thief' reputation - are formally assigned to <b>Citipati osmolskae</b>, not <em>Oviraptor philoceratops</em> itself. The two are close relatives in the oviraptorid group, and the behavioural inference extends to the group as a whole, but the brooding individual is technically a different taxon. Oviraptor itself is known mainly from a partial skull. This distinction does not undermine the significance of the discovery - it remains the clearest direct evidence of avian-style nest brooding in non-avian dinosaurs - but it illustrates how taxonomy affects what we can attribute to which animal."
+  },
+  hook: "Oviraptor was named 'egg thief' after being found on a nest — a verdict later overturned when the same nest type was found with embryos inside that matched Oviraptor itself.",
+  learnerLevel: "beginner",
+  conceptTags: ["display"],
+  glossaryLinks: ["theropod","cretaceous","maniraptoran","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"velociraptor", name:"Velociraptor", epithet:"V. mongoliensis", pron:"veh-LOSS-ih-rap-tor",
+  period:"cretaceous", clade:"Dromaeosaurid theropod", diet:"carnivore",
+  age:"~75–71 Ma (Late Cretaceous)", startMa:75, endMa:71, length:"~2 m", mass:"~15–18 kg", place:"Mongolia",
+  img:"images/species/velociraptor.png",
+  overview:"A turkey-sized dromaeosaurid theropod from the Late Cretaceous of Mongolia, Velociraptor was a feathered predator around 2 metres long - far smaller than its film depictions - with quill knobs on its forearms confirming large wing feathers, and a raised sickle claw on each second toe. It is best known from the 'Fighting Dinosaurs' specimen, a Velociraptor and Protoceratops locked in combat and preserved mid-struggle, one of the most vivid records of predator-prey interaction in the fossil record.",
+  insights:[
+    ["It wore feathers","Quill knobs on its forearm bones prove it bore <b>feathers</b>, despite the scaly movie image - flightless, but unmistakably part of the bird-line plumage story."],
+    ["Combat frozen in stone","The 'Fighting Dinosaurs' fossil preserves a Velociraptor <b>locked in battle with a Protoceratops</b>, buried mid-fight - an actual behaviour caught in the act, not just an anatomy."],
+    ["A grappler, confirmed by a corpse","In that fossil its sickle claw is at the herbivore's throat, supporting the <b>grip-and-hold model</b> over the slashing-blade myth - the same conclusion reached for Deinonychus, here shown directly."],
+    ["Turkey-sized reality","At under 20 kg it was far smaller than its film portrayal, closer in scale to a <b>large bird</b> than a human-height monster."]
+  ],
+  behaviour:"<p>Velociraptor was a swift, feathered predator of small-to-medium prey in a desert of dunes and oases, using hands and sickle claws to pin victims. The 'Fighting Dinosaurs' specimen shows it grappling a Protoceratops that bit its arm before a collapsing dune buried both - a literal snapshot of <b>predator and prey locked together</b>. In its sandy ecosystem it was the <b>agile mid-sized hunter</b>, taking the role small dromaeosaurs filled across the Cretaceous.</p><p>That one fossil tells us more about how the claw was used than any amount of anatomy alone.</p>",
+  evolution:"<p>Velociraptor, feathered and bird-like, vividly illustrates how <b>close dromaeosaurs sit to birds</b>. Its quill knobs confirm feathers evolved well before flight - for insulation or display - exactly as cousins like Microraptor suggest.</p>",
+  study:[],
+  matters:"Velociraptor shows the gulf between cultural icon and real animal. Strip away the scaly movie monster and you find a feathered hunter caught mid-attack - and a quiet correction to the public's very idea of what a dinosaur was."
+,
+  fossilRecord:{
+    knownFrom:"Several specimens from Mongolia including the 'Fighting Dinosaurs' fossil (IGM 100/25) and a forearm bone (IGM 100/981) preserving quill knobs",
+    evidenceLevel:"Rich",
+    locality:"Ömnögovi Province (Gobi Desert), Mongolia",
+    formation:"Djadokhta Formation",
+    material:["Partial skeleton","Skull","Claw","Limb bones","Teeth"],
+    note:"Two specimens of <b>Velociraptor</b> provide unusually direct behavioural evidence. The 'Fighting Dinosaurs' fossil (described 1971, collected 1971 by a Polish–Mongolian expedition) preserves a <em>Velociraptor</em> and <em>Protoceratops</em> locked in combat, with the raptor's sickle claw at the herbivore's throat and the herbivore's jaws closed on the raptor's arm - the most direct physical record of Mesozoic predation known. Specimen IGM 100/981 shows six quill knobs on the forearm, physically confirming the presence of large feathers on a specimen far too small to fly - proving feathers evolved before flight in this lineage. No quill knobs are found on juveniles, suggesting they may have been more prominent in adults."
+  },
+  hook: "The 'Fighting Dinosaurs' fossil preserves a Velociraptor and Protoceratops locked in combat, buried mid-struggle — the most direct physical record of Mesozoic predation known.",
+  learnerLevel: "beginner",
+  conceptTags: ["feathers"],
+  glossaryLinks: ["dromaeosaurid","maniraptoran","paravian","theropod","cretaceous","integument","specimen","fossil-record"],
+  researchLinks: ["feathers"]
+},
+{
+  id:"parasaurolophus", name:"Parasaurolophus", epithet:"P. walkeri", pron:"PAR-ah-saw-ROL-oh-fus",
+  period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
+  age:"~77–73 Ma (Late Cretaceous)", startMa:77, endMa:73, length:"~10 m", mass:"~2.5–5 t", place:"North America",
+  img:"images/species/parasaurolophus.jpg",
+  overview:"A large hadrosaurid ornithopod of the Late Cretaceous of North America, Parasaurolophus was around 10 metres long and carried a distinctive hollow tube-like crest sweeping backward from its skull - an elongated nasal passage whose internal geometry has been modelled by CT scanning to estimate the resonant sounds it may have produced. Whether the crest served primarily for sound production, species recognition, display, or a combination of these functions is still actively discussed.",
+  insights:[
+    ["A skull you can play","Its crest contains <b>looping nasal tubes</b>; CT scans let researchers model its resonant frequencies - making this perhaps the only dinosaur whose probable sound we can recreate."],
+    ["A low-frequency broadcast","Those tubes likely produced <b>deep, far-carrying calls</b>, ideal for keeping a herd in contact across open country - sound as social glue."],
+    ["An industrial grinder","Hundreds of teeth packed into grinding batteries let hadrosaurs <b>process tough plants</b> with near-mammalian efficiency, a key reason they became the era's most abundant herbivores."],
+    ["A crest that grew with age","Juveniles had short crests that lengthened with maturity, hinting the structure also <b>signalled age or status</b> - display and sound combined, much like Triceratops's frill."]
+  ],
+  behaviour:"<p>Parasaurolophus browsed on all fours but could rear up to reach higher foliage, its dental batteries making it an industrial-scale plant grinder - the efficiency behind hadrosaur dominance. Living in herds across Late Cretaceous floodplains, it likely used its <b>resonating crest to coordinate the group</b>, recognise individuals and attract mates, exploiting sound where rivals relied on sight.</p><p>That acoustic dimension makes it one of the few dinosaurs whose social signalling we can partly reconstruct.</p>",
+  evolution:"<p>Parasaurolophus exemplifies the <b>hadrosaurs</b>, whose chewing dental batteries rank among the most advanced plant-processing systems any land animal evolved. Its crest is a showcase of dinosaurs investing in <b>communication structures</b>.</p>",
+  study:[
+    {q:"What was the hollow crest mainly for?",
+     why:"It plausibly served sound, display, or both, and the evidence supports a combined role.",
+     interps:[
+       ["Sound production","conf-strong","CT-modelled resonance strongly supports low-frequency calls."],
+       ["Visual display","conf-strong","Its size, shape and age-related growth fit a recognition or status signal."]
+     ]}
+  ],
+  matters:"Parasaurolophus is as close as paleontology gets to hearing the past. By treating a skull as a wind instrument, scientists reconstructed not just how it looked but how it may have sounded - turning fossil bone into a voice."
+,
+  fossilRecord:{
+    knownFrom:"Several partial to nearly complete specimens including skulls with intact crests; CT scanning of crest interiors has been performed",
+    evidenceLevel:"Rich",
+    locality:"New Mexico, Utah, Alberta (Canada)",
+    formation:"Kirtland Formation; Dinosaur Park Formation",
+    material:["Skull","Partial skeleton","Vertebrae","Limb bones","Teeth"],
+    note:"The hollow crest of <b>Parasaurolophus</b> is the key physical evidence supporting the sound-production hypothesis. CT scanning of well-preserved crests has allowed researchers to model the internal nasal passage geometry and estimate resonant frequencies - producing low-frequency sound reconstructions that are directly based on the fossil anatomy, not on speculation. Different crest lengths between specimens (potentially age-related or sex-related) are documented in the fossil material itself, supporting the additional role as a visual display structure. The overall skeleton is well-known, though fully articulated specimens are relatively rare. Most individual bones are known in isolation or partial association."
+  },
+  hook: "CT scanning of Parasaurolophus's hollow crest has modelled its resonant frequencies — making this the only dinosaur whose probable call we can reconstruct directly from bone.",
+  learnerLevel: "beginner",
+  conceptTags: ["display"],
+  glossaryLinks: ["ornithischian","cretaceous","display-structure","specimen","fossil-record","preservation"],
+  researchLinks: []
+},
+{
+  id:"triceratops", name:"Triceratops", epithet:"T. horridus", pron:"try-SAIR-uh-tops",
+  period:"cretaceous", clade:"Ceratopsid ornithischian", diet:"herbivore",
+  age:"~68–66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~9 m", mass:"~6–10 t", place:"Western North America",
+  img:"images/species/triceratops.jpg",
+  overview:"A large ceratopsian herbivore of the latest Cretaceous, Triceratops was among the most common large dinosaurs of the Hell Creek landscape, carrying two long brow horns, a shorter nasal horn, and a broad bony frill above a beak-and-battery skull built to shear tough vegetation. Healed puncture marks on frill bones suggest its horns were used against other Triceratops as well as in encounters with Tyrannosaurus, whose bite marks are documented on Triceratops bone; its dramatic changes in horn and frill proportions through growth are at the centre of an ongoing debate over whether the related Torosaurus represents a separate genus or simply an old Triceratops.",
+  insights:[
+    ["Horns for rivals, not just rex","Frills bearing <b>healed punctures that match Triceratops horns</b> suggest much of its fighting was against its own kind - like deer locking antlers - not only defence against Tyrannosaurus."],
+    ["A face that changed with age","Its frill reshaped dramatically from juvenile to adult, complicating species counts and pointing to a strong role in <b>display and recognition</b>."],
+    ["The Torosaurus puzzle","Some argue the genus Torosaurus is simply <b>old Triceratops</b> - a debate about how growth itself can masquerade as a separate species."],
+    ["A beak built to shear","A sharp parrot-like beak and scissoring tooth batteries let it <b>crop and slice</b> the toughest low plants, from palms to cycads."]
+  ],
+  behaviour:"<p>Triceratops was a powerful low browser that sheared fibrous vegetation with a beak and scissoring teeth, sharing its world - and its predator - with Tyrannosaurus, whose bite marks and its own horn wounds record their dangerous coexistence. Its horns and frill, once read purely as anti-rex armour, show wear pointing to <b>combat between Triceratops</b> over mates or dominance, a social weapon as much as a defensive one.</p><p>It lived right up to the end-Cretaceous extinction, making it a key witness to the world the asteroid ended.</p>",
+  evolution:"<p>Triceratops is the pinnacle of the <b>ceratopsians</b>, the horned, frilled herbivores. Its dramatic age-related change has made it central to debates over <b>how much a single species can vary</b> - and how that variation can fool us into naming too many.</p>",
+  study:[
+    {q:"Is Torosaurus a separate genus, or just a fully grown Triceratops?",
+     why:"Frill bone changes with age, and the line between 'old individual' and 'different animal' is genuinely hard to draw.",
+     interps:[
+       ["Distinct genus","conf-moderate","Differences in frill holes and bone structure may exceed normal growth."],
+       ["Mature Triceratops","conf-moderate","The features could simply reflect the oldest growth stage of one species."]
+     ]}
+  ],
+  matters:"Triceratops makes growth itself a scientific problem. If an animal changes this much from youth to old age, how do we know we're seeing two species rather than two ages of one? It's a humbling check on what bones alone can prove."
+,
+  fossilRecord:{
+    knownFrom:"Hundreds of isolated specimens and multiple partial skulls from the Hell Creek Formation; the skull is one of the most commonly found large dinosaur elements in the western USA",
+    evidenceLevel:"Rich",
+    locality:"Montana, Wyoming, South Dakota, North Dakota, Colorado, USA; Saskatchewan, Canada",
+    formation:"Hell Creek Formation; Lance Formation",
+    material:["Skull","Partial skeleton","Teeth","Limb bones","Vertebrae","Bonebed"],
+    note:"<b>Triceratops</b> is represented by hundreds of specimens, making the skull one of the most studied large dinosaur elements. This abundance has enabled direct study of how the frill and horns change through growth - from relatively modest juvenile proportions to the dramatic adult configuration - which is central to the Torosaurus debate (whether Torosaurus is simply old Triceratops). Frill bones in some specimens show healed puncture marks consistent in size with Triceratops horn tips, providing physical evidence of intraspecific combat. Bite marks on Triceratops bone attributable to <em>T. rex</em> are documented, recording the predator–prey relationship directly. The abundance of skull material relative to postcranial material reflects differential preservation - robust bone survives; delicate elements are lost."
+  },
+  hook: "Healed horn wounds on Triceratops frills confirm it spent as much time fighting rivals as it did facing Tyrannosaurus.",
+  learnerLevel: "beginner",
+  conceptTags: ["extinction-event","display"],
+  glossaryLinks: ["ceratopsian","ornithischian","cretaceous","maastrichtian","kpg-boundary","mass-extinction","display-structure","taxonomy","specimen","fossil-record"],
+  researchLinks: ["nanotyrannus","pre-asteroid-decline","family-tree"]
+},
+{
+  id:"ankylosaurus", name:"Ankylosaurus", epithet:"A. magniventris", pron:"an-KY-loh-SAW-rus",
+  period:"cretaceous", clade:"Ankylosaurid ornithischian", diet:"herbivore",
+  age:"~68–66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~6–8 m", mass:"~4–6 t", place:"Western North America",
+  img:"images/species/ankylosaurus.png",
+  overview:"An ankylosaurid ornithischian of the latest Cretaceous Hell Creek ecosystem, Ankylosaurus was a heavily armoured low-grazing herbivore with bony plates and studs covering its body - extending even to the eyelids - and its tail ending in a large fused-bone club capable of delivering a bone-breaking blow. Whether that club was used primarily against predators like Tyrannosaurus or in contests with rival ankylosaurs remains an open question.",
+  insights:[
+    ["Armoured to the eyelids","Bony plates sheathed its body and even <b>shielded its eyelids</b>, an almost total defensive envelope rivalled by no other dinosaur."],
+    ["A sledgehammer tail","Its fused-bone club could swing with <b>force modelled to shatter bone</b> - a counterweighted weapon as engineered as a medieval mace."],
+    ["A walking fermentation vat","A broad, low body housed a <b>huge gut</b> for breaking down fibrous low plants, the herbivore counterpart to its heavy armour."],
+    ["Who was the club for?","Whether it mainly struck predators like Tyrannosaurus or <b>rival ankylosaurs</b> stays unresolved - the same predator-or-rival ambiguity seen in Triceratops's horns."]
+  ],
+  behaviour:"<p>Ankylosaurus grazed close to the ground, fermenting tough vegetation in a capacious gut, and was built so low and wide as to be nearly impervious to attack. Sharing its landscape with Tyrannosaurus, its <b>bone-breaking tail club</b> was a credible deterrent to even an apex predator - though, as with horned dinosaurs, the weapon may have been swung as much at rivals as at carnivores.</p><p>Its armour-and-club package let it occupy open ground that less-defended herbivores would have found lethal.</p>",
+  evolution:"<p>Ankylosaurus is the ultimate expression of <b>ankylosaurid armour</b>, the herbivore answer to giant predators. Its tail club is among the most specialised <b>weapons</b> any dinosaur evolved.</p>",
+  study:[
+    {q:"Was the tail club mainly for predators or for fighting rivals?",
+     why:"Both uses are biomechanically plausible, and fossils rarely capture the act itself.",
+     interps:[
+       ["Anti-predator defence","conf-moderate","A bone-breaking club is an obvious deterrent to large carnivores."],
+       ["Intraspecific combat","conf-moderate","Like horns and frills, it may have settled disputes among ankylosaurs."]
+     ]}
+  ],
+  matters:"Ankylosaurus shows defence taken to its logical limit - and reminds us even an obvious weapon hides an open question. A club that 'must' be for predators may really have been for settling fights within the species."
+,
+  fossilRecord:{
+    knownFrom:"Three partial skulls and scattered postcranial material; no complete skeleton is known despite the animal's fame",
+    evidenceLevel:"Partial",
+    locality:"Montana, Wyoming, USA; Alberta, Canada",
+    formation:"Hell Creek Formation; Lance Formation; Scollard Formation",
+    material:["Skull","Limb bones","Vertebrae","Partial skeleton"],
+    note:"Despite being the iconic armoured dinosaur, <b>Ankylosaurus magniventris</b> is represented by surprisingly limited material - three incomplete skulls and scattered bones. No fully articulated skeleton exists, meaning the classic museum-mount image is partly inferred from better-preserved relatives such as <em>Euoplocephalus</em>. The tail club is known and its bone structure has been analysed biomechanically; estimated swing forces are strong enough to fracture bone. The arrangement and extent of the dorsal armour is known from osteoderms (bony skin plates) but their precise layout on the body must be reconstructed by analogy with related ankylosaurs."
+  },
+  hook: "Ankylosaurus's tail club was engineered to shatter bone — but whether it swung that club at Tyrannosaurus or at rival ankylosaurs is a question the fossil record cannot yet answer.",
+  learnerLevel: "beginner",
+  conceptTags: ["extinction-event"],
+  glossaryLinks: ["ornithischian","cretaceous","maastrichtian","kpg-boundary","mass-extinction","specimen","fossil-record"],
+  researchLinks: ["pre-asteroid-decline"]
+},
+{
+  id:"pachycephalosaurus", name:"Pachycephalosaurus", epithet:"P. wyomingensis", pron:"PAK-ee-SEF-ah-loh-SAW-rus",
+  period:"cretaceous", clade:"Pachycephalosaurid ornithischian", diet:"herbivore",
+  age:"~70–66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~4.5 m", mass:"~450 kg", place:"Western North America",
+  img:"images/species/pachycephalosaurus.jpg", cardImgFit:"cover", cardImgPosition:"50% 12%",
+  overview:"A pachycephalosaurid ornithischian of the Late Cretaceous western interior, Pachycephalosaurus was a bipedal herbivore around 4.5 metres long distinguished by an enormous thick-boned dome of a skull - in adults the dome could reach around 25 centimetres in thickness. Whether that dome was used for direct head-to-head butting, flank-shoving, or primarily as a visual display structure has been debated for decades, and biomechanical studies have reached conflicting conclusions.",
+  insights:[
+    ["A skull-cap up to 25 cm thick","Its bony dome is extraordinarily thick, the single feature that launched the <b>head-butting hypothesis</b> and won't let it go."],
+    ["Healed head wounds","Some domes show <b>healed lesions</b> consistent with impacts - physical evidence that the head met other heads, even if the exact blow is unclear."],
+    ["Maybe a shove, not a charge","Neck and dome geometry hint at <b>flank-butting or shoving</b> rather than the high-speed head-on ramming of bighorn sheep, which would risk fatal injury."],
+    ["A dome that grew up","Juveniles had flat heads, so the dome likely also signalled <b>maturity and status</b> - the recurring blur between weapon and display seen across horned and crested dinosaurs."]
+  ],
+  behaviour:"<p>Pachycephalosaurus was a bipedal browser of low plants, but it's the dome that drives the science. Healed injuries imply the head featured in <b>physical contests</b>, while biomechanics favour shoving or side-on blows over reckless head-on charges. Because the dome enlarged with age, it doubled as a <b>visual badge of dominance</b>, combat and display reinforcing one another in the same structure.</p><p>In its ecosystem it was a small, alert herbivore navigating a world that also held Tyrannosaurus and Triceratops.</p>",
+  evolution:"<p>Pachycephalosaurus is the iconic <b>dome-head</b>, and its skull is a natural experiment in reading behaviour from bone. It shows how engineering analysis and injury evidence together can test a behaviour no one will ever witness.</p>",
+  study:[
+    {q:"Did Pachycephalosaurus head-butt like a bighorn sheep?",
+     why:"The thick dome allows it, but neck mechanics and dome shape raise doubts about head-on ramming.",
+     interps:[
+       ["Head-on ramming","conf-low","The dramatic image, but biomechanics make precise head-to-head collisions risky."],
+       ["Flank-butting / shoving","conf-moderate","Side-on blows and pushing matches fit the anatomy and injuries better."],
+       ["Mainly display","conf-moderate","Age-linked dome growth suggests a strong signalling role regardless of combat."]
+     ]}
+  ],
+  matters:"Pachycephalosaurus is behaviour on trial. We can never watch one fight, so its actions are reconstructed from skull thickness, healed wounds and physics - a model for how paleontology recovers behaviour from stone."
+,
+  fossilRecord:{
+    knownFrom:"Mainly isolated dome skull caps; partial skull material is more rarely preserved; postcranial remains are fragmentary",
+    evidenceLevel:"Partial",
+    locality:"Montana, Wyoming, South Dakota, USA; Alberta, Canada",
+    formation:"Hell Creek Formation; Lance Formation",
+    material:["Skull","Partial skeleton"],
+    note:"The dome skull cap of <b>Pachycephalosaurus</b> is among the most easily fossilised dinosaur elements - dense, thick bone that survives transport and time - meaning the animal is likely over-represented by cranial material relative to postcranial elements, which are much rarer. Healed lesions on some dome specimens are interpreted as impact injuries, but the nature of the impacts (head-on ramming vs. side-butting vs. other causes) cannot be resolved from the bone damage alone. Juveniles with flat heads that grade into adult dome morphology are documented, supporting the hypothesis that the dome grew in with maturity. Whether smaller flat-headed pachycephalosaurs represent juveniles of <em>Pachycephalosaurus</em> or separate species is an active debate."
+  },
+  hook: "Healed injuries on the Pachycephalosaurus dome suggest its thick skull met other skulls — but biomechanics favour shoving over charging, and the dome was probably as much a badge of maturity as a weapon.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display"],
+  glossaryLinks: ["ornithischian","cretaceous","display-structure","specimen","fossil-record","maastrichtian"],
+  researchLinks: []
+},
+{
+  id:"pteranodon", name:"Pteranodon", epithet:"P. longiceps", pron:"teh-RAN-oh-don",
+  period:"cretaceous", clade:"Pterosaur (not a dinosaur)", diet:"carnivore",
+  age:"~86–84 Ma (Late Cretaceous)", startMa:86, endMa:84, length:"6–7 m wingspan", mass:"~20–25 kg", place:"North American seaway",
+  img:"images/species/pteranodon.png", modalImgPosition:"50% 15%",
+  overview:"A large pterosaur - not a dinosaur - from the Late Cretaceous North American seaway, Pteranodon had a wingspan of around 6-7 metres and was toothless, using a long pointed beak probably to snatch fish from the sea surface. Its prominent backward-pointing skull crest varied considerably between individuals and was likely a display or species-recognition structure; the size difference in crest shape between larger and smaller specimens is widely interpreted as sexual dimorphism.",
+  insights:[
+    ["Not a dinosaur at all","Pterosaurs are a <b>separate flying-reptile lineage</b>, cousins to dinosaurs but distinct - calling Pteranodon a dinosaur is among the most common errors in the public imagination."],
+    ["A crest that differed by sex","Its long backward crest most likely served <b>display</b> - species recognition and sexual selection - and its size differs markedly between presumed males and females - rare evidence of sexual difference in a flier."],
+    ["Built impossibly light","Hollow, thin-walled bones let a 6-metre creature weigh about as much as a <b>large swan</b> - the same lightening trick, reached independently, that let birds and Brachiosaurus solve their own size problems."],
+    ["An ocean glider","Long, narrow wings suit <b>dynamic soaring</b> over open sea, like an albatross, snatching fish from the surface across enormous distances."]
+  ],
+  behaviour:"<p>Pteranodon soared over a vast inland sea on long albatross-like wings, gliding immense distances on ocean winds to feed on surface fish with its toothless beak. As an <b>aerial fisher</b> it exploited a marine food source closed to the land-bound dinosaurs of the nearby coasts, sharing the skies only with other pterosaurs and early seabirds.</p><p>Crest differences between specimens point to two sexes, the larger-crested form likely male - a glimpse of social signalling in a flying reptile.</p>",
+  evolution:"<p>Pteranodon represents the <b>pterosaurs</b>, the first vertebrates to achieve powered flight, tens of millions of years before birds matched their giant sizes. It demonstrates an <b>entirely separate route to flight</b> from the bird line running through Archaeopteryx.</p>",
+  study:[],
+  matters:"Pteranodon corrects two misconceptions at once: that all big Mesozoic reptiles were dinosaurs, and that flight evolved only once. It is the banner animal for a whole lost dynasty of flying reptiles that ruled the skies on their own terms."
+,
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens from the Niobrara Chalk, making it among the best-known pterosaurs; crest size and shape varies significantly between individuals",
+    evidenceLevel:"Rich",
+    locality:"Kansas, Nebraska, Wyoming, USA (former Western Interior Seaway)",
+    formation:"Niobrara Chalk Formation",
+    material:["Skull","Partial skeleton","Limb bones","Vertebrae"],
+    note:"The Niobrara Chalk has yielded over 1,000 <b>Pteranodon</b> specimens, making it one of the richest pterosaur samples anywhere. This abundance has enabled systematic study of the crest: crest dimensions differ strikingly between morphs, and the two morphs are now generally interpreted as male and female - one of the most clearly documented cases of sexual dimorphism in pterosaurs. Being toothless (the name means 'toothless wing'), its skull anatomy is well-established; the toothless beak is directly preserved, not inferred. Despite all this material, complete associated skeletons are rare - most specimens are disarticulated by the marine environment - so exact proportions and mass are estimated from partial material."
+  },
+  hook: "Pteranodon was not a dinosaur — it was a flying reptile of a completely separate lineage that independently solved powered flight, tens of millions of years before birds matched their giant sizes.",
+  learnerLevel: "beginner",
+  conceptTags: ["display","convergent-evolution"],
+  glossaryLinks: ["cretaceous","display-structure","preservation","specimen","fossil-record"],
+  researchLinks: ["feathers"]
+},
+{
+  id:"quetzalcoatlus", name:"Quetzalcoatlus", epithet:"Q. northropi", pron:"KET-sal-koh-AHT-lus",
+  period:"cretaceous", clade:"Azhdarchid pterosaur", diet:"carnivore",
+  age:"~68–66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"10–11 m wingspan", mass:"~200–250 kg", place:"Texas, USA",
+  img:"images/species/quetzalcoatlus.jpg", modalImgFit:"contain",
+  overview:"An azhdarchid pterosaur of the latest Cretaceous of Texas, Quetzalcoatlus had an estimated wingspan of 10-11 metres - among the largest of any known flying animal - and stood roughly giraffe-height on the ground. The current leading model has it as a terrestrial stalker, striding on stiff legs to ambush small prey, rather than a fish-plunger or soaring carrion feeder, though flight biomechanics at this scale remain genuinely challenging to model with confidence.",
+  insights:[
+    ["The largest thing ever to fly","With an airliner-like 10-metre wingspan, it stood as tall as a giraffe yet got airborne - the <b>absolute ceiling of vertebrate flight</b>, far beyond any bird or its own relative Pteranodon."],
+    ["A launch like a vault","Lacking room for a running take-off, it likely used a <b>four-limbed 'pole-vault' leap</b>, pushing off its powerful arms to get airborne - a mechanism unlike any living flier."],
+    ["A stork on a giant scale","Rather than fishing at sea, it probably <b>stalked prey on land</b>, striding through floodplains and plucking up small animals like a colossal marabou stork."],
+    ["Flight at the edge of physics","How a 200 kg animal flew at all strains aerodynamic models, making its <b>flight capability itself a live scientific question</b>."]
+  ],
+  behaviour:"<p>Quetzalcoatlus most likely foraged on foot across Late Cretaceous floodplains, using its long neck and beak to snatch small dinosaurs, mammals and other prey - a terrestrial-stalker niche no bird occupies today, and one that set it apart from the sea-fishing Pteranodon. When it flew, it probably launched with a quadrupedal vault and then rode thermals on vast, efficient wings.</p><p>It shared the final Cretaceous world with Tyrannosaurus and Triceratops, an aerial giant towering over the herbivores it may have hunted as hatchlings.</p>",
+  evolution:"<p>Quetzalcoatlus marks the <b>upper boundary of powered flight</b>, the aerial counterpart to Argentinosaurus's terrestrial gigantism. As one of the last and largest pterosaurs, it shows the group pushing size to the very limits physics allows before vanishing with the rest at the K–Pg extinction.</p>",
+  study:[
+    {q:"How did such a giant get off the ground?",
+     why:"No living animal this heavy flies, so take-off and sustained flight must be modelled, not observed.",
+     interps:[
+       ["Quadrupedal launch","conf-moderate","A four-limbed vaulting leap is the leading model for getting airborne."],
+       ["Mostly terrestrial, limited flight","conf-low","A minority argue it flew rarely, spending most of its life walking."]
+     ]}
+  ],
+  matters:"Quetzalcoatlus asks how big a flying animal can possibly be - and answers at the very edge of physical possibility. Like Argentinosaurus on land, it marks a limit, forcing scientists to model take-off and lift for a creature with no living equivalent."
+,
+  fossilRecord:{
+    knownFrom:"Large specimen: a partial wing including a giant humerus from Big Bend, Texas (1971); smaller specimens of a closely related form also from Big Bend",
+    evidenceLevel:"Fragments",
+    locality:"Big Bend National Park, Texas, USA",
+    formation:"Javelina Formation",
+    material:["Limb bones","Skull","Vertebrae"],
+    note:"The giant <b>Quetzalcoatlus northropi</b> holotype is frustratingly incomplete - primarily a fragmentary wing. Size estimates of 10–11 metre wingspans are extrapolated from that material by comparison with smaller azhdarchid relatives, some of which are better known. A smaller azhdarchid from the same formation (sometimes assigned to <em>Quetzalcoatlus</em> as a different species, sometimes treated as a separate taxon) provides more information about body proportions but cannot simply be scaled up without uncertainty. The debate about how such a massive animal became airborne, and whether it flew at all routinely, is largely a biomechanical modelling exercise constrained by very limited physical evidence."
+  },
+  hook: "Quetzalcoatlus had a 10-metre wingspan yet weighed around 200 kg — a flying animal at the absolute upper limit of what aerodynamics allows, and its take-off is still a live scientific problem.",
+  learnerLevel: "advanced",
+  conceptTags: [],
+  glossaryLinks: ["cretaceous","maastrichtian","kpg-boundary","mass-extinction","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"deinocheirus", name:"Deinocheirus", epithet:"D. mirificus", pron:"DY-noh-KY-rus",
+  period:"cretaceous", clade:"Ornithomimosaur theropod", diet:"omnivore",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~11 m", mass:"~6 t", place:"Mongolia",
+  img:"images/species/deinocheirus.jpg", cardImgPosition:"50% 100%", modalImgPosition:"50% 0%",
+  overview:"A giant ornithomimosaur theropod from the Late Cretaceous of Mongolia, Deinocheirus reached around 11 metres and weighed an estimated 6 tonnes - by far the largest member of its group - with arms over 2 metres long, a broad hump of elongated vertebral spines, and a wide duckbill-like beak. Known only from those enormous arms for nearly fifty years after its 1965 discovery, the eventual recovery of near-complete skeletons revealed an anatomy that was far stranger than anyone had anticipated.",
+  insights:[
+    ["A fifty-year cliffhanger","Discovered in 1965 as just <b>two enormous arms</b>, its body stayed a mystery until skeletons surfaced around 2014 - half a century of guessing, resolved in a single reveal."],
+    ["An ostrich-dinosaur gone strange","It's an <b>ornithomimosaur</b> - the lightweight 'ostrich dinosaurs' - but scaled to elephant size with a humped back and a broad duck-like bill, the family's body plan pushed to an extreme."],
+    ["A confirmed omnivore","Stomach contents held <b>fish and plant matter</b>, and its bill suits a mixed waterside diet - the rare big theropod that wasn't a hunter."],
+    ["A fossil-trafficking story","Key bones were <b>poached and smuggled</b> before being repatriated to Mongolia, putting it at the centre of a debate over fossils as national heritage."]
+  ],
+  behaviour:"<p>Deinocheirus waded and foraged along Cretaceous rivers, raking vegetation with long arms and gathering plants and fish with its broad bill - a slow, big-bellied generalist rather than a predator. By feeding at the <b>water's edge as a giant omnivore</b>, it avoided competing with both the meat-eating tyrannosaurs and the strictly herbivorous duck-bills that shared its Mongolian wetlands.</p><p>Its decades-long mystery is one of paleontology's great detective stories, and its surprising solution a caution against confident reconstruction from scraps.</p>",
+  evolution:"<p>Deinocheirus shows how far the <b>ornithomimosaur</b> body plan could stretch - from lightweight runners to a multi-tonne omnivore. It's a standing reminder that <b>fragments mislead</b>: for fifty years, two arms implied an entirely different animal.</p>",
+  study:[],
+  matters:"Deinocheirus is the ultimate caution against guessing from scraps. Half a century of speculation about two arms collapsed the instant the full animal appeared - proof that in paleontology the next fossil can always overturn the textbook."
+,
+  fossilRecord:{
+    knownFrom:"Two enormous forelimbs described in 1965; additional specimens including skull, torso, and feet discovered around 2009 and described in 2014, partly via repatriation of poached material",
+    evidenceLevel:"Partial",
+    locality:"Nemegt Formation exposures, Ömnögovi Province, Mongolia",
+    formation:"Nemegt Formation",
+    material:["Limb bones","Skull","Vertebrae","Partial skeleton","Teeth"],
+    note:"For nearly fifty years <b>Deinocheirus</b> was the textbook case of a creature known only from detached arms - the 1965 type specimen consisting of forelimbs nearly 2.5 metres long. The discovery and repatriation of additional specimens (some of which had been illegally excavated and sold onto the fossil market) in the 2000s and early 2010s finally revealed the skull, body and feet. The complete picture - a hump-backed, duck-billed, multi-tonne ornithomimosaur - was genuinely surprising. Stomach contents in new specimens confirmed fish scales and plant material. The story of this specimen is also a significant case study in fossil trafficking and the legal and scientific complexities of poached palaeontological material."
+  },
+  hook: "Deinocheirus was known only from two enormous arms for nearly fifty years — until near-complete skeletons revealed a hump-backed, duck-billed, multi-tonne omnivore that surprised everyone.",
+  learnerLevel: "intermediate",
+  conceptTags: ["diet-debate"],
+  glossaryLinks: ["theropod","cretaceous","specimen","fossil-record","taphonomy"],
+  researchLinks: []
+},
+{
+  id:"argentinosaurus", name:"Argentinosaurus", epithet:"A. huinculensis", pron:"AR-jen-TEEN-oh-SAW-rus",
+  period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
+  age:"~96–92 Ma (Late Cretaceous)", startMa:96, endMa:92, length:"~30–35 m", mass:"~65–75 t", place:"Patagonia, Argentina",
+  img:"images/species/argentinosaurus.jpg",
+  overview:"A titanosaur sauropod from the Late Cretaceous of Patagonia, Argentinosaurus is among the largest land animals for which we have any fossil evidence, with estimates of around 30-35 metres in length and 65-75 tonnes in mass - though those figures carry significant uncertainty because the known material consists mainly of a few vertebrae, partial sacrum, and limb fragments. Its inclusion here is a reminder that even the most extreme body sizes in animal history are often known only from incomplete remains.",
+  insights:[
+    ["A giant reconstructed from scraps","It's estimated from <b>a handful of colossal bones</b>, so its size is a careful, contested reconstruction rather than a mounted skeleton - like rebuilding a whale from a few vertebrae."],
+    ["At the edge of the possible","At ~70 tonnes it nears the <b>physical ceiling for land life</b>, where bone strength, muscle and circulation all strain against gravity at once."],
+    ["A vertebra taller than you","Single back vertebrae exceed human height, and engineers model <b>how it walked</b> from such bones, since no living animal offers a guide."],
+    ["Fuelled by furious growth","To reach such size, hatchlings the size of a dog likely grew <b>by tonnes per year</b>, a developmental sprint utterly unlike the slow growth of Plateosaurus, its distant prototype."]
+  ],
+  behaviour:"<p>Argentinosaurus moved slowly across Patagonian floodplains, cropping vast quantities of vegetation to fuel its bulk, its sheer size making it effectively <b>immune to predators</b> as an adult even alongside giants like Giganotosaurus. By out-growing every threat, gigantism itself became its defence and its ecological strategy - a herbivore that won by being unattackable rather than armoured.</p><p>Reaching that scale required explosive juvenile growth and a bird-like air-sac system to keep so vast a body supplied with oxygen.</p>",
+  evolution:"<p>Argentinosaurus is a flagship <b>titanosaur</b>, the lineage that produced the biggest land animals ever. It defines the upper boundary of <b>terrestrial gigantism</b> and frames the question of why nothing on land has grown larger since.</p>",
+  study:[
+    {q:"How big was Argentinosaurus really?",
+     why:"Mass and length come from scaling fragmentary bones against more complete relatives.",
+     interps:[
+       ["~70-tonne giant","conf-moderate","Most volumetric and skeletal models converge near this range."],
+       ["Notably heavier or lighter","conf-low","Different scaling methods yield different masses, so real uncertainty remains."]
+     ]}
+  ],
+  matters:"Argentinosaurus marks the ceiling of life on land. Studying it means asking not just how big an animal was, but how big anything can be before physics says no - a question that reaches far beyond dinosaurs."
+,
+  fossilRecord:{
+    knownFrom:"Fragmentary material: several dorsal vertebrae, a sacrum, and a partial fibula",
+    evidenceLevel:"Fragments",
+    locality:"Neuquén Province, Patagonia, Argentina",
+    formation:"Huincul Formation",
+    material:["Vertebrae","Limb bones"],
+    note:"Despite its fame as potentially the largest land animal ever, <b>Argentinosaurus huinculensis</b> is known from genuinely scant material - a handful of partial vertebrae and limb fragments. Size estimates in the 70–100 tonne range are extrapolated by comparing these elements to better-known titanosaurs and scaling up, a method with significant uncertainty at extreme sizes. Individual vertebrae exceed human height and are impressive in themselves. The difficulty of recovering giant sauropod skeletons (bone preservation decreases with body size due to increased time to burial and scavenging) means the fragmentary record may be unavoidable rather than accidental - but it does mean that confident specific size claims for this animal are substantially inferential."
+  },
+  hook: "Argentinosaurus's best estimate of 70 tonnes is built from a handful of colossal vertebrae — the largest land animal in history reconstructed with the uncertainty of a crime scene.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","cretaceous","specimen","fossil-record","pneumaticity"],
+  researchLinks: ["cretaceous-sauropods"]
+},
+{
+  id:"majungasaurus", name:"Majungasaurus", epithet:"M. crenatissimus", pron:"mah-JUNG-ah-SAW-rus",
+  period:"cretaceous", clade:"Abelisaurid theropod", diet:"carnivore",
+  age:"~70–66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~6–7 m", mass:"~1.1 t", place:"Madagascar",
+  img:"images/species/majungasaurus.png",
+  overview:"An abelisaurid theropod from the Late Cretaceous of Madagascar, Majungasaurus was a stocky carnivore around 6-7 metres long with a short, deep skull and a single low horn-like dome on its head, characteristic of the abelisaurid lineage. Bite marks on Majungasaurus bones matching the tooth dimensions of the same species are the most widely accepted evidence of dinosaur cannibalism in the fossil record.",
+  insights:[
+    ["Proof of cannibalism","Majungasaurus bones bear <b>tooth marks from other Majungasaurus</b> - the clearest evidence of dinosaur cannibalism known, a behaviour usually only guessed at."],
+    ["A short-skulled grappler","Unlike long-snouted hunters, it had a <b>short, deep, powerful skull</b> built to bite and hold large prey, contrasting with the slashing carcharodontosaurs and the bone-crushing tyrannosaurs."],
+    ["A single low horn","A low head horn was likely for <b>display or recognition</b> between individuals rather than combat - the same signalling theme echoing across abelisaurids like Carnotaurus."],
+    ["An island's apex predator","Isolated on Cretaceous Madagascar, it topped a <b>distinctive island fauna</b> long cut off from the mainland, evolving in its own direction."]
+  ],
+  behaviour:"<p>Majungasaurus was an ambush-style predator using a deep skull and stout neck to seize and hold large prey, including the long-necked titanosaurs it shared the island with. The cannibalism evidence shows it also <b>fed on its own species</b>, whether by hunting rivals or scavenging the dead - likely a response to the lean resources of an isolated island. As the top carnivore of that closed ecosystem, it had no competing apex predator to check it.</p><p>Its long separation from continental faunas shaped a predator subtly unlike any elsewhere.</p>",
+  evolution:"<p>Majungasaurus is a well-studied <b>abelisaurid</b>, the dominant predators of the southern continents after Gondwana fragmented. Its butchery-marked bones supply the rare, direct evidence needed to <b>confirm a behaviour</b> - cannibalism - rather than merely infer it.</p>",
+  study:[],
+  matters:"Majungasaurus turns a grisly detail into rigorous science. Cannibalism in dinosaurs is easy to imagine but hard to prove; here, tooth marks matching the same species supply the kind of hard evidence that separates speculation from knowledge."
+,
+  fossilRecord:{
+    knownFrom:"Multiple specimens including well-preserved skulls and substantial postcranial material; unusually good for a large Malagasy dinosaur",
+    evidenceLevel:"Rich",
+    locality:"Mahajanga Province (northwestern Madagascar)",
+    formation:"Maevarano Formation",
+    material:["Skull","Multiple skeletons","Vertebrae","Limb bones","Teeth"],
+    note:"<b>Majungasaurus crenatissimus</b> is known from a good sample of material by Cretaceous African/Malagasy standards. Crucially, bones in the assemblage bear tooth marks matching the teeth of other <em>Majungasaurus</em> - the evidence that established cannibalism as a probable behaviour. This is not an inference from anatomy but from direct physical marks: tooth-to-bone correspondence. The skull is well-preserved and shows the single low horn and robust build characteristic of abelisaurids. The Maevarano Formation fauna is relatively well-studied for its geographic isolation, documenting a distinct evolutionary trajectory for Cretaceous Madagascar."
+  },
+  hook: "Tooth marks matching Majungasaurus dimensions on Majungasaurus bones are the most direct evidence of cannibalism in any dinosaur — not a guess, but a physical match.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["theropod","cretaceous","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"sinosauropteryx", name:"Sinosauropteryx", epithet:"S. prima", pron:"SY-noh-saw-ROP-ter-iks",
+  period:"cretaceous", clade:"Compsognathid theropod", diet:"carnivore",
+  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~1 m", mass:"~0.5 kg", place:"Liaoning, China",
+  img:"images/species/sinosauropteryx.jpg",
+  overview:"A small compsognathid theropod from the Early Cretaceous of Liaoning, China, Sinosauropteryx was around 1 metre long and covered in simple filamentous proto-feathers - the first non-avian dinosaur found with unmistakable feather preservation, in 1996. Melanosome analysis of the preserved filaments has identified a colour pattern of rusty-red and white banding, one of the earliest specific colour reconstructions made for any non-avian dinosaur.",
+  insights:[
+    ["The fossil that proved feathers","Its 1996 discovery showed clear <b>filamentous feathers on a non-bird dinosaur</b>, settling the debate and forcing a redrawing of how countless dinosaurs looked."],
+    ["Feathers for warmth, not flight","A small ground-runner that could never fly, it shows the earliest feathers were for <b>insulation or display</b> - flight was a later co-option of a structure that already existed."],
+    ["A ginger-and-white striped tail","Preserved pigment structures reveal a <b>reddish coat and a banded tail</b>, the first time a dinosaur's actual colour pattern was read from the rock."],
+    ["Countershaded camouflage","Its colour gradient - dark above, light below - matches modern <b>camouflage</b>, hinting at the open, sunlit habitat it lived in."]
+  ],
+  behaviour:"<p>Sinosauropteryx was a small, fast ground predator that hunted insects, lizards and small mammals across the forests and lakeshores of Early Cretaceous Liaoning. Its countershaded, banded coat suggests it relied on <b>camouflage in open, well-lit terrain</b>, occupying the small-insectivore niche alongside other tiny feathered theropods preserved in the same ashfalls - a miniature predator guild captured in extraordinary detail.</p><p>Filling the role of a roadrunner-like hunter, it shows how richly the small end of the dinosaur world was populated.</p>",
+  evolution:"<p>Sinosauropteryx is the proof that <b>feathers evolved before flight</b>, reframing them as an ancient dinosaurian feature later borrowed for the air. Together with colour-bearing relatives like Microraptor, it shows how exceptional preservation can recover an animal's appearance, not just its skeleton.</p>",
+  study:[],
+  matters:"Sinosauropteryx rewrote how we picture dinosaurs. Once it proved feathers came first and flight second, the scaly monsters of old reconstructions gave way to warm, patterned, often colourful animals - a change in imagery rooted directly in evidence."
+,
+  fossilRecord:{
+    knownFrom:"Two specimens from the Yixian Formation, Liaoning; described in 1996 as the first non-avian dinosaur confirmed with proto-feathers",
+    evidenceLevel:"Rich",
+    locality:"Sihetun, Liaoning Province, northeastern China",
+    formation:"Yixian Formation",
+    material:["Nearly complete skeleton","Feathers","Skull","Limb bones"],
+    note:"The 1996 description of <b>Sinosauropteryx prima</b> changed dinosaur palaeontology irrevocably: it was the first non-avian theropod for which filamentous integumentary structures (proto-feathers) were unambiguously confirmed, settling a long-standing debate about whether such structures preceded true feathers. Both known specimens are substantially complete, preserved in the same fine-grained volcanic lake sediments as <em>Archaeopteryx</em> is preserved in the Solnhofen. Subsequent analysis of melanosomes - microscopic pigment-bearing organelles - preserved in the filaments identified a reddish-brown colouration in the coat and banding in the tail, making <em>Sinosauropteryx</em> one of the first non-avian dinosaurs whose colour pattern was inferred from physical fossil evidence rather than guesswork."
+  },
+  hook: "Sinosauropteryx was the first non-bird dinosaur confirmed with feathers, and its russet-and-white colour was read directly from preserved pigment structures.",
+  learnerLevel: "intermediate",
+  conceptTags: ["feathers","colour","taphonomy-showcase"],
+  glossaryLinks: ["theropod","cretaceous","integument","preservation","lagerstaette","fossil-formation","specimen"],
+  researchLinks: ["feathers","dinosaur-colours","soft-tissue"]
+},
+{
+  id:"beelzebufo", name:"Beelzebufo", epithet:"B. ampinga", pron:"bee-EL-zeh-BOO-foh",
+  period:"cretaceous", clade:"Frog (non-dinosaur exception)", diet:"carnivore",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~0.4 m", mass:"~4 kg", place:"Madagascar",
+  img:"images/species/beelzebufo.jpg",
+  overview:"A large frog from the Late Cretaceous of Madagascar, Beelzebufo was roughly the size of a football with a broad, powerful skull suggesting it could take vertebrate prey - possibly among the largest frogs that ever lived. It is included in the DinoDex as one of the rare non-dinosaur entries, representing the wider cast of formidable Mesozoic animals that shared the world with dinosaurs.",
+  insights:[
+    ["The 'devil frog'","One of the largest frogs ever known, it grew to the size of a <b>squashed beach ball</b> - a reminder that giants weren't only dinosaurs and pterosaurs."],
+    ["A bite that punched above its size","Modelled bite force suggests it could <b>seize surprisingly large prey</b>, possibly even small dinosaurs and hatchlings - an ambush predator in miniature."],
+    ["Armoured skin plates","Bony plates in its back, the 'ampinga' (shield) of its name, gave it <b>built-in armour</b>, unusual among frogs and a defence against the abelisaurids overhead."],
+    ["A clue to lost geography","Its closest living relatives are South American horned frogs, so its presence on Madagascar supports a <b>former land connection</b> across the southern continents."]
+  ],
+  behaviour:"<p>Beelzebufo was almost certainly a sit-and-wait ambush predator like its living horned-frog relatives, lunging from concealment to engulf whatever it could overpower - invertebrates, small vertebrates, perhaps the hatchlings of dinosaurs sharing its Madagascan wetlands. It occupied the <b>small-ambush-predator niche beneath the giants</b>, coexisting with the apex abelisaurid Majungasaurus by hunting prey far too small to interest it.</p><p>Its armour likely helped it survive in a landscape thick with larger predators.</p>",
+  evolution:"<p>Beelzebufo widens the lens beyond dinosaurs, showing the Mesozoic teemed with <b>capable predators across many lineages</b>. Its biogeography also makes it scientific evidence for <b>ancient land bridges</b>, linking Madagascar to South America when the southern continents were joined.</p>",
+  study:[
+    {q:"Could Beelzebufo really eat small dinosaurs?",
+     why:"Bite-force estimates allow it, but direct evidence of its prey is lacking.",
+     interps:[
+       ["Yes, opportunistically","conf-moderate","Its size and powerful bite make small hatchlings plausible prey, like living horned frogs that take vertebrates."],
+       ["Mostly smaller prey","conf-moderate","It may have fed chiefly on invertebrates and small vertebrates, with dinosaurs rare exceptions."]
+     ]}
+  ],
+  matters:"Beelzebufo broadens the story the dinosaurs usually monopolise. The Mesozoic was a whole world, not a dinosaur stage set - and a beach-ball-sized frog with armoured skin and a punishing bite is a vivid reminder that formidable animals came in many shapes."
+,
+  fossilRecord:{
+    knownFrom:"Isolated bones and bone fragments from multiple individuals; no complete skeleton is known",
+    evidenceLevel:"Fragments",
+    locality:"Mahajanga Basin, northwestern Madagascar",
+    formation:"Maevarano Formation",
+    material:["Skull","Limb bones"],
+    note:"<b>Beelzebufo ampinga</b> is reconstructed from isolated and fragmentary material - no single specimen provides a complete picture of the animal. Size and body mass estimates are based on scaling from the fragments and comparison with living horned frogs. Bite force has been estimated by modelling jaw geometry from the partial skull material and scaling from living relatives; this is an informed inference, not a direct measurement. Its presence in the Maevarano Formation alongside <em>Majungasaurus</em> is documented, so the ecological co-occurrence is real. Its biogeographic significance - implying a land connection between Madagascar and South America - is an inference from phylogenetic relationships, not something directly visible in the fossils themselves."
+  },
+  hook: "Beelzebufo was a football-sized frog with bite force modelled to seize small dinosaurs — a reminder that the Mesozoic was a whole world of formidable animals, not just a dinosaur stage set.",
+  learnerLevel: "beginner",
+  conceptTags: [],
+  glossaryLinks: ["cretaceous","preservation","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"heterodontosaurus", name:"Heterodontosaurus", epithet:"H. tucki", pron:"HET-er-oh-DON-toh-SAW-rus",
+  period:"jurassic", eras:["triassic"], clade:"Heterodontosaurid ornithischian", diet:"herbivore",
+  age:"~200–190 Ma (Early Jurassic)", startMa:200, endMa:190, length:"~1.2 m", mass:"~2–3 kg", place:"South Africa",
+  img:"images/species/heterodontosaurus.png",
+  overview:"A small heterodontosaurid ornithischian from the Early Jurassic of South Africa, Heterodontosaurus was around 1.2 metres long and had three functionally distinct types of teeth - small front nipping teeth, prominent canine-like tusks, and rear cheek teeth for chewing - an unusual dental differentiation in an early dinosaur. Whether the tusks were used in feeding, defence, or social display is still debated.",
+  insights:[
+    ["Mammal-style mixed teeth","Almost uniquely among dinosaurs it had <b>nipping front teeth, stabbing canines and grinding cheek teeth</b> - the differentiated dentition of a mammal, in a reptile's mouth."],
+    ["Tusks on a plant-eater","Its prominent canine 'tusks', despite a herbivore's diet, most likely served <b>display or rival combat</b> rather than feeding, like a modern musk deer's fangs."],
+    ["A precision feeder","That toolkit let it <b>process plants with unusual efficiency</b> at tiny size, foreshadowing the grinding mastery later perfected by hadrosaurs like Parasaurolophus."],
+    ["Hints it could grasp and dig","Long-fingered hands suggest it could <b>grasp food or dig for roots and tubers</b>, an unusually versatile forelimb for so early an ornithischian."]
+  ],
+  behaviour:"<p>Heterodontosaurus was a small, agile herbivore (perhaps occasional omnivore) of arid Early Jurassic South Africa, cropping and grinding tough vegetation with its specialised teeth. By processing food so efficiently at miniature size, it exploited a <b>small-bodied selective-browser niche</b> distinct from the bulk-feeding strategies of larger plant-eaters, easing competition for scarce desert plants.</p><p>The tusks, useless for its diet, point to social signalling or fighting - display and combat appearing even in one of the earliest bird-hipped dinosaurs.</p>",
+  evolution:"<p>Heterodontosaurus shows the <b>ornithischians experimenting early</b> with sophisticated, differentiated teeth - a striking contrast to the uniform dentition typical of reptiles. It demonstrates that the chewing innovations behind later herbivore success had deep, surprising roots.</p>",
+  study:[],
+  matters:"Heterodontosaurus overturns the textbook image of reptile teeth as a row of identical pegs. A tiny Jurassic plant-eater with a mammal-like mix of tooth types shows evolution arriving at the same solution - specialised teeth for specialised jobs - in lineages far apart."
+,
+  fossilRecord:{
+    knownFrom:"A well-preserved skull and partial skeleton described in 1962; additional isolated material; a complete skull (SAM-PK-K1332) studied by CT scanning",
+    evidenceLevel:"Partial",
+    locality:"Upper Elliot Formation exposures, Eastern Cape and Free State, South Africa",
+    formation:"Upper Elliot Formation",
+    material:["Skull","Partial skeleton","Teeth","Limb bones"],
+    note:"Despite its small size, <b>Heterodontosaurus</b> has a fossil record good enough to reveal its unusual dentition clearly in the type specimen. CT scanning of a well-preserved skull has allowed detailed study of the three different tooth types - nipping incisiform teeth, stabbing caniniforms, and grinding cheek teeth - without destroying the specimen. The canine-like tusks are unambiguously preserved and their position relative to jaw musculature has been modelled. Additional heterodontosaurid material from the same formation includes scrappy but informative elements. The hands, known from associated material, show the grasping and digging potential noted in the entry."
+  },
+  hook: "Heterodontosaurus had three functionally different types of teeth in a single jaw — pointed front teeth, stabbing canines, and grinding cheek teeth — a mammal-like specialisation in an Early Jurassic dinosaur.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display"],
+  glossaryLinks: ["ornithischian","jurassic","triassic","display-structure","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"gallimimus", name:"Gallimimus", epithet:"G. bullatus", pron:"GAL-ih-MY-mus",
+  period:"cretaceous", clade:"Ornithomimosaur theropod", diet:"omnivore",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~6 m", mass:"~440 kg", place:"Mongolia",
+  img:"images/species/gallimimus.png", cardImgPosition:"50% 50%",
+  overview:"An ornithomimosaur theropod from the Late Cretaceous of Mongolia, Gallimimus was around 6 metres long with long legs, a short body, a toothless beak, and large eyes - a build optimised for speed and general omnivory rather than predation, convergently mirroring the body form of large running ground birds. One of the largest known ornithomimosaurs, it illustrates how thoroughly the theropod body plan could be redirected away from carnivory.",
+  insights:[
+    ["A theropod built like an ostrich","Long shins, light bones and a tiny head mark it as one of the <b>fastest dinosaurs</b>, a meat-eating lineage retooled entirely for speed - convergent with today's flightless running birds."],
+    ["A toothless filter-feeder?","Its toothless beak bore comb-like structures that some read as a <b>filter for straining small food from water or mud</b>, an unexpected diet for a theropod."],
+    ["Big eyes, big brain region","Large eyes and well-developed sensory regions suit an animal relying on <b>vigilance and reaction speed</b> to survive among predators."],
+    ["Same family, opposite extreme","Where its relative Deinocheirus grew huge and slow, Gallimimus stayed <b>lithe and swift</b> - one family exploring both ends of the size-and-speed spectrum."]
+  ],
+  behaviour:"<p>Gallimimus was a fast, alert omnivore of the Mongolian floodplains, likely eating small animals, plants and possibly filtered fare, and relying on <b>outright speed</b> to escape the tyrannosaurs and dromaeosaurs that hunted it. It occupied the swift-grazer-and-gleaner niche held today by ostriches and emus, avoiding direct competition with slower herbivores by covering ground quickly and feeding opportunistically.</p><p>Its sharp senses and running build paint an animal whose whole survival strategy was detection and escape rather than defence.</p>",
+  evolution:"<p>Gallimimus shows the <b>ornithomimosaurs</b> perfecting cursorial speed, a vivid case of a predatory lineage converging on the body plan of running birds. Alongside Deinocheirus it reveals how broadly one family could diversify, from sprinter to giant.</p>",
+  study:[],
+  matters:"Gallimimus reframes 'theropod' as a body plan, not a behaviour. The same lineage that produced bone-crushing killers also produced a toothless, ostrich-like speedster - evidence that evolution endlessly repurposes a successful design for radically different lives."
+,
+  fossilRecord:{
+    knownFrom:"Several partial skeletons including juvenile and adult material from Mongolia; described in 1972",
+    evidenceLevel:"Partial",
+    locality:"Ömnögovi Province (Gobi Desert), Mongolia",
+    formation:"Nemegt Formation",
+    material:["Partial skeleton","Skull","Limb bones","Vertebrae"],
+    note:"<b>Gallimimus bullatus</b> is known from a reasonable sample including animals of different growth stages. The toothless beak and its comb-like internal filtering structures are preserved in skull material, supporting the dietary hypotheses. Limb proportions - long lower leg relative to upper leg - can be directly measured and confirm a cursorial (running-adapted) build. However, soft-tissue information is absent, so the extent of plumage, exact colouration, and fine-grained behavioural detail are inferred from comparative anatomy with birds and other ornithomimosaurs. The Nemegt Formation provides a rich faunal context that places <em>Gallimimus</em> alongside <em>Tarbosaurus</em>, the Asian relative of <em>T. rex</em>."
+  },
+  hook: "Gallimimus had long shins, a toothless beak, and large eyes — a theropod lineage that produced bone-crushing killers also produced this ostrich-like speedster.",
+  learnerLevel: "beginner",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["theropod","cretaceous","cursorial","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"maiasaura", name:"Maiasaura", epithet:"M. peeblesorum", pron:"MY-ah-SAW-rah",
+  period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
+  age:"~76 Ma (Late Cretaceous)", startMa:77, endMa:74, length:"~9 m", mass:"~3 t", place:"Montana, USA",
+  img:"images/species/maiasaura.jpg",
+  overview:"A hadrosaurid ornithopod from the Late Cretaceous of Montana, Maiasaura was a large duck-billed herbivore around 9 metres long whose nesting sites provide the clearest direct evidence of parental care and colonial nesting behaviour in a non-avian dinosaur. Eggs, hatchlings, and juveniles preserved together at Egg Mountain in Montana indicate that young were reared at the nest for an extended period rather than being immediately independent.",
+  insights:[
+    ["A whole nesting colony","Its discovery revealed <b>nests, eggs, embryos and babies together</b> in a vast breeding ground - proof that some dinosaurs nested communally, like seabird colonies today."],
+    ["Babies that couldn't leave the nest","Hatchlings had <b>poorly formed leg joints but worn teeth</b>, meaning they ate yet couldn't walk far - so adults must have <b>brought food to the nest</b>, direct evidence of parental care."],
+    ["Named for motherhood","The name 'good mother lizard' enshrines the finding that overturned the image of dinosaurs as <b>abandoning their eggs</b> like most reptiles."],
+    ["A bird-like nursery","Communal nesting and feeding of helpless young echo modern <b>colonial birds</b>, reinforcing the deep behavioural link between dinosaurs and birds."]
+  ],
+  behaviour:"<p>Maiasaura was a herding hadrosaur that returned to communal nesting grounds to lay eggs in earth mounds and rear helpless hatchlings, bringing them food until they could walk - the strongest early case for dinosaur parental care. Living in large herds offered <b>safety in numbers</b> against predators, and its grinding dental batteries let it process bulk vegetation efficiently, the standard hadrosaur strategy that made the group so abundant.</p><p>Its bonebeds, holding thousands of individuals, suggest enormous migrating herds moving across Cretaceous Montana.</p>",
+  evolution:"<p>Maiasaura transformed our understanding of <b>dinosaur behaviour</b>, supplying the first solid evidence of nesting colonies and parental care and tightening the behavioural bridge to birds that Oviraptor's brooding fossils later reinforced.</p>",
+  study:[],
+  matters:"Maiasaura overturned the assumption that dinosaurs, like most reptiles, simply abandoned their eggs. Nests of helpless, well-fed babies revealed devoted parents - a discovery that, more than almost any other, made dinosaurs feel like living animals rather than scaly automatons."
+,
+  fossilRecord:{
+    knownFrom:"Thousands of bones from bonebed sites in Montana including eggs, embryos, hatchlings, juveniles and adults; among the most behaviourally informative fossil records of any dinosaur",
+    evidenceLevel:"Exceptional",
+    locality:"Two Medicine Formation exposures, Glacier County, Montana, USA",
+    formation:"Two Medicine Formation",
+    material:["Bonebed","Eggs","Multiple skeletons","Skull","Limb bones","Vertebrae","Teeth"],
+    note:"The <b>Maiasaura</b> nesting-colony sites discovered by Jack Horner and Bob Makela in 1978 provide what remains the most direct evidence of parental care in any non-avian dinosaur. The sites preserve multiple nests, eggs with embryos, hatchlings with worn teeth (showing they were fed before they could walk far), juveniles, and adults in the same area - a physical association that directly supports active provisioning rather than nest abandonment. Bone histology from growth series confirms rapid bird-like growth rates. The bonebed assemblages, representing thousands of individuals, record evidence of possible mass-mortality events. This is the rare case where the fossil evidence directly addresses a specific behaviour rather than inferring it from anatomy."
+  },
+  hook: "Maiasaura hatchlings had worn teeth but could barely walk — adults must have brought food to the nest, making this the first dinosaur proved to practice parental care.",
+  learnerLevel: "beginner",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["ornithischian","cretaceous","bonebed","taphonomy","preservation","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"styracosaurus", name:"Styracosaurus", epithet:"S. albertensis", pron:"sty-RAK-oh-SAW-rus",
+  period:"cretaceous", clade:"Ceratopsid ornithischian", diet:"herbivore",
+  age:"~75 Ma (Late Cretaceous)", startMa:76, endMa:73, length:"~5.5 m", mass:"~2.7 t", place:"Alberta, Canada",
+  img:"images/species/styracosaurus.jpg",
+  overview:"A centrosaurine ceratopsid from the Late Cretaceous of Alberta, Styracosaurus was around 5.5 metres long and carried a single long nasal horn paired with a frill edged by multiple long bony spikes - a more elaborate headgear arrangement than most of its relatives. Those frill spikes are too fragile and variable for effective use in combat, pointing to visual species recognition or mate-attraction as their primary function.",
+  insights:[
+    ["A frill made for billboards","Its spectacular ring of long frill spikes was <b>too elaborate and fragile for defence</b>, marking it as a giant visual signal - the same display logic as Triceratops's frill, taken to a flamboyant extreme."],
+    ["Many species, distinguished by ornament","Closely related ceratopsians differ mainly in <b>frill and horn shape</b>, suggesting these structures drove species recognition - and possibly rapid speciation."],
+    ["A nose horn, not brow horns","Unlike Triceratops it bore one long <b>nasal horn</b> rather than paired brow horns, a different solution within the same family."],
+    ["Herd animal of the north","Bonebeds of related ceratopsians imply <b>large herds</b>, with ornate frills helping animals identify their own kind in a crowd."]
+  ],
+  behaviour:"<p>Styracosaurus was a low-browsing herbivore that sheared tough plants with a beak and tooth batteries, almost certainly living in herds across Cretaceous Alberta. Its dramatic frill spikes most plausibly served <b>display and species recognition</b> within those herds, helping the many similar ceratopsians of the region tell each other apart - a social rather than defensive role, paralleling the crests and domes seen elsewhere in DinoDex.</p><p>Sharing its world with tyrannosaurs, it gained real protection from herd vigilance and bulk rather than from its showy headgear.</p>",
+  evolution:"<p>Styracosaurus illustrates how <b>ceratopsian frills and horns diversified</b> into a riot of shapes, likely driven by species recognition and sexual display. This ornament-led divergence may help explain why horned dinosaurs were so spectacularly varied in the Late Cretaceous.</p>",
+  study:[
+    {q:"Were the elaborate frills mainly for defence, display, or species recognition?",
+     why:"The structures are striking but often too delicate for real combat, and several functions overlap.",
+     interps:[
+       ["Display / species recognition","conf-strong","Their variety and fragility point firmly to visual signalling between animals."],
+       ["Some defensive role","conf-low","Spikes might deter a predator, but their build argues against true armour."]
+     ]}
+  ],
+  matters:"Styracosaurus shows that evolution's extravagance often serves communication, not combat. Its baroque frill is best understood the way we read a peacock's tail - a signal to its own kind - not as a weapon, correcting the instinct to treat every spike as defence."
+,
+  fossilRecord:{
+    knownFrom:"Several partial skulls and postcranial material; a multi-individual bonebed (Huxley Quarry) in Alberta",
+    evidenceLevel:"Partial",
+    locality:"Dinosaur Provincial Park, Alberta, Canada",
+    formation:"Dinosaur Park Formation",
+    material:["Skull","Partial skeleton","Bonebed","Limb bones","Teeth"],
+    note:"<b>Styracosaurus albertensis</b> is known from partial skull material that clearly shows the dramatic frill-spike configuration. The frill spikes themselves are preserved, though some skulls are incomplete or reconstructed from multiple associated pieces. A multi-individual bone accumulation suggests gregarious behaviour or at least death in proximity - but as with all bonebeds, the accumulation mechanism (drought, flood, disease) is a separate interpretive question from the social biology. The frill spikes vary in exact number and arrangement between specimens, which is useful for studying individual variation but complicates species-level diagnoses."
+  },
+  hook: "Styracosaurus's frill spikes were too elaborate and fragile to be armour — they were a visual broadcast, the same display logic as Triceratops's frill taken to a flamboyant extreme.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display"],
+  glossaryLinks: ["ceratopsian","ornithischian","cretaceous","display-structure","bonebed","taphonomy","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"edmontosaurus", name:"Edmontosaurus", epithet:"E. regalis", pron:"ed-MON-toh-SAW-rus",
+  period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
+  age:"~73–66 Ma (Late Cretaceous)", startMa:73, endMa:66, length:"~12 m", mass:"~4 t", place:"Western North America",
+  img:"images/species/edmontosaurus.png",
+  overview:"A large hadrosaurid ornithopod of the latest Cretaceous of western North America, Edmontosaurus was one of the biggest duck-billed dinosaurs at around 12 metres, with a toothless beak and hundreds of tightly packed grinding teeth for processing tough vegetation. Several mummified specimens have preserved skin, muscle tissue, and stomach contents in unusual detail, making it one of the most completely understood hadrosaurs anatomically.",
+  insights:[
+    ["A thousand teeth in a grinding mill","Its dental batteries packed <b>hundreds of teeth into self-sharpening grinding surfaces</b>, the most efficient plant-processing system of any dinosaur - the engine of hadrosaur abundance."],
+    ["A fleshy comb, preserved","One specimen retains a <b>soft, comb-like crest of skin</b> atop the head, revealing display features that almost never fossilise and that bone alone would never hint at."],
+    ["Survived a T. rex bite","A healed, T. rex-tooth-shaped wound on one tail proves it <b>survived an attack</b>, a rare snapshot of a failed predation and the rex–prey arms race."],
+    ["Vast migrating herds","Enormous bonebeds suggest it lived in <b>large groups</b>, the buffalo of the Late Cretaceous, dominating northern landscapes by sheer numbers."]
+  ],
+  behaviour:"<p>Edmontosaurus was a bulk-feeding herbivore that ground tough, low-quality vegetation in its tooth batteries and likely roamed in large migrating herds for protection. As one of the most abundant plant-eaters of the final Cretaceous, it was a <b>staple prey of Tyrannosaurus</b> - the healed bite wound recording an encounter it survived - and its success rested on out-eating and out-numbering rivals rather than out-fighting predators.</p><p>The preserved fleshy crest hints at a layer of soft-tissue display utterly lost from most of the fossil record.</p>",
+  evolution:"<p>Edmontosaurus shows the <b>hadrosaur chewing system at its peak</b>, the innovation that made duck-bills the dominant herbivores of their time. Its preserved skin crest is a reminder that bones alone undercount the display and soft anatomy dinosaurs actually carried.</p>",
+  study:[],
+  matters:"Edmontosaurus underlines how much of an animal the fossil record loses. A chance soft-tissue crest reveals display gear that bone would never show - a caution that even well-known dinosaurs may have looked stranger and more ornamented than their skeletons suggest."
+,
+  fossilRecord:{
+    knownFrom:"Multiple specimens including 'mummy' specimens preserving dried skin and soft tissue; bonebeds in Alberta and the Dakotas; a specimen with healed T. rex bite marks on the tail",
+    evidenceLevel:"Exceptional",
+    locality:"Alberta, Canada; Montana, South Dakota, Wyoming, USA",
+    formation:"Hell Creek Formation; Lance Formation; Horseshoe Canyon Formation",
+    material:["Multiple skeletons","Skin impressions","Bonebed","Skull","Teeth","Limb bones","Vertebrae"],
+    note:"Several <b>Edmontosaurus</b> 'mummy' specimens - naturally desiccated before burial - preserve dried skin, tendons, and muscle outlines in three dimensions, giving us direct evidence of soft-tissue body shape that most dinosaurs can only be guessed at. One specimen retains a fleshy comb-like head crest that bone alone would never reveal. A tail vertebra bearing healed bite marks matching <em>T. rex</em> tooth dimensions provides physical evidence that this prey animal survived at least one predatory encounter. The bonebeds - some containing thousands of individuals - document herding behaviour or at least seasonal mass death. The dental battery is well-preserved in many specimens and demonstrates the remarkable self-sharpening tooth replacement mechanism directly."
+  },
+  hook: "One Edmontosaurus survived a Tyrannosaurus attack and lived to show the healed bite — a rare snapshot of predation written in bone.",
+  learnerLevel: "beginner",
+  conceptTags: ["soft-tissue","polar"],
+  glossaryLinks: ["cretaceous","maastrichtian","kpg-boundary","mass-extinction","bonebed","taphonomy","preservation","specimen","fossil-record"],
+  researchLinks: ["nanotyrannus","polar-dinosaurs","pre-asteroid-decline","soft-tissue"]
+},
+{
+  id:"mononykus", name:"Mononykus", epithet:"M. olecranus", pron:"mon-ON-ih-kus",
+  period:"cretaceous", clade:"Alvarezsaurid theropod", diet:"carnivore",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~1 m", mass:"~3.5 kg", place:"Mongolia",
+  img:"images/species/mononykus.png",
+  overview:"An alvarezsaurid theropod from the Late Cretaceous of Mongolia, Mononykus was a slender, long-legged runner around 1 metre long with each forelimb reduced to a single stout digging claw on a vestigial arm. The leading hypothesis is that those claws were used to break into termite or insect mounds, convergently with modern anteaters and aardvarks, though this function is inferred from bone mechanics rather than direct evidence.",
+  insights:[
+    ["One powerful claw, two stubby arms","Its arms were reduced to short, immensely strong limbs ending in a <b>single thick claw</b> - a tool unlike anything in other theropods, built for force, not reach."],
+    ["An anteater in dinosaur form","That claw is widely read as a device for <b>tearing open insect nests</b>, suggesting Mononykus fed on termites or ants like a modern pangolin or anteater."],
+    ["Built for the open desert","Long, slim legs and large eyes mark a <b>fast nocturnal runner</b> of arid Mongolia, surviving by speed and acute senses."],
+    ["Bird-like to a fault","So close to birds in skeleton that it was once <b>mistaken for a flightless bird</b>, it underlines how blurred the dinosaur–bird boundary becomes near its origin."]
+  ],
+  behaviour:"<p>Mononykus was a small, fleet-footed insectivore of the Late Cretaceous Gobi, likely using its single robust claw to break into termite or ant colonies and its long legs to cover open desert quickly. By specialising on <b>social insects</b>, it tapped a food source ignored by the dinosaurs around it, neatly sidestepping competition - the same niche modern anteaters and aardvarks exploit today.</p><p>Its large eyes hint at nocturnal or crepuscular activity, hunting when the desert was cool.</p>",
+  evolution:"<p>Mononykus belongs to the <b>alvarezsaurs</b>, among the most bizarrely specialised of all theropods, and its bird-like skeleton once fooled scientists into classing it as a bird. It shows how extreme dietary specialisation can reshape a body - and how thin the line between small theropods and birds really is.</p>",
+  study:[
+    {q:"What was the single claw actually used for?",
+     why:"No close analogue exists among theropods, so its function is inferred from shape and mechanics.",
+     interps:[
+       ["Breaking into insect nests","conf-moderate","Its strength and shape best fit digging into termite or ant colonies."],
+       ["Other digging or defence","conf-low","Alternative uses such as burrowing or defence are proposed but less supported."]
+     ]}
+  ],
+  matters:"Mononykus shows specialisation can warp a body almost beyond recognition. A theropod with a single anteater-like claw, once mistaken for a bird, demonstrates how a narrow diet can drive a lineage into a shape that defies easy classification."
+,
+  fossilRecord:{
+    knownFrom:"A partial skeleton described in 1993 including the distinctive reduced forelimb with a single robust claw; additional fragmentary material from the Mongolian Late Cretaceous",
+    evidenceLevel:"Partial",
+    locality:"Ömnögovi Province (Gobi Desert), Mongolia",
+    formation:"Nemegt Formation (and Djadokhta for related material)",
+    material:["Partial skeleton","Skull","Claw","Limb bones"],
+    note:"The holotype of <b>Mononykus olecranus</b> is substantially complete enough to establish the key anatomical feature: the near-vestigial forelimb ending in a single, disproportionately robust claw. The claw's shape, joint surfaces, and attachment muscle scars have been studied to infer its function - the geometry fits a digging-into-substrate action better than a slashing or grasping one. Its bird-like skull and sternum caused genuine confusion when first described, leading some researchers to classify it as a flightless bird; later phylogenetic analyses placed it firmly in Alvarezsauridae, a non-bird theropod group. Soft tissue, colour, and plumage are entirely unknown from direct evidence."
+  },
+  hook: "Mononykus reduced each forearm to a single stubby limb ending in one enormous claw — the most extreme dietary specialisation in any theropod, built for tearing open insect nests like an anteater.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution","bird-origins"],
+  glossaryLinks: ["theropod","cretaceous","maniraptoran","specimen","fossil-record"],
+  researchLinks: []
+},
+
+/* ================================================================
+   BATCH A - New entries 41–50
+   ================================================================ */
+
+{
+  id:"eudimorphodon", name:"Eudimorphodon", epithet:"E. ranzii", pron:"yoo-DI-mor-foh-don",
+  period:"triassic", clade:"Pterosaur (not a dinosaur)", diet:"carnivore",
+  age:"~228–210 Ma (Late Triassic)", startMa:228, endMa:210, length:"~1 m wingspan", mass:"~0.2 kg", place:"Northern Italy; Greenland",
+  img:"images/species/eudimorphodon.jpg",
+  overview:"An early pterosaur from the Late Triassic of northern Italy with a wingspan of around 1 metre, Eudimorphodon already possessed the key features of powered flight - hollow bones, a long wing finger, and complex multi-cusped teeth for catching fish - within a few million years of pterosaurs first appearing in the fossil record. Its well-preserved material makes it a primary reference for what early pterosaurs were like before the group diversified through the Jurassic and Cretaceous.",
+  insights:[
+    ["No transitional form has ever been found","Pterosaurs appear in the fossil record already capable of flight, with no clear walking ancestor yet identified - their origins remain the biggest unsolved question in vertebrate palaeontology."],
+    ["Teeth unlike any other pterosaur","<b>Multicusped, fang-like teeth at the front and smaller multicuspid teeth behind</b> suggest a diet of fish and insects, and distinguish it from the toothless pterosaurs of the Cretaceous."],
+    ["A wing built differently from birds","The flight membrane stretched from an enormously elongated <b>fourth finger</b> to the body and hindlimbs - the same basic pterosaur design preserved unchanged for 160 million years."],
+    ["Already complex at its earliest appearance","The complete flying apparatus in a ~228 Ma animal tells us powered flight in pterosaurs must have evolved <b>significantly earlier still</b> - the precursor lineage is simply not yet known from fossils."]
+  ],
+  behaviour:"<p>Eudimorphodon was a small aerial predator that likely hunted along coastlines and over open water, snapping fish from the surface or pursuing insects on the wing. Its multicusped teeth closely resemble those of some modern insect-eating bats, though stomach contents preserved in at least one specimen show fish scales - pointing to opportunistic mixed hunting rather than pure insect pursuit.</p><p>It was not a dinosaur's prey-item but a member of an entirely separate reptile lineage that, like the dinosaurs, had just secured its place in a world recovering from the end-Permian extinction.</p>",
+  evolution:"<p>Eudimorphodon represents the <b>earliest pterosaurs</b> in the fossil record with meaningful skeletal material. Its fully developed flight anatomy shows the pterosaur wing plan was functional from the very beginning - but also that we are looking at an already-evolved animal, not a transition. The mystery of how pterosaurs got airborne from unwinged ancestors is as open today as it was when the first specimen was described in 1858.</p>",
+  study:[
+    {q:"Where did pterosaurs come from?",
+     why:"No clear ancestor with intermediate wing anatomy has ever been found, leaving pterosaur origins genuinely unknown.",
+     interps:[
+       ["A rapid, ghost-lineage origin","conf-moderate","Pterosaurs may have evolved quickly in a setting or time window not yet sampled by fossil hunters."],
+       ["Lagerpetid archosaurs as close relatives","conf-moderate","Recent phylogenetic work places non-flying lagerpetids close to pterosaurs, but none shows wing precursors."]
+     ]}
+  ],
+  matters:"Eudimorphodon is the counterargument to the idea that evolution always leaves a trail. Here is one of the most distinctive body plans in vertebrate history - a flying reptile with a wholly novel wing design - and we cannot show how it got there. The mystery of pterosaur origins is not a gap in public knowledge; it is a genuine gap in science."
+  ,
+  fossilRecord:{
+    knownFrom:"A nearly complete skull and partial skeleton from Cene di Bergamo, Italy (1973); additional specimens from Greenland; stomach contents preserved in the Italian specimen",
+    evidenceLevel:"Partial",
+    locality:"Cene di Bergamo, Lombardy, Italy; Jameson Land, Greenland",
+    formation:"Calcare di Zorzino (Norian, Late Triassic)",
+    material:["Skull","Partial skeleton","Teeth","Limb bones"],
+    note:"The Italian holotype is the most informative specimen, preserving a near-complete skull with its distinctive multicusped teeth intact, and partial wing and body elements. Critically, one specimen preserves fish scales in the gut region, providing direct dietary evidence. The material is sufficient to establish the full pterosaur wing plan in Late Triassic times, but fragmentary enough that questions about soft-tissue wing extent and exact body proportions rely on extrapolation from better-preserved later pterosaurs."
+  },
+  hook: "Eudimorphodon was already fully flight-capable at its earliest appearance 228 million years ago — the origin of pterosaurs left no trail in the fossil record and remains one of vertebrate palaeontology's biggest unsolved questions.",
+  learnerLevel: "advanced",
+  conceptTags: ["missing-link"],
+  glossaryLinks: ["triassic","fossil-formation","fossil-record","phylogeny","specimen","clade"],
+  researchLinks: []
+},
+{
+  id:"mussaurus", name:"Mussaurus", epithet:"M. patagonicus", pron:"moo-SAW-rus",
+  period:"triassic", clade:"Basal sauropodomorph", diet:"herbivore",
+  age:"~215–200 Ma (Late Triassic)", startMa:215, endMa:200, length:"~3 m (adult)", mass:"~70–100 kg", place:"Patagonia, Argentina",
+  img:"images/species/mussaurus.png", cardImgPosition:"50% 100%",
+  overview:"A basal sauropodomorph from the Late Triassic of Patagonia, Mussaurus was around 3 metres long as an adult and one of the earliest dinosaurs known from a nearly complete growth series - from nest-bound hatchlings through to large adults. That growth record helped establish that very young sauropodomorphs had proportionately large heads and short necks that changed dramatically as they matured, with hatchlings so small they were initially thought to be a separate, miniature species.",
+  insights:[
+    ["Named from babies, not adults","The original specimens were hatchlings small enough to fit in a human hand, earning the name 'mouse lizard' - the adults were actually several metres long and revealed an entirely different animal."],
+    ["A nursery preserved in stone","Multiple juveniles and eggs found together suggest <b>colonial nesting</b> - the first strong evidence of group nesting behaviour in any Triassic dinosaur."],
+    ["Growth changes shape","Hatchlings had large skulls and short necks like most baby animals; adults developed the long neck and plant-processing anatomy of the sauropodomorph lineage, showing <b>dramatic ontogenetic change</b>."],
+    ["Social from the start","Adults are often found together too, hinting that <b>gregarious behaviour</b> in sauropodomorphs began very early - long before the great herds of later titanosaurs."]
+  ],
+  behaviour:"<p>Adult Mussaurus was a bipedal to partially quadrupedal plant-eater that browsed low and mid-level vegetation, likely gathering in groups for nesting or feeding. The colonial nesting sites - multiple eggs and juveniles in close association - suggest adults returned to the same sites year after year, much as some modern reptiles and birds do.</p><p>The hatchlings were entirely dependent on their natal environment for at least some time, their underdeveloped limb joints showing they could not disperse far independently.</p>",
+  evolution:"<p>Mussaurus sits near the base of the <b>sauropodomorph lineage</b> and is one of the earliest dinosaurs for which a complete growth series from egg to adult has been assembled. Its colonial nesting evidence pushes the origin of complex social behaviour in dinosaurs back to the Triassic, earlier than previously thought.</p>",
+  study:[
+    {q:"Did Mussaurus adults care for their young, or simply nest colonially?",
+     why:"Multiple juveniles at nesting sites suggest proximity, but whether adults actively guarded or fed hatchlings cannot be determined from the fossil record alone.",
+     interps:[
+       ["Colonial nesting without parental care","conf-moderate","Aggregated juveniles could reflect a preferred nesting site without implying adult attendance."],
+       ["Some degree of parental oversight","conf-low","The consistent association of age classes at one site raises the possibility, but evidence is indirect."]
+     ]}
+  ],
+  matters:"Mussaurus corrects the assumption that complex social behaviours - colonial nesting, gregariousness - were innovations of later, more sophisticated dinosaurs. The evidence for group living appears almost at the very beginning of the dinosaur story, in a small-to-medium sauropodomorph in Triassic Patagonia."
+  ,
+  fossilRecord:{
+    knownFrom:"Multiple specimens ranging from eggs and hatchlings to near-adults, from two main Argentine localities; a comprehensive growth series study published in 2021",
+    evidenceLevel:"Rich",
+    locality:"El Tranquilo Formation exposures, Santa Cruz Province, Patagonia, Argentina",
+    formation:"El Tranquilo Formation",
+    material:["Eggs","Multiple skeletons","Skull","Limb bones","Vertebrae"],
+    note:"<b>Mussaurus patagonicus</b> is known from one of the most complete ontogenetic (growth-stage) series of any Triassic dinosaur: eggs, hatchlings, juveniles, and near-adults have all been recovered and studied. A 2021 paper by Otero et al. used bone histology to reconstruct growth rates and confirmed the shift from sprawling juvenile posture to more erect adult posture across the growth series. The colonial nesting evidence rests on the spatial association of multiple eggs and small juveniles at a single horizon - a consistent pattern across excavation, not a single coincidence."
+  },
+  hook: "Mussaurus juveniles were so small they were originally named as a separate miniature species — the adults were several metres long, with colonial nesting evidence that pushes gregarious behaviour back to the Triassic.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["triassic","sauropod","bipedal","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"tawa", name:"Tawa hallae", epithet:"T. hallae", pron:"TAH-wah HAL-ay",
+  period:"triassic", clade:"Early theropod", diet:"carnivore",
+  age:"~214 Ma (Late Triassic)", startMa:215, endMa:213, length:"~2 m", mass:"~20 kg", place:"New Mexico, USA",
+  img:"images/species/tawa_hallae.jpg",
+  overview:"A small early theropod from the Late Triassic of New Mexico, Tawa hallae was around 2 metres long and carried a combination of anatomical features that helped clarify how the major dinosaur lineages were related to each other near the base of the family tree. Its anatomy also supported the hypothesis that early dinosaurs spread rapidly from South America across Pangaea, accounting for why closely related early forms appear on continents that were later separated by ocean.",
+  insights:[
+    ["A landmark dispersal discovery","Its anatomy clearly links it to South American dinosaurs, proving that early saurischians spread rapidly across Pangaea - their fossils appear worldwide because they started as a single connected population."],
+    ["Multiple Triassic immigrants at once","Tawa was found alongside animals representing three separate dinosaur lineages in one deposit - suggesting <b>multiple independent waves</b> of dinosaur immigration into North America."],
+    ["Settles the Herrerasaurus puzzle","Its anatomy provides a clearer family tree for enigmatic early predators like Herrerasaurus, helping resolve where the earliest meat-eating lineages actually branched."],
+    ["Named for a Tewa sun god","The name honours the Tewa-speaking people whose ancestral lands include the Ghost Ranch quarry - a deliberate nod to the Indigenous heritage of the site where Coelophysis was also found."]
+  ],
+  behaviour:"<p>Tawa was a lightly built bipedal predator of small prey, running down lizard-relatives and early mammaliaforms across the semi-arid floodplains of Triassic New Mexico. It shared its world with other early dinosaurs and the crocodile-line archosaurs that still outnumbered them, filling the small-carnivore niche at a time when dinosaur supremacy was still far from assured.</p>",
+  evolution:"<p>Tawa's description in 2009 (Nesbitt et al., <em>Science</em>) was a watershed moment for understanding the early dinosaur family tree. By placing it firmly within <b>Theropoda</b> and linking it anatomically to South American relatives, the paper demonstrated that early dinosaur communities were dispersed across Pangaea in interconnected waves - the whole history of dinosaur biogeography became clearer with one well-preserved skeleton.</p>",
+  study:[
+    {q:"Was Tawa a true theropod or a more basal saurischian?",
+     why:"Earliest saurischian relationships are genuinely hard to resolve because key features evolved in parallel across different lineages.",
+     interps:[
+       ["Basal theropod","conf-strong","The 2009 description and subsequent analyses consistently place it within Theropoda."],
+       ["Very basal saurischian outside Theropoda","conf-low","A minority position; not supported by most recent phylogenies."]
+     ]}
+  ],
+  matters:"Tawa hallae answered a question that had nagged palaeontology since the 1970s: why do early dinosaurs on different continents look so similar? Because they crossed a single landmass before it broke apart. One skeleton, correctly placed in a family tree, rewrote the map of dinosaur origins."
+  ,
+  fossilRecord:{
+    knownFrom:"Multiple partial skeletons from a single quarry at Ghost Ranch, New Mexico, including skull material and substantial postcranial elements",
+    evidenceLevel:"Partial",
+    locality:"Ghost Ranch, Rio Arriba County, New Mexico, USA",
+    formation:"Chinle Formation (Petrified Forest Member)",
+    material:["Skull","Partial skeleton","Limb bones","Vertebrae","Teeth"],
+    note:"<b>Tawa hallae</b> is known from several individuals ranging from juvenile to adult, recovered from the same quarry as the famous Coelophysis bonebed - though the two animals were not found in direct association. The material is partial but sufficient to establish clear theropod anatomy and key features for phylogenetic analysis. The skull, while not fully complete, preserves enough cranial material to anchor Tawa in the early theropod family tree with reasonable confidence."
+  },
+  hook: "Tawa's anatomy clearly links it to South American dinosaurs found in Arizona — proving that early dinosaurs spread rapidly across a single Pangaean landmass before continents separated.",
+  learnerLevel: "advanced",
+  conceptTags: [],
+  glossaryLinks: ["triassic","theropod","phylogeny","clade","specimen","fossil-record","dinosauria"],
+  researchLinks: []
+},
+{
+  id:"nothosaurus", name:"Nothosaurus", epithet:"N. mirabilis", pron:"noh-thoh-SAW-rus",
+  period:"triassic", clade:"Marine reptile (Sauropterygia)", diet:"carnivore",
+  age:"~240–210 Ma (Middle to Late Triassic)", startMa:240, endMa:210, length:"~3–4 m", mass:"~150–200 kg", place:"Central Europe; China; Middle East",
+  img:"images/species/nothosaurus.jpg", modalImgFit:"cover", modalImgPosition:"50% 80%",
+  overview:"A sauropterygian marine reptile from the Middle to Late Triassic of Europe, the Middle East, and China, Nothosaurus was an amphibious predator around 3-4 metres long with webbed feet, a long flexible neck, and interlocking needle teeth suited for catching fish. It represents an early stage in the transition toward fully aquatic life in the lineage that probably gave rise to the plesiosaurs of the Jurassic and Cretaceous.",
+  insights:[
+    ["A reptile going back to water","Nothosaurs were the Triassic experiment in semi-aquatic life - <b>amphibious rather than fully marine</b>, returning to land to rest and probably to breed, like a seal's distant reptilian cousin."],
+    ["A global genus from Triassic seas","Nothosaurus fossils span from Germany to China to Israel, showing that Triassic seas connected the margins of Pangaea and allowed widespread marine reptile dispersal."],
+    ["The ancestors of plesiosaurs","Nothosaurs are the ecological and anatomical stepping-stone toward plesiosaurs - they show the <b>swimming limb geometry and long neck taking shape</b> before it was perfected in the Jurassic."],
+    ["Needle-teeth for slippery prey","Interlocking <b>needle-like teeth</b> formed a fish-trap jaw - when the mouth closed, fish could not escape sideways. The same trick reappears in later ichthyosaurs and Spinosaurus."]
+  ],
+  behaviour:"<p>Nothosaurus likely hunted in the shallow coastal waters of the Tethys Sea, pursuing fish with swift forward lunges of its long neck before hauling onto rocky shores or beaches to rest. Unlike the fully oceanic ichthyosaurs of the same era, it retained functional limbs capable of terrestrial movement - halfway between the fully land-based reptiles it descended from and the plesiosaurs its descendants would become.</p>",
+  evolution:"<p>Nothosaurs sit within <b>Sauropterygia</b> - the same broad group that includes plesiosaurs and pliosaurs. They are not dinosaurs, and not even closely related to ichthyosaurs, which evolved aquatic life independently. Nothosaurus shows that the Triassic seas saw multiple, simultaneous experiments in marine adaptation by different reptile lineages, not a single coordinated move into the water.</p>",
+  study:[],
+  matters:"Nothosaurus is the Triassic sea made visible. The world before the dinosaurs dominated usually conjures a land story - but while Eoraptor and Herrerasaurus were taking their first steps on land, the seas were already full of long-necked, fish-trapping reptiles with global ranges. The dinosaur age on land was also a marine reptile age in the ocean."
+  ,
+  fossilRecord:{
+    knownFrom:"Multiple specimens from several species across Europe, China, and the Middle East; some skulls and partial skeletons well preserved",
+    evidenceLevel:"Rich",
+    locality:"Muschelkalk Formation exposures, Germany and Netherlands; Guizhou Province, China; Israel",
+    formation:"Muschelkalk (Germanic Triassic); various Tethyan Triassic formations",
+    material:["Skull","Partial skeleton","Limb bones","Teeth","Vertebrae"],
+    note:"Several species of <b>Nothosaurus</b> are known from European, Chinese, and Middle Eastern Triassic deposits, with material ranging from isolated bones to well-preserved skulls and partial postcranial skeletons. The skull anatomy - including the interlocking teeth and elongated snout - is documented in sufficient detail to reconstruct feeding mechanics. Trackways attributed to nothosaurs are also known, providing indirect evidence of terrestrial locomotion. The group is well-studied in the context of early sauropterygian evolution, with phylogenetic placement among the ancestors of plesiosaurs broadly accepted."
+  },
+  hook: "Nothosaurus was swimming in Triassic seas with a needle-tooth fish-trap jaw and a body plan halfway between land reptile and plesiosaur — the ocean equivalent of the dinosaur origin story.",
+  learnerLevel: "intermediate",
+  conceptTags: ["aquatic"],
+  glossaryLinks: ["triassic","specimen","fossil-record","phylogeny","mesozoic"],
+  researchLinks: []
+},
+{
+  id:"scelidosaurus", name:"Scelidosaurus", epithet:"S. harrisonii", pron:"SKEL-ih-doh-SAW-rus",
+  period:"jurassic", clade:"Basal thyreophoran ornithischian", diet:"herbivore",
+  age:"~191 Ma (Early Jurassic)", startMa:193, endMa:189, length:"~4 m", mass:"~200–270 kg", place:"Dorset, England",
+  img:"images/species/scelidosaurus.png",
+  overview:"A thyreophoran ornithischian from the Early Jurassic of Dorset, England, Scelidosaurus was around 4 metres long and covered in a regular arrangement of bony osteoderms embedded in the skin, making it one of the earliest well-documented armoured dinosaurs. It sits near the base of the thyreophoran lineage before it had diverged into the plated stegosaurs and the more heavily armoured ankylosaurs.",
+  insights:[
+    ["The origin of dinosaur armour","Scelidosaurus carries rows of bony osteoderms along its back and flanks - the <b>first clearly documented armour system</b> in the dinosaur lineage, predating Stegosaurus by 40 million years."],
+    ["At the fork of two great lineages","It sits near the base of <b>Thyreophora</b>, the group that would split into the plate-backed stegosaurs and the tank-like ankylosaurs - Scelidosaurus predates that split."],
+    ["A Dorset cliffside fossil","The best specimens come from Charmouth, Dorset, and were described by Richard Owen in 1861 - the same Richard Owen who coined the word 'Dinosauria'. The history of British palaeontology runs through this animal."],
+    ["Armour before attack","Its armour was already elaborate while its predators were still relatively small - raising the question of whether defence or display drove the osteoderms' early evolution."]
+  ],
+  behaviour:"<p>Scelidosaurus was a slow-moving, low-browsing herbivore that cropped vegetation close to the ground, relying on its armour for passive defence rather than speed or counterattack. Its forelimbs were shorter than its hindlimbs, suggesting it was becoming more quadrupedal - a posture the fully armoured ankylosaurs would later perfect.</p><p>It lived in what was a warm, seasonally dry coastal environment, its fossils suggesting it was washed into a shallow marine setting after death - which is why many specimens are so complete.</p>",
+  evolution:"<p>Scelidosaurus is a landmark in ornithischian evolution: it shows that the <b>heavy-armour body plan appeared very early</b>, before the stegosaur/ankylosaur split. Understanding it helps palaeontologists reconstruct when and how armour evolved, and whether it evolved once or multiple times within Thyreophora.</p>",
+  study:[
+    {q:"Is Scelidosaurus closer to stegosaurs or ankylosaurs?",
+     why:"Its exact phylogenetic position within early Thyreophora has shifted between analyses.",
+     interps:[
+       ["Basal thyreophoran outside both lineages","conf-moderate","Most analyses place it before the stegosaur/ankylosaur split."],
+       ["Early ankylosaur relative","conf-low","Some features have been interpreted as shared with ankylosaurs specifically."]
+     ]}
+  ],
+  matters:"Scelidosaurus proves that armour was not an invention of the Jurassic or Cretaceous - it was an Early Jurassic solution to a persistent problem. And because it predates the split between stegosaurs and ankylosaurs, it is the living blueprint from which both great armoured lineages were built."
+  ,
+  fossilRecord:{
+    knownFrom:"Several specimens from Charmouth, Dorset, England, including articulated skulls and extensive postcranial material; described by Owen in 1861 and re-examined by Norman in a 2020 monograph",
+    evidenceLevel:"Rich",
+    locality:"Charmouth, Dorset, England",
+    formation:"Charmouth Mudstone Formation (Lower Lias, Lower Jurassic)",
+    material:["Skull","Partial skeleton","Vertebrae","Limb bones","Skin impressions"],
+    note:"<b>Scelidosaurus harrisonii</b> is known from several specimens from the Lower Jurassic cliffs of Charmouth, some preserving articulated skull material and extensive body armour in place. The animals were likely washed into shallow marine sediments after death, which accounts for the unusual completeness. A major 2020 monograph by David Norman provided the most thorough re-examination of the anatomy, updating Owen's original 1861 description and resolving some long-standing questions about its phylogenetic position. Osteoderm arrangement is documented from articulated specimens."
+  },
+  hook: "Scelidosaurus carried rows of bony armour over its back 40 million years before Stegosaurus — and it predates the split between the stegosaur and ankylosaur lineages, making it the template both were built from.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["ornithischian","jurassic","preservation","specimen","fossil-record","phylogeny","clade"],
+  researchLinks: []
+},
+{
+  id:"megalosaurus", name:"Megalosaurus", epithet:"M. bucklandii", pron:"MEG-ah-loh-SAW-rus",
+  period:"jurassic", clade:"Megalosaurid theropod", diet:"carnivore",
+  age:"~168–166 Ma (Middle Jurassic)", startMa:168, endMa:166, length:"~6–7 m", mass:"~700–1000 kg", place:"Oxfordshire, England",
+  img:"images/species/megalosaurus.png",
+  overview:"A megalosaurid theropod from the Middle Jurassic of Oxfordshire, England, Megalosaurus was around 6-7 metres long and the first non-avian dinosaur to receive a formal scientific name, described by William Buckland in 1824. Known from relatively limited material, it is better-documented in the history of palaeontology than in the fossil record - its jaw, vertebrae, and limb elements figured in the founding of the discipline itself, and it was one of the three genera from which Richard Owen defined the group Dinosauria in 1842.",
+  insights:[
+    ["Named before 'dinosaur' existed","Megalosaurus was described by William Buckland in 1824 - <b>eighteen years before Richard Owen coined the word 'Dinosauria'</b>. It was the first named dinosaur, described without the concept even existing yet."],
+    ["Once misidentified as a giant human","The original femur was described in 1676 as the thigh bone of a giant human, then tentatively as a Roman elephant. It took 150 more years to understand what it actually was."],
+    ["A wastebasket taxon for a century","Every large theropod fragment found in Europe was called Megalosaurus for decades - <b>over 50 species were wrongly assigned</b> to the genus, making it a cautionary tale about naming from scraps."],
+    ["A mid-Jurassic apex predator","The real animal was a powerful megalosaurid theropod, related to Spinosaurus and Torvosaurus - an apex predator of the British Middle Jurassic, not the bungling quadruped depicted in early reconstructions."]
+  ],
+  behaviour:"<p>Megalosaurus was a large, active theropod predator of the Jurassic English wetlands, hunting large sauropods and ornithosaurs in a warm, tropical coastal environment. Its powerful jaws and blade-like serrated teeth were built for slicing flesh, unlike the bone-crushing bite of tyrannosaurs or the axe-hatchet strike of Allosaurus.</p><p>It walked on two legs - the very fact that had to be relearned after decades of four-legged restorations.</p>",
+  evolution:"<p>Megalosaurus is the type genus of <b>Megalosauridae</b>, a clade of large theropods widespread in the Jurassic of Europe, Africa, and North America. After the long wastebasket era was cleaned up, the true Megalosaurus emerged as a well-defined British species, and megalosaurids were recognised as an important branch of theropod evolution predating the allosauroids.</p>",
+  study:[],
+  matters:"Megalosaurus is the history of palaeontology in its most compressed form. It was described, misunderstood, multiplied into dozens of phantom species, and eventually cleaned up into a single real animal. Every mistake science made with Megalosaurus taught palaeontology something about how not to interpret incomplete fossils."
+  ,
+  fossilRecord:{
+    knownFrom:"A partial lower jaw with teeth (the holotype), along with vertebrae, limb bones, and a pelvis from Stonesfield, Oxfordshire; additional material from Dorset and other English Jurassic sites",
+    evidenceLevel:"Partial",
+    locality:"Stonesfield, Oxfordshire; other Middle Jurassic sites in England",
+    formation:"Stonesfield Slate (Bathonian, Middle Jurassic)",
+    material:["Partial skeleton","Skull","Teeth","Limb bones","Vertebrae"],
+    note:"The holotype jaw of <b>Megalosaurus bucklandii</b> - described by Buckland in 1824 - is the first dinosaur fossil ever formally named and described. Additional material from Stonesfield and other sites has been referred to the genus over the years, though many historical assignments are now considered invalid. The known material is sufficient to establish Megalosaurus as a large megalosaurid theropod but does not provide a complete picture of its anatomy. Skull material beyond the lower jaw is fragmentary. The wastebasket history of the genus means careful re-evaluation of all referred specimens is ongoing."
+  },
+  hook: "Megalosaurus was the first dinosaur formally named — in 1824, 18 years before the word 'dinosaur' existed — and every large European theropod fragment was called Megalosaurus for over a century.",
+  learnerLevel: "beginner",
+  conceptTags: [],
+  glossaryLinks: ["theropod","jurassic","holotype","taxonomy","genus","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"ceratosaurus", name:"Ceratosaurus", epithet:"C. nasicornis", pron:"seh-RAT-oh-SAW-rus",
+  period:"jurassic", clade:"Ceratosaurid theropod", diet:"carnivore",
+  age:"~153–148 Ma (Late Jurassic)", startMa:153, endMa:148, length:"~5.5–7 m", mass:"~600–700 kg", place:"Western USA; Portugal; Tanzania",
+  img:"images/species/ceratosaurus.jpg",
+  overview:"A ceratosaurian theropod from the Late Jurassic Morrison Formation, Ceratosaurus was a medium-sized predator of around 6-7 metres, recognised by a prominent nasal horn, paired brow ridges, and a row of small bony osteoderms along its back - a combination unique among Morrison theropods. Isotopic evidence from its teeth tentatively suggests it occupied a different niche from the larger Allosaurus, possibly hunting in wetter riparian habitats; close relatives in Portugal and Tanzania confirm that its lineage had a broad Jurassic distribution.",
+  insights:[
+    ["A horn on a meat-eater","A prominent nasal horn and paired brow ridges made Ceratosaurus <b>instantly recognisable in a formation already famous for Allosaurus</b> - and show that display structures appeared in theropods before ceratopsians monopolised the idea."],
+    ["A second apex predator, not a sidekick","Ceratosaurus and Allosaurus shared the Morrison but were probably not direct competitors - <b>isotopic and habitat evidence</b> suggests Ceratosaurus hunted closer to water, perhaps targeting crocodilians and large fish."],
+    ["Osteoderms on a theropod","Small bony plates ran along its back - <b>unique among large Morrison theropods</b> and a reminder that theropod diversity included anatomical experiments we rarely associate with predators."],
+    ["A global ceratosaurian lineage","Close relatives lived in Portugal and Tanzania, showing ceratosaurs had a <b>worldwide distribution</b> in the Jurassic - they were not merely secondary players in North America."]
+  ],
+  behaviour:"<p>Ceratosaurus hunted in the wetter margins of the Morrison ecosystem, possibly specialising in crocodilians, fish, and larger prey in riparian habitats where Allosaurus was less dominant. Its blade-like teeth were more laterally compressed than Allosaurus's, suited to a different cutting action. The horn was likely for display or species recognition between Ceratosaurus individuals - too fragile for real combat with large prey.</p>",
+  evolution:"<p>Ceratosaurus belongs to <b>Ceratosauria</b>, the branch of theropods that split from the coelurosaur/allosauroid lineage very early. Ceratosaurians were widespread in the Jurassic but largely replaced by abelisaurids in the southern hemisphere by the Cretaceous. In the north, their story mostly ends with the Jurassic - making Ceratosaurus one of the last major representatives of a once-global lineage.</p>",
+  study:[
+    {q:"Did Ceratosaurus specialise in aquatic prey?",
+     why:"Isotopic data from teeth suggests dietary and habitat differences from Allosaurus, but direct prey evidence is absent.",
+     interps:[
+       ["Aquatic / semi-aquatic specialist","conf-moderate","Isotope signatures compatible with hunting in or near water, differentiating it from Allosaurus."],
+       ["Generalist predator like other large theropods","conf-moderate","Body size and tooth shape are compatible with a broad diet; specialisation may be overstated."]
+     ]}
+  ],
+  matters:"Ceratosaurus corrects the Morrison Formation's narrative. It is not Allosaurus's world with one carnivore in charge - it is a real ecosystem with multiple large predators dividing resources, habitats, and prey. A horn on a meat-eater is also a useful surprise: ornament was not just an herbivore's game."
+  ,
+  fossilRecord:{
+    knownFrom:"Several partial to nearly complete skeletons from the Morrison Formation of Colorado and Utah; one good skull with nasal horn intact; additional material from Portugal and Tanzania",
+    evidenceLevel:"Rich",
+    locality:"Garden Park, Fremont County, Colorado; Cleveland-Lloyd Quarry, Utah, USA; Guimarota, Portugal; Tendaguru, Tanzania",
+    formation:"Morrison Formation (USA); Lourinhã Formation (Portugal); Tendaguru Beds (Tanzania)",
+    material:["Skull","Partial skeleton","Limb bones","Vertebrae","Teeth"],
+    note:"<b>Ceratosaurus nasicornis</b> is known from several North American specimens, including a skull preserving the nasal horn and brow ridges. The small osteoderms along the back are documented from associated specimens. Portuguese and Tanzanian material confirms the global distribution of closely related ceratosaurs in the Late Jurassic. Ceratosaur isotopic chemistry has been studied in the context of Morrison ecosystem partitioning, supporting tentative habitat-separation between Ceratosaurus and Allosaurus. The skeleton is well-enough known for confident anatomical reconstruction, though no single specimen is fully complete."
+  },
+  hook: "Ceratosaurus shared the Morrison Formation with Allosaurus but carried a nasal horn and small back plates — display structures and diet distinctions that suggest two apex predators dividing one ecosystem rather than competing head-on.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display","diet-debate"],
+  glossaryLinks: ["theropod","jurassic","display-structure","specimen","fossil-record","integument"],
+  researchLinks: []
+},
+{
+  id:"cryolophosaurus", name:"Cryolophosaurus", epithet:"C. ellioti", pron:"CRY-oh-LOH-foh-SAW-rus",
+  period:"jurassic", clade:"Early theropod", diet:"carnivore",
+  age:"~182 Ma (Early Jurassic)", startMa:184, endMa:180, length:"~6 m", mass:"~400–500 kg", place:"Antarctica",
+  img:"images/species/cryolophosaurus.jpg",
+  overview:"An early theropod from the Early Jurassic of Antarctica, Cryolophosaurus was around 6 metres long and bore a distinctive forward-facing bony crest running transversely across its skull. The only large predatory dinosaur known from Antarctica, it demonstrates that by the Early Jurassic, dinosaurs had reached what was then a warmer, forested high-latitude landmass connected to the other southern continents.",
+  insights:[
+    ["A dinosaur at the South Pole","Cryolophosaurus was found at 84°S - closer to the South Pole than any other large dinosaur - but the Early Jurassic Antarctic was <b>forested and temperate</b>, not iced over."],
+    ["An unusual perpendicular crest","Its crest runs <b>across the skull from side to side</b>, rather than front to back like most crested theropods - nicknamed 'Elvisaurus' by the field team for its pompadour-like silhouette."],
+    ["A polar apex predator","As the largest predator in its Antarctic ecosystem, it hunted sauropodomorphs and other animals in a forested environment, showing that polar land ecosystems in the Jurassic were <b>rich enough to support large predators</b>."],
+    ["Evidence of a hard life","One specimen shows healed injuries and a partial sauropod vertebra lodged in its throat - a real predation event frozen in stone, and a reminder that even apex predators could choke."]
+  ],
+  behaviour:"<p>Cryolophosaurus was the apex predator of an Early Jurassic Antarctic forest, hunting early sauropodomorphs and whatever else it could overpower. The presence of a sauropod bone lodged in its throat - an apparent choking death - is one of the more vivid pieces of direct feeding evidence from the Jurassic, though it raises unresolved questions about whether the animal was scavenging or hunting.</p>",
+  evolution:"<p>Cryolophosaurus is an early theropod whose exact position within Theropoda has shifted between analyses - it has been placed close to Dilophosaurus, within Tetanurae, and elsewhere. What it unambiguously shows is that large-bodied theropods were <b>globally distributed by the Early Jurassic</b>, reaching Antarctica from what was still a connected Gondwana landmass.</p>",
+  study:[
+    {q:"Where exactly does Cryolophosaurus sit in the theropod family tree?",
+     why:"Its unusual crest and some skeletal features don't fit neatly into known early theropod groupings.",
+     interps:[
+       ["Basal tetanuran","conf-moderate","Several analyses place it within early Tetanurae, close to the main theropod trunk."],
+       ["Close relative of Dilophosaurus","conf-low","Some early analyses grouped it with crested theropods, but this is not the current consensus."]
+     ]}
+  ],
+  matters:"Cryolophosaurus makes the early Jurassic world feel genuinely global. Dinosaurs did not 'conquer' continents gradually - they were everywhere almost as soon as they appeared, carried across a still-connected Gondwana before the continents locked into their modern isolating positions. The South Pole was not the edge of their world; it was just another forest."
+  ,
+  fossilRecord:{
+    knownFrom:"A single partial skeleton including a well-preserved skull with the distinctive transverse crest, found in 1991 on Hanson Ridge, Mount Kirkpatrick, Antarctica",
+    evidenceLevel:"Partial",
+    locality:"Mount Kirkpatrick, Transantarctic Mountains, Antarctica (84°S)",
+    formation:"Hanson Formation (Early Jurassic)",
+    material:["Skull","Partial skeleton","Limb bones","Vertebrae","Teeth"],
+    note:"The holotype of <b>Cryolophosaurus ellioti</b> was excavated in the 1991–92 Antarctic field season under David Elliot and is the most complete large theropod known from Antarctica. The skull preserves the distinctive transverse crest intact. Postcranial material is present but incomplete. A small sauropodomorph vertebra was found associated with the skeleton, possibly in the throat region, and has been interpreted as evidence of a predation event or scavenging followed by choking. The high-altitude, remote Antarctic location means only limited additional material has been sought since the original excavation."
+  },
+  hook: "Cryolophosaurus was found at 84 degrees south — closer to the South Pole than any other large dinosaur — but its forested Antarctic world was temperate, not frozen.",
+  learnerLevel: "intermediate",
+  conceptTags: ["polar","display"],
+  glossaryLinks: ["theropod","jurassic","display-structure","specimen","fossil-record","holotype"],
+  researchLinks: ["polar-dinosaurs"]
+},
+{
+  id:"rhamphorhynchus", name:"Rhamphorhynchus", epithet:"R. muensteri", pron:"RAM-foh-RINK-us",
+  period:"jurassic", clade:"Pterosaur (not a dinosaur)", diet:"carnivore",
+  age:"~150 Ma (Late Jurassic)", startMa:152, endMa:148, length:"~1.8 m wingspan", mass:"~0.45 kg", place:"Bavaria, Germany; England; Tanzania",
+  img:"images/species/rhamphorhynchus.png",
+  overview:"A long-tailed pterosaur from the Late Jurassic Solnhofen limestone of Bavaria, Rhamphorhynchus had a wingspan of around 1.8 metres and a spear-like beak with forward-pointing teeth well suited to snatching fish. Multiple specimens preserve soft-tissue details - wing membranes, a diamond-shaped tail vane, and in one case a throat pouch similar to a pelican's - making it one of the best-documented pterosaurs in terms of actual appearance.",
+  insights:[
+    ["A tail-vane no one expected","The diamond-shaped membrane at the tip of its long tail is preserved in Solnhofen specimens - a <b>steering and stabilising vane</b> invisible from bones alone, and the only reason we know the tail was not just a bare rod."],
+    ["Soft tissue beyond the bones","Some specimens preserve the <b>throat pouch, wing membrane extent, and even the texture of the wing</b> - making Rhamphorhynchus one of the most anatomically complete flying animals from the Mesozoic."],
+    ["The long-tailed chapter","Rhamphorhynchus belongs to the rhamphorhynchoids - the long-tailed pterosaur lineage that dominated Triassic and Jurassic skies before the short-tailed pterodactyloids took over. This animal represents that earlier, longer-tailed world."],
+    ["A fish specialist with a trap jaw","Its forward-angled teeth and deep lower jaw formed a <b>fish-trap</b> - the animal likely skimmed or dipped the surface, impaling fish rather than plucking them."]
+  ],
+  behaviour:"<p>Rhamphorhynchus was a skilled aerial fisher that hunted above the coastal lagoons of the Solnhofen Archipelago - the same shallow-water environment that preserved Archaeopteryx. It likely flew low over the water, dipping its jaws to snatch fish, and may have rested on exposed rocks or branches between flights. Stomach contents in some specimens confirm fish as primary prey.</p>",
+  evolution:"<p>Rhamphorhynchus is the flagship of the <b>Rhamphorhynchidae</b> and of the broader long-tailed pterosaur grade. At 150 Ma it lived alongside the earliest pterodactyloids - the transitional moment between the two great pterosaur chapters. Its anatomical detail makes it the reference point for understanding all rhamphorhynchoid anatomy and how the transition to the short-tailed body plan unfolded.</p>",
+  study:[],
+  matters:"Rhamphorhynchus shows what the fossil record can do when conditions are perfect. From bone alone you can reconstruct a skeleton; from the Solnhofen you can reconstruct a living animal - tail-vane, wing-membrane, throat pouch and all. It is the clearest proof that the flying world of the Jurassic was as rich and specific as any modern ecosystem."
+  ,
+  fossilRecord:{
+    knownFrom:"Dozens of specimens from the Solnhofen Limestone of Bavaria, several preserving soft-tissue impressions including wing membranes, throat pouches, and tail vanes; also known from England and Tanzania",
+    evidenceLevel:"Exceptional",
+    locality:"Solnhofen, Eichstätt, and Zandt, Bavaria, Germany",
+    formation:"Solnhofen Plattenkalk (Tithonian, Late Jurassic)",
+    material:["Nearly complete skeleton","Skull","Teeth","Feathers","Skin impressions","Limb bones"],
+    note:"<b>Rhamphorhynchus muensteri</b> is one of the best-known Jurassic pterosaurs, with multiple specimens preserving soft tissue that goes far beyond bone. The wing membrane is preserved in lateral extent, the diamond-shaped tail vane is documented in several specimens, and at least one specimen preserves a distended throat sac. Fish remains in the gut area confirm piscivorous diet. The Solnhofen Lagerstätte is the principal source of exceptional pterosaur preservation, and Rhamphorhynchus specimens have been foundational in establishing how pterosaur wings and flight mechanics worked."
+  },
+  hook: "Rhamphorhynchus preserves soft-tissue wing membranes and stomach contents in exceptional Solnhofen specimens — giving us an actual cross-section of a Jurassic pterosaur's biology rather than a guess.",
+  learnerLevel: "intermediate",
+  conceptTags: ["soft-tissue","taphonomy-showcase"],
+  glossaryLinks: ["jurassic","lagerstaette","fossil-formation","preservation","specimen","fossil-record","integument"],
+  researchLinks: []
+},
+{
+  id:"ichthyosaurus", name:"Ichthyosaurus", epithet:"I. communis", pron:"IK-thee-oh-SAW-rus",
+  period:"jurassic", clade:"Marine reptile (ichthyosaur)", diet:"carnivore",
+  age:"~200–175 Ma (Early to Middle Jurassic)", startMa:200, endMa:175, length:"~2–3.5 m", mass:"~90–160 kg", place:"England; Germany; Belgium",
+  img:"images/species/ichthyosaurus.jpg",
+  overview:"A marine reptile from the Early to Middle Jurassic of England and Germany, Ichthyosaurus was around 2-3.5 metres long with a streamlined body, large eyes, and crescent-shaped tail fin - independently arriving at a dolphin-like body plan through the same constraints of fast open-water swimming. One of the first large fossil reptiles to be systematically described, it was central to early 19th-century debates about extinction and the deep history of life.",
+  insights:[
+    ["Convergence before Darwin","Long before evolution was understood, Ichthyosaurus had already built a <b>dolphin's body from reptile parts</b> - the same hydrodynamic shape, the same tail, the same dorsal fin, all invented independently. It is evolution's clearest case of form following function."],
+    ["Live birth confirmed in fossil","Specimens preserving embryos - and in one case a baby mid-birth - <b>directly prove live birth in a reptile</b>, which had seemed impossible before the fossils. The mother apparently died in the act of giving birth."],
+    ["Collected by Mary Anning, a teenage girl","The most famous Ichthyosaurus skeletons were found on the Jurassic Coast of Dorset by Mary Anning, who was between 12 and 15 years old. Her finds launched the science of vertebrate palaeontology in Britain."],
+    ["Warm blood, warm colours?","Recent analysis of melanosome chemistry in ichthyosaur skin suggests <b>dark colouration</b> and possibly thermoregulatory physiology more like a modern warm-blooded dolphin than a cold-blooded lizard."]
+  ],
+  behaviour:"<p>Ichthyosaurus was a fast, open-water predator that hunted fish and soft-bodied cephalopods (belemnites), using large eyes adapted for low-light or deep-water vision. Like modern dolphins, it gave birth to live young at sea, never needing to return to land. The group was widespread in Early Jurassic seas and represents the most complete marine adaptation achieved by any reptile until mosasaurs appeared 100 million years later.</p>",
+  evolution:"<p>Ichthyosaurus belongs to <b>Ichthyosauria</b>, a group of marine reptiles that have no direct relationship to dinosaurs, plesiosaurs, or mosasaurs - they evolved their aquatic lifestyle completely independently. Their ancestors were land-dwelling reptiles that returned to the sea in the Triassic; by the Early Jurassic the transformation was complete. Ichthyosaurs went extinct in the early Late Cretaceous, before the end-Cretaceous mass extinction.</p>",
+  study:[],
+  matters:"Ichthyosaurus is where the science of deep time began for British audiences. Mary Anning's beach discoveries in the 1810s were the first large, clearly strange fossil vertebrates the public ever saw - and they didn't look like any living animal. The question 'what were these things?' drove the founding of palaeontology as a discipline. Every museum natural history gallery can trace its prehistoric-life section back to these Dorset cliffs."
+  ,
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens from the Jurassic coast of Dorset and Somerset, England, including articulated skeletons with preserved soft tissue outlines; specimens with embryos and live-birth fossils",
+    evidenceLevel:"Exceptional",
+    locality:"Charmouth and Lyme Regis, Dorset; Street, Somerset, England; Holzmaden, Baden-Württemberg, Germany",
+    formation:"Blue Lias Formation and related Lower Jurassic formations (England); Posidonia Shale (Germany)",
+    material:["Nearly complete skeleton","Skull","Skin impressions","Limb bones","Vertebrae","Teeth"],
+    note:"<b>Ichthyosaurus communis</b> and related British species are among the most completely known fossil marine reptiles. The Jurassic Coast yields numerous articulated skeletons, many preserving the outline of the body including the dorsal fin and tail fluke as dark carbon films - structures that would be entirely unknown without exceptional preservation. The famous 'birth fossils' (mothers with embryos and one specimen mid-parturition) document live birth directly. German Posidonia Shale specimens add soft-tissue colour data via melanosome analysis. Few Mesozoic marine animals are known in such anatomical and biological detail."
+  },
+  hook: "Ichthyosaurus gave birth to live young — a fact confirmed by fossil juveniles preserved inside adults — making it the Mesozoic's clearest example of convergence with dolphins down to reproductive biology.",
+  learnerLevel: "beginner",
+  conceptTags: ["soft-tissue","convergent-evolution"],
+  glossaryLinks: ["jurassic","lagerstaette","fossil-formation","preservation","integument","specimen","fossil-record","convergent-evolution"],
+  researchLinks: []
+},
+
+/* ================================================================
+   BATCH B - New entries 51–60
+   ================================================================ */
+
+{
+  id:"plesiosaurus", name:"Plesiosaurus", epithet:"P. dolichodeirus", pron:"PLEE-zee-oh-SAW-rus",
+  period:"jurassic", clade:"Marine reptile (plesiosaur)", diet:"carnivore",
+  age:"~200–175 Ma (Early Jurassic)", startMa:200, endMa:175, length:"~3.5 m", mass:"~90 kg", place:"Dorset, England",
+  img:"images/species/plesiosaurus.jpg",
+  overview:"A plesiosaur from the Early Jurassic of Dorset, England, Plesiosaurus was around 3.5 metres long with a small head, a moderately long neck, and four broad paddle-like flippers used to fly through the water in the manner of sea turtles rather than swimming with a fish-like tail stroke. One of the first Mesozoic marine reptiles to receive a complete formal description, it defined the basic body plan of the plesiosaur group and was among the fossils found by Mary Anning at Lyme Regis.",
+  insights:[
+    ["'Like a snake threaded through a turtle'","William Conybeare's description of Plesiosaurus in 1821 is one of the most evocative in fossil history - a body plan so strange it <b>seemed impossible</b> until the bones proved otherwise."],
+    ["The Loch Ness body plan","Every claimed photograph or sonar trace of the Loch Ness Monster depicts a long-necked, small-headed shape - directly borrowed from the public image of Plesiosaurus, despite the animal having been extinct for 66 million years."],
+    ["A neck for reaching, not for speed","The extraordinary neck - up to half the total body length - was not built for fast pursuit; it was a <b>stealth weapon</b>, allowing the body to hold station while the neck darted in unpredictably from any angle."],
+    ["Among the first complete marine reptile skeletons","Mary Anning found the type specimen in 1823, just a few years after her Ichthyosaurus discoveries - the two animals together made the Jurassic sea real to the Victorian public for the first time."]
+  ],
+  behaviour:"<p>Plesiosaurus was a deliberate, ambush-oriented predator that used its long flexible neck to snatch fish and cephalopods, propelled through the water by four large paddle limbs rowing in a figure-eight motion similar to modern sea turtles. The neck's extraordinary length gave it the ability to strike prey at distance without moving its whole body - a stealth advantage in open water.</p><p>It was not a fast open-water sprinter; it was a patient, precise stalker of shallow coastal seas.</p>",
+  evolution:"<p>Plesiosaurus represents the <b>long-necked plesiosaur body plan</b> - one of two fundamental shapes within Plesiosauria (the other being the short-necked, large-headed pliosaurs). The two forms evolved from nothosaur-like ancestors in the Triassic, with Plesiosaurus establishing the long-neck template that would persist in many lineages through to the end-Cretaceous extinction.</p>",
+  study:[
+    {q:"How flexible was the plesiosaur neck?",
+     why:"The neck is very long but the vertebrae vary by species, and some analyses suggest limited lateral flexibility despite the length.",
+     interps:[
+       ["Flexible in all planes","conf-moderate","Some vertebral joint analyses support wide movement, enabling the stealth-strike model."],
+       ["Stiff and held horizontally","conf-moderate","Neck vertebrae of some plesiosaurs lack the range of motion implied by popular images."]
+     ]}
+  ],
+  matters:"Plesiosaurus made the Mesozoic sea real. Before its 1823 discovery, the deep past was a land story - dinosaurs, pterosaurs, strange mammals. Anning's plesiosaur added an ocean full of equally strange reptiles to that picture and gave the public the first clear sense that the prehistoric world was not just different on land, but different in every direction."
+  ,
+  fossilRecord:{
+    knownFrom:"The type specimen, a nearly complete skeleton found by Mary Anning in 1823 near Lyme Regis; additional specimens from other Early Jurassic sites in England and Germany",
+    evidenceLevel:"Rich",
+    locality:"Lyme Regis, Dorset, England; other Lower Jurassic sites in southern England",
+    formation:"Blue Lias Formation (Hettangian to Sinemurian, Lower Jurassic)",
+    material:["Nearly complete skeleton","Skull","Limb bones","Vertebrae","Teeth"],
+    note:"The holotype of <b>Plesiosaurus dolichodeirus</b>, collected by Mary Anning and formally described by Conybeare in 1824, remains one of the most historically important vertebrate fossils ever found. Additional specimens from Lyme Regis and other Blue Lias exposures have extended knowledge of the anatomy. The skull is relatively small and lightly built. Postcranial material is well-documented across multiple specimens, establishing the paddle anatomy and vertebral count reliably. Plesiosaur soft tissue is not generally preserved beyond bone, so muscle arrangement, skin texture, and colour are inferred from comparative anatomy."
+  },
+  hook: "Plesiosaurus's famously long neck has generated biomechanical debate for 200 years — whether it could raise its head above water is still contested from basic physics of neck muscle mass.",
+  learnerLevel: "beginner",
+  conceptTags: ["aquatic"],
+  glossaryLinks: ["jurassic","preservation","specimen","fossil-record","phylogeny"],
+  researchLinks: []
+},
+{
+  id:"liopleurodon", name:"Liopleurodon", epithet:"L. ferox", pron:"LY-oh-PLOOR-oh-don",
+  period:"jurassic", clade:"Marine reptile (pliosaur)", diet:"carnivore",
+  age:"~160–155 Ma (Late Jurassic)", startMa:160, endMa:155, length:"~5–7 m", mass:"~1–1.7 t", place:"England; France; Germany; Mexico",
+  img:"images/species/liopleurodon.jpg",
+  overview:"A large pliosaur from the Late Jurassic of England, France, and Germany, Liopleurodon was around 5-7 metres long - a powerfully built, short-necked marine predator with four broad flippers and a large skull bearing interlocking conical teeth for seizing large prey. Its actual documented size is well-supported by fossil evidence; claims of a 25-metre animal broadcast in a 1999 television documentary had no basis in the specimen record.",
+  insights:[
+    ["The BBC effect","The 1999 Walking with Dinosaurs episode depicted Liopleurodon as 25 metres long - five times its actual maximum size. The exaggeration was later acknowledged by the producers; the real animal was closer to <b>5–7 metres</b>, still a formidable predator."],
+    ["A bite with no modern equivalent","Its skull is proportionally enormous - estimated at nearly a quarter of total body length - and the jaw musculature suggests a <b>crushing bite force</b> that exceeded most Mesozoic predators, capable of seizing large ichthyosaurs and plesiosaurs."],
+    ["Four paddles, no tail fin","Unlike ichthyosaurs, pliosaurs lacked a tail fin and instead powered themselves entirely through <b>underwater flight with four paddle limbs</b> - the same motion as sea turtles, scaled up enormously."],
+    ["Smell-steering in water","Liopleurodon's nostrils were arranged to sample water flowing in one side and out the other, allowing it to <b>steer by scent</b> like a stereo olfaction system - confirmed by the nasal anatomy of its skull."]
+  ],
+  behaviour:"<p>Liopleurodon was the apex marine predator of the Late Jurassic European sea, hunting other large marine reptiles, large fish, and possibly surface prey. Its enormous head and teeth point to a grappling, crushing killing style rather than the slashing-and-retreating approach of some other large predators. It likely used its extraordinary sense of smell to locate prey over large distances in open water.</p>",
+  evolution:"<p>Liopleurodon belongs to <b>Pliosauridae</b>, the short-necked, large-headed branch of Plesiosauria - the counterpart to the long-necked Plesiosaurus body plan. Pliosaurs evolved the large-skull design independently of mosasaurs and sharks, converging on the same solution to open-water apex predation. They disappeared before the end-Cretaceous, replaced as apex marine predators by mosasaurs.</p>",
+  study:[
+    {q:"How large did Liopleurodon actually grow?",
+     why:"Exaggerated size claims in popular media have made the real size harder to communicate; fossil evidence gives a clear range.",
+     interps:[
+       ["5–7 m (maximum evidence-based)","conf-strong","Best-studied specimens fall in this range; no credible fossil evidence supports claims of 10 m or more."],
+       ["Potentially up to 10 m","conf-low","Some incomplete fragments have been assigned to Liopleurodon and used to infer larger sizes, but these attributions are uncertain."]
+     ]}
+  ],
+  matters:"Liopleurodon is the purest example of a real animal outpaced by its media reputation. The correction matters: a 6-metre pliosaur with a skull designed for crushing and a nose built to steer by scent is more interesting than a vague sea monster. Getting the size right makes the animal more real, not less impressive."
+  ,
+  fossilRecord:{
+    knownFrom:"Teeth and partial skeletal material from England, France, and Germany; a relatively complete skull from Normandy, France; additional material from Mexico",
+    evidenceLevel:"Partial",
+    locality:"Peterborough, England; Normandy, France; various Late Jurassic European sites",
+    formation:"Oxford Clay Formation (England); Marnes de Dives (France)",
+    material:["Skull","Teeth","Limb bones","Vertebrae"],
+    note:"<b>Liopleurodon ferox</b> is known from scattered but informative material across Europe. The Normandy skull is the best cranial specimen. Teeth are robust and blade-like. The Oxford Clay Formation of England, also famous for Jurassic marine reptiles and fish, has yielded additional pliosaur material that informs the group's ecology. Size estimates are constrained by the known specimens; popular claims of 25 m are entirely without fossil support and originated from television production choices. The material, while partial, is sufficient to establish the large skull-to-body ratio and basic anatomy."
+  },
+  hook: "Liopleurodon's TV depiction as a 25-metre monster is off by a factor of three — the actual animal was around 7 metres, which makes it no less formidable but is a case study in how documentaries inflate fossils.",
+  learnerLevel: "beginner",
+  conceptTags: [],
+  glossaryLinks: ["jurassic","specimen","fossil-record","diagnosis"],
+  researchLinks: []
+},
+{
+  id:"morganucodon", name:"Morganucodon", epithet:"M. oehleri", pron:"mor-GAN-oo-COH-don",
+  period:"jurassic", clade:"Mammaliaform (not a dinosaur)", diet:"carnivore",
+  age:"~205–190 Ma (Late Triassic to Early Jurassic)", startMa:205, endMa:190, length:"~10 cm", mass:"~20–40 g", place:"Wales; China; USA",
+  img:"images/species/morganucodon.jpg",
+  overview:"A tiny mammaliaform from the Late Triassic to Early Jurassic of Wales, China, and the USA, Morganucodon was around 10 centimetres long and one of the earliest animals on or very close to the mammal stem line, with a dentition showing transitional features between the ancestral condition and the differentiated teeth of true mammals. It was contemporaneous with the earliest dinosaurs, representing the lineage that would quietly diversify through the Mesozoic and long outlast them.",
+  insights:[
+    ["Mammals are older than most dinosaurs","Morganucodon was alive at the same time as the earliest dinosaurs - it did not evolve after them, <b>it evolved alongside them</b>, and its descendants survived the extinction that ended the dinosaur era."],
+    ["Large eyes for a nocturnal life","Orbital proportions suggest large eyes relative to skull size - most likely an adaptation for <b>nocturnal activity</b>, keeping this small animal out of the path of daylight predators."],
+    ["The double jaw joint","Morganucodon still retained a remnant reptilian jaw joint alongside the new mammalian one - a transitional anatomy caught mid-transformation, directly showing <b>how the mammal ear evolved</b> from jaw bones."],
+    ["Already found on three continents","Specimens from Wales, China, and North America show that early mammaliaforms were as <b>geographically widespread</b> as the early dinosaurs - neither group stayed in one place."]
+  ],
+  behaviour:"<p>Morganucodon was almost certainly nocturnal, hunting insects, worms, and other small invertebrates under cover of darkness while dinosaurs and large reptiles were active by day. At the size of a large mouse, it was vulnerable to almost every predator in its environment - its survival strategy was to stay small, stay hidden, and exploit the ecological night shift that larger animals couldn't use as effectively.</p>",
+  evolution:"<p>Morganucodon belongs to <b>Morganucodota</b>, the most primitive group of true mammaliaforms - animals with the full mammalian jaw joint but still retaining some ancestral features. It is not the direct ancestor of any living mammal lineage, but it represents the grade of animal from which all modern mammals ultimately descend. The 160 million years of dinosaur dominance were also 160 million years of mammal evolution - small, constrained, but continuous.</p>",
+  study:[],
+  matters:"Morganucodon reframes the dinosaur story entirely. Mammals were not latecomers who inherited the Earth after the asteroid - they were there from the beginning, running beneath the feet of sauropods and dodging theropods for 160 million years. The dinosaur age is also the hidden mammal age, and Morganucodon is the proof."
+  ,
+  fossilRecord:{
+    knownFrom:"Hundreds of isolated teeth and jaw fragments from Welsh fissure fills; several partial skulls and jaw material from China; additional material from North America",
+    evidenceLevel:"Rich",
+    locality:"Pant-y-Ffynnon and other fissure fills, Wales, UK; Yunnan Province, China; USA",
+    formation:"Rhaetic/Hettangian fissure fills (Wales); Lufeng Formation (China)",
+    material:["Skull","Teeth","Limb bones","Partial skeleton"],
+    note:"<b>Morganucodon</b> is one of the best-known early mammaliaforms, with abundant isolated tooth and jaw material from Welsh limestone fissure fills that have been accumulated through decades of screen-washing. Several partial skulls are known, including material from China that preserves three-dimensional anatomy. The double jaw joint - the diagnostic feature showing the transition between reptilian and mammalian jaw articulation - is directly visible in well-preserved specimens. Despite the abundance of dental material, complete skeletal material is scarce, and much of the postcranial reconstruction relies on closely related species."
+  },
+  hook: "Morganucodon was a mammal contemporary with the first dinosaurs — their 150-million-year coexistence reframes mammals as Mesozoic survivors, not post-extinction opportunists.",
+  learnerLevel: "intermediate",
+  conceptTags: ["missing-link"],
+  glossaryLinks: ["triassic","jurassic","mesozoic","transitional-fossil","specimen","fossil-record","phylogeny"],
+  researchLinks: []
+},
+{
+  id:"mosasaurus", name:"Mosasaurus", epithet:"M. hoffmannii", pron:"MOH-zah-SAW-rus",
+  period:"cretaceous", clade:"Marine reptile (mosasaur)", diet:"carnivore",
+  age:"~70–66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~13–14 m", mass:"~10–15 t", place:"Netherlands; North America",
+  img:"images/species/mosasaurus.jpg",
+  overview:"A large mosasaur - a giant marine lizard, not a dinosaur or plesiosaur - from the Late Cretaceous of the Netherlands and North America, Mosasaurus was around 13-14 metres long and an apex predator of the terminal Cretaceous seas, with powerful jaws, conical teeth, and a deep laterally compressed tail for propulsion. Jaw fragments found near Maastricht in the 18th century were among the first large extinct reptile bones to be formally examined, and the specimen played a role in the early scientific recognition that species could go extinct.",
+  insights:[
+    ["The skull that proved extinction","The great Maastricht skull, described in the 1760s and 1770s, was the first fossil too large and too strange to be any living animal - it forced natural philosophers to seriously consider that <b>entire species could disappear</b>, decades before cuvier formally articulated it."],
+    ["A monitor lizard scaled to a bus","Mosasaurs are not related to plesiosaurs - they are <b>squamates</b>, cousins of monitor lizards and Komodo dragons, that returned to the sea and evolved to giant size in a geological eyeblink."],
+    ["The ruler of the Cretaceous sea","Mosasaurs replaced ichthyosaurs as Cretaceous sea dominants and, by the end, <b>had no equal</b> in marine predation - they were the last great group to achieve marine dominance before the K-Pg extinction."],
+    ["Twice the vertebrae","Mosasaurs lengthened their bodies by <b>adding vertebrae</b> rather than elongating existing ones - a different solution to the same problem of getting longer that shows how many ways evolution can build a large body."]
+  ],
+  behaviour:"<p>Mosasaurus was the apex predator of the latest Cretaceous seas, hunting large fish, ammonites, smaller mosasaurs, and possibly sea birds like Hesperornis. Its double-hinged jaw - with bones in the middle of each tooth row that could flex - allowed it to manipulate large struggling prey, much like a large modern lizard. It likely swam with an undulating body motion enhanced by a tail fin similar to that of sharks.</p>",
+  evolution:"<p>Mosasaurs represent an independent marine transition by <b>squamate reptiles</b> (the group including lizards and snakes), analogous to but entirely separate from the transitions made by ichthyosaurs and plesiosaurs. They arose in the early Late Cretaceous and diversified rapidly, filling the ecological vacuum left when ichthyosaurs went extinct. All mosasaurs went extinct in the K-Pg mass extinction 66 million years ago.</p>",
+  study:[],
+  matters:"Mosasaurus is where the concept of extinction began. Before the Maastricht skull, the idea that God's creation could include entire species that no longer existed was theologically and intellectually uncomfortable. The skull was too big, too different, and too clearly not a living animal. It forced a rethink of how permanent the natural world really is - which is why the history of science runs straight through a mosasaur quarry in the Netherlands."
+  ,
+  fossilRecord:{
+    knownFrom:"The famous Maastricht skull (late 18th century), now in Paris; multiple specimens from the Cretaceous chalk of the Netherlands, Belgium, and Kansas; excellent material from the Western Interior Seaway deposits of North America",
+    evidenceLevel:"Rich",
+    locality:"St. Pietersberg, Maastricht, Netherlands; Niobrara Chalk, Kansas, USA",
+    formation:"Maastricht Formation (Netherlands); Niobrara Formation (USA)",
+    material:["Skull","Partial skeleton","Teeth","Vertebrae","Limb bones","Skin impressions"],
+    note:"<b>Mosasaurus hoffmannii</b> is known from abundant material on both sides of the Atlantic. The original Maastricht skull, seized by Napoleon's army in 1794 and now in the Muséum National d'Histoire Naturelle in Paris, remains the most historically significant mosasaur specimen. Kansas chalk deposits have yielded additional large skulls and partial skeletons. Some mosasaur specimens preserve skin impressions, showing a smooth, non-scaly surface more like a modern sea snake than a lizard. The anatomy is well enough known for confident reconstruction, though maximum size estimates remain debated."
+  },
+  hook: "Mosasaurus skin impressions show a non-scaly surface more like a sea snake than a lizard — direct evidence that overturned the default 'scaly reptile' assumption and was only possible from exceptional fossils.",
+  learnerLevel: "beginner",
+  conceptTags: ["extinction-event"],
+  glossaryLinks: ["cretaceous","maastrichtian","kpg-boundary","mass-extinction","convergent-evolution","preservation","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"hesperornis", name:"Hesperornis", epithet:"H. regalis", pron:"HES-per-OR-nis",
+  period:"cretaceous", clade:"Hesperornithiform bird", diet:"carnivore",
+  age:"~84–78 Ma (Late Cretaceous)", startMa:84, endMa:78, length:"~1.5–1.8 m", mass:"~4–6 kg", place:"Kansas, USA; Canada",
+  img:"images/species/hesperornis.png",
+  overview:"A hesperornithiform bird from the Late Cretaceous Western Interior Seaway, Hesperornis was around 1.5-1.8 metres long - toothed, flightless, with vestigial wings and powerful hindlimbs for propelling itself underwater like a modern loon or grebe. Its discovery in the 1870s by O.C. Marsh showed that Mesozoic birds had diversified far beyond Archaeopteryx-like forms, with some lineages having abandoned flight entirely in favour of deep-diving predation.",
+  insights:[
+    ["Birds with teeth","Hesperornis carried a full set of teeth in its lower jaw - <b>proof that Cretaceous birds retained the toothed condition</b> from their theropod ancestors long after Archaeopteryx, before toothless bills evolved in modern birds."],
+    ["Flight abandoned for diving","Its wings were reduced to vestigial stubs - Hesperornis had <b>given up flight entirely</b> to become a specialist diver, much like modern penguins, showing that evolution can reverse seemingly major innovations."],
+    ["Discovered by O.C. Marsh in 1872","Marsh described Hesperornis at the height of the Bone Wars, and it immediately become controversial: a toothed bird confirmed Darwin's prediction that ancestral birds would carry reptilian teeth - a major evolutionary validation."],
+    ["A sea bird of the inland seaway","Hesperornis lived in the <b>Western Interior Seaway</b> - the shallow sea that split North America in two during the Cretaceous - where it competed with mosasaurs, plesiosaurs, and large fish for prey."]
+  ],
+  behaviour:"<p>Hesperornis was a foot-propelled diving bird that hunted fish by pursuing them underwater with powerful strokes of its large hind feet, much like a modern loon or grebe. Its vestigial wings played no role in locomotion. On land, it would have been awkward - its feet were set far back on its body for diving efficiency, making walking difficult - likely hauling itself ashore only to rest or nest.</p>",
+  evolution:"<p>Hesperornis belongs to <b>Hesperornithiformes</b>, a clade of diving birds that diversified in Cretaceous seas and went extinct at the K-Pg boundary. As a true bird (within Aves), it is taxonomically a theropod dinosaur - and is therefore correctly placed in the Theropods lane of the Timeline. It shows that the Cretaceous radiation of birds was not a simple march toward modern forms; it included specialisations like flightlessness and aquatic predation that ultimately led to evolutionary dead ends.</p>",
+  study:[],
+  matters:"Hesperornis answers the question 'what happened to birds after Archaeopteryx?' - and the answer is more interesting than 'they gradually became modern birds.' Some of them went back to the water, lost their wings, grew teeth, and became specialist divers, before going extinct with the non-avian dinosaurs at the K-Pg boundary. The bird story is not a single thread; it is a bush, and some of those branches are dead."
+  ,
+  fossilRecord:{
+    knownFrom:"Multiple specimens from the Niobrara Chalk of Kansas, including skulls with teeth intact; some nearly complete skeletons; described by Marsh in 1872",
+    evidenceLevel:"Rich",
+    locality:"Smoky Hill River, Gove County, Kansas, USA; Manitoba, Canada",
+    formation:"Niobrara Chalk Formation",
+    material:["Skull","Nearly complete skeleton","Teeth","Limb bones","Vertebrae"],
+    note:"<b>Hesperornis regalis</b> is among the best-known Cretaceous birds, with multiple specimens from the Niobrara Chalk preserving skulls with teeth and substantial postcranial material. Marsh's 1872 description was based on good material, and subsequent Kansas chalk expeditions have substantially improved the sample. The vestigial wing elements are documented directly in articulated specimens. The foot anatomy - with large paddle-like hindfeet - is well-preserved and directly evidences the diving lifestyle. Hesperornis is placed in the same formation as Pteranodon, confirming they shared the same Late Cretaceous sea ecosystem."
+  },
+  hook: "Hesperornis was a fully toothed diving bird the size of a penguin — proof that birds were already diversifying into specialist niches 80 million years ago, long before the extinction that supposedly freed them.",
+  learnerLevel: "intermediate",
+  conceptTags: ["bird-origins","extinction-event"],
+  glossaryLinks: ["cretaceous","maastrichtian","kpg-boundary","mass-extinction","theropod","maniraptoran","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"lesothosaurus", name:"Lesothosaurus", epithet:"L. diagnosticus", pron:"leh-SOH-toh-SAW-rus",
+  period:"jurassic", clade:"Basal ornithischian dinosaur", diet:"herbivore",
+  age:"~200–190 Ma (Early Jurassic)", startMa:200, endMa:190, length:"~1 m", mass:"~10 kg", place:"Lesotho; South Africa",
+  img:"images/species/lesothosaurus.png",
+  overview:"A small basal ornithischian from the Early Jurassic of Lesotho and South Africa, Lesothosaurus was around 1 metre long and lightly built with simple leaf-shaped teeth and long hindlimbs suited to running, representing an early and relatively unspecialised stage before the ornithischian lineage diversified into armoured, horned, duck-billed, and dome-headed forms. It sits close to the base of the bird-hipped dinosaur tree and helps establish the ancestral body plan of the group.",
+  insights:[
+    ["The ornithischian 'default setting'","Lesothosaurus is small, fast, bipedal, and unspecialised - it shows the <b>basal body plan</b> from which stegosaurs, ankylosaurs, hadrosaurs, and ceratopsians all ultimately evolved."],
+    ["Built for speed, not strength","Long shins relative to thighs mark it as a <b>fast runner</b>, built to escape predators rather than fight them - the same cursorial adaptation seen in modern prey animals like gazelles."],
+    ["Africa's earliest bird-hipped dinosaur","Its South African / Lesothan context fills a geographical gap - most ornithischian story is told through North American and European fossils. Lesothosaurus shows the group was already diverse on <b>Gondwana in the Early Jurassic</b>."],
+    ["Named for a kingdom","Lesotho is one of only a handful of sovereign nations with a dinosaur named for it - a reminder that <b>Gondwana palaeontology</b> has yielded discoveries that matter globally."]
+  ],
+  behaviour:"<p>Lesothosaurus was a small, alert herbivore that cropped low vegetation with leaf-shaped teeth and fled from danger at speed rather than defending itself. It lived in a semi-arid, seasonally dry environment - the same general setting as many early South African dinosaurs - where fast movement between food patches and water sources would have been essential.</p>",
+  evolution:"<p>Lesothosaurus sits near the base of <b>Ornithischia</b>, the bird-hipped dinosaur lineage. It shows that the earliest ornithischians were small, fast bipeds - not the giant armoured tanks or elaborate crested animals the group later produced. Every complex ornithischian body plan was built on a foundation like this one.</p>",
+  study:[
+    {q:"Is Lesothosaurus genuinely basal to all ornithischians, or does it belong within a more specific group?",
+     why:"Small, lightly built ornithischians are hard to place phylogenetically because they share many primitive features.",
+     interps:[
+       ["Very basal ornithischian","conf-moderate","Most analyses place it close to the ornithischian base, outside the main specialised groups."],
+       ["Related to heterodontosaurids","conf-low","Some features overlap with the heterodontosaurid clade, raising placement questions."]
+     ]}
+  ],
+  matters:"Lesothosaurus is the ornithischian at the beginning, before the radiation. Every plate on a Stegosaurus, every horn on a Triceratops, every resonating crest on a Parasaurolophus - all of it grew from a body plan like this one: small, fast, unadorned, and watching for danger on a Jurassic African floodplain."
+  ,
+  fossilRecord:{
+    knownFrom:"Several partial skulls and disarticulated postcranial material from the Elliot Formation of Lesotho and South Africa; described in 1978 by Peter Galton",
+    evidenceLevel:"Partial",
+    locality:"Maphutseng and nearby localities, Leribe District, Lesotho; Herschel District, Eastern Cape, South Africa",
+    formation:"Upper Elliot Formation (Early Jurassic)",
+    material:["Skull","Partial skeleton","Teeth","Limb bones"],
+    note:"<b>Lesothosaurus diagnosticus</b> is known from several partial skulls and disarticulated postcranial elements, making it one of the better-known early ornithischians from Africa. The material is not complete, and some postcranial bones have been referred to the taxon with uncertainty. Its phylogenetic position has shifted between analyses. The Elliot Formation of Lesotho and South Africa has yielded a diverse early dinosaur fauna, and Lesothosaurus is one of the best-represented ornithischians from this context. Tooth wear patterns are documented and consistent with herbivory."
+  },
+  hook: "Lesothosaurus was a dog-sized dinosaur running around in the Early Jurassic — a reminder that the base of the ornithischian family tree was small and fast, not the giants that dominate the group's fame.",
+  learnerLevel: "intermediate",
+  conceptTags: ["missing-link"],
+  glossaryLinks: ["ornithischian","jurassic","bipedal","cursorial","phylogeny","clade","specimen","fossil-record"],
+  researchLinks: []
+},
+{
+  id:"anchiornis", name:"Anchiornis", epithet:"A. huxleyi", pron:"AN-kee-OR-nis",
+  period:"jurassic", clade:"Troodontid theropod", diet:"carnivore",
+  age:"~160 Ma (Late Jurassic)", startMa:162, endMa:158, length:"~0.35 m", mass:"~0.11 kg", place:"Liaoning, China",
+  img:"images/species/anchiornis.png",
+  overview:"A small troodontid theropod from the Late Jurassic of Liaoning, China, Anchiornis was around 35 centimetres long and bore flight feathers on all four limbs - pre-dating Archaeopteryx by several million years while already showing well-developed avian-style feathers. Melanosome analysis of preserved feather impressions reconstructed a detailed black-and-white spangled plumage with a reddish-orange crown, one of the most complete colour reconstructions achieved for any Mesozoic animal.",
+  insights:[
+    ["Older than Archaeopteryx","At ~160 Ma, Anchiornis predates <b>Archaeopteryx by roughly 10 million years</b>, showing that feathered paravian theropods were already diverse before the animal conventionally called the first bird appeared."],
+    ["The first dinosaur whose colour was fully mapped","Melanosome analysis of multiple body regions produced a detailed <b>black-and-white speckled pattern with a rusty-red head crest</b> - the most complete colour reconstruction achieved for any non-avian dinosaur."],
+    ["Four wings - again","Like Microraptor, Anchiornis bore long flight feathers on its hindlimbs as well as its arms - another four-winged experiment, further reinforcing that <b>multiple routes toward flight were tried simultaneously</b>."],
+    ["Named for Thomas Henry Huxley","The epithet honours the Victorian biologist who argued most forcefully that birds descended from dinosaurs - an irony, given that Anchiornis effectively proves him right from a position 10 Ma earlier than anyone expected."]
+  ],
+  behaviour:"<p>Anchiornis was a tiny, feathered predator of small vertebrates and insects in a forested Jurassic environment. Whether it could fly, glide, or merely used its feathered limbs for running-assisted climbing is genuinely uncertain - its feathers are clearly aerodynamic in structure but the shoulder anatomy does not clearly support strong flapping flight. It likely lived in trees or on the forest edge, moving through the canopy opportunistically.</p>",
+  evolution:"<p>Anchiornis is placed within <b>Troodontidae</b> or near that family in most analyses, making it a paravian theropod closely related to dromaeosaurs and birds. Its existence at 160 Ma in China reinforces the picture of a diverse feathered paravian fauna well before Archaeopteryx - the 'origin of birds' was a process spread across millions of years and many species, not a single event.</p>",
+  study:[
+    {q:"Could Anchiornis fly or only glide?",
+     why:"Its feather structure is aerodynamically capable but its shoulder and sternum anatomy is less clearly flight-adapted than in Archaeopteryx.",
+     interps:[
+       ["Gliding, not powered flight","conf-moderate","Shoulder and muscle attachment points suggest limited flapping capability."],
+       ["Limited powered flight possible","conf-moderate","Feather shape and limb proportions are not inconsistent with some degree of active flight."]
+     ]}
+  ],
+  matters:"Anchiornis resets the timeline of feathered flight experiments. The four-winged, patterned, insect-sized paravians were already diverse in China 10 million years before what we conventionally call the first bird. The origin of birds was a radiation, not a moment - and Anchiornis is the most vividly coloured entry point into that radiation we currently have."
+  ,
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens from the Yanliao Biota of Liaoning, many preserving feather details; multiple specimens subject to melanosome analysis for colour reconstruction",
+    evidenceLevel:"Exceptional",
+    locality:"Jianchang and Lingyuan counties, Liaoning Province, northeastern China",
+    formation:"Tiaojishan Formation (Oxfordian, Late Jurassic)",
+    material:["Nearly complete skeleton","Feathers","Skull","Limb bones"],
+    note:"<b>Anchiornis huxleyi</b> is known from a remarkable number of specimens - estimates range into the hundreds - many of them preserving detailed feather impressions from across the body. This density of material has enabled the most systematic melanosome analysis performed on any non-avian dinosaur: individual body regions were sampled and mapped to produce a complete colour reconstruction, showing a speckled black-and-white body with a rusty-red head crest and white wing spots. The abundance of material also allows study of ontogenetic variation (growth stages), which is rare for small feathered theropods."
+  },
+  hook: "Anchiornis had its feather colour mapped from fossilised melanosomes before any living equivalent — the first time a Mesozoic animal's actual colour was read directly from a fossil rather than guessed.",
+  learnerLevel: "intermediate",
+  conceptTags: ["bird-origins","colour","feathers"],
+  glossaryLinks: ["theropod","paravian","maniraptoran","jurassic","integument","preservation","lagerstaette","fossil-formation","specimen","fossil-record"],
+  researchLinks: ["feathers","dinosaur-colours","soft-tissue"]
+},
+{
+  id:"protoceratops", name:"Protoceratops", epithet:"P. andrewsi", pron:"proh-toh-SAIR-ah-tops",
+  period:"cretaceous", clade:"Protoceratopsid ornithischian", diet:"herbivore",
+  age:"~75–71 Ma (Late Cretaceous)", startMa:75, endMa:71, length:"~1.8 m", mass:"~100–180 kg", place:"Mongolia",
+  img:"https://upload.wikimedia.org/wikipedia/commons/8/84/Protoceratops_andrewsi_Restoration.png",
+  overview:"A small protoceratopsid ornithischian from the Late Cretaceous of Mongolia, Protoceratops was around 1.8 metres long with a prominent bony frill but no true horns, and is one of the most extensively sampled Cretaceous dinosaurs - hundreds of specimens spanning all growth stages allow study of development, individual variation, and population structure in unusual detail. It is also the prey animal in the 'Fighting Dinosaurs' specimen, preserved locked in combat with a Velociraptor.",
+  insights:[
+    ["Known from hundreds of individuals","Protoceratops may be the most completely sampled small dinosaur in the fossil record - specimens range from embryos to elderly adults, giving a <b>complete growth series across a population</b>."],
+    ["The prey in the 'Fighting Dinosaurs'","The famous fossil that preserves a Velociraptor grappling with Protoceratops is a Protoceratops biting the raptor's arm - the story from the <b>prey animal's side</b> is rarely told as clearly as from the hunter's."],
+    ["Frill without horns","Its large neck frill predates the elaborate horn-and-frill combination of Triceratops by millions of years - it shows the <b>frill as display device</b> before horns were added to the system."],
+    ["Eggs that inspired a myth","American Museum expeditions in the 1920s found Protoceratops nests and eggs in the Gobi, which were initially mistaken for Oviraptor eggs - <b>inadvertently creating one of palaeontology's most famous misidentifications</b>."]
+  ],
+  behaviour:"<p>Protoceratops was a herding herbivore that probably travelled in groups for safety across the Cretaceous Gobi Desert's dune environments. It nested in sand, laying eggs in spiralling clutches. Its parrot-like beak was well-suited to cropping tough desert vegetation. As the prey of Velociraptor, its ability to bite back - documented in the Fighting Dinosaurs fossil - shows that herbivores were not passive victims.</p>",
+  evolution:"<p>Protoceratops belongs to <b>Protoceratopsidae</b>, small ceratopsians that preceded the giant-horned ceratopsids like Triceratops. It shows the ceratopsian body plan in an earlier, simpler form - frill present, horns minimal or absent - and gives context for how the spectacular Late Cretaceous ceratopsid radiation began with much smaller, less elaborate animals.</p>",
+  study:[
+    {q:"Do frill size differences between specimens represent sexual dimorphism or growth stages?",
+     why:"The sample size is large enough to study variation, but attributing it to sex vs age is difficult without independent sex identification.",
+     interps:[
+       ["Sexual dimorphism","conf-moderate","Some analyses find two size-class groups consistent with male/female distinction."],
+       ["Growth variation","conf-moderate","Continuous variation in the sample could reflect continuous growth rather than two discrete sexes."]
+     ]}
+  ],
+  matters:"Protoceratops gives palaeontology what it rarely gets: depth. Most dinosaurs are known from one or two individuals; Protoceratops is known from hundreds. From that depth comes something approaching population biology - growth curves, individual variation, nesting behaviour. And the Fighting Dinosaurs fossil gives the prey animal a voice, showing that the story of predator-prey interaction is always a two-sided account."
+  ,
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens across all growth stages, from embryos to large adults; eggs and nesting sites; the 'Fighting Dinosaurs' specimen (IGM 100/25) shared with Velociraptor",
+    evidenceLevel:"Exceptional",
+    locality:"Djadokhta Formation exposures, Ömnögovi Province and Bayankhongor Province, Mongolia; Bayan Mandate, Inner Mongolia, China",
+    formation:"Djadokhta Formation; Bayan Mandate Formation",
+    material:["Multiple skeletons","Skull","Eggs","Limb bones","Vertebrae","Teeth","Partial skeleton"],
+    note:"<b>Protoceratops andrewsi</b> has one of the densest specimen records of any dinosaur. The American Museum of Natural History's Central Asiatic Expeditions of the 1920s and subsequent Mongolian and Sino-Mongolian expeditions have yielded a sample spanning every growth stage, making it one of the few dinosaurs for which true population-level biology is possible. The 'Fighting Dinosaurs' specimen, preserved in a sand dune collapse mid-combat, is the most direct evidence of a specific predator-prey interaction in the dinosaur fossil record. Egg clutches with well-preserved egg structure provide data on ceratopsian nesting biology."
+  },
+  hook: "The 'Fighting Dinosaurs' fossil preserves a Velociraptor and Protoceratops locked in combat, buried mid-struggle — direct evidence of predation so vivid it reads like a crime scene photograph.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display","taphonomy-showcase"],
+  glossaryLinks: ["ceratopsian","ornithischian","cretaceous","display-structure","bonebed","taphonomy","specimen","fossil-record","holotype"],
+  researchLinks: []
+},
+{
+  id:"deinosuchus", name:"Deinosuchus", epithet:"D. riograndensis", pron:"DY-noh-SOO-kus",
+  period:"cretaceous", clade:"Crocodyliform (not a dinosaur)", diet:"carnivore",
+  age:"~82–75 Ma (Late Cretaceous)", startMa:82, endMa:75, length:"~8–12 m", mass:"~2–5 t", place:"Western North America",
+  img:"images/species/deinosuchus.png",
+  overview:"A giant crocodyliform from the Late Cretaceous of western North America - not a dinosaur - Deinosuchus reached an estimated 8-12 metres and is one of the largest crocodile-line animals known, with a massively muscled jaw and robust blunt teeth capable of taking large vertebrate prey. Bite marks matching its tooth dimensions have been found on hadrosaur and ceratopsian bones, confirming it as a genuine apex predator of coastal and riverine environments alongside the theropods of its time.",
+  insights:[
+    ["A dinosaur predator that wasn't a dinosaur","Bite marks attributed to Deinosuchus appear on the bones of hadrosaurs and other large dinosaurs - <b>direct evidence of a crocodyliform preying on non-avian dinosaurs</b>, not just stealing their kills."],
+    ["Gigantism achieved independently","At up to 12 metres and 5 tonnes, Deinosuchus reached tyrannosaur-scale mass through a completely separate lineage - a third independent solution to apex-predator size alongside theropods and large marine reptiles."],
+    ["Teeth like blunted bowling pins","Its teeth were unusually blunt and rounded compared to other crocodyliformes - built for <b>crushing bone</b> rather than slicing flesh, a specialisation suited to tackling heavily built prey like hadrosaurs and turtles."],
+    ["A short boom, a quick exit","Deinosuchus appears and disappears within about 7 million years - a geological eyeblink - suggesting its niche was tightly constrained, possibly by competition with tyrannosaurs that expanded their range during the same period."]
+  ],
+  behaviour:"<p>Deinosuchus was an ambush predator of riverbanks and coastal wetlands, lunging from the water to seize large dinosaurs that came to drink. Its deep skull and blunt, crushing teeth point toward prey that could not easily be subdued by simple biting - the 'death roll' strategy familiar from modern crocodilians, scaled up to an animal the mass of a large tyrannosaur.</p>",
+  evolution:"<p>Deinosuchus belongs to <b>Alligatoroidea</b>, the same broad group as modern alligators and caimans - making it a member of a lineage that is still alive today, not an extinct experiment. Its gigantism occurred within a surviving crocodyliform lineage, which makes it unique among the giant predators of the Cretaceous. Modern alligators are its distant cousins, reduced to a fraction of its size.</p>",
+  study:[
+    {q:"How large did Deinosuchus actually grow?",
+     why:"Size estimates vary widely across specimens and extrapolation methods, and some assigned material may belong to different taxa.",
+     interps:[
+       ["8–10 m (conservative)","conf-moderate","Most well-constrained specimens fall in this range when scaled against complete modern crocodilians."],
+       ["Up to 12 m","conf-low","Some specimens suggest larger individuals, but maximum size is uncertain."]
+     ]}
+  ],
+  matters:"Deinosuchus disrupts the assumption that all Cretaceous apex predators were theropod dinosaurs. Here is a crocodyliform - a member of a lineage that survives to the present day - that grew to tyrannosaur scale and was actively preying on large dinosaurs. The predator-prey ecology of the Cretaceous was richer and stranger than any one group can represent."
+  ,
+  fossilRecord:{
+    knownFrom:"Fragmented but recognisable material including skull bones, osteoderms, and teeth from multiple North American localities; no complete skeleton is known",
+    evidenceLevel:"Partial",
+    locality:"Big Bend National Park, Texas; New Jersey; Georgia; North Carolina; New Mexico, USA",
+    formation:"Aguja Formation (Texas); various Atlantic Coastal Plain formations; Fruitland Formation (New Mexico)",
+    material:["Skull","Teeth","Vertebrae","Limb bones"],
+    note:"<b>Deinosuchus riograndensis</b> and the related <em>D. hatcheri</em> are known from scattered but informative material across several US states. No single complete skull or skeleton exists, so size and anatomy are reconstructed from partial cranial bones, osteoderms (bony skin plates), and teeth. The blunt, rounded teeth are documented in multiple specimens and are distinctly different from the sharper teeth of most crocodyliformes. Bite marks on hadrosaur bones are attributed to Deinosuchus based on tooth shape and size match. Osteoderms are among the most commonly recovered elements and confirm very large body size."
+  },
+  hook: "Deinosuchus was a 10-metre crocodilian that almost certainly preyed on dinosaurs — bite marks on hadrosaur bone make it one of the few non-dinosaur predators confirmed to have hunted them.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["cretaceous","specimen","fossil-record","convergent-evolution","taphonomy"],
+  researchLinks: ["spinosaurus"]
+},
+{
+  id:"magyarosaurus", name:"Magyarosaurus", epithet:"M. dacus", pron:"MAD-yar-oh-SAW-rus",
+  period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
+  age:"~70–66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~5–6 m", mass:"~700 kg–1 t", place:"Transylvania, Romania",
+  img:"images/species/magyarosaurus.jpeg",
+  overview:"A titanosaur sauropod from the latest Cretaceous of the Haţeg Basin, Romania, Magyarosaurus was around 5-6 metres long - dramatically smaller than the multi-tonne giants typical of its lineage - as a result of evolving on an island where limited resources favoured smaller body size over generations. It is one of the best-documented cases of insular dwarfism in a non-avian dinosaur and a clear example of the island rule operating across deep time.",
+  insights:[
+    ["A titanosaur you could look in the eye","While Argentinosaurus was reaching 70 tonnes on mainland Gondwana, Magyarosaurus was living on a Cretaceous island at <b>1/70th the mass</b> - the same lineage, radically rescaled by isolation."],
+    ["Island dwarfism confirmed by bone histology","Growth ring analysis shows Magyarosaurus reached adult size quickly and at a small body mass - it was <b>not a juvenile of a larger species</b>, as once suspected. It was a genuinely small-bodied adult."],
+    ["Cretaceous island of Transylvania","In the Late Cretaceous, what is now Romania was an archipelago in a shallow sea - <b>Transylvanian dinosaur fauna</b> was as strange and isolated as Galápagos wildlife, evolving in a closed system."],
+    ["First described by a female palaeontologist in 1895","The Transylvanian material was described by Baroness Mária von Nopcsa, one of the first women to work formally in vertebrate palaeontology - her work preceded most of the theoretical framework for island dwarfism."]
+  ],
+  behaviour:"<p>Magyarosaurus browsed low vegetation on its island habitat, moving slowly and relying on the reduced predator pressure of island life rather than sheer size for defence. Its world was a strange miniaturised ecosystem: dwarf titanosaurs, unusual hadrosaurs, and predatory dromaeosaurs sized down relative to their continental relatives - everything rescaled by the same island constraints.</p>",
+  evolution:"<p>Magyarosaurus sits within <b>Titanosauria</b>, the group that includes Argentinosaurus and the largest land animals ever - yet here is a titanosaur smaller than a modern horse. Its miniaturisation is the clearest documented case of <b>island dwarfism</b> in a sauropod, confirmed by independent histological analysis showing the small body is genuinely adult, not juvenile. It illustrates that no evolutionary tendency is irreversible: gigantism built by selection can be undone by the same process on a different scale.</p>",
+  study:[],
+  matters:"Magyarosaurus makes gigantism look temporary. The same forces that drove sauropods to 70 tonnes on a continent with abundant resources drove a close relative to 1 tonne on a crowded island. Evolution is not a one-way escalator - it is a set of trade-offs, and the trade-offs change completely when you are on an island. The smallest sauropod teaches as much about evolution as the largest."
+  ,
+  fossilRecord:{
+    knownFrom:"Multiple individuals including adults and juveniles from several Transylvanian localities; bone histology studies confirm adult status of small individuals",
+    evidenceLevel:"Rich",
+    locality:"Haţeg Basin, Transylvania, Romania (formerly Hungary)",
+    formation:"Densuş-Ciula Formation and Sânpetru Formation (Maastrichtian, Late Cretaceous)",
+    material:["Multiple skeletons","Limb bones","Vertebrae","Skull"],
+    note:"<b>Magyarosaurus dacus</b> is known from multiple specimens from the Haţeg Basin, including individuals at different growth stages. The crucial evidence for island dwarfism - rather than juvenile status - comes from bone histology: growth rings in small individuals show adult bone remodelling patterns, confirming that these were fully grown animals, not large sauropods that happened to be young. The same histological evidence shows relatively rapid growth to small adult size. The Haţeg fauna is one of the most distinctive Late Cretaceous island faunas known, and Magyarosaurus is its most studied inhabitant."
+  },
+  hook: "Magyarosaurus was a sauropod the size of a horse — island dwarfism confirmed by bone histology, making it the clearest example of evolution shrinking a giant to fit a small island.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","cretaceous","maastrichtian","kpg-boundary","mass-extinction","specimen","fossil-record","preservation"],
+  researchLinks: ["cretaceous-sauropods"]
+},
+
+/* ── Expansion Pack - 14 New Entries ── */
+
+{
+  id:"ornithomimus", name:"Ornithomimus", epithet:"O. edmontonicus", pron:"or-NITH-oh-MY-mus",
+  period:"cretaceous", clade:"Ornithomimosaur theropod", diet:"omnivore",
+  age:"~76–66 Ma (Late Cretaceous)", startMa:76, endMa:66, length:"~3.5 m", mass:"~100–170 kg", place:"Alberta, Canada; western North America",
+  img:"images/species/ornithomimus.png", imgFit:"contain",
+  overview:"An ornithomimosaur theropod from the Late Cretaceous of Alberta, Ornithomimus was around 3.5 metres long with long legs, a toothless beak, and large eyes - an ostrich-like build suited to fast running and general omnivory. Canadian specimens with preserved feather impressions show that adults carried wing-like arm feathers that were too small for flight, pointing to display as their likely function.",
+  insights:[
+    ["A bird mimic with real feathers","Fossils of Ornithomimus preserve filamentous body covering and wing-like feather traces, proving that even large, flightless ostrich-mimic dinosaurs could be <b>feathered</b>."],
+    ["Wings before flight","Adult specimens show more developed forelimb feathers than juveniles, suggesting these structures were tied to maturity, display or brooding rather than powered flight."],
+    ["Speed without certainty","Long legs, light build and a toothless beak make Ornithomimus look like a Mesozoic ostrich, but exact running speed and diet remain <b>inferred</b> rather than directly measured."],
+    ["Feathers outside China","Its feather evidence from Canada showed that feathered dinosaur preservation was not limited to the famous Liaoning lake beds."]
+  ],
+  behaviour:"<p>Ornithomimus was a fast, lightly built animal of Late Cretaceous floodplains, probably using speed as its first defence against tyrannosaurs. Its toothless beak and long arms fit a flexible feeding strategy: small animals, insects, eggs, fruit, seeds or soft vegetation are all plausible, making 'omnivore' safer than forcing it into a strict carnivore or herbivore category.</p><p>The most important behavioural clue is its plumage. Feathers on a non-flying runner point toward insulation, signalling, brooding or courtship, not flight. Adult wing-like feathers may have been visual flags, useful in display or reproductive behaviour rather than aerodynamic tools.</p>",
+  evolution:"<p>Ornithomimus pushes the origin and function of feathered forelimbs deeper and wider across theropods. It shows that wing-like structures could evolve in animals too large to fly, supporting the idea that wings began as display, brooding or signalling surfaces before being co-opted for flight. Its feather evidence from sandstone deposits also expands where palaeontologists expect to find such preservation.</p>",
+  study:[
+    {q:"What were the wing-like forelimb feathers for?",
+     why:"The function of large forelimb feathers on a flightless runner shapes how we understand feather origins.",
+     interps:[
+       ["Display or courtship","conf-strong","Adult development of more elaborate feathers fits a maturity-linked visual function."],
+       ["Brooding","conf-moderate","Feathered arms could help cover eggs, but direct nest association is missing."],
+       ["Aerodynamics","conf-low","The animal was too large and built for running, not flying."]
+     ]}
+  ],
+  matters:"Ornithomimus is a clean reminder that feathers are not automatically about flight. It turns wings into a broader evolutionary question: before they carried animals into the air, they may have helped them signal, brood, display and survive.",
+  fossilRecord:{
+    knownFrom:"Multiple partial skeletons and feather-preserving specimens referred to Ornithomimus edmontonicus from Alberta",
+    evidenceLevel:"Rich",
+    locality:"Alberta, Canada; western North America",
+    formation:"Dinosaur Park Formation and related Late Cretaceous deposits",
+    material:["Partial skeletons","Limb bones","Skull material","Vertebrae","Feather traces"],
+    note:"The key evidence comes from several <b>Ornithomimus edmontonicus</b> specimens preserving filamentous feathers and, in adults, traces of wing-like forelimb feathering. The fossils are especially important because they come from sandstone deposits, not the fine lake sediments usually associated with feather preservation. This expands where palaeontologists expect to find feather evidence. The exact species-level taxonomy of ornithomimids can be complicated, but the feather signal itself is the important point."
+  },
+  hook: "Ornithomimus specimens preserve actual feather quill knobs — the first direct feather evidence in an ornithomimid — and show adult individuals were more feathered than juveniles, suggesting display rather than insulation.",
+  learnerLevel: "intermediate",
+  conceptTags: ["feathers","display"],
+  glossaryLinks: ["theropod","cretaceous","maniraptoran","integument","preservation","specimen","fossil-record"],
+  researchLinks: ["feathers"]
+},
+
+{
+  id:"brontosaurus", name:"Brontosaurus", epithet:"B. excelsus", pron:"BRON-toh-SAW-rus",
+  period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
+  age:"~157–145 Ma (Late Jurassic)", startMa:157, endMa:145, length:"~20–22 m", mass:"~15–20 tonnes", place:"Wyoming, Colorado, Utah, western USA",
+  img:"images/species/brontosaurus.png", imgFit:"contain",
+  overview:"A large diplodocid sauropod of the Late Jurassic Morrison Formation, Brontosaurus reached around 20-22 metres in length and shared its floodplain ecosystem with Allosaurus, Stegosaurus, and Diplodocus. Long synonymised within Apatosaurus by most palaeontologists, it was reinstated as a valid separate genus in 2015 after a large specimen-level analysis found consistent anatomical differences between the two groups - making it one of palaeontology's more public examples of taxonomy as a revisable, evidence-based process.",
+  insights:[
+    ["The thunder lizard came back","Long treated as <em>Apatosaurus</em>, Brontosaurus was revived as a valid genus after a large specimen-level analysis found enough anatomical differences to support separate genera."],
+    ["A public name with a scientific problem","Brontosaurus survived in popular culture even when many palaeontologists rejected it, making it a famous case of <b>public memory versus taxonomy</b>."],
+    ["Built like a diplodocid","Its long neck, long whip-like tail and columnar limbs place it among the Morrison Formation sauropods, close to Apatosaurus and Diplodocus."],
+    ["Classification is not just naming","The Brontosaurus debate shows that taxonomy changes when scientists measure and compare anatomy in new ways, not just when someone chooses a preferred label."]
+  ],
+  behaviour:"<p>Brontosaurus was a giant browsing herbivore of the Morrison Formation, sharing floodplains and seasonal environments with Diplodocus, Brachiosaurus, Stegosaurus, Allosaurus and others. Like other diplodocids, it likely fed without chewing, cropping vegetation with a small head and processing it through a vast gut.</p><p>Its ecological role was not simply 'big plant eater': sauropods partitioned food by height, neck posture, tooth shape and movement. Brontosaurus probably fed differently from high-browsing Brachiosaurus and narrow-muzzled Diplodocus, though exact feeding envelopes remain debated.</p>",
+  evolution:"<p>Brontosaurus is a case study in scientific self-correction. Its resurrection did not happen because the public liked the name; it happened because a major analysis found enough anatomical differences between <em>Apatosaurus</em> and <em>Brontosaurus</em> to support separate genera. It gives the DinoDex a perfect example of taxonomy as an evidence-based, revisable process.</p>",
+  study:[
+    {q:"Is Brontosaurus securely distinct from Apatosaurus?",
+     why:"The case affects how palaeontologists define genera from subtle anatomical variation.",
+     interps:[
+       ["Valid separate genus","conf-moderate","A large 2015 analysis supported this position based on numerous anatomical characters."],
+       ["Better kept within Apatosaurus","conf-low","Some researchers treat the split cautiously, as genus boundaries always involve judgement calls about how much difference is enough."]
+     ]}
+  ],
+  matters:"Brontosaurus makes taxonomy feel alive. It proves that a dinosaur name is not a permanent label glued to a skeleton, but a scientific conclusion that can be tested, rejected and sometimes brought back.",
+  fossilRecord:{
+    knownFrom:"Partial skeletons and referred diplodocid material from the Morrison Formation",
+    evidenceLevel:"Rich",
+    locality:"Wyoming, Colorado, Utah, western USA",
+    formation:"Morrison Formation",
+    material:["Partial skeletons","Vertebrae","Limb bones","Pelvic material","Tail vertebrae"],
+    note:"Brontosaurus is not known from one perfect skeleton; its story is built from comparative anatomy across diplodocid specimens. That is exactly why the case matters. The fossil evidence is sufficient to reconstruct the animal as a Morrison diplodocid, but the taxonomic boundary between <b>Brontosaurus</b> and <em>Apatosaurus</em> depends on detailed character scoring across many specimens. It belongs in DinoDex not because it is the biggest or the most complete, but because its name itself teaches how palaeontology revises categories."
+  },
+  hook: "Brontosaurus was declared invalid in 1903, taught as Apatosaurus for a century, then restored as a valid genus in 2015 — no dinosaur better illustrates how taxonomy is an ongoing scientific process, not a fixed list.",
+  learnerLevel: "beginner",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","jurassic","taxonomy","genus","specimen","fossil-record","cladistics"],
+  researchLinks: ["family-tree"]
+},
+
+{
+  id:"pachyrhinosaurus", name:"Pachyrhinosaurus", epithet:"P. lakustai", pron:"PAK-ee-RY-noh-SAW-rus",
+  period:"cretaceous", clade:"Centrosaurine ceratopsid ornithischian", diet:"herbivore",
+  age:"~73 Ma (Late Cretaceous)", startMa:74, endMa:72, length:"~5.5–6 m", mass:"~2–4 tonnes", place:"Alberta, Canada",
+  img:"images/species/pachyrhinosaurus.png", imgFit:"contain",
+  overview:"A centrosaurine ceratopsid from the Late Cretaceous of Alberta, Pachyrhinosaurus was around 5.5-6 metres long and distinctive among horned dinosaurs for replacing the expected nasal horn with a thick roughened boss of bone. Mass-accumulation bonebeds dominated by this species, particularly at Pipestone Creek, provide some of the best evidence that ceratopsians lived and moved in large groups.",
+  insights:[
+    ["A boss instead of a horn","Unlike Styracosaurus or Triceratops, Pachyrhinosaurus carried a roughened <b>nasal boss</b> rather than a tall nose horn, showing how varied ceratopsian headgear became."],
+    ["Bonebeds of a crowd","The Pipestone Creek material preserves huge numbers of individuals, making Pachyrhinosaurus one of the best herd-scale ceratopsian records."],
+    ["Display in bone texture","The nasal boss and frill ornament were probably visual and social structures, shaped by recognition, maturity and possibly combat."],
+    ["Ceratopsians of the north","The genus also includes high-latitude species, making Pachyrhinosaurus useful context for polar dinosaur ecosystems."]
+  ],
+  behaviour:"<p>Pachyrhinosaurus was a robust low-browsing herbivore using a beak and dental batteries to process tough vegetation. The mass accumulations at Pipestone Creek suggest that many individuals died together or were transported into the same deposit, giving a rare population-level glimpse of ceratopsians.</p><p>That does not automatically prove a single living herd died in one instant, but it strongly supports the idea that these animals lived in large groups or gathered repeatedly in the same landscapes. Its headgear probably functioned in social signalling, species recognition and perhaps pushing or shoving contests, rather than acting as simple anti-predator armour.</p>",
+  evolution:"<p>Pachyrhinosaurus expands the ceratopsian story beyond 'horns and frills as weapons'. Its thick bosses and ornate frills show that horned dinosaurs experimented with many kinds of visual and social anatomy. It also links display evolution with population-level fossil evidence from bonebeds.</p>",
+  study:[
+    {q:"What was the nasal boss mainly for?",
+     why:"The boss is too distinctive to ignore but difficult to assign one function.",
+     interps:[
+       ["Display and species recognition","conf-strong","Its visibility, texture and variation fit social signalling."],
+       ["Intraspecific combat","conf-moderate","The boss may have absorbed pushing or shoving forces."],
+       ["Predator defence","conf-low","It may have deterred attacks, but the structure reads more as social anatomy than weaponry."]
+     ]}
+  ],
+  matters:"Pachyrhinosaurus shows that horned dinosaurs were not all variations on Triceratops. Evolution did not just make bigger horns; it made bosses, spikes, frills and visual signatures for life in crowded herds.",
+  fossilRecord:{
+    knownFrom:"Large bonebed assemblages, skulls, cranial ornament and postcranial material",
+    evidenceLevel:"Exceptional",
+    locality:"Pipestone Creek, near Grande Prairie/Wembley, Alberta, Canada",
+    formation:"Wapiti Formation",
+    material:["Bonebed","Skulls","Nasal bosses","Frill elements","Limb bones","Teeth","Vertebrae"],
+    note:"The <b>Pipestone Creek bonebed</b> is one of the richest ceratopsian deposits known, dominated by <em>Pachyrhinosaurus lakustai</em>. The abundance of material allows study of variation, growth and bonebed formation, but it also requires caution: a bonebed records death and burial processes as well as biology. The association of many individuals supports herd-level interpretations, but the exact cause of accumulation is a taphonomic question."
+  },
+  hook: "Pachyrhinosaurus had a bony boss instead of a nose horn — a reminder that the defining feature of ceratopsians was a display platform, not just a weapon, varied wildly across species.",
+  learnerLevel: "intermediate",
+  conceptTags: ["display"],
+  glossaryLinks: ["ceratopsian","ornithischian","cretaceous","display-structure","bonebed","taphonomy","specimen","fossil-record"],
+  researchLinks: []
+},
+
+{
+  id:"yutyrannus", name:"Yutyrannus", epithet:"Y. huali", pron:"YOO-tee-RAN-us",
+  period:"cretaceous", clade:"Basal tyrannosauroid theropod", diet:"carnivore",
+  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~8–9 m", mass:"~1–1.5 tonnes", place:"Liaoning, China",
+  img:"images/species/yutyrannus.png", imgFit:"contain",
+  overview:"A large basal tyrannosauroid from the Early Cretaceous of Liaoning, China, Yutyrannus reached around 8-9 metres and is preserved with extensive filamentous body covering consistent with simple proto-feathers - making it the largest dinosaur known with direct feather evidence. Its size demonstrates that large-bodied predatory dinosaurs, not just small bird-like theropods, could carry significant insulating plumage.",
+  insights:[
+    ["The giant with feathers","Yutyrannus is among the largest dinosaurs with direct evidence of feather-like filaments, overturning the idea that only small theropods were fluffy."],
+    ["Three skeletons, one signal","The original description was based on three near-complete individuals, making the feather evidence harder to dismiss as an oddity."],
+    ["A tyrannosaur before T. rex","It was not a close twin of Tyrannosaurus, but an earlier tyrannosauroid, showing that feathering was present within the wider <b>tyrant-dinosaur lineage</b>."],
+    ["Insulation at scale","Its feathers may reflect a cool Early Cretaceous climate, display, or inherited body covering retained from smaller ancestors."]
+  ],
+  behaviour:"<p>Yutyrannus was a large predator of the Early Cretaceous Jehol world, probably hunting sizeable herbivores and scavenging when possible. Its feather-like covering would not have made it birdlike in behaviour, but it changes the animal's living silhouette completely: a tonne-scale predator with a shaggy coat.</p><p>If the filaments served insulation, they suggest that even large animals in cooler climates could benefit from covering. If display played a role, then tyrannosauroids were already using body covering as visual signalling long before the huge bone-crushers of the Late Cretaceous.</p>",
+  evolution:"<p>Yutyrannus is central to the feather debate because it breaks the simple size rule. Feathers were not just the equipment of small gliders and bird-line dinosaurs; they could persist in large-bodied predators. It complicates how we reconstruct later tyrannosaurs: T. rex does not automatically become fully feathered, but Yutyrannus shows that feathered tyrannosauroids were real.</p>",
+  study:[
+    {q:"What does Yutyrannus imply for feathers in later tyrannosaurs?",
+     why:"It affects how we restore famous animals like Tyrannosaurus.",
+     interps:[
+       ["Feathering was widespread in tyrannosauroids","conf-moderate","Yutyrannus proves the capacity existed in the lineage."],
+       ["Large Late Cretaceous tyrannosaurids were mostly scaly","conf-moderate","Skin impressions from later taxa support scaly regions, though not necessarily the whole body."],
+       ["Mixed covering across body regions and life stages","conf-strong","Different body regions, ages and climates may have carried different coverings - the most cautious reading."]
+     ]}
+  ],
+  matters:"Yutyrannus is the dinosaur that makes 'giant feathered predator' scientifically real. It does not settle every T. rex restoration, but it permanently widens the range of plausible tyrannosaur bodies.",
+  fossilRecord:{
+    knownFrom:"Three near-complete skeletons preserving filamentous integumentary traces",
+    evidenceLevel:"Exceptional",
+    locality:"Liaoning Province, China",
+    formation:"Yixian Formation",
+    material:["Multiple skeletons","Skulls","Limb bones","Vertebrae","Filamentous integument"],
+    note:"The original Yutyrannus material is unusually informative because several individuals preserve both skeletal anatomy and filamentous covering. The integumentary evidence is not a speculative restoration from relatives; it is part of the fossil record. The exact distribution of feathers over the whole body remains reconstructed from preserved patches, so not every centimetre is equally well evidenced."
+  },
+  hook: "Yutyrannus was a 9-metre tyrannosauroid covered in filamentous feathers — direct evidence that large tyrannosaurs could be feathered, turning T. rex's scaly appearance from a certainty into an open question.",
+  learnerLevel: "intermediate",
+  conceptTags: ["feathers","soft-tissue"],
+  glossaryLinks: ["theropod","cretaceous","integument","preservation","lagerstaette","fossil-formation","specimen","fossil-record"],
+  researchLinks: ["theropod-hunting","feathers"]
+},
+
+{
+  id:"wulong", name:"Wulong", epithet:"W. bohaiensis", pron:"WOO-long",
+  period:"cretaceous", clade:"Microraptorine dromaeosaur theropod", diet:"carnivore",
+  age:"~120 Ma (Early Cretaceous)", startMa:122, endMa:118, length:"~0.8 m", mass:"~1 kg", place:"Liaoning, China",
+  img:"images/species/wulong.jpg", imgFit:"contain", cardImgFit:"cover", cardImgPosition:"50% center",
+  overview:"A small microraptorine dromaeosaurid from the Early Cretaceous of Liaoning, China, Wulong was around 0.8 metres long and preserved with a pair of elongated ribbon-like tail feathers that would have functioned in display. The known specimen appears to be a juvenile that already carried these plumes, suggesting display structures developed early in growth rather than only in sexually mature adults.",
+  insights:[
+    ["A dragon with plumes","Wulong preserves long feathers on the tail and limbs, adding another spectacular data point to the Jehol <b>feathered-dinosaur</b> record."],
+    ["Young but showy","Histology indicates the known specimen was immature, yet it already carried elaborate plumage that in living birds often appears later."],
+    ["Four-winged context","As a microraptorine, Wulong belongs near the animals that experimented with feathered arms and legs, blurring the line between display and aerodynamics."],
+    ["Growth complicates reconstruction","The fossil warns that a single beautiful specimen may represent a juvenile stage, not the final adult form."]
+  ],
+  behaviour:"<p>Wulong was a small predatory dinosaur in the Jehol ecosystem, likely hunting insects, small vertebrates and other tiny animals around forests and lake margins. Its feathers make it visually dramatic, but its behaviour must be treated cautiously.</p><p>Feathered limbs may have helped with display, balance, manoeuvring or gliding-like movements in close relatives, but Wulong itself should not be turned into a guaranteed flyer. The most interesting point is developmental: elaborate feathers appeared before full skeletal maturity, suggesting that display biology in early paravians may not map neatly onto modern bird expectations.</p>",
+  evolution:"<p>Wulong helps show that the bird-line neighbourhood was full of evolutionary experiments. Long feathers, tail fans and limb plumage did not emerge in a straight line toward modern birds; they appeared in small predatory dinosaurs with different ecologies, growth patterns and possible display systems.</p>",
+  study:[
+    {q:"Were Wulong's long feathers mainly for display or movement?",
+     why:"It affects how we interpret feather evolution near the origin of birds.",
+     interps:[
+       ["Display","conf-moderate","Long tail feathers are visually striking and may have signalled identity or maturity."],
+       ["Aerodynamic role","conf-low","Close relatives used limb feathers in movement, but Wulong's exact ability is not proven."],
+       ["Developmental signal","conf-strong","The specimen's immaturity is central: elaboration before adulthood is a real biological fact preserved in the fossil."]
+     ]}
+  ],
+  matters:"Wulong is not just another feathered dinosaur. It is a reminder that fossils preserve individuals at particular ages, and that the most beautiful specimen may be a teenager rather than an adult blueprint.",
+  fossilRecord:{
+    knownFrom:"A complete or near-complete feathered specimen preserving plumage and skeletal anatomy",
+    evidenceLevel:"Exceptional",
+    locality:"Liaoning Province, China",
+    formation:"Jiufotang Formation, Jehol Biota",
+    material:["Skeleton","Skull","Limb bones","Tail","Feather impressions","Histological evidence"],
+    note:"<b>Wulong bohaiensis</b> is based on a beautifully preserved specimen with feather traces and skeletal detail. Its histology indicates immaturity, which makes the fossil especially valuable for studying growth. That same fact complicates reconstruction: adult Wulong may have differed in plumage or proportions. This is a perfect entry for teaching that a fossil is also an individual life stage."
+  },
+  hook: "Wulong's spectacular plumage was already fully developed in a juvenile — proof that complex display feathers evolved before sexual maturity, not as a byproduct of it.",
+  learnerLevel: "advanced",
+  conceptTags: ["feathers"],
+  glossaryLinks: ["dromaeosaurid","maniraptoran","paravian","theropod","cretaceous","integument","preservation","lagerstaette","fossil-formation","specimen","fossil-record"],
+  researchLinks: ["feathers","soft-tissue"]
+},
+
+{
+  id:"utahraptor", name:"Utahraptor", epithet:"U. ostrommaysorum", pron:"YOO-tah-RAP-tor",
+  period:"cretaceous", clade:"Dromaeosaurid theropod", diet:"carnivore",
+  age:"~135–130 Ma (Early Cretaceous)", startMa:135, endMa:130, length:"~5–6 m", mass:"~300–500 kg", place:"Utah, USA",
+  img:"images/species/utahraptor.png", imgFit:"contain",
+  overview:"A large dromaeosaurid theropod from the Early Cretaceous of Utah, Utahraptor was around 5-6 metres long and one of the biggest raptors known, retaining the enlarged sickle-shaped killing claw on the second toe seen in smaller relatives like Deinonychus and Velociraptor. Its size demonstrates that the dromaeosaurid body plan could scale up substantially without abandoning its defining anatomical features.",
+  insights:[
+    ["The raptor scaled up","Utahraptor was far larger than Velociraptor or Deinonychus, bringing the dromaeosaur body plan into <b>big-predator territory</b>."],
+    ["A huge sickle claw","Its enlarged second toe claw shows the classic raptor foot weapon at a scale capable of grappling with sizeable prey."],
+    ["Early in the Cretaceous","Utahraptor lived much earlier than the famous Late Cretaceous raptors, showing large dromaeosaurs were already established early in the period."],
+    ["A tangled fossil block","Important Utahraptor material includes a dense block with multiple individuals, promising insight but requiring careful preparation and interpretation."]
+  ],
+  behaviour:"<p>Utahraptor was a large predatory theropod of the Cedar Mountain ecosystems, probably hunting or scavenging iguanodontian herbivores and other prey. Its sickle claw was likely used in gripping, pinning or cutting during close contact, but it should not be described as a simple slashing knife.</p><p>As with Deinonychus, claims of pack hunting are tempting but hard to prove. Multiple individuals in the same deposit may reflect social behaviour, a predator trap, drought, flood concentration or other taphonomic processes. The best reading is powerful, close-quarters predator, not movie-style coordinated wolf pack.</p>",
+  evolution:"<p>Utahraptor expands the dromaeosaur story beyond small, agile animals. It shows that the raptor design could be scaled up into a major predatory role and helps connect public fascination with raptors to more careful biomechanical and fossil-evidence questions.</p>",
+  study:[
+    {q:"Did Utahraptor hunt cooperatively?",
+     why:"The popular image of raptors is deeply social, but fossil evidence rarely proves coordinated behaviour.",
+     interps:[
+       ["Social or group behaviour","conf-low","Multi-individual deposits are suggestive but not decisive."],
+       ["Taphonomic accumulation","conf-moderate","Burial processes can gather animals without them living as a pack."],
+       ["Solitary but opportunistic predator","conf-moderate","This remains a safe default for large carnivores without direct behavioural proof."]
+     ]}
+  ],
+  matters:"Utahraptor gives the public the giant raptor they expected, but the science is more interesting than the movie. The fossil asks how far we can scale a body plan - and how careful we must be before turning a bonebed into a pack.",
+  fossilRecord:{
+    knownFrom:"Partial skeletons, large claws, cranial and postcranial material, and multi-individual material under study",
+    evidenceLevel:"Partial",
+    locality:"Utah, USA",
+    formation:"Cedar Mountain Formation",
+    material:["Claws","Limb bones","Vertebrae","Skull fragments","Partial skeletons"],
+    note:"Utahraptor is famous, but not known from one perfect mounted skeleton. Its record includes partial but diagnostic material, especially the large dromaeosaurid sickle claw and limb elements. The multi-individual block is potentially important for growth, ecology and behaviour, but its full scientific value depends on preparation and study. The fossil record does not demonstrate wolf-like cooperative hunting."
+  },
+  hook: "Utahraptor was a dromaeosaurid the size of a bear with 22-centimetre sickle claws — the scaled-up version of Velociraptor that predates its famous relative by 50 million years.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["dromaeosaurid","maniraptoran","paravian","theropod","cretaceous","specimen","fossil-record"],
+  researchLinks: ["theropod-hunting"]
+},
+
+{
+  id:"albertosaurus", name:"Albertosaurus", epithet:"A. sarcophagus", pron:"al-BER-toh-SAW-rus",
+  period:"cretaceous", clade:"Tyrannosaurid theropod", diet:"carnivore",
+  age:"~71–68 Ma (Late Cretaceous)", startMa:71, endMa:68, length:"~9–10 m", mass:"~1.5–2.5 tonnes", place:"Alberta, Canada",
+  img:"images/species/albertosaurus.png", imgFit:"contain",
+  overview:"A tyrannosaurid theropod from the Late Cretaceous of Alberta, Albertosaurus was around 9-10 metres long and more slender-built than its close relative Tyrannosaurus, with proportionally longer legs suggesting a faster animal. A bonebed at Dry Island Buffalo Jump containing multiple Albertosaurus individuals of different ages has fuelled ongoing debate over whether tyrannosaurs sometimes travelled or hunted in groups.",
+  insights:[
+    ["A tyrannosaur built for pursuit","Compared with T. rex, Albertosaurus was lighter and longer-legged, suggesting a <b>faster predator</b> of northern floodplains."],
+    ["The Dry Island bonebed","A famous deposit preserves many Albertosaurus individuals, making it central to debates over tyrannosaur social behaviour."],
+    ["Not just a small T. rex","Albertosaurus was part of an earlier, slimmer tyrannosaurid radiation, not merely a scaled-down version of the later giant."],
+    ["Barnum Brown's predator","Its discovery history links directly to museum collecting and the fossil-hunting era in Alberta."]
+  ],
+  behaviour:"<p>Albertosaurus was an apex predator of Late Cretaceous Alberta, hunting hadrosaurs, ceratopsians and other animals in a landscape rich with large herbivores. Its lighter build suggests a different predatory style from T. rex: more pursuit-capable, less extreme in skull-crushing specialisation.</p><p>The Dry Island bonebed is the behavioural centre of the entry. Many individuals in one place may suggest gregariousness or at least group-level ecology, but catastrophic death, drought, flooding or repeated accumulation remain possible. The evidence supports possible social behaviour, not confirmed pack hunting.</p>",
+  evolution:"<p>Albertosaurus shows tyrannosaurids before the final T. rex extreme. It gives a broader view of tyrannosaur evolution: not one inevitable march toward a giant bone-crusher, but a family of predators with different body proportions, ranges and ecologies.</p>",
+  study:[
+    {q:"Does the Albertosaurus bonebed prove group living?",
+     why:"It is one of the strongest pieces of evidence used in the tyrannosaur sociality debate.",
+     interps:[
+       ["Some gregarious behaviour","conf-moderate","Multiple individuals of different ages together are suggestive."],
+       ["Catastrophic or repeated accumulation","conf-moderate","Taphonomy can gather carcasses without social behaviour."],
+       ["Coordinated pack hunting","conf-low","The fossil record does not demonstrate wolf-like cooperation."]
+     ]}
+  ],
+  matters:"Albertosaurus is where tyrannosaur social behaviour becomes a real scientific question rather than a movie trope. It shows how one bonebed can invite big behavioural ideas while still demanding restraint.",
+  fossilRecord:{
+    knownFrom:"Multiple specimens including skulls, skeletons and a multi-individual bonebed at Dry Island Buffalo Jump",
+    evidenceLevel:"Rich",
+    locality:"Alberta, Canada",
+    formation:"Horseshoe Canyon Formation",
+    material:["Skulls","Partial skeletons","Limb bones","Vertebrae","Teeth","Bonebed"],
+    note:"Albertosaurus has a strong fossil record by large-theropod standards. The <b>Dry Island bonebed</b> contains multiple individuals and has been central to discussions of tyrannosaur gregariousness. The deposit is behaviourally tempting but taphonomically complex: many animals in one place can mean group life, mass death, carcass concentration or repeated deposition. Its value lies in preserving a population sample, not just a single predator."
+  },
+  hook: "A single Albertosaurus bonebed contains individuals of at least a dozen different ages — direct evidence of age-structured groups, making it the best case for tyrannosaur social behaviour in the fossil record.",
+  learnerLevel: "intermediate",
+  conceptTags: ["taphonomy-showcase"],
+  glossaryLinks: ["theropod","cretaceous","bonebed","taphonomy","specimen","fossil-record"],
+  researchLinks: ["theropod-hunting"]
+},
+
+{
+  id:"torvosaurus", name:"Torvosaurus", epithet:"T. tanneri", pron:"TOR-voh-SAW-rus",
+  period:"jurassic", clade:"Megalosaurid theropod", diet:"carnivore",
+  age:"~153–145 Ma (Late Jurassic)", startMa:153, endMa:145, length:"~9–10 m", mass:"~2–3 tonnes", place:"Colorado, Wyoming, Utah, USA; Portugal",
+  img:"images/species/torvosaurus.png", imgFit:"contain",
+  overview:"A large megalosaurid theropod from the Late Jurassic Morrison Formation of the western USA and Portugal, Torvosaurus was around 9-10 metres long with robust forelimbs and large serrated teeth, and was one of the biggest predators of its time alongside Allosaurus. Its presence in both North America and Portugal reflects a Jurassic faunal connection between the two regions before the Atlantic widened to break them apart.",
+  insights:[
+    ["The other giant of the Morrison","Torvosaurus lived alongside Allosaurus but came from a different theropod lineage, adding <b>predator diversity</b> to the Jurassic."],
+    ["A megalosaurid survivor","It connects back to older Jurassic predators like Megalosaurus, showing a long-running branch of large carnivores."],
+    ["Across the young Atlantic","Closely related Torvosaurus material in Portugal links the Morrison Formation and Lourinhã Formation faunas."],
+    ["Fragmentary but formidable","Its size and skull elements point to a huge predator, but much of its life appearance remains reconstructed from incomplete material."]
+  ],
+  behaviour:"<p>Torvosaurus was a large carnivore in ecosystems already crowded with predatory dinosaurs. It likely hunted or scavenged large herbivores, including sauropods and stegosaurs, but its exact niche relative to Allosaurus remains uncertain.</p><p>Differences in skull build, tooth form, body size and abundance may indicate different hunting strategies or prey preferences. Unlike Allosaurus, which is known from many individuals, Torvosaurus is rarer, which makes behavioural inference harder.</p>",
+  evolution:"<p>Torvosaurus helps prevent the Jurassic predator story becoming too Allosaurus-centred. It shows that multiple large theropod lineages overlapped, with megalosaurids persisting as major predators while allosauroids diversified.</p>",
+  study:[
+    {q:"How did Torvosaurus share ecosystems with Allosaurus?",
+     why:"Predator diversity reveals how Jurassic food webs were structured.",
+     interps:[
+       ["Different prey or feeding strategy","conf-moderate","Anatomy and rarity suggest niche separation."],
+       ["Direct competition","conf-moderate","Both were large predators in overlapping environments."],
+       ["Regional replacement","conf-low","Portuguese and North American records complicate the picture."]
+     ]}
+  ],
+  matters:"Torvosaurus is the antidote to one-apex-predator storytelling. The Jurassic was not ruled by a single carnivore; it was a dangerous ecosystem with several ways to be a giant meat-eater.",
+  fossilRecord:{
+    knownFrom:"Partial skull and postcranial material from the Morrison Formation and related material in Portugal",
+    evidenceLevel:"Partial",
+    locality:"Colorado, Wyoming, Utah, USA; Lourinhã region, Portugal",
+    formation:"Morrison Formation; Lourinhã Formation",
+    material:["Skull elements","Teeth","Limb bones","Vertebrae","Partial skeleton"],
+    note:"Torvosaurus is well enough known to establish it as a major megalosaurid predator, but its fossil record is patchier than Allosaurus. Portuguese material has been interpreted as a close relative or separate species, showing faunal similarity between western North America and Europe during the Late Jurassic. The animal's size is clear; finer details of behaviour are inferred from partial anatomy and ecological context."
+  },
+  hook: "Torvosaurus was one of the largest Jurassic predators in Europe and North America — a reminder that before Cretaceous tyrannosaurids there were already giants, just differently built.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["theropod","jurassic","specimen","fossil-record","convergent-evolution"],
+  researchLinks: ["theropod-hunting"]
+},
+
+{
+  id:"dreadnoughtus", name:"Dreadnoughtus", epithet:"D. schrani", pron:"DRED-naw-tus",
+  period:"cretaceous", clade:"Lithostrotian titanosaur sauropod", diet:"herbivore",
+  age:"~77 Ma (Late Cretaceous)", startMa:79, endMa:75, length:"~26 m", mass:"~30–60 tonnes (debated)", place:"Patagonia, Argentina",
+  img:"images/species/dreadnoughtus.jpg", imgFit:"contain",
+  overview:"A large titanosaur sauropod from the Late Cretaceous of Patagonia, Dreadnoughtus is known from one of the most complete titanosaur skeletons yet found, making it a primary reference point for the body proportions of giant sauropods. Mass estimates derived from those bones have varied substantially between analyses, illustrating how difficult it is to translate bone geometry into body weight for animals with no living counterparts of comparable size.",
+  insights:[
+    ["A giant with much of the skeleton known","Dreadnoughtus is among the most complete very large titanosaurs, making it unusually informative for an animal of such size."],
+    ["Still growing","Bone histology suggests the type individual had not finished growing, meaning its adult size may have been even greater."],
+    ["A famous mass debate","The original high mass estimate was challenged by later volumetric work, making Dreadnoughtus a case study in <b>weighing extinct giants</b>."],
+    ["Titanosaurs at scale","It shows that Cretaceous sauropods were not fading everywhere; in South America, titanosaurs were still producing colossal bodies."]
+  ],
+  behaviour:"<p>Dreadnoughtus was a huge browsing herbivore of Cretaceous Patagonia, moving through floodplain environments and consuming immense quantities of plant matter. Its size would have made adults difficult prey, though juveniles were vulnerable.</p><p>The more interesting ecological question is not just 'how big was it?' but how giant titanosaurs sustained themselves: wide-ranging foraging, efficient digestion, rapid growth and low chewing investment all mattered. Its death and burial also matter: preserving so much of such a large animal requires unusual taphonomic circumstances.</p>",
+  evolution:"<p>Dreadnoughtus is a flagship for modern sauropod science because it combines size with measurable completeness. Instead of extrapolating from scraps, researchers could use major limb and body elements - and then argue about how those bones translate into soft tissue and mass.</p>",
+  study:[
+    {q:"How heavy was Dreadnoughtus really?",
+     why:"Mass estimates shape everything from metabolism to ecology and biomechanics.",
+     interps:[
+       ["Extremely high mass near 60 tonnes","conf-moderate","Based on limb-scaling methods applied to the original description."],
+       ["Lower mass around 30–40 tonnes","conf-strong","Volumetric reassessment produced lower, better-constrained estimates."],
+       ["A range rather than a number","conf-strong","Body mass should be presented as debated, not fixed - the disagreement is the scientific point."]
+     ]}
+  ],
+  matters:"Dreadnoughtus teaches that 'biggest dinosaur' headlines are less important than method. The fossil is magnificent because it lets scientists test how they estimate giants, not because it gives one final number.",
+  fossilRecord:{
+    knownFrom:"Two individuals, including an exceptionally complete giant titanosaur skeleton lacking much of the skull and neck",
+    evidenceLevel:"Rich",
+    locality:"Santa Cruz Province, Patagonia, Argentina",
+    formation:"Cerro Fortaleza Formation",
+    material:["Limb bones","Vertebrae","Ribs","Girdle elements","Tail vertebrae","Partial skeleton"],
+    note:"<b>Dreadnoughtus schrani</b> is unusually complete for a gigantic titanosaur, preserving much of the postcranial skeleton. The skull and portions of the neck are missing, but the limb and body material allow unusually direct estimates of proportions. Histology indicates the type specimen was still growing. The mass estimate is deliberately written as a range because published methods disagree: this disagreement is the scientific point, not a weakness to hide."
+  },
+  hook: "Dreadnoughtus's mass estimate of 65 tonnes was immediately challenged by independent methods — the public disagreement between research teams is a worked example of how size claims for giant sauropods should be evaluated.",
+  learnerLevel: "intermediate",
+  conceptTags: [],
+  glossaryLinks: ["sauropod","cretaceous","specimen","fossil-record","preservation"],
+  researchLinks: ["cretaceous-sauropods"]
+},
+
+{
+  id:"nanuqsaurus", name:"Nanuqsaurus", epithet:"N. hoglundi", pron:"nah-NOOK-saw-rus",
+  period:"cretaceous", clade:"Tyrannosaurine theropod", diet:"carnivore",
+  age:"~70–69 Ma (Late Cretaceous)", startMa:70, endMa:69, length:"~5–6 m (uncertain)", mass:"~500–900 kg (uncertain)", place:"North Slope, Alaska, USA",
+  img:"images/species/nanuqsaurus.png", imgFit:"contain",
+  overview:"A tyrannosaurine theropod from the latest Cretaceous of the North Slope of Alaska, Nanuqsaurus was a relatively small tyrannosaur estimated at around 5-6 metres - considerably smaller than Tyrannosaurus - living in a high-latitude environment that experienced months of polar darkness each year. Known from limited material, it is notable as evidence that tyrannosaurs occupied arctic ecosystems and likely had physiological or behavioural adaptations to extreme seasonal conditions.",
+  insights:[
+    ["The polar tyrant","Nanuqsaurus comes from the <b>Prince Creek Formation</b> of Alaska, a high-latitude ecosystem with long winter darkness."],
+    ["Small, but uncertain","It was originally interpreted as relatively small for a tyrannosaur, though size estimates are limited by fragmentary material."],
+    ["Arctic ecology, not icy wasteland","Its world was warmer than modern Arctic Alaska, but still seasonally extreme."],
+    ["A predator in the dark","Nanuqsaurus adds a carnivore to the evidence that polar dinosaur ecosystems were complete, resident communities."]
+  ],
+  behaviour:"<p>Nanuqsaurus was probably a top predator in the Prince Creek ecosystem, hunting hadrosaurs, small ornithischians and other high-latitude animals. Its ecology is less well known than T. rex or Albertosaurus because the fossil material is limited, but its setting is powerful.</p><p>For months each year, its environment would have been dark, cool and seasonal. Whether it relied on keen smell, low-light vision, scavenging, or year-round resident prey communities remains open. The environment is the story: tyrannosaurs were not confined to lush temperate floodplains.</p>",
+  evolution:"<p>Nanuqsaurus helps make polar dinosaur science concrete. It links tyrannosaur evolution with high-latitude ecology and supports the broader view that many dinosaurs had physiology and behaviours capable of handling seasonal extremes.</p>",
+  study:[
+    {q:"Was Nanuqsaurus genuinely small because of polar ecology?",
+     why:"It affects claims about food limitation and Arctic adaptation in tyrannosaurs.",
+     interps:[
+       ["Small-bodied polar tyrannosaur","conf-moderate","The original material suggests a smaller animal."],
+       ["Size uncertain due to fragmentary fossils","conf-strong","Limited material means caution is essential."],
+       ["Ecological adaptation to polar conditions","conf-low","Plausible, but not directly proven from the available evidence."]
+     ]}
+  ],
+  matters:"Nanuqsaurus turns the Arctic into dinosaur country. It makes the polar dinosaur story less abstract: in the winter dark, there were predators too.",
+  fossilRecord:{
+    knownFrom:"Fragmentary cranial material attributed to a tyrannosaurine",
+    evidenceLevel:"Fragments",
+    locality:"North Slope, Alaska, USA",
+    formation:"Prince Creek Formation",
+    material:["Skull fragments","Maxilla/nasal/frontal material","Associated tyrannosaurid material from the formation"],
+    note:"<b>Nanuqsaurus hoglundi</b> is based on limited skull material, so every reconstruction must be cautious. The taxon is important less for completeness than for context: it documents a derived tyrannosaurine in a polar ecosystem. Size, ecology and exact behaviour are therefore more uncertain than in better-known tyrannosaurs. Its strongest evidence value is biogeographic and palaeoecological."
+  },
+  hook: "A tyrannosaur from Arctic Alaska confirms that dinosaur predators lived through months of polar darkness, not only in temperate lowlands.",
+  learnerLevel: "intermediate",
+  conceptTags: ["polar"],
+  glossaryLinks: ["theropod","cretaceous","maastrichtian","specimen","fossil-record"],
+  researchLinks: ["polar-dinosaurs"]
+},
+
+{
+  id:"hatzegopteryx", name:"Hatzegopteryx", epithet:"H. thambema", pron:"HAT-seg-OP-ter-iks",
+  period:"cretaceous", clade:"Azhdarchid pterosaur", diet:"carnivore",
+  age:"~70–66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~10–12 m wingspan (uncertain)", mass:"~200–250 kg (uncertain)", place:"Haţeg Basin, Romania",
+  img:"images/species/hatzegopteryx.jpg", imgFit:"contain",
+  overview:"An azhdarchid pterosaur from the Late Cretaceous Haţeg Basin of Romania, Hatzegopteryx had an estimated wingspan of 10-12 metres and a massively built skull and reinforced neck bones that distinguish it from other azhdarchids of comparable size. It lived on an island ecosystem populated by dwarf dinosaurs, making it likely the apex predator of that environment - a flying reptile filling a role usually occupied by large theropods.",
+  insights:[
+    ["A giant on an island","Hatzegopteryx lived in the Haţeg ecosystem, famous for <b>island-dwarfed dinosaurs</b> and unusual Late Cretaceous fauna."],
+    ["Built more robustly than expected","Neck and skull material suggest a stockier, stronger animal than the standard long-necked azhdarchid template."],
+    ["A pterosaur as land predator","Rather than skimming oceans, azhdarchids are now often interpreted as <b>ground-stalking predators</b> of small animals."],
+    ["The top predator problem","In Haţeg, Hatzegopteryx may have been one of the few animals large enough to dominate sizeable prey."]
+  ],
+  behaviour:"<p>Hatzegopteryx was likely a terrestrial stalker, walking on all fours across island floodplains and woodlands, seizing small dinosaurs, mammals, reptiles and carrion with a huge beak. It could fly, but its ecological role may have been closer to a giant ground hornbill or marabou stork than a seabird.</p><p>Its robust neck matters because it challenges the idea that all giant azhdarchids were built the same. In a landscape of dwarf sauropods and ornithopods, a towering pterosaur may have been a dominant predator. Note: Hatzegopteryx was a pterosaur, not a dinosaur - it belongs to a separate reptile lineage.</p>",
+  evolution:"<p>Hatzegopteryx expands the pterosaur story beyond flight. It shows that pterosaurs were not simply aerial side characters next to dinosaurs; some may have been major land predators shaping island ecosystems.</p>",
+  study:[
+    {q:"How predatory was Hatzegopteryx on land?",
+     why:"It changes how pterosaurs fit into dinosaur-dominated ecosystems.",
+     interps:[
+       ["Terrestrial apex or mesopredator","conf-moderate","Its robust skull and neck support strong feeding performance."],
+       ["Generalist scavenger/predator","conf-strong","Azhdarchids likely exploited many food sources - the cautious reading."],
+       ["Pure aerial fisher","conf-low","This older image fits poorly with current azhdarchid anatomy."]
+     ]}
+  ],
+  matters:"Hatzegopteryx makes pterosaurs feel dangerous again - not as monsters, but as real ecological players. It turns the sky reptile into a land predator towering over island dinosaurs.",
+  fossilRecord:{
+    knownFrom:"Fragmentary but distinctive skull and neck material from giant azhdarchid pterosaurs",
+    evidenceLevel:"Fragments",
+    locality:"Haţeg Basin, Transylvania, Romania",
+    formation:"Densuş-Ciula Formation and related Haţeg deposits",
+    material:["Skull fragments","Jaw material","Cervical vertebrae","Limb fragments"],
+    note:"Hatzegopteryx is based on fragmentary remains, but the preserved skull and neck bones are unusually robust. Biomechanical work on the neck supports the idea of a shorter, stronger cervical system than in some other azhdarchids. Because the fossil is incomplete, wingspan and mass estimates are ranges rather than fixed numbers. Its importance lies in ecology and biomechanics, not completeness."
+  },
+  hook: "Hatzegopteryx was likely the apex predator of an island with no large carnivorous dinosaurs — a pterosaur filling the ecological role of a tyrannosaurid, which should not have been possible.",
+  learnerLevel: "advanced",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["cretaceous","maastrichtian","specimen","fossil-record","convergent-evolution","kpg-boundary","mass-extinction"],
+  researchLinks: []
+},
+
+{
+  id:"elasmosaurus", name:"Elasmosaurus", epithet:"E. platyurus", pron:"ee-LAZ-moh-SAW-rus",
+  period:"cretaceous", clade:"Marine reptile, elasmosaurid plesiosaur", diet:"carnivore",
+  age:"~80–77 Ma (Late Cretaceous)", startMa:80, endMa:77, length:"~10–11 m", mass:"~2 tonnes (uncertain)", place:"Western Interior Seaway, North America",
+  img:"images/species/elasmosaurus.jpg", imgFit:"contain",
+  overview:"An elasmosaurid plesiosaur from the Late Cretaceous Western Interior Seaway, Elasmosaurus was around 10-11 metres long with an extraordinary neck of over 70 vertebrae comprising roughly half its total body length, and a small head at the end of it. Edward Drinker Cope's original reconstruction famously placed the head on the tail end; its correction by rival O.C. Marsh became one of the more memorable episodes in the 19th-century 'Bone Wars.'",
+  insights:[
+    ["The neck that fooled Cope","Edward Drinker Cope famously reconstructed the animal with its head on the wrong end, mistaking its extraordinary neck for a tail."],
+    ["A sea reptile, not a dinosaur","Elasmosaurus lived alongside dinosaurs but belonged to a separate <b>marine reptile lineage</b> - plesiosaurs were not dinosaurs."],
+    ["Extreme neck evolution","Its neck contained an astonishing number of vertebrae, showing how far plesiosaurs pushed body-plan specialisation."],
+    ["The Bone Wars lesson","The mistake became part of the rivalry between Cope and Marsh, but the deeper lesson is about fragmentary anatomy and scientific correction."]
+  ],
+  behaviour:"<p>Elasmosaurus swam through the Western Interior Seaway, feeding on fish, squid-like animals and other small marine prey. Its long neck is often imagined as a flexible snake-like weapon, but plesiosaur necks were probably more limited than old artworks suggest.</p><p>The animal likely used stealth, reach and body positioning rather than wildly whipping its head around. It was one of many marine reptiles in a seaway that split North America, sharing those waters with mosasaurs, fish, turtles, ammonites and toothed birds.</p>",
+  evolution:"<p>Elasmosaurus is useful because it teaches two lessons at once: marine reptiles evolved body plans as specialised and strange as anything on land, and scientific errors can become productive when corrected. Its wrong-end reconstruction is famous, but its real importance lies in the anatomy that made the mistake possible.</p>",
+  study:[
+    {q:"What was the long neck for?",
+     why:"Elasmosaurus is the classic extreme-neck plesiosaur, but function is not obvious.",
+     interps:[
+       ["Stealthy prey approach","conf-moderate","A small head on a long neck may have reduced disturbance near prey."],
+       ["Wide feeding reach","conf-moderate","The neck increased strike area without moving the whole body."],
+       ["Highly flexible swan-like neck","conf-low","Modern studies generally reject extreme flexibility in elasmosaurid necks."]
+     ]}
+  ],
+  matters:"Elasmosaurus is the perfect fossil humility story. Cope's mistake is funny, but the animal's body was genuinely hard to interpret. The correction is not an embarrassment to science - it is science working.",
+  fossilRecord:{
+    knownFrom:"Incomplete type skeleton including extensive neck vertebrae, partial skull and postcranial material",
+    evidenceLevel:"Partial",
+    locality:"Kansas, USA",
+    formation:"Pierre Shale",
+    material:["Cervical vertebrae","Partial skull elements","Limb material","Vertebrae","Gastroliths"],
+    note:"<b>Elasmosaurus platyurus</b> is historically important but not completely preserved. The type material includes enough of the neck and body to establish its extreme proportions, but missing and scattered elements contributed to early reconstruction problems. Later redescription clarified its anatomy. Its fossil record should be understood as scientifically rich but historically messy. Elasmosaurus was a marine reptile, not a dinosaur."
+  },
+  hook: "Elasmosaurus's neck was reconstructed with the head on the wrong end by the scientist who named it — the error, corrected by rival O.C. Marsh, launched the Bone Wars and shaped American palaeontology for decades.",
+  learnerLevel: "beginner",
+  conceptTags: ["aquatic"],
+  glossaryLinks: ["cretaceous","preservation","specimen","fossil-record","holotype","taxonomy"],
+  researchLinks: []
+},
+
+{
+  id:"postosuchus", name:"Postosuchus", epithet:"P. kirkpatricki", pron:"POST-oh-SOO-kus",
+  period:"triassic", clade:"Pseudosuchian archosaur, rauisuchian-grade predator", diet:"carnivore",
+  age:"~221–203 Ma (Late Triassic)", startMa:221, endMa:203, length:"~4–5 m", mass:"~250–300 kg", place:"Texas, USA",
+  img:"images/species/postosuchus.jpg", imgFit:"contain",
+  overview:"A large rauisuchian archosaur from the Late Triassic of Texas, Postosuchus was around 4-5 metres long and not a dinosaur but a member of the pseudosuchian - crocodile-relative - lineage that dominated large-predator niches before dinosaurs came to the fore. Its upright posture, deep skull, and serrated teeth give it a superficially theropod-like appearance, illustrating how similar predatory body plans can evolve independently in unrelated lineages.",
+  insights:[
+    ["Not a dinosaur","Postosuchus belonged to the <b>crocodile side of the archosaur family tree</b> (Pseudosuchia), making it a crucial comparison for early dinosaurs."],
+    ["A Triassic top predator","Before theropods dominated, pseudosuchians like Postosuchus were among the major land carnivores."],
+    ["Convergence in action","Its erect limbs, big skull and predatory build can look dinosaur-like, but they evolved on a different archosaur branch."],
+    ["Dinosaurs began as underdogs","Postosuchus helps explain why early dinosaurs were only one part of a broader Triassic experiment in ruling land."]
+  ],
+  behaviour:"<p>Postosuchus was a large carnivore in Late Triassic ecosystems, hunting early dinosaurs, dicynodonts, small reptiles and other animals. Its powerful jaws and serrated teeth point to a predator capable of tackling sizeable prey.</p><p>It may have been mostly quadrupedal or capable of some bipedal postures depending on interpretation, but it should not be presented as a tyrannosaur ancestor or a true dinosaur. It belonged to Pseudosuchia - the crocodile-line archosaurs - and its ecological dominance makes the Triassic feel very different from the Jurassic.</p>",
+  evolution:"<p>Postosuchus is one of the best entries for teaching archosaur evolution. It shows that dinosaurs did not simply appear and immediately take over. During the Late Triassic, many crocodile-line relatives occupied the large-predator roles later filled by theropods.</p>",
+  study:[
+    {q:"How should Postosuchus be reconstructed and classified?",
+     why:"It affects how we picture Triassic locomotion and predator ecology.",
+     interps:[
+       ["Primarily quadrupedal pseudosuchian predator","conf-moderate","Modern reconstructions generally favour this posture."],
+       ["Facultatively bipedal at times","conf-low","Historically suggested but debated; not the current consensus."],
+       ["Dinosaur ancestor or dinosaur relative","conf-low","This is outdated: modern systematics firmly places Postosuchus on the crocodile-line side of Archosauria."]
+     ]}
+  ],
+  matters:"Postosuchus is the animal that stops DinoDex from becoming dinosaur propaganda. It shows that dinosaurs inherited the Earth only after a wider archosaur world collapsed around them.",
+  fossilRecord:{
+    knownFrom:"Skull and postcranial material from the Dockum Group of Texas, with additional related material from North America",
+    evidenceLevel:"Rich",
+    locality:"Post Quarry, Garza County, Texas, USA; additional North American material",
+    formation:"Cooper Canyon Formation, Dockum Group",
+    material:["Skull","Partial skeletons","Vertebrae","Limb bones","Teeth","Pelvic material"],
+    note:"<b>Postosuchus kirkpatricki</b> is known from relatively good material for a Triassic pseudosuchian, including skull and postcranial remains. Its classification has shifted as archosaur relationships have been revised. It was once linked loosely to dinosaur ancestry in older literature, but modern interpretation places it firmly on the crocodile-line side of Archosauria. This entry actively corrects the 'dinosaur-like means dinosaur' mistake."
+  },
+  hook: "Postosuchus was a 6-metre apex predator of the Triassic that looks exactly like an early theropod — because it was a rauisuchian, not a dinosaur, which means the same body plan evolved twice independently in the same period.",
+  learnerLevel: "intermediate",
+  conceptTags: ["convergent-evolution"],
+  glossaryLinks: ["triassic","phylogeny","clade","specimen","fossil-record","convergent-evolution","dinosauria"],
+  researchLinks: ["family-tree"]
+},
+
+{
+  id:"psittacosaurus", name:"Psittacosaurus", epithet:"P. mongoliensis", pron:"sih-TAK-oh-SAW-rus",
+  period:"cretaceous", clade:"Basal ceratopsian ornithischian", diet:"herbivore",
+  age:"~125–100 Ma (Early Cretaceous)", startMa:125, endMa:100, length:"~2 m", mass:"~20 kg", place:"Mongolia, China and wider Asia",
+  img:"images/species/psittacosaurus.png", imgFit:"contain",
+  overview:"A basal ceratopsian ornithischian from the Early Cretaceous of Mongolia and wider Asia, Psittacosaurus was around 2 metres long with a distinctive deep parrot-like beak and no true horns - an early and relatively unspecialised member of the lineage that would later produce Triceratops. Exceptionally preserved specimens provide direct evidence of skin texture, a counter-shaded colour pattern, tail bristles, and even the cloaca, making it one of the most completely understood non-avian dinosaurs in terms of soft-tissue anatomy.",
+  insights:[
+    ["A ceratopsian before the frills","Psittacosaurus was an early relative of Triceratops, but lacked the giant horns and frill of later ceratopsids - a reminder that <b>iconic features take time to evolve</b>."],
+    ["Colour from the skin","Exceptional specimens preserve pigment patterns showing countershading, one of the strongest dinosaur colour reconstructions outside feathered theropods."],
+    ["Tail bristles, not full fluff","Some specimens preserve long bristle-like structures on the tail, adding nuance to the ornithischian filament debate."],
+    ["A fossil record of growth","Many specimens across ages make Psittacosaurus important for studying development, posture, diet and social behaviour."]
+  ],
+  behaviour:"<p>Psittacosaurus was a small, agile herbivore or low-browser feeding with a sharp beak and cheek teeth. It likely ate tough plants, seeds and other low vegetation, possibly aided by gastroliths. Its colour pattern suggests camouflage in a habitat with directional light, and its tail bristles may have been visual display structures.</p><p>The animal's abundance makes it one of the best windows into early ceratopsian biology. It was not a miniature Triceratops; it was a different stage in the ceratopsian experiment, before horns and frills became the headline.</p>",
+  evolution:"<p>Psittacosaurus links several DinoDex themes at once: ceratopsian origins, colour reconstruction, skin preservation, filament-like structures and growth. It is one of the most scientifically useful small dinosaurs because it shows how much information exceptional preservation can add beyond bones.</p>",
+  study:[
+    {q:"What were the tail bristles and colour patterns for?",
+     why:"Psittacosaurus sits at the intersection of skin, display, camouflage and feather-origin debates.",
+     interps:[
+       ["Countershading for camouflage","conf-strong","Pigment distribution supports this interpretation."],
+       ["Tail bristles for display","conf-moderate","Their position and form fit signalling, but direct behaviour is unobserved."],
+       ["Evidence for widespread ornithischian feathers","conf-low","The bristles are important but not enough to make all ornithischians fluffy."]
+     ]}
+  ],
+  matters:"Psittacosaurus is a small dinosaur with a huge scientific footprint. It proves that the right fossil can reveal not just bones, but colour, skin, growth and the visual life of an extinct animal.",
+  fossilRecord:{
+    knownFrom:"Hundreds of specimens, including juveniles, adults, articulated skeletons, skin impressions, bristle-like tail structures and exceptional soft-tissue preservation",
+    evidenceLevel:"Exceptional",
+    locality:"Mongolia, northern China and other parts of Asia",
+    formation:"Multiple Early Cretaceous units including Yixian/Jehol-related deposits and equivalents",
+    material:["Skull","Skeletons","Growth series","Skin impressions","Pigment evidence","Tail bristles","Gastroliths"],
+    note:"Psittacosaurus has one of the richest fossil records of any small dinosaur. Its exceptional specimens preserve skin and pigment patterns, enabling countershading reconstructions. Tail bristles show unusual integument in an ornithischian, but these should not be treated as direct equivalents of bird feathers without caution. The abundance of specimens also allows study of growth and variation, making it a rare dinosaur where individual biology and population-level questions overlap."
+  },
+  hook: "Psittacosaurus is one of the only dinosaurs whose colour, skin texture, tail bristles, and cloaca have all been directly recovered from specimens.",
+  learnerLevel: "intermediate",
+  conceptTags: ["colour","feathers","display"],
+  glossaryLinks: ["ceratopsian","ornithischian","cretaceous","integument","preservation","display-structure","specimen","fossil-record"],
+  researchLinks: ["feathers","dinosaur-colours","soft-tissue"]
+}
+];
