@@ -36,16 +36,13 @@ When these goals conflict, ask which one is in front today rather than guessing.
   - One large inline `<script>` with all app logic and render functions. All data
     has been extracted to external files — the inline script contains logic only.
 - **External data files**, loaded via `<script>` tags before the inline script:
-  - `species.js` — `var SPECIES = [...]` — **74** entries. Rich schema (see §3).
-  - `glossary.js` — `window.GLOSSARY_TERMS = [...]` — **41** terms, `gl*`-prefixed logic.
+  - `species.js` — `var SPECIES = [...]` — **100** entries. Rich schema (see §3).
+  - `glossary.js` — `window.GLOSSARY_TERMS = [...]` — **74** terms, `gl*`-prefixed logic.
   - `research-cases.js` — `var RESEARCH_CASES = [...]` — **10** open-question cases.
   - `fossil-hunters.js` — `var PEOPLE = [...]` — **12** people.
   - `last-day.js` — three arrays: `LAST_DAY_CHAPTERS` (8), `SURVIVAL_GROUPS` (8),
     `FOSSILS_SCIENCE_CASES` (11). Extracted in Phase 0 — render functions in
     index.html unchanged, data now external.
-- **`index_copy.html`** — the OLD monolith (~6,900 lines). Superseded by git history.
-  **Delete this file** — it is dead weight and a source of confusion. If anything
-  from it is ever needed, it is recoverable from the initial git commit.
 
 ### Views (tabs)
 Home · DinoDex · Timeline · Moving Earth · Fossil Hunters · Fossils That Changed
@@ -58,6 +55,9 @@ Science · The Last Day · Research Desk · Glossary.
   fine for a static portfolio site; do not introduce a bundler/framework without an
   explicit decision, because that trades simplicity for capability and the owner wants
   to make that trade deliberately.
+- Several `glossaryLinks` and `researchLinks` values in the 26 entries added in the
+  last sprint may reference IDs not yet present in `glossary.js` or `research-cases.js`.
+  These need auditing before cross-references are relied upon.
 
 ---
 
@@ -74,12 +74,16 @@ knownFrom, evidenceLevel, locality, formation, material[], note}, hook, learnerL
 conceptTags[], glossaryLinks[], researchLinks[]`. HTML is allowed inside prose fields
 (`<b>`, `<p>`). Confidence values use the `conf-strong|moderate|low` convention.
 
+**String ranges** — use plain hyphens, not en dashes, in all string fields (age,
+length, mass, etc.). So `"~9.5-11 m"` not `"~9.5–11 m"`. En dashes cause encoding
+artifacts in the browser.
+
 **Glossary** (`glossary.js`): `id, term, category, difficulty(core|useful|advanced),
 aliases[], simpleDefinition, scientificExplanation, whyItMatters, dinodexContext,
 exampleUsage, examples[], exampleSpeciesIds[], relatedTerms[], keywords[], sourceNotes`.
 
 **Research case** (`research-cases.js`): `id, number, title, subtitle, hook, summary,
-status[], categories[], activeness(1–5), evidence[], question, whyItMatters,
+status[], categories[], activeness(1-5), evidence[], question, whyItMatters,
 changedRecently, competingInterpretations[], mostlyAgreed[], unresolved[], direction,
 cautiousReading, linkedSpecies[], papers[{authors,year,title,source,doi,type,note}]`.
 
@@ -88,14 +92,14 @@ eraCategory, linkedDinoDexSpecies[], image, imageAlt, imageCaption, imageFit,
 imagePosition, modal{person,discovery,ideaChanged,messyBit,legacyInDinodex},
 sourceNotes[]`.
 
-**Last Day chapter** (`last-day.js` → `LAST_DAY_CHAPTERS`): `id, nav, kicker, title,
+**Last Day chapter** (`last-day.js` -> `LAST_DAY_CHAPTERS`): `id, nav, kicker, title,
 time, body(HTML), links[], facts[{k,v}], chain[{num,label,desc}], afterHTML, img{src,
 alt,caption,contain,position}`.
 
-**Survival group** (`last-day.js` → `SURVIVAL_GROUPS`): `group, fate, tone
+**Survival group** (`last-day.js` -> `SURVIVAL_GROUPS`): `group, fate, tone
 (loss|some|survived), why, examples[]`.
 
-**Fossil exhibit** (`last-day.js` → `FOSSILS_SCIENCE_CASES`): `id, number, title,
+**Fossil exhibit** (`last-day.js` -> `FOSSILS_SCIENCE_CASES`): `id, number, title,
 subtitle, image, alt, caption, contain, before, showed, how, nuance, species[],
 people[], researchCases[], lastDay(bool)`.
 
@@ -123,9 +127,9 @@ Cross-references rely on matching `id`s (e.g. `glossaryLinks`, `linkedSpecies`,
 
 ## 5. How to work with the codebase
 
-- **Edit `index.html` and the data files (`species.js`, `glossary.js`, `research-cases.js`,
-  `fossil-hunters.js`, `last-day.js`).** `index_copy.html` has been deleted — use git
-  history if you ever need to look back at the old monolith.
+- **Edit `index.html` and the data files (`species.js`, `glossary.js`,
+  `research-cases.js`, `fossil-hunters.js`, `last-day.js`).** The old monolith
+  `index_copy.html` was deleted — use git history if anything from it is ever needed.
 - **Make surgical edits.** This is a large hand-built file; prefer targeted
   `str_replace` over rewriting whole sections. Show the diff and explain it.
 - **Preserve the design system.** Colours, type, and spacing come from CSS custom
@@ -147,7 +151,7 @@ Deep, accurate paleo research is a recurring need. When researching:
 - **Prefer primary literature and authoritative sources**: peer-reviewed papers (with
   DOIs), museum publications (NHM, AMNH, Smithsonian), and recognised researchers.
   Treat secondary/popular sources as leads to verify, not as citable facts.
-- **Date-stamp the science.** The field moves fast (e.g. the 2024–25 Nanotyrannus
+- **Date-stamp the science.** The field moves fast (e.g. the 2024-25 Nanotyrannus
   shift). Always note when a finding is recent or contested, and search for the
   current state rather than relying on training data.
 - **Produce research as structured notes** that map onto the data schemas above, so
