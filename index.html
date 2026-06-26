@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1418,6 +1418,21 @@
 .gl-related{margin-top:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .gl-related-label{font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sediment)}
 .gl-related-pill{font-size:12px;padding:3px 10px;border:1px solid var(--ink-soft);color:var(--ink-soft)}
+
+/* ============================================================
+   RESPONSIBLE AI VIEW
+   ============================================================ */
+#responsible-ai-view{min-height:calc(100vh - 50px);background:var(--bone);padding-bottom:80px}
+.rai-header{padding:48px 0 32px;border-bottom:1.5px solid var(--ink)}
+.rai-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;letter-spacing:-.02em;color:var(--ink);margin:0}
+.rai-body{padding:40px 0}
+.rai-section{margin-bottom:36px}
+.rai-coda{margin-top:40px;padding-top:28px;border-top:1.5px solid var(--ink-soft);font-style:italic;color:var(--ink-soft);font-size:15px;line-height:1.75}
+.rai-body p{font-size:15px;line-height:1.75;color:var(--ink);margin:0 0 24px}
+.rai-body p:last-child{margin-bottom:0}
+.rai-home-note{text-align:center;padding:20px 0 0;font-size:13px;color:var(--ink-soft)}
+.rai-home-note button{color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;font-size:inherit;font-family:inherit;line-height:inherit}
+.rai-home-note button:hover{color:var(--rust)}
 </style>
 </head>
 <body>
@@ -1440,6 +1455,8 @@
     <button class="view-tab" data-view="last-day">The Last Day</button>
     <span class="view-tab-sep">|</span>
     <button class="view-tab" data-view="research-desk">Research Desk</button>
+    <span class="view-tab-sep">|</span>
+    <button class="view-tab" data-view="responsible-ai">Responsible AI</button>
     <span class="view-tab-sep">|</span>
     <button class="view-tab" data-view="glossary">Glossary</button>
   </div>
@@ -1505,6 +1522,18 @@
           <span class="home-card-desc">Dig into the debates, uncertainties, and live questions behind the science.</span>
           <span class="home-card-arrow">Open &rarr;</span>
         </button>
+        <button class="home-section-card" onclick="goToView('responsible-ai')">
+          <span class="home-card-label">AI Usage</span>
+          <span class="home-card-title">Responsible AI</span>
+          <span class="home-card-desc">A note on how this site was built, its limitations, and the approach taken to copyright.</span>
+          <span class="home-card-arrow">Open &rarr;</span>
+        </button>
+        <button class="home-section-card" onclick="goToView('glossary')">
+          <span class="home-card-label">Reference</span>
+          <span class="home-card-title">Glossary</span>
+          <span class="home-card-desc">Definitions of key terms in palaeontology, geology, and evolutionary biology.</span>
+          <span class="home-card-arrow">Open &rarr;</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1517,7 +1546,7 @@
   <div class="wrap">
     <div class="eyebrow">The DinoDex · A Field Guide to Deep Time</div>
     <h1 class="title">Reading the<br><em>bones</em></h1>
-    <p class="lede">Seventy-four animals that reshaped how we understand <b>dinosaurs and their Mesozoic world</b> - chosen not for fame but for what each one taught us. Every entry separates what the fossils show from what scientists are still arguing about.</p>
+    <p class="lede">Animals that reshaped how we understand <b>dinosaurs and their Mesozoic world</b> - chosen not for fame but for what each one taught us. Every entry separates what the fossils show from what scientists are still arguing about.</p>
 
     <div class="strata">
       <div class="strata-meta"><span>251 Ma</span><span>Mesozoic Era · 186 million years</span><span>66 Ma</span></div>
@@ -1589,7 +1618,7 @@
 <div id="timeline-view" style="display:none">
   <div class="tl-header wrap">
     <div class="eyebrow">Deep Time · Geological Timeline</div>
-    <p class="tl-sub">Seventy-four animals grouped by <b>broad geological period</b> - Triassic, Jurassic, and Cretaceous - not by exact first or last appearance date. Includes non-dinosaur animals of the Mesozoic world. Click any name to open its entry.</p>
+    <p class="tl-sub">Animals grouped by <b>broad geological period</b> - Triassic, Jurassic, and Cretaceous - not by exact first or last appearance date. Includes non-dinosaur animals of the Mesozoic world. Click any name to open its entry.</p>
   </div>
   <div class="tl-scroll-outer">
     <div class="tl-scroll-inner" id="tlCanvas">
@@ -1789,6 +1818,30 @@
 
 <!-- ===== FOSSILS THAT CHANGED SCIENCE VIEW ===== -->
 <div id="fossils-science-view" style="display:none"></div>
+
+<!-- ===== RESPONSIBLE AI VIEW ===== -->
+<div id="responsible-ai-view" style="display:none">
+  <div class="wrap">
+    <div class="rai-header">
+      <h1 class="rai-title">Built with AI Disclaimer</h1>
+    </div>
+    <div class="rai-body">
+      <div class="rai-section">
+        <span class="home-card-label">Accuracy &amp; Limitations</span>
+        <p>This site should not be treated as an absolute source of truth. DinoDex has been built with significant AI assistance, whether for research, drafting, or both. Everything has been human-reviewed, though I am not by any stretch an expert. It is likely that there are at least a few errors within this site, especially with lesser-researched species. With the field moving fast, I will continue to revise details based on new findings.</p>
+      </div>
+      <div class="rai-section">
+        <span class="home-card-label">Copyright</span>
+        <p>I appreciate the concerns of the palaeontology community surrounding AI usage. I have tried to use AI responsibly, intending to avoid any copyrighted texts and palaeontology books. Images are mostly sourced through Wikimedia and any AI tools used for research have been clearly instructed to avoid copyrighted content as well as to intentionally prioritise the most trusted sources.</p>
+      </div>
+      <div class="rai-section">
+        <span class="home-card-label">Approach</span>
+        <p>I've tried to be honest about uncertainty throughout, adding confidence levels and competing interpretations, as well as regular deliberate acknowledgement of areas where things are still unknown.</p>
+      </div>
+      <p class="rai-coda">This is a passion project, not a textbook. The primary audience for this site is myself, though I wanted to be transparent regardless.</p>
+    </div>
+  </div>
+</div>
 
 <!-- ===== GLOSSARY VIEW ===== -->
 <div id="glossary-view" style="display:none"></div>
@@ -3028,6 +3081,7 @@ function renderLastDay() {
     'research-desk':  document.getElementById('research-desk-view'),
     'fossils-science':document.getElementById('fossils-science-view'),
     'glossary':       document.getElementById('glossary-view'),
+    'responsible-ai': document.getElementById('responsible-ai-view'),
   };
 
   tabs.forEach(tab => {

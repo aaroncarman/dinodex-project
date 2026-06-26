@@ -163,7 +163,29 @@ Deep, accurate paleo research is a recurring need. When researching:
 
 ---
 
-## 7. Interaction style the owner wants
+## 7. Planned content additions — build sequence
+
+The following new tabs have been scoped and approved. Order reflects current build
+priority but may change at the owner's discretion. Each is a new tab in the main nav
+unless noted otherwise.
+
+| # | Tab | Depth | Notes |
+|---|-----|-------|-------|
+| 1 | **Responsible AI** | Medium | Personal and reflective tone first, factual disclosure underneath. Claude drafts, owner rewrites in own voice. Covers: AI used extensively; accuracy limitations acknowledged; open-source/copyright intent; epistemic risks of AI-assisted research. |
+| 2 | **Deep Time Scale** | Brief | Experiential rather than encyclopaedic — help the reader *feel* the numbers. A few well-chosen anchors (e.g. humans to K-Pg, K-Pg to Permian, Permian to Cambrian). Not a timeline (that tab exists). |
+| 3 | **How Palaeontology Works** | Detailed | Most detailed of the new additions — owner wants to learn from it. Cover: taphonomy, excavation, preparation, dating methods (radiometric, biostratigraphy, magnetostratigraphy), what fossils can and can't tell us. Cross-reference lightly to Anatomy 101 (planned). |
+| 4 | **Theropods to Birds** | Full narrative | The evolutionary transition as a story with evidence/inference tension throughout. Key fossil moments, which features came first, what they were originally for, when "bird" actually begins. Similar depth to The Last Day tab. |
+| 5 | **Mass Extinctions** | Brief per event | Cover the Big Five: End-Ordovician, Late Devonian, End-Permian, End-Triassic, K-Pg. Brief treatment of each; End-Permian and End-Triassic especially relevant to dinosaur origins. |
+| 6 | **Mesozoic Ecosystems** | Medium | What the Mesozoic world actually looked like — flora, climate, geography, not just fauna. Briefer than The Last Day. |
+| 7 | **Anatomy 101** | Medium | Lower priority. Its own tab (not a subsection of How Palaeontology Works — different conceptual territory: reading an animal vs. understanding the science). Cross-references into How Palaeontology Works. |
+
+**Deferred / out of scope for now:** Living relatives (crocodilians, birds as analogues),
+trace fossils (tracks, eggs, coprolites), AI tools / chatbot feature (parked pending
+clearer use case).
+
+---
+
+## 8. Interaction style the owner wants
 
 - This is an L&D collaboration, not just task execution. Explain the *why*, surface
   trade-offs, and teach the transferable pattern.

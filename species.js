@@ -3653,6 +3653,79 @@ var SPECIES = [
   conceptTags:["feathers","european-cretaceous","carcharodontosaurid","display"],
   glossaryLinks:["theropod","carcharodontosaurid","lagerstaette","feathers","specimen"],
   researchLinks:["feathers"]
+},
+
+{
+  id:"corythosaurus",
+  name:"Corythosaurus",
+  epithet:"C. casuarius",
+  pron:"koh-RITH-oh-SAW-rus",
+  period:"cretaceous",
+  clade:"Hadrosaurid ornithopod (Lambeosaurinae)",
+  diet:"herbivore",
+  age:"~77-75.7 Ma (Late Cretaceous, Campanian)",
+  startMa:77,
+  endMa:75.7,
+  length:"~7.7-9 m",
+  mass:"~2.8-3.8 t",
+  place:"Alberta (Canada); Montana (USA)",
+  img:"images/species/corythosaurus.jpg",
+  overview:"A large hadrosaurid ornithopod of the Late Cretaceous Dinosaur Park Formation, Corythosaurus carried a tall, hollow, helmet-shaped crest formed by elaborated nasal bones that looped upward above the skull. The crest's internal passages are the primary evidence for acoustic signalling, but visual display and species recognition likely contributed too. Corythosaurus is among the most comprehensively preserved hadrosaurs known: multiple specimens retain articulated skeletons, skin impressions across much of the body, and in at least one case plant material interpreted as gut contents - making it a reference animal for understanding lambeosaurine anatomy and ecology.",
+  insights:[
+    ["A crest built for sound",
+     "The crest is not solid bone: it encloses <b>elaborated nasal passages</b> that loop up and back before connecting to the respiratory tract. CT scanning of related lambeosaurines shows the inner ear was tuned to low frequencies, consistent with the resonance hypothesis - though whether sound was the crest's primary purpose or one of several remains debated."],
+    ["A helmet that grew",
+     "Juveniles have small, low crests that become fully developed only in adults. Because crest shape also varied between the two recognised species (<i>C. casuarius</i> and the slightly later <i>C. intermedius</i>), Dodson's 1975 study showed that earlier workers had split sex and age variants into multiple spurious species - a cautionary lesson in reading individual variation as taxonomy."],
+    ["Skin, guts, and bone together",
+     "One Tyrrell specimen (TMP 1980.040.001) preserves an articulated skeleton <b>with plant fragments interpreted as gut contents</b> - mostly gymnosperm twigs and bark, with angiosperm material and charcoal - while the holotype retains polygonal scale impressions across the flanks, tail, and unusually for hadrosaurs, the feet. Few Cretaceous herbivores are known in this detail."],
+    ["The most common hadrosaur in its formation",
+     "Biostratigraphic work on the Dinosaur Park Formation places <i>C. casuarius</i> in the lower assemblage zone (with <i>Centrosaurus</i>), and <i>C. intermedius</i> slightly higher. Corythosaurus is <b>the most abundant hadrosaurid in the formation</b> - its frequency is a signal about ecology and habitat preference, not just preservation luck."]
+  ],
+  behaviour:"<p>Corythosaurus moved facultatively on two or four legs, the latter posture likely used during low browsing; footprint evidence from Campanian-aged deposits in Utah suggests hadrosaurs reared bipedally to reach higher conifer foliage, consistent with the gut-content record of <b>woody gymnosperms and twigs</b>. Ossified tendons stiffened the tail, serving as a counterbalance rather than a swimming aid - the old image of hadrosaurs as semi-aquatic swamp grazers has been abandoned.</p><p>The crest's probable acoustic role points to a social animal: a herd of Corythosaurus individuals of different ages and sexes would have produced a range of frequencies, with juveniles' smaller crests generating higher-pitched calls that deepened as the crest grew. Whether the crest additionally served as a visual species-recognition signal - helping animals distinguish Corythosaurus from the sympatric <b>Lambeosaurus</b> and <b>Parasaurolophus</b> with their differently shaped crests - remains plausible but inferred rather than demonstrated.</p>",
+  evolution:"<p>Corythosaurus sits within <b>Lambeosaurinae</b>, the crest-bearing branch of Hadrosauridae, alongside <i>Lambeosaurus</i>, <i>Hypacrosaurus</i>, and the Asian <i>Olorotitan</i>. The tribe Corythosaurini groups it most closely with <i>Hypacrosaurus</i>. Lambeosaurine crests evolved independently from the solid crests of saurolophine hadrosaurs, and the internal nasal elaboration distinguishing them from non-crested hadrosaurids represents one of the more striking examples of <b>communication structures driving morphological divergence</b> in a dinosaur lineage.</p><p>The temporal succession of <i>C. casuarius</i> followed by <i>C. intermedius</i> within the Dinosaur Park Formation is one of the cleaner within-genus stratigraphic sequences documented in Laramidian hadrosaurs, though whether the two represent a true anagenetic series or distinct lineages is not fully resolved.</p>",
+  study:[
+    {
+      q:"What was the crest primarily for?",
+      why:"The crest enclosed nasal passages; CT evidence from lambeosaurines supports resonance, but visual signalling and thermoregulation have also been proposed.",
+      interps:[
+        ["Acoustic resonance",
+         "conf-strong",
+         "CT scanning of related lambeosaurines (Evans et al. 2009) shows nasal passages would have resonated at low frequencies below ~1000 Hz, and that the inner ear was tuned to detect such sounds. The anatomy is consistent with intraspecific vocal communication."],
+        ["Visual display and species recognition",
+         "conf-moderate",
+         "The crest's distinctiveness from those of sympatric Lambeosaurus and Parasaurolophus is consistent with species recognition or social signalling. Both functions are not mutually exclusive; the weight of evidence suggests combined roles rather than a single primary purpose."],
+        ["Thermoregulation",
+         "conf-low",
+         "Proposed as an accessory function but lacks direct anatomical support analogous to the resonance evidence."]
+      ]
+    },
+    {
+      q:"Are C. casuarius and C. intermedius genuinely separate species?",
+      why:"Dodson (1975) synonymised most Corythosaurus species as sex and age variants; C. intermedius was retained as potentially valid and supported by a 2009 study, but opinion is not unanimous.",
+      interps:[
+        ["Two valid species",
+         "conf-moderate",
+         "C. intermedius is morphologically distinct from C. casuarius, appears slightly later stratigraphically, and a 2009 study supported their separation. A 2026 study (Dudgeon, Brown and Evans) examined internal crest anatomy across both species, further characterising them."],
+        ["Single variable species",
+         "conf-low",
+         "Some workers treat intermedius as within the variation of casuarius; the stratigraphic separation and morphological differences make this the minority view but it has not been definitively ruled out."]
+      ]
+    }
+  ],
+  matters:"Corythosaurus is what it looks like when palaeontology gets lucky several times over: a nearly complete skeleton with skin, a specimen with preserved gut contents, and over fifty articulated individuals from a single formation. The crest, far from being a curiosity, is evidence that Cretaceous dinosaurs were investing heavily in communication - and that the Dinosaur Park Formation was home to multiple species doing the same thing in parallel, with distinctly different crest shapes.",
+  fossilRecord:{
+    knownFrom:"Holotype AMNH 5240 (nearly complete skeleton with skin impressions, missing tail tip and partial forelimbs); plesiotype AMNH 5338; over twenty skulls; TMP 1980.040.001 with gut contents; additional specimens at RTMP and ROM",
+    evidenceLevel:"Exceptional",
+    locality:"Red Deer River valley and Dinosaur Provincial Park, Alberta, Canada; one specimen from Judith River Formation, Montana, USA",
+    formation:"Oldman Formation (lower); Dinosaur Park Formation (upper), Belly River Group",
+    material:["Nearly complete skeleton","Skulls (>20)","Skin impressions (flanks, tail, feet)","Gut content material","Juvenile specimens","Ossified tendons"],
+    note:"The holotype was collected by Barnum Brown in 1911-12 and described in 1914; two outstanding Sternberg specimens were lost when SS Mount Temple was sunk by SMS Möwe in December 1916 while carrying them to the British Museum. Peter Dodson's 1975 ontogenetic and sexual dimorphism study collapsed most of the seven named species into synonymy with <i>C. casuarius</i>. The Tyrrell gut-content specimen (TMP 1980.040.001) was assessed as 'equivocal' for in-situ gut contents in a 2020 review (Qvarnström et al.), noting the material is consistent with but not conclusively identified as stomach contents. The 2022 description of the first confirmed Montana specimens extended the known range south. A 2026 study by Dudgeon, Brown and Evans examined internal crest anatomy across mature individuals of <i>C. casuarius</i>, <i>C. intermedius</i>, and <i>Lambeosaurus lambei</i>."
+  },
+  hook:"Over fifty articulated specimens, preserved skin, possible gut contents, and a hollow crest whose nasal passages have been CT-scanned for resonance - Corythosaurus is one of the most completely known hadrosaurs, and the crest is evidence that Cretaceous dinosaurs were investing seriously in communication.",
+  learnerLevel:"intermediate",
+  conceptTags:["display","communication","skin-impressions","hadrosaur","lambeosaurine"],
+  glossaryLinks:["ornithischian","cretaceous","display-structure","hadrosauroid","dental-battery","preservation","specimen","fossil-record","ontogeny","integument"],
+  researchLinks:["soft-tissue"]
 }
 
 ];
