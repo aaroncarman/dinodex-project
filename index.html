@@ -1613,16 +1613,16 @@
   max-width:620px;
 }
 .dtp-yardstick-intro{max-width:680px;font-size:17px;line-height:1.65;color:var(--ink-soft);margin-bottom:28px}
-.dtp-strip-wrap{position:relative;padding-top:36px;margin-bottom:16px}
+.dtp-strip-wrap{position:relative;padding-top:60px;margin-bottom:16px}
 .dtp-strip-labels{
-  display:flex;position:absolute;top:4px;left:0;right:0;
-  align-items:flex-end;height:28px;
+  display:flex;position:absolute;top:38px;left:0;right:0;
+  align-items:flex-end;height:16px;
 }
 .dtp-strip-label{
   font-family:"Helvetica Neue",Arial,sans-serif;
   font-size:9px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--sediment);text-align:center;
-  overflow:hidden;white-space:nowrap;flex-shrink:0;
+  overflow:visible;white-space:nowrap;flex-shrink:0;
 }
 .dtp-strip{display:flex;height:32px;border-radius:2px;overflow:hidden;border:1.5px solid var(--line)}
 .dtp-band{height:100%;flex-shrink:0}
@@ -1670,6 +1670,76 @@
   max-width:320px;white-space:normal;
 }
 .dtp-band-tip.visible{opacity:1}
+.dtp-parent-label{
+  position:absolute;top:0;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-end;padding-bottom:3px;
+  border-bottom:1.5px solid var(--line);height:34px;
+}
+.dtp-parent-primary{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);
+}
+.dtp-parent-sub{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:8px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--sediment);margin-top:1px;
+}
+.dtp-parent-divider{
+  position:absolute;top:60px;
+  width:2px;height:32px;
+  background:var(--ink);z-index:2;pointer-events:none;
+}
+.dtp-circles-section{
+  margin-top:56px;padding-top:40px;
+  border-top:1.5px solid var(--line);
+}
+.dtp-circles-header{
+  font-size:clamp(20px,2.5vw,28px);font-weight:400;
+  letter-spacing:-.01em;line-height:1.2;
+  margin-bottom:44px;max-width:560px;
+}
+.dtp-circles-wrap{
+  display:flex;align-items:center;gap:56px;
+  margin-bottom:36px;flex-wrap:wrap;
+}
+.dtp-circle-col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.dtp-circle-dino{
+  width:240px;height:240px;border-radius:50%;
+  background:var(--strata-cre);opacity:.85;
+}
+.dtp-circle-human{
+  border-radius:50%;background:var(--rust);margin-top:8px;
+}
+.dtp-circle-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);
+}
+.dtp-circle-label em{font-style:italic;text-transform:none;letter-spacing:0}
+.dtp-circle-ma{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--sediment);
+}
+.dtp-circles-pct{
+  font-size:clamp(36px,5vw,52px);font-weight:700;
+  color:var(--rust);line-height:1;margin:4px 0;
+}
+.dtp-circles-context{
+  font-size:14px;color:var(--ink-soft);
+  text-align:center;line-height:1.5;max-width:240px;
+}
+.dtp-circles-footnote{
+  max-width:620px;font-size:15px;
+  line-height:1.7;color:var(--ink-soft);
+}
+.dtp-circles-footnote strong{color:var(--ink);font-weight:600}
+@media(max-width:768px){
+  .dtp-circles-wrap{gap:40px;justify-content:center}
+  .dtp-circle-dino{width:180px;height:180px}
+}
 .dtp-callout-stat{font-weight:700;color:var(--rust)}
 .dtp-strip-ticks{display:flex;justify-content:space-between;margin-top:4px}
 .dtp-tick-label{
@@ -2031,7 +2101,7 @@
         </div>
       </div>
 
-      <p class="dtp-yardstick-intro">The strip below shows the last 252 million years drawn to true proportion &#8212; from the first dinosaurs to now. Each colour represents a chapter in that story. The sliver at the far right is the entire existence of humans.</p>
+      <p class="dtp-yardstick-intro">The strip below shows the last 252 million years drawn to true proportion - from the first dinosaurs to now. Each colour represents a chapter in that story. The small section at the far right is the entire existence of our first bipedal ape ancestors. To show homo sapiens would be even less than a pixel wide.</p>
 
       <div class="dtp-strip-wrap">
         <div class="dtp-strip-labels" id="dtpStripLabels"></div>
@@ -2048,16 +2118,38 @@
       </div>
 
       <div class="dtp-callout" id="dtpCallout" style="display:none">
-        <span class="dtp-callout-kicker">Humans &middot; ~300,000 years</span>
+        <span class="dtp-callout-kicker">Homo sapiens &middot; ~300,000 years</span>
         <h3 class="dtp-callout-title">Our entire species fits inside this sliver</h3>
         <p class="dtp-callout-body">
-          <em>Homo sapiens</em> has existed for roughly 300,000 years. Agriculture began around 12,000 years ago.
-          Written records begin around 5,000 years ago. On this strip, all of recorded human history &#8212;
-          every civilisation, every dynasty, every written word &#8212; is
-          <span class="dtp-callout-stat">0.0017%</span> of the time non-avian dinosaurs walked the Earth.
-          The entire existence of our species is <span class="dtp-callout-stat">0.18%</span> of the dinosaur reign.
+          <em>Homo sapiens</em> has existed for <span class="dtp-callout-stat">0.16%</span>
+          of the time non-avian dinosaurs walked the Earth.
+          All of recorded history - every civilisation, dynasty, and written word - is
+          <span class="dtp-callout-stat">0.0027%</span> of the dinosaur reign.
         </p>
       </div>
+
+      <div class="dtp-circles-section">
+        <h2 class="dtp-circles-header">How long have we existed compared to the dinosaurs?</h2>
+        <div class="dtp-circles-wrap">
+          <div class="dtp-circle-col">
+            <div class="dtp-circle-dino"></div>
+            <div class="dtp-circle-label">Dinosaur reign</div>
+            <div class="dtp-circle-ma">186 Ma</div>
+          </div>
+          <div class="dtp-circle-col">
+            <div class="dtp-circles-context"><em>Homo sapiens</em> has existed for</div>
+            <div class="dtp-circles-pct">0.16%</div>
+            <div class="dtp-circles-context">of the time non-avian dinosaurs walked the Earth</div>
+            <div class="dtp-circle-human" id="dtpCircleHuman"></div>
+            <div class="dtp-circle-label"><em>Homo sapiens</em></div>
+            <div class="dtp-circle-ma">0.3 Ma</div>
+          </div>
+        </div>
+        <p class="dtp-circles-footnote">
+          All of recorded history - every civilisation, dynasty, and written word - is <strong>0.0027%</strong> of the dinosaur reign.
+        </p>
+      </div>
+
     </div>
   </div>
 
@@ -3728,7 +3820,7 @@ function initDtpYardstick() {
     triassic:   'Dinosaurs began here, small and marginal, in the shadow of the Permian extinction\'s survivors.',
     jurassic:   'The great diversification - sauropods, theropods, and the first birds all emerge.',
     cretaceous: 'The peak and the end - flowering plants, T. rex, and 66 million years ago, the asteroid.',
-    mammal:     'With the dinosaurs gone, mammals inherited the Earth and diversified into every niche.',
+    mammal:     'The Cenozoic era, still ongoing - mammals and birds diversifying into every niche left by the dinosaurs.',
     hominin:    'Bipedal apes appear in Africa - our lineage, but not yet recognisably us.',
     humans:     'Our entire existence as a species would barely register as a pixel on this strip.'
   };
@@ -3787,12 +3879,12 @@ function initDtpYardstick() {
     var mesoLbl = document.createElement('div');
     mesoLbl.className = 'dtp-strip-label';
     mesoLbl.style.width = mesoPx.toFixed(1) + 'px';
-    mesoLbl.textContent = 'Mesozoic';
+    mesoLbl.textContent = '';
     labelsRow.appendChild(mesoLbl);
 
     // Remaining bands
     var otherBands = [
-      { key: 'mammal',  label: 'Mammal age', ma: 59,  color: 'var(--gold)', opacity: '.75', isHuman: false },
+      { key: 'mammal',  label: '', ma: 59,  color: 'var(--gold)', opacity: '.75', isHuman: false },
       { key: 'hominin', label: 'Hominins',   ma: 6.7, color: 'var(--moss)', opacity: '.8',  isHuman: false },
       { key: 'humans',  label: '',           ma: 0.3, color: 'var(--rust)', opacity: '1',   isHuman: true  }
     ];
@@ -3829,7 +3921,55 @@ function initDtpYardstick() {
     strip.addEventListener('mouseout', function(e) {
       if (!strip.contains(e.relatedTarget)) hideTip();
     });
+
+    // Parent group labels (absolutely positioned above strip)
+    var mesoParent = document.createElement('div');
+    mesoParent.className = 'dtp-parent-label';
+    mesoParent.style.left = '0px';
+    mesoParent.style.width = mesoPx.toFixed(1) + 'px';
+    mesoParent.innerHTML = '<span class="dtp-parent-primary">Mesozoic</span><span class="dtp-parent-sub">Age of Dinosaurs</span>';
+    wrap.appendChild(mesoParent);
+
+    var cenoPx = pxFor(59) + pxFor(6.7) + Math.max(4, pxFor(0.3));
+    var cenoParent = document.createElement('div');
+    cenoParent.className = 'dtp-parent-label';
+    cenoParent.style.left = mesoPx.toFixed(1) + 'px';
+    cenoParent.style.width = cenoPx.toFixed(1) + 'px';
+    cenoParent.innerHTML = '<span class="dtp-parent-primary">Cenozoic</span><span class="dtp-parent-sub">Age of Mammals</span>';
+    wrap.appendChild(cenoParent);
+
+    // Heavy vertical divider at era boundary
+    var divider = document.createElement('div');
+    divider.className = 'dtp-parent-divider';
+    divider.style.left = mesoPx.toFixed(1) + 'px';
+    wrap.appendChild(divider);
+
+    // Parent label hover triggers their tooltips
+    mesoParent.addEventListener('mouseenter', function() {
+      showTip(mesoParent, BAND_TIPS.mesozoic);
+    });
+    mesoParent.addEventListener('mouseleave', hideTip);
+
+    cenoParent.addEventListener('mouseenter', function() {
+      showTip(cenoParent, BAND_TIPS.mammal);
+    });
+    cenoParent.addEventListener('mouseleave', hideTip);
   });
+}
+
+function initDtpCircles() {
+  var DINO_MA  = 186;
+  var HUMAN_MA = 0.3;
+  var DINO_R   = 120; // matches CSS .dtp-circle-dino width/2
+
+  // Homo sapiens circle: area proportional to dinosaur circle
+  var humanR = DINO_R * Math.sqrt(HUMAN_MA / DINO_MA); // ≈ 4.82px
+  var humanD = Math.round(humanR * 2); // diameter in px
+
+  var el = document.getElementById('dtpCircleHuman');
+  if (!el) return;
+  el.style.width  = Math.max(humanD, 6) + 'px';
+  el.style.height = Math.max(humanD, 6) + 'px';
 }
 
 /* --- Tab switching --- */
@@ -3864,6 +4004,7 @@ function initDtpYardstick() {
         if(!dtpPerspectiveRendered) {
           initDtpTrexTimeline();
           initDtpYardstick();
+          initDtpCircles();
           dtpPerspectiveRendered = true;
         }
       }
