@@ -1,0 +1,560 @@
+<!--
+  ============================================================
+  DEEP TIME — PERSPECTIVE SECTION
+  Drop this block inside #deep-time-view, after </div><!-- /.dt-body -->
+  The CSS block goes inside the existing <style>, after the .dt-* rules.
+  ============================================================
+-->
+
+<!-- ===== CSS — add to existing <style> block after .dt-* rules ===== -->
+<!--
+/* ===== DEEP TIME · PERSPECTIVE ===== */
+
+/* New accent: a cool slate-blue that reads as "distance / depth / time" —
+   distinct from rust (accent), moss (secondary), gold (highlight).
+   Used only in this section to signal a different register. */
+:root {
+  --deep: #3D5A6B;       /* slate-blue — deep time perspective accent */
+  --deep-pale: rgba(61,90,107,.10);
+}
+
+.dtp-section {
+  border-top: 2px solid var(--ink);
+  padding: 64px 0 80px;
+}
+
+/* ---- PART 1: T. rex / Stegosaurus fact ---- */
+
+.dtp-header {
+  margin-bottom: 48px;
+}
+
+.dtp-kicker {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--deep);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.dtp-title {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.dtp-intro {
+  max-width: 620px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* Three-point timeline */
+.dtp-trex-timeline {
+  position: relative;
+  margin: 40px 0 8px;
+  height: 64px;
+}
+
+.dtp-trex-line {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--line);
+}
+
+/* Gap spans rendered as coloured overlays on the line */
+.dtp-trex-gap {
+  position: absolute;
+  top: 22px;
+  height: 2px;
+}
+
+.dtp-trex-gap.gap-steg-trex {
+  background: var(--deep);
+  opacity: .55;
+}
+
+.dtp-trex-gap.gap-trex-now {
+  background: var(--rust);
+  opacity: .75;
+}
+
+/* Dot + label for each point */
+.dtp-trex-point {
+  position: absolute;
+  top: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.dtp-trex-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: var(--bone);
+  flex-shrink: 0;
+}
+
+.dtp-trex-point.pt-steg .dtp-trex-dot { border-color: var(--deep); }
+.dtp-trex-point.pt-trex .dtp-trex-dot { border-color: var(--ink); background: var(--ink); }
+.dtp-trex-point.pt-now  .dtp-trex-dot { border-color: var(--rust); background: var(--rust); }
+
+.dtp-trex-name {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--sediment);
+  margin-top: 6px;
+  white-space: nowrap;
+}
+
+.dtp-trex-ma {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  color: var(--sediment);
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
+/* Gap labels that sit below the line */
+.dtp-trex-gap-label {
+  position: absolute;
+  top: 38px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dtp-trex-gap-label.lbl-steg { color: var(--deep); }
+.dtp-trex-gap-label.lbl-trex { color: var(--rust); }
+
+/* The verdict callout beneath the timeline */
+.dtp-verdict {
+  margin-top: 32px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--rust);
+  background: var(--bone-deep);
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.dtp-verdict strong {
+  font-style: normal;
+  color: var(--ink);
+}
+
+/* ---- PART 2: The Human Yardstick ---- */
+
+.dtp-yardstick-header {
+  margin: 72px 0 20px;
+}
+
+.dtp-yardstick-intro {
+  max-width: 620px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* The strip itself */
+.dtp-strip-wrap {
+  position: relative;
+}
+
+.dtp-strip {
+  display: flex;
+  height: 48px;
+  border-radius: 2px;
+  overflow: visible;
+  position: relative;
+}
+
+/* Individual band segments */
+.dtp-band {
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  transition: filter .15s;
+}
+
+.dtp-band.band-dino   { background: var(--strata-cre); opacity: .85; }
+.dtp-band.band-mammal { background: var(--gold); opacity: .75; }
+.dtp-band.band-hominin{ background: var(--moss); opacity: .8; }
+.dtp-band.band-sapiens{ background: var(--sediment); opacity: .85; }
+.dtp-band.band-history{
+  background: var(--rust);
+  opacity: 1;
+  cursor: pointer;
+  position: relative;
+  min-width: 3px; /* always visible regardless of proportion */
+}
+
+.dtp-band.band-history:hover { filter: brightness(1.15); }
+.dtp-band.band-history.active { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* Band labels that sit above the strip */
+.dtp-strip-labels {
+  display: flex;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.dtp-strip-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sediment);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* Scale ticks below strip */
+.dtp-strip-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.dtp-tick-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  color: var(--sediment);
+  letter-spacing: .08em;
+}
+
+/* Arrow annotation for the history sliver */
+.dtp-history-arrow {
+  position: absolute;
+  bottom: -48px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rust);
+  white-space: nowrap;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dtp-history-arrow::before {
+  content: '▲';
+  font-size: 8px;
+}
+
+/* Callout panel below strip */
+.dtp-callout {
+  display: none;
+  margin-top: 64px;
+  padding: 24px 28px;
+  background: var(--bone-deep);
+  border-top: 2px solid var(--rust);
+  max-width: 640px;
+}
+
+.dtp-callout.visible { display: block; }
+
+.dtp-callout-kicker {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.dtp-callout-title {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.dtp-callout-body {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.dtp-callout-stat {
+  display: inline-block;
+  background: var(--bone);
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--rust);
+  margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+  .dtp-trex-timeline { height: 80px; }
+  .dtp-strip { height: 36px; }
+}
+-->
+
+<!-- ===== HTML — drop after </div><!-- /.dt-body wrap --> inside #deep-time-view ===== -->
+
+<div class="wrap">
+  <div class="dtp-section">
+
+    <!-- PART 1: T. rex / Stegosaurus -->
+    <div class="dtp-header">
+      <span class="dtp-kicker">Perspective · Time &amp; Distance</span>
+      <h2 class="dtp-title">T. rex was closer to us<br>than to Stegosaurus</h2>
+      <p class="dtp-intro">We tend to think of "the dinosaurs" as a single era. But the Mesozoic lasted 186 million years — long enough for the gap between its earliest giants and its most famous predator to dwarf the time separating that predator from us. The timeline below is drawn to true proportion.</p>
+    </div>
+
+    <!-- Three-point proportional timeline, rendered by JS -->
+    <div class="dtp-trex-timeline" id="dtpTrexTimeline">
+      <!-- rendered by initDtpTrexTimeline() -->
+    </div>
+
+    <div class="dtp-verdict">
+      T. rex and Stegosaurus are separated by <strong>~87 million years</strong>. T. rex and modern humans are separated by <strong>~66 million years</strong>. The word "dinosaur" spans a range of time that makes both gaps feel small — until you draw them out.
+    </div>
+
+    <!-- PART 2: The Human Yardstick -->
+    <div class="dtp-yardstick-header">
+      <span class="dtp-kicker">Perspective · The Human Yardstick</span>
+      <h2 class="dtp-title">The last 300 million years,<br>drawn to scale</h2>
+    </div>
+    <p class="dtp-yardstick-intro">The bar below covers 300 million years, from the first archosaurs to the present. Each band is proportional. The red sliver at the far right is all of recorded human history. Click it.</p>
+
+    <div class="dtp-strip-wrap" id="dtpStripWrap">
+      <!-- label row -->
+      <div class="dtp-strip-labels" id="dtpStripLabels"></div>
+
+      <!-- band strip -->
+      <div class="dtp-strip" id="dtpStrip"></div>
+
+      <!-- arrow annotation for history sliver -->
+      <div class="dtp-history-arrow" id="dtpHistoryArrow">All of recorded history</div>
+
+      <!-- scale ticks -->
+      <div class="dtp-strip-ticks">
+        <span class="dtp-tick-label">300 Ma</span>
+        <span class="dtp-tick-label">200 Ma</span>
+        <span class="dtp-tick-label">100 Ma</span>
+        <span class="dtp-tick-label">Now</span>
+      </div>
+    </div>
+
+    <!-- Callout panel, shown on history sliver click -->
+    <div class="dtp-callout" id="dtpCallout">
+      <span class="dtp-callout-kicker">Recorded History · ~5,000 years</span>
+      <h3 class="dtp-callout-title">Every city, war, and book<br>fits inside this sliver</h3>
+      <p class="dtp-callout-body">
+        Written records begin around 5,000 years ago in Mesopotamia. Agriculture began around 12,000 years ago.
+        <em>Homo sapiens</em> as a species is roughly 300,000 years old. The non-avian dinosaurs went extinct
+        <span class="dtp-callout-stat">66 Ma</span> ago. On this bar, all of recorded human history is
+        <span class="dtp-callout-stat">0.0017%</span> of the dinosaur reign.
+        The entire existence of <em>Homo sapiens</em> is <span class="dtp-callout-stat">0.18%</span> of the time
+        non-avian dinosaurs walked the Earth.
+      </p>
+    </div>
+
+  </div><!-- /.dtp-section -->
+</div><!-- /.wrap -->
+
+
+<!-- ===== JS — add inside the existing <script> block ===== -->
+<!--
+/* ---- Deep Time Perspective: T. rex timeline ---- */
+function initDtpTrexTimeline() {
+  var el = document.getElementById('dtpTrexTimeline');
+  if (!el) return;
+
+  // Three reference points (Ma = millions of years ago)
+  var SPAN_START = 160; // Ma — left edge (slightly before Stegosaurus)
+  var points = [
+    { id:'steg', ma:155, label:'Stegosaurus',  ma_label:'~155 Ma', cls:'pt-steg' },
+    { id:'trex', ma:68,  label:'T. rex',        ma_label:'~68 Ma',  cls:'pt-trex' },
+    { id:'now',  ma:0,   label:'Us',             ma_label:'Now',     cls:'pt-now'  }
+  ];
+
+  var lineEl   = document.createElement('div');
+  lineEl.className = 'dtp-trex-line';
+  el.appendChild(lineEl);
+
+  // Gap overlays
+  var gapSteg = document.createElement('div');
+  gapSteg.className = 'dtp-trex-gap gap-steg-trex';
+  var gapTrex = document.createElement('div');
+  gapTrex.className = 'dtp-trex-gap gap-trex-now';
+  el.appendChild(gapSteg);
+  el.appendChild(gapTrex);
+
+  // Gap labels
+  var lblSteg = document.createElement('div');
+  lblSteg.className = 'dtp-trex-gap-label lbl-steg';
+  lblSteg.textContent = '87 million years';
+  var lblTrex = document.createElement('div');
+  lblTrex.className = 'dtp-trex-gap-label lbl-trex';
+  lblTrex.textContent = '66 million years';
+  el.appendChild(lblSteg);
+  el.appendChild(lblTrex);
+
+  // Point dots + labels
+  points.forEach(function(p) {
+    var pt = document.createElement('div');
+    pt.className = 'dtp-trex-point ' + p.cls;
+    pt.style.left = ((SPAN_START - p.ma) / SPAN_START * 100) + '%';
+
+    var dot = document.createElement('div');
+    dot.className = 'dtp-trex-dot';
+
+    var name = document.createElement('div');
+    name.className = 'dtp-trex-name';
+    name.textContent = p.label;
+
+    var ma = document.createElement('div');
+    ma.className = 'dtp-trex-ma';
+    ma.textContent = p.ma_label;
+
+    pt.appendChild(dot);
+    pt.appendChild(name);
+    pt.appendChild(ma);
+    el.appendChild(pt);
+  });
+
+  // Position gap overlays and labels after layout
+  requestAnimationFrame(function() {
+    var w = el.offsetWidth;
+    if (!w) return;
+
+    var stegPct  = (SPAN_START - 155) / SPAN_START;
+    var trexPct  = (SPAN_START - 68)  / SPAN_START;
+    var nowPct   = 1;
+
+    var stegX = stegPct * w;
+    var trexX = trexPct * w;
+    var nowX  = nowPct  * w;
+
+    gapSteg.style.left  = stegX + 'px';
+    gapSteg.style.width = (trexX - stegX) + 'px';
+
+    gapTrex.style.left  = trexX + 'px';
+    gapTrex.style.width = (nowX - trexX) + 'px';
+
+    lblSteg.style.left = (stegX + (trexX - stegX) / 2) + 'px';
+    lblSteg.style.transform = 'translateX(-50%)';
+
+    lblTrex.style.left = (trexX + (nowX - trexX) / 2) + 'px';
+    lblTrex.style.transform = 'translateX(-50%)';
+  });
+}
+
+/* ---- Deep Time Perspective: Human Yardstick strip ---- */
+function initDtpYardstick() {
+  var strip    = document.getElementById('dtpStrip');
+  var labelsEl = document.getElementById('dtpStripLabels');
+  var arrowEl  = document.getElementById('dtpHistoryArrow');
+  var callout  = document.getElementById('dtpCallout');
+  if (!strip) return;
+
+  var TOTAL_MA = 300; // span in Ma
+
+  // Bands: [label, startMa, endMa, cssClass]
+  // Note: endMa = 0 means "now"; fractions of Ma used for recent entries
+  var BANDS = [
+    { label:'Dinosaur reign',   start:231,    end:66,     cls:'band-dino',    desc:null },
+    { label:'Age of Mammals',   start:66,     end:7,      cls:'band-mammal',  desc:null },
+    { label:'Hominins',         start:7,      end:0.3,    cls:'band-hominin', desc:null },
+    { label:'Homo sapiens',     start:0.3,    end:0.005,  cls:'band-sapiens', desc:null },
+    { label:'Recorded history', start:0.005,  end:0,      cls:'band-history', desc:'click' }
+  ];
+
+  // Pre-300 Ma filler (archosaur/pre-dino)
+  var fillerBand = document.createElement('div');
+  fillerBand.className = 'dtp-band';
+  fillerBand.style.flexGrow = '1'; // takes remaining space on left
+  fillerBand.style.background = 'var(--line)';
+  fillerBand.style.opacity = '.35';
+  strip.appendChild(fillerBand);
+
+  BANDS.forEach(function(b) {
+    var span = b.start - b.end; // Ma duration
+    var pct  = span / TOTAL_MA * 100;
+
+    var band = document.createElement('div');
+    band.className = 'dtp-band ' + b.cls;
+    // min-width handled by CSS for history band; otherwise use flex basis
+    if (b.cls !== 'band-history') {
+      band.style.width = pct + '%';
+    } else {
+      // History: tiny — let CSS min-width handle it, position arrow after render
+      band.style.width = Math.max(pct, 0.05) + '%';
+      band.addEventListener('click', function() {
+        var isActive = band.classList.contains('active');
+        band.classList.toggle('active', !isActive);
+        callout.classList.toggle('visible', !isActive);
+      });
+    }
+    strip.appendChild(band);
+
+    // Label
+    var lbl = document.createElement('div');
+    lbl.className = 'dtp-strip-label';
+    lbl.textContent = b.label;
+    lbl.style.width = (b.cls !== 'band-history' ? pct + '%' : '0');
+    lbl.style.overflow = 'visible';
+    labelsEl.appendChild(lbl);
+  });
+
+  // Position arrow over history sliver after render
+  requestAnimationFrame(function() {
+    var historyBand = strip.querySelector('.band-history');
+    var stripRect   = strip.getBoundingClientRect();
+    var bandRect    = historyBand ? historyBand.getBoundingClientRect() : null;
+    if (bandRect && arrowEl) {
+      var midX = (bandRect.left - stripRect.left) + bandRect.width / 2;
+      arrowEl.style.left = midX + 'px';
+      arrowEl.style.transform = 'translateX(-50%)';
+    }
+  });
+}
+
+/* ---- Call both on deep-time tab open ---- */
+// Add these two lines inside the existing tab-switch handler where dtTrackRendered is checked:
+// initDtpTrexTimeline();
+// initDtpYardstick();
+// (or call them once in a DOMContentLoaded if the tab is pre-rendered)
+-->

@@ -20,6 +20,8 @@
     --strata-tri:#8A6F4E;
     --strata-jur:#5C6B4A;
     --strata-cre:#A6492E;
+    --deep:#3D5A6B;              /* slate-blue — perspective section accent only */
+    --deep-pale:rgba(61,90,107,.10);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -1433,6 +1435,248 @@
 .rai-home-note{text-align:center;padding:20px 0 0;font-size:13px;color:var(--ink-soft)}
 .rai-home-note button{color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;font-size:inherit;font-family:inherit;line-height:inherit}
 .rai-home-note button:hover{color:var(--rust)}
+
+/* ===== DEEP TIME ===== */
+.dt-header{padding:48px 0 32px;border-bottom:2px solid var(--ink)}
+.dt-title{font-size:clamp(32px,5vw,56px);font-weight:400;letter-spacing:-.02em;margin-bottom:12px}
+.dt-intro{max-width:680px;color:var(--ink-soft);font-size:15px;line-height:1.65;margin-top:16px}
+
+.dt-body{display:flex;gap:40px;padding:40px 0 80px;align-items:flex-start}
+
+.dt-track-container{
+  width:260px;flex-shrink:0;
+  height:82vh;overflow-y:auto;
+  position:sticky;top:72px;
+  border:1.5px solid var(--line);
+  border-radius:2px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--sediment) var(--bone-deep);
+}
+.dt-track-container::-webkit-scrollbar{width:5px}
+.dt-track-container::-webkit-scrollbar-track{background:var(--bone-deep)}
+.dt-track-container::-webkit-scrollbar-thumb{background:var(--sediment);border-radius:2px}
+
+.dt-track{position:relative;width:100%}
+
+.dt-era{position:absolute;left:0;right:0}
+
+.dt-interstitial{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:8px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--line);font-style:italic;
+  white-space:nowrap;pointer-events:none;
+  opacity:.7;
+}
+
+.dt-anchor{
+  position:absolute;left:0;right:0;
+  display:flex;align-items:center;gap:6px;
+  cursor:pointer;z-index:2;
+}
+.dt-anchor-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--bone);border:1.5px solid var(--sediment);
+  flex-shrink:0;margin-left:8px;
+  transition:background .15s,border-color .15s;
+}
+.dt-anchor.active .dt-anchor-dot{background:var(--rust);border-color:var(--rust)}
+.dt-anchor-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:8.5px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--sediment);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  max-width:180px;
+}
+.dt-anchor.active .dt-anchor-label{color:var(--rust)}
+.dt-anchor:hover .dt-anchor-dot{border-color:var(--rust)}
+.dt-anchor:hover .dt-anchor-label{color:var(--ink)}
+
+.dt-scale-break{
+  width:100%;padding:10px 8px;
+  background:var(--bone-deep);
+  border-top:1.5px dashed var(--sediment);
+  border-bottom:1.5px dashed var(--sediment);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:8px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sediment);
+  text-align:center;
+}
+
+.dt-act2{position:relative;width:100%}
+.dt-act2-band{position:absolute;left:0;right:0;background:var(--gold);opacity:.18}
+
+.dt-now{
+  display:flex;align-items:center;gap:8px;
+  padding:12px 8px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:8.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--rust);
+}
+.dt-now-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--rust);flex-shrink:0;
+  animation:dt-pulse 1.8s ease-in-out infinite;
+}
+@keyframes dt-pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.4;transform:scale(.6)}
+}
+
+.dt-panel{flex:1;min-height:82vh;padding:0 0 0 8px}
+.dt-panel-kicker{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9.5px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--rust);
+  margin-bottom:10px;display:block;
+}
+.dt-panel-ma{
+  display:inline-block;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;font-weight:700;letter-spacing:.1em;
+  color:var(--sediment);
+  border:1px solid var(--line);
+  padding:2px 8px;border-radius:2px;
+  margin-bottom:16px;
+}
+.dt-panel-title{font-size:clamp(22px,3vw,34px);font-weight:400;letter-spacing:-.01em;margin-bottom:20px;line-height:1.1}
+.dt-panel-section-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sediment);
+  margin-bottom:6px;display:block;margin-top:20px;
+}
+.dt-panel-body{font-size:15px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px}
+.dt-panel-perspective{
+  margin-top:24px;padding:16px;
+  border-left:3px solid var(--rust);
+  background:var(--bone-deep);
+  font-size:14px;color:var(--ink-soft);
+  font-style:italic;line-height:1.6;
+}
+.dt-panel-empty{
+  color:var(--sediment);font-style:italic;font-size:15px;
+  padding-top:40px;
+}
+
+@media(max-width:768px){
+  .dt-body{flex-direction:column}
+  .dt-track-container{width:100%;height:40vh;position:static}
+  .dt-panel{padding:0}
+}
+
+/* === Deep Time Perspective === */
+.dtp-section{padding:64px 0 48px;border-top:1.5px solid var(--line);margin-top:40px}
+.dtp-section-eyebrow{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  letter-spacing:.42em;text-transform:uppercase;font-size:11px;font-weight:700;
+  color:var(--deep);margin-bottom:28px;
+}
+.dtp-intro{max-width:680px;font-size:17px;line-height:1.65;color:var(--ink-soft);margin-bottom:44px}
+.dtp-trex-timeline{position:relative;margin-bottom:12px}
+.dtp-timeline-track{
+  position:relative;height:48px;
+  background:var(--bone-deep);border:1.5px solid var(--line);border-radius:2px;
+  overflow:visible;
+}
+.dtp-gap{position:absolute;top:0;height:100%}
+.dtp-gap-blue{background:var(--deep-pale);border-right:1.5px solid var(--deep)}
+.dtp-gap-rust{background:rgba(166,73,46,.10);border-right:1.5px solid var(--rust)}
+.dtp-dot{
+  position:absolute;top:50%;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--ink);transform:translate(-50%,-50%);z-index:2;
+}
+.dtp-dot::after{
+  content:attr(data-label);
+  position:absolute;bottom:14px;left:50%;
+  transform:translateX(-50%);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;letter-spacing:.06em;
+  white-space:nowrap;color:var(--ink-soft);
+}
+.dtp-dot-now{background:var(--rust)}
+.dtp-gap-labels{position:relative;height:24px;margin-top:6px}
+.dtp-gap-label{
+  position:absolute;top:0;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  transform:translateX(-50%);white-space:nowrap;
+}
+.dtp-gap-label-blue{color:var(--deep)}
+.dtp-gap-label-rust{color:var(--rust)}
+.dtp-verdict{
+  margin:28px 0 56px;padding:16px 20px;
+  border-left:3px solid var(--rust);
+  background:var(--bone-deep);
+  font-size:16px;font-weight:600;color:var(--ink);line-height:1.5;
+  max-width:620px;
+}
+.dtp-yardstick-intro{max-width:680px;font-size:17px;line-height:1.65;color:var(--ink-soft);margin-bottom:28px}
+.dtp-strip-wrap{position:relative;padding-top:36px;margin-bottom:16px}
+.dtp-strip-labels{
+  display:flex;position:absolute;top:4px;left:0;right:0;
+  align-items:flex-end;height:28px;
+}
+.dtp-strip-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sediment);text-align:center;
+  overflow:hidden;white-space:nowrap;flex-shrink:0;
+}
+.dtp-strip{display:flex;height:32px;border-radius:2px;overflow:hidden;border:1.5px solid var(--line)}
+.dtp-band{height:100%;flex-shrink:0}
+.dtp-band-history{cursor:pointer;flex-shrink:0;min-width:3px}
+.dtp-band-history:hover{opacity:.82}
+.dtp-history-annotation{
+  position:absolute;top:4px;right:0;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--rust);white-space:nowrap;pointer-events:none;
+  text-align:right;line-height:1.4;
+}
+.dtp-callout{border-top:1.5px solid var(--line);padding:24px 0 0;margin-top:12px}
+.dtp-callout-kicker{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  letter-spacing:.42em;text-transform:uppercase;font-size:10px;font-weight:700;
+  color:var(--sediment);margin-bottom:10px;
+}
+.dtp-callout-title{font-size:20px;font-weight:400;margin-bottom:14px;color:var(--ink)}
+.dtp-callout-body{max-width:660px;font-size:16px;line-height:1.65;color:var(--ink-soft)}
+@media(max-width:768px){
+  .dtp-section{padding:40px 0 32px}
+  .dtp-intro,.dtp-yardstick-intro{font-size:15px}
+  .dtp-verdict{font-size:14px;margin-bottom:40px}
+  .dtp-callout-title{font-size:18px}
+}
+.dtp-dot-card{
+  position:absolute;bottom:36px;left:0;
+  transform:translateX(-50%);
+  z-index:20;opacity:0;pointer-events:none;
+  transition:opacity .15s;width:260px;
+}
+.dtp-dot-card.visible{opacity:1;pointer-events:auto}
+.dtp-dot-card .card{animation:none}
+.dtp-band-tip{
+  position:absolute;
+  bottom:calc(100% + 10px);
+  left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bone);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:12px;line-height:1.5;
+  padding:8px 12px;
+  pointer-events:none;opacity:0;
+  transition:opacity .15s;z-index:10;
+  max-width:320px;white-space:normal;
+}
+.dtp-band-tip.visible{opacity:1}
+.dtp-callout-stat{font-weight:700;color:var(--rust)}
+.dtp-strip-ticks{display:flex;justify-content:space-between;margin-top:4px}
+.dtp-tick-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--sediment);
+}
 </style>
 </head>
 <body>
@@ -1445,6 +1689,8 @@
     <button class="view-tab" data-view="dinodex">DinoDex</button>
     <span class="view-tab-sep">|</span>
     <button class="view-tab" data-view="timeline">Timeline</button>
+    <span class="view-tab-sep">|</span>
+    <button class="view-tab" data-view="deep-time">Deep Time</button>
     <span class="view-tab-sep">|</span>
     <button class="view-tab" data-view="moving-earth">Moving Earth</button>
     <span class="view-tab-sep">|</span>
@@ -1490,6 +1736,12 @@
           <span class="home-card-label">Geological Time</span>
           <span class="home-card-title">Timeline</span>
           <span class="home-card-desc">See how the Mesozoic unfolds across the Triassic, Jurassic, and Cretaceous.</span>
+          <span class="home-card-arrow">Open &rarr;</span>
+        </button>
+        <button class="home-section-card" onclick="goToView('deep-time')">
+          <span class="home-card-label">Proportional Scale</span>
+          <span class="home-card-title">Deep Time</span>
+          <span class="home-card-desc">Feel the true scale of Earth's 4.54-billion-year history - from formation to now.</span>
           <span class="home-card-arrow">Open &rarr;</span>
         </button>
         <button class="home-section-card" onclick="goToView('moving-earth')">
@@ -1737,6 +1989,79 @@
   </section><!-- /#time-slice-explorer -->
 
 </div><!-- /#timeline-view -->
+
+<!-- ===== DEEP TIME VIEW ===== -->
+<div id="deep-time-view" style="display:none">
+
+  <div class="wrap">
+    <header class="dt-header">
+      <div class="eyebrow">Proportional Scale &middot; 4,540 Million Years</div>
+      <h1 class="dt-title">Deep Time</h1>
+      <p class="dt-intro">Everything on this page before the scale break is drawn to true proportion. The Precambrian - the first four billion years - dominates because it should. Scroll down through time; click any marker to learn what Earth was like and what, if anything, was alive. At the bottom, the last 66 million years have been expanded so that the recent past is visible at all. On the proportional scale above, all of recorded human history occupies less space than a single pixel.</p>
+    </header>
+  </div>
+
+  <div class="dt-body wrap">
+    <div class="dt-track-container">
+      <div class="dt-track" id="dtTrack">
+        <!-- rendered by JS in Phase 3 -->
+      </div>
+    </div>
+    <div class="dt-panel" id="dtPanel">
+      <!-- rendered by JS in Phase 4 -->
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="dtp-section">
+      <div class="dtp-section-eyebrow">Perspective</div>
+      <p class="dtp-intro">Two of the most iconic dinosaurs in popular culture never shared the Earth. Stegosaurus was already gone for 87 million years before T. rex appeared - a gap longer than the one that separates T. rex from us today. The timeline below is drawn to true proportion.</p>
+
+      <div class="dtp-trex-timeline" id="dtpTrexTimeline">
+        <div class="dtp-timeline-track" id="dtpTimelineTrack">
+          <div class="dtp-gap dtp-gap-blue" id="dtpGapBlue"></div>
+          <div class="dtp-gap dtp-gap-rust" id="dtpGapRust"></div>
+          <div class="dtp-dot" id="dtpDotSteg" data-label="Stegosaurus ~155 Ma"></div>
+          <div class="dtp-dot" id="dtpDotTrex" data-label="T. rex ~68 Ma"></div>
+          <div class="dtp-dot dtp-dot-now" id="dtpDotNow" data-label="Now"></div>
+        </div>
+        <div class="dtp-gap-labels" id="dtpGapLabels">
+          <div class="dtp-gap-label dtp-gap-label-blue" id="dtpLabelBlue">87 million years</div>
+          <div class="dtp-gap-label dtp-gap-label-rust" id="dtpLabelRust">66 million years</div>
+        </div>
+      </div>
+
+      <p class="dtp-yardstick-intro">The strip below shows the last 252 million years drawn to true proportion &#8212; from the first dinosaurs to now. Each colour represents a chapter in that story. The sliver at the far right is the entire existence of humans.</p>
+
+      <div class="dtp-strip-wrap">
+        <div class="dtp-strip-labels" id="dtpStripLabels"></div>
+        <div class="dtp-strip" id="dtpStrip"></div>
+        <div class="dtp-history-annotation" id="dtpHistoryAnnotation"></div>
+        <div class="dtp-strip-ticks">
+          <span class="dtp-tick-label">252 Ma</span>
+          <span class="dtp-tick-label">200 Ma</span>
+          <span class="dtp-tick-label">150 Ma</span>
+          <span class="dtp-tick-label">100 Ma</span>
+          <span class="dtp-tick-label">50 Ma</span>
+          <span class="dtp-tick-label">Now</span>
+        </div>
+      </div>
+
+      <div class="dtp-callout" id="dtpCallout" style="display:none">
+        <span class="dtp-callout-kicker">Humans &middot; ~300,000 years</span>
+        <h3 class="dtp-callout-title">Our entire species fits inside this sliver</h3>
+        <p class="dtp-callout-body">
+          <em>Homo sapiens</em> has existed for roughly 300,000 years. Agriculture began around 12,000 years ago.
+          Written records begin around 5,000 years ago. On this strip, all of recorded human history &#8212;
+          every civilisation, every dynasty, every written word &#8212; is
+          <span class="dtp-callout-stat">0.0017%</span> of the time non-avian dinosaurs walked the Earth.
+          The entire existence of our species is <span class="dtp-callout-stat">0.18%</span> of the dinosaur reign.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#deep-time-view -->
 
 <!-- ===== MOVING EARTH VIEW (new) ===== -->
 <div id="moving-earth-view" style="display:none">
@@ -3068,6 +3393,445 @@ function renderLastDay() {
   renderLastDay();
 })();
 
+/* ============================================================
+   DEEP TIME
+   ============================================================ */
+var DT_ERAS = [
+  { name:'Hadean',      start:4540, end:4000, color:'var(--ink)' },
+  { name:'Archean',     start:4000, end:2500, color:'var(--ink-soft)' },
+  { name:'Proterozoic', start:2500, end:538,  color:'var(--sediment)' },
+  { name:'Paleozoic',   start:538,  end:252,  color:'var(--moss)' },
+  { name:'Triassic',    start:252,  end:201,  color:'var(--strata-tri)' },
+  { name:'Jurassic',    start:201,  end:145,  color:'var(--strata-jur)' },
+  { name:'Cretaceous',  start:145,  end:66,   color:'var(--strata-cre)' }
+];
+
+var DT_INTERSTITIALS = [
+  { ma:3000, label:'still no oxygen' },
+  { ma:1800, label:'the Boring Billion' },
+  { ma:1000, label:'still single-celled' },
+  { ma:850,  label:'continents assembling' }
+];
+
+var ACT1_SPAN = 4474; // 4540 to 66 Ma
+var ACT1_MULTIPLIER = 7;
+var dtTrackRendered = false;
+var dtpPerspectiveRendered = false;
+
+var DEEP_TIME_ANCHORS = [
+  {
+    id:'earth-forms', ma:4540, act:1, kicker:'EARTH FORMS',
+    title:'A molten beginning',
+    earth:'Earth condenses from the solar nebula - a ball of molten rock and metal, bombarded by debris left over from the formation of the solar system. The Moon forms within the first hundred million years, most likely from a collision with a Mars-sized body. There is no atmosphere as we would recognise it, just volcanic outgassing. No liquid water on the surface yet.',
+    life:'Nothing. The planet is too hot, too violent, and too young. It will remain lifeless for at least a billion years - possibly much less, but the evidence for the earliest life is fiercely contested.',
+    perspective:null
+  },
+  {
+    id:'first-life', ma:3500, act:1, kicker:'FIRST LIFE',
+    title:'Microbes in the shallows',
+    earth:'Earth has cooled enough for liquid water. The atmosphere is rich in carbon dioxide and nitrogen but contains no free oxygen. The oceans are green, iron-rich, and bathed in ultraviolet radiation - there is no ozone layer.',
+    life:'The earliest confirmed fossils are stromatolites - layered structures built by microbial communities in shallow water - from the Dresser Formation in Western Australia, dated to ~3,480 Ma. Possible evidence extends as far back as 3.7 billion years (Greenland) or even 4.28 billion years (Quebec), but these claims remain debated. Life is entirely single-celled and anaerobic - it runs on chemical energy, not sunlight.',
+    perspective:null
+  },
+  {
+    id:'great-oxidation', ma:2400, act:1, kicker:'THE ATMOSPHERE TRANSFORMS',
+    title:'Oxygen rises',
+    earth:'Cyanobacteria have evolved oxygenic photosynthesis - using sunlight and water to produce energy, releasing oxygen as waste. Over hundreds of millions of years, this oxygen accumulates in the atmosphere, reacts with methane, and triggers catastrophic global cooling. The Huronian glaciation may be Earth\'s first Snowball event. For anaerobic organisms, this is a mass extinction. For the future of complex life, it is the most important chemical event in Earth\'s history.',
+    life:'Still entirely microbial. Single-celled organisms dominate every habitat. But the chemistry of the planet has permanently changed - oxygen is now a permanent feature of the atmosphere, and eventually it will make complex, energy-hungry life possible.',
+    perspective:null
+  },
+  {
+    id:'snowball-earth', ma:720, act:1, kicker:'THE PLANET FREEZES',
+    title:'Ice to the equator',
+    earth:'During the Cryogenian, Earth experiences at least two global glaciations - the Sturtian (~717-660 Ma) and Marinoan (~650-635 Ma) - when ice extends to the equator or very near it. The trigger may be the breakup of the supercontinent Rodinia, exposing fresh rock whose weathering draws CO2 from the atmosphere. The planet may be almost entirely frozen for tens of millions of years at a stretch.',
+    life:'Single-celled organisms endure, most likely in refugia near volcanic vents or thin equatorial seas. When the ice finally melts, something remarkable happens: complex, multicellular life begins to appear. The Ediacaran organisms that follow - strange, soft-bodied things unlike anything alive today - are the first large, visible life on Earth. The connection between the freeze and the subsequent explosion of complexity is one of deep time\'s most tantalising questions.',
+    perspective:null
+  },
+  {
+    id:'cambrian', ma:538, act:1, kicker:'ANIMALS ARRIVE',
+    title:'The body plans appear',
+    earth:'The supercontinent Rodinia has fragmented. Sea levels are high, the climate is warm, and shallow marine shelves ring the scattered continents. There is still no life on land beyond microbial crusts.',
+    life:'In a geological instant - perhaps 10-20 million years - most of the major animal body plans appear in the fossil record. Arthropods, molluscs, chordates, echinoderms, worms of every description. The seas fill with predators, grazers, burrowers, and filter-feeders. Recent evidence (2026, from Yunnan Province, China) suggests some lineages have roots in the preceding Ediacaran, but the Cambrian remains the moment when animal life became unmistakably dominant. The land, however, is still barren.',
+    perspective:'From Earth\'s formation to this point: 4 billion years. From this point to the first dinosaurs: 307 million years. The wait was long.'
+  },
+  {
+    id:'land-life', ma:470, act:1, kicker:'THE BARE LAND GREENS',
+    title:'Onto solid ground',
+    earth:'The continents are scattered but drifting toward assembly. The oceans are rich - coral reefs, crinoid meadows, trilobites, armoured fish. The land is bare rock, scoured by wind and rain with no soil as we would recognise it.',
+    life:'The first land plants - small, non-vascular, resembling modern mosses and liverworts - colonise coastal margins during the Ordovician (~470 Ma). Arthropods follow by the late Silurian (~430 Ma): myriapods and arachnids, then insects. Vertebrates arrive last, with the first tetrapods in the mid-Devonian (~380 Ma). Plants create soil, alter weathering, and draw down atmospheric CO2 - possibly triggering the end-Ordovician glaciation and mass extinction. The colonisation of land has begun.',
+    perspective:null
+  },
+  {
+    id:'great-dying', ma:252, act:1, kicker:'ALMOST EVERYTHING DIES',
+    title:'The worst day in the history of life',
+    earth:'The supercontinent Pangaea stretches from pole to pole. The Siberian Traps - a colossal volcanic eruption lasting roughly a million years - pump CO2 and sulphur into the atmosphere, acidifying the oceans and destabilising the climate. Global temperatures spike. Ocean oxygen levels plummet.',
+    life:'Roughly 90% of marine species and 70% of terrestrial vertebrate species disappear. This is the worst mass extinction in Earth\'s history. Before it, the land is dominated by synapsids - the lineage that will eventually lead to mammals - and large amphibians. Recovery takes over 10 million years. When it comes, the survivors inherit an empty world, and among them are the archosaurs that will give rise to dinosaurs.',
+    perspective:null
+  },
+  {
+    id:'first-dinosaurs', ma:231, act:1, kicker:'SMALL BEGINNINGS',
+    title:'Marginal animals',
+    earth:'Pangaea is largely intact, the climate is warm and arid, and the landscape is dominated by conifers and ferns. The world has recovered from the Permian extinction but looks nothing like it did before.',
+    life:'The earliest dinosaurs appear in what is now Argentina and Brazil. They are small - mostly bipedal, roughly human-sized or smaller, and far from dominant. Crurotarsans (crocodile-line archosaurs) rule the land. Dinosaurs are marginal players. It takes another mass extinction - the end-Triassic (~201 Ma), triggered by the Central Atlantic Magmatic Province - to clear the stage. Only then do dinosaurs diversify into the dominant land animals of the Jurassic and Cretaceous. Mammals have appeared too, tiny and nocturnal, and they will stay that way for the next 165 million years.',
+    perspective:'Dinosaurs dominate for 165 million years. Homo sapiens has existed for 0.3 million years.'
+  },
+  {
+    id:'impact', ma:66, act:1, kicker:'THE MESOZOIC ENDS',
+    title:'After 165 million years',
+    earth:'A 10-15 km asteroid strikes what is now the Yucatan Peninsula. The resulting debris, sulphate aerosols, and impact winter collapse photosynthesis globally. Sea levels are high, flowering plants have transformed terrestrial ecosystems, and the world is warm. Within decades, it is unrecognisable.',
+    life:'Non-avian dinosaurs, pterosaurs, mosasaurs, ammonites, and most marine reptiles disappear. Birds - avian dinosaurs - survive, as do mammals, crocodilians, turtles, and many other groups. The Mesozoic ends. Dinosaurs have dominated terrestrial ecosystems for 165 million years - a reign roughly 550 times longer than the entire existence of Homo sapiens.',
+    perspective:null
+  },
+  {
+    id:'mammals', ma:56, act:2, kicker:'THE EMPTY WORLD FILLS',
+    title:'New rulers',
+    earth:'With non-avian dinosaurs gone, the climate spikes during the Paleocene-Eocene Thermal Maximum (PETM, ~56 Ma) - one of the most rapid warming events in the geological record. Forests cover much of the planet, including the poles.',
+    life:'Mammals diversify explosively. Modern orders - primates, rodents, hoofed mammals, whales - appear in rapid succession. Birds diversify in parallel. Within 10 million years of the extinction, the world is recognisably mammalian. Nothing is yet larger than a few hundred kilograms - the age of giants is temporarily over.',
+    perspective:null
+  },
+  {
+    id:'hominins', ma:7, act:2, kicker:'UPRIGHT WALKERS',
+    title:'Bipedal apes',
+    earth:'The climate has cooled and dried. Grasslands have spread across Africa, Asia, and the Americas. Ice ages begin cycling in the Northern Hemisphere. The planet looks broadly modern.',
+    life:'The earliest hominins - bipedal apes, not yet tool-users - appear in Africa. Sahelanthropus (~7 Ma) may be the oldest, though its status as a hominin is debated - a 2026 study found strong evidence for bipedalism, but the question is not fully settled. Ardipithecus (~4.4 Ma) and the australopithecines (~4-2 Ma) walk upright but retain many ape-like features. Stone tool use begins around 3.3 Ma. For perspective: dinosaurs have already been extinct for over 60 million years.',
+    perspective:null
+  },
+  {
+    id:'homo-sapiens', ma:0.3, act:2, kicker:'US',
+    title:'Three hundred thousand years',
+    earth:'The planet is in a cycle of glacial and interglacial periods. Ice sheets advance and retreat across northern continents. Sea levels rise and fall by over 100 metres.',
+    life:'Anatomically modern humans appear in Africa. For most of our existence we are hunter-gatherers in small groups, sharing the planet with Neanderthals, Denisovans, and other hominin species. Agriculture begins around 12,000 years ago. Written records begin around 5,000 years ago. The entire span of recorded human history - every city, every war, every book - fits inside the last 5,000 years. On the proportional scale above, that is too small to draw.',
+    perspective:'If Earth\'s history were compressed into a single year, Homo sapiens would appear at 11:36 PM on December 31st. Written history begins less than half a second before midnight.'
+  }
+];
+
+function renderDeepTimeTrack() {
+  var container = document.getElementById('dtTrack');
+  if (!container) return;
+
+  var containerEl = container.parentElement;
+  var containerH = containerEl.offsetHeight || window.innerHeight * 0.82;
+  var act1H = containerH * ACT1_MULTIPLIER;
+  var act2H = containerH * 0.5;
+  var scaleBreakH = 44;
+
+  container.style.height = (act1H + scaleBreakH + act2H + 60) + 'px';
+  container.style.position = 'relative';
+  container.innerHTML = '';
+
+  // Era bands
+  DT_ERAS.forEach(function(era) {
+    var topFrac = (4540 - era.start) / ACT1_SPAN;
+    var botFrac = (4540 - era.end)   / ACT1_SPAN;
+    var top    = topFrac * act1H;
+    var height = (botFrac - topFrac) * act1H;
+    var band = document.createElement('div');
+    band.className = 'dt-era';
+    band.style.cssText = 'top:' + top + 'px;height:' + height + 'px;background:' + era.color + ';opacity:0.22;';
+    if (height > 30) {
+      var label = document.createElement('div');
+      label.style.cssText = 'position:absolute;bottom:4px;right:6px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--bone);opacity:.7;pointer-events:none;';
+      label.textContent = era.name.toUpperCase();
+      band.appendChild(label);
+    }
+    container.appendChild(band);
+  });
+
+  // Interstitial ambient labels
+  DT_INTERSTITIALS.forEach(function(item) {
+    var topFrac = (4540 - item.ma) / ACT1_SPAN;
+    var top = topFrac * act1H;
+    var el = document.createElement('div');
+    el.className = 'dt-interstitial';
+    el.style.top = (top + 2) + 'px';
+    el.textContent = item.label;
+    container.appendChild(el);
+  });
+
+  // Scale break
+  var breakEl = document.createElement('div');
+  breakEl.className = 'dt-scale-break';
+  breakEl.style.cssText = 'position:absolute;top:' + act1H + 'px;left:0;right:0;height:' + scaleBreakH + 'px;display:flex;align-items:center;justify-content:center;';
+  breakEl.textContent = 'SCALE BREAK · 66 million years expanded below';
+  container.appendChild(breakEl);
+
+  // Act 2 background
+  var act2Start = act1H + scaleBreakH;
+  var act2Band = document.createElement('div');
+  act2Band.style.cssText = 'position:absolute;top:' + act2Start + 'px;left:0;right:0;height:' + act2H + 'px;background:var(--gold);opacity:0.15;';
+  container.appendChild(act2Band);
+
+  // You are here
+  var nowEl = document.createElement('div');
+  nowEl.className = 'dt-now';
+  nowEl.style.cssText = 'position:absolute;top:' + (act2Start + act2H) + 'px;left:0;right:0;';
+  nowEl.innerHTML = '<div class="dt-now-dot"></div><span>NOW</span>';
+  container.appendChild(nowEl);
+
+  // Act 1 anchor markers
+  DEEP_TIME_ANCHORS.filter(function(a){ return a.act === 1; }).forEach(function(anchor) {
+    var frac = (4540 - anchor.ma) / ACT1_SPAN;
+    var top  = frac * act1H - 5;
+    var el = document.createElement('div');
+    el.className = 'dt-anchor';
+    el.dataset.id = anchor.id;
+    el.style.top = top + 'px';
+    el.innerHTML = '<div class="dt-anchor-dot"></div><div class="dt-anchor-label">' + anchor.kicker + '</div>';
+    el.addEventListener('click', function(){ selectDtAnchor(anchor.id); });
+    container.appendChild(el);
+  });
+
+  // Act 2 anchor markers
+  var act2Span = 66;
+  DEEP_TIME_ANCHORS.filter(function(a){ return a.act === 2; }).forEach(function(anchor) {
+    var frac = anchor.ma / act2Span;
+    var top  = act2Start + ((1 - frac) * act2H) - 5;
+    var el = document.createElement('div');
+    el.className = 'dt-anchor';
+    el.dataset.id = anchor.id;
+    el.style.top = top + 'px';
+    el.innerHTML = '<div class="dt-anchor-dot"></div><div class="dt-anchor-label">' + anchor.kicker + '</div>';
+    el.addEventListener('click', function(){ selectDtAnchor(anchor.id); });
+    container.appendChild(el);
+  });
+
+  // Select first anchor on initial render
+  selectDtAnchor('earth-forms');
+}
+
+function selectDtAnchor(id) {
+  document.querySelectorAll('.dt-anchor').forEach(function(el){
+    el.classList.remove('active');
+  });
+  var activeEl = document.querySelector('.dt-anchor[data-id="' + id + '"]');
+  if (activeEl) activeEl.classList.add('active');
+
+  var anchor = DEEP_TIME_ANCHORS.find(function(a){ return a.id === id; });
+  if (!anchor) return;
+
+  var panel = document.getElementById('dtPanel');
+  var maLabel = anchor.ma >= 1
+    ? anchor.ma.toLocaleString() + ' Ma'
+    : (anchor.ma * 1000).toFixed(0) + ' thousand years ago';
+
+  panel.innerHTML =
+    '<span class="dt-panel-kicker">' + anchor.kicker + '</span>' +
+    '<div class="dt-panel-ma">' + maLabel + '</div>' +
+    '<h2 class="dt-panel-title">' + anchor.title + '</h2>' +
+    '<span class="dt-panel-section-label">The Earth</span>' +
+    '<p class="dt-panel-body">' + anchor.earth + '</p>' +
+    '<span class="dt-panel-section-label">Life</span>' +
+    '<p class="dt-panel-body">' + anchor.life + '</p>' +
+    (anchor.perspective ? '<div class="dt-panel-perspective">' + anchor.perspective + '</div>' : '');
+}
+
+function initDtpTrexTimeline() {
+  var SPAN_START = 170;
+  var SPAN_END   = 0;
+  var TOTAL      = SPAN_START - SPAN_END;
+  var STEG_MA    = 155;
+  var TREX_MA    = 68;
+  var NOW_MA     = 0;
+
+  function toPct(ma) { return (SPAN_START - ma) / TOTAL * 100; }
+
+  var dotSteg = document.getElementById('dtpDotSteg');
+  var dotTrex = document.getElementById('dtpDotTrex');
+  var dotNow  = document.getElementById('dtpDotNow');
+  var gapBlue = document.getElementById('dtpGapBlue');
+  var gapRust = document.getElementById('dtpGapRust');
+  var lblBlue = document.getElementById('dtpLabelBlue');
+  var lblRust = document.getElementById('dtpLabelRust');
+  var track   = document.getElementById('dtpTimelineTrack');
+
+  function buildDotCard(speciesId) {
+    var s = SPECIES.find(function(x) { return x.id === speciesId; });
+    if (!s) return null;
+    var card = document.createElement('div');
+    card.className = 'dtp-dot-card';
+    card.id = 'dtpCard-' + speciesId;
+    card.innerHTML =
+      '<article class="card">' +
+        '<div class="card-img">' +
+          '<span class="card-period" data-p="' + s.period + '">' + periodLabel[s.period] + '</span>' +
+          (s.img
+            ? '<img src="' + s.img + '" alt="' + s.name + '" crossorigin="anonymous" onerror="imgFallback(this)">'
+            : '<div class="img-fallback">' + s.name + ' - image pending</div>') +
+        '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-clade">' + s.clade + '</div>' +
+          '<h3>' + s.name + '<span class="epithet">' + s.epithet + '</span></h3>' +
+          '<p class="card-tag">' + getPreviewSentence(s.overview) + '</p>' +
+          '<div class="card-foot">' +
+            '<span>' + s.length + ' &middot; ' + s.mass + '</span>' +
+            '<span class="diet ' + dietClass(s.diet) + '">' + getPublicGroupLabel(s) + ' &middot; ' + s.diet.toUpperCase() + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    return card;
+  }
+
+  function attachDotBehaviour(dotEl, cardEl, speciesId) {
+    var hideTimer = null;
+    function show() { clearTimeout(hideTimer); cardEl.classList.add('visible'); }
+    function hide() { hideTimer = setTimeout(function() { cardEl.classList.remove('visible'); }, 120); }
+    dotEl.addEventListener('mouseenter', show);
+    dotEl.addEventListener('mouseleave', hide);
+    cardEl.addEventListener('mouseenter', show);
+    cardEl.addEventListener('mouseleave', hide);
+    dotEl.addEventListener('click', function() { openModal(speciesId); });
+  }
+
+  requestAnimationFrame(function() {
+    var stegPct = toPct(STEG_MA);
+    var trexPct = toPct(TREX_MA);
+    var nowPct  = toPct(NOW_MA);
+
+    dotSteg.style.left = stegPct.toFixed(2) + '%';
+    dotTrex.style.left = trexPct.toFixed(2) + '%';
+    dotNow.style.left  = nowPct.toFixed(2) + '%';
+
+    gapBlue.style.left  = stegPct.toFixed(2) + '%';
+    gapBlue.style.width = (trexPct - stegPct).toFixed(2) + '%';
+
+    gapRust.style.left  = trexPct.toFixed(2) + '%';
+    gapRust.style.width = (nowPct - trexPct).toFixed(2) + '%';
+
+    lblBlue.style.left = ((stegPct + trexPct) / 2).toFixed(2) + '%';
+    lblRust.style.left = ((trexPct + nowPct)  / 2).toFixed(2) + '%';
+
+    var trackWidth = track.offsetWidth;
+
+    var cardSteg = buildDotCard('stegosaurus');
+    if (cardSteg) {
+      cardSteg.style.left = stegPct.toFixed(2) + '%';
+      if ((stegPct / 100) * trackWidth < 130) {
+        cardSteg.style.transform = 'translateX(0)';
+      }
+      track.appendChild(cardSteg);
+      attachDotBehaviour(dotSteg, cardSteg, 'stegosaurus');
+    }
+
+    var cardTrex = buildDotCard('tyrannosaurus');
+    if (cardTrex) {
+      cardTrex.style.left = trexPct.toFixed(2) + '%';
+      track.appendChild(cardTrex);
+      attachDotBehaviour(dotTrex, cardTrex, 'tyrannosaurus');
+    }
+  });
+}
+
+function initDtpYardstick() {
+  var TOTAL_MA = 252;
+  var BAND_TIPS = {
+    mesozoic:   'The age of dinosaurs - 186 million years that reshaped life on land.',
+    triassic:   'Dinosaurs began here, small and marginal, in the shadow of the Permian extinction\'s survivors.',
+    jurassic:   'The great diversification - sauropods, theropods, and the first birds all emerge.',
+    cretaceous: 'The peak and the end - flowering plants, T. rex, and 66 million years ago, the asteroid.',
+    mammal:     'With the dinosaurs gone, mammals inherited the Earth and diversified into every niche.',
+    hominin:    'Bipedal apes appear in Africa - our lineage, but not yet recognisably us.',
+    humans:     'Our entire existence as a species would barely register as a pixel on this strip.'
+  };
+
+  var strip     = document.getElementById('dtpStrip');
+  var labelsRow = document.getElementById('dtpStripLabels');
+  var callout   = document.getElementById('dtpCallout');
+  var wrap      = strip.parentElement;
+
+  var tip = document.createElement('div');
+  tip.className = 'dtp-band-tip';
+  tip.id = 'dtpBandTip';
+  wrap.appendChild(tip);
+
+  function showTip(el, text) {
+    var wrapRect = wrap.getBoundingClientRect();
+    var elRect   = el.getBoundingClientRect();
+    var center   = elRect.left + elRect.width / 2 - wrapRect.left;
+    tip.style.left = center.toFixed(1) + 'px';
+    tip.textContent = text;
+    tip.classList.add('visible');
+  }
+
+  function hideTip() { tip.classList.remove('visible'); }
+
+  requestAnimationFrame(function() {
+    var stripWidth = strip.offsetWidth || 800;
+    strip.innerHTML    = '';
+    labelsRow.innerHTML = '';
+
+    function pxFor(ma) { return (ma / TOTAL_MA) * stripWidth; }
+
+    // Mesozoic parent container (Triassic + Jurassic + Cretaceous)
+    var mesoPx = pxFor(186);
+    var mesoEl = document.createElement('div');
+    mesoEl.className = 'dtp-band dtp-band-meso';
+    mesoEl.dataset.tipKey = 'mesozoic';
+    mesoEl.style.cssText = 'width:' + mesoPx.toFixed(1) + 'px;height:100%;display:flex;flex-shrink:0;';
+
+    var subBands = [
+      { key: 'triassic',   ma: 51, color: 'var(--strata-tri)' },
+      { key: 'jurassic',   ma: 56, color: 'var(--strata-jur)' },
+      { key: 'cretaceous', ma: 79, color: 'var(--strata-cre)' }
+    ];
+
+    subBands.forEach(function(sub) {
+      var subEl = document.createElement('div');
+      subEl.className = 'dtp-band dtp-sub-band';
+      subEl.dataset.tipKey = sub.key;
+      subEl.style.cssText = 'width:' + pxFor(sub.ma).toFixed(1) + 'px;height:100%;flex-shrink:0;background:' + sub.color + ';';
+      mesoEl.appendChild(subEl);
+    });
+
+    strip.appendChild(mesoEl);
+
+    var mesoLbl = document.createElement('div');
+    mesoLbl.className = 'dtp-strip-label';
+    mesoLbl.style.width = mesoPx.toFixed(1) + 'px';
+    mesoLbl.textContent = 'Mesozoic';
+    labelsRow.appendChild(mesoLbl);
+
+    // Remaining bands
+    var otherBands = [
+      { key: 'mammal',  label: 'Mammal age', ma: 59,  color: 'var(--gold)', opacity: '.75', isHuman: false },
+      { key: 'hominin', label: 'Hominins',   ma: 6.7, color: 'var(--moss)', opacity: '.8',  isHuman: false },
+      { key: 'humans',  label: '',           ma: 0.3, color: 'var(--rust)', opacity: '1',   isHuman: true  }
+    ];
+
+    otherBands.forEach(function(band) {
+      var naturalPx = pxFor(band.ma);
+      var width = band.isHuman ? Math.max(4, naturalPx) : naturalPx;
+
+      var bandEl = document.createElement('div');
+      bandEl.className = 'dtp-band' + (band.isHuman ? ' dtp-band-humans' : '');
+      bandEl.dataset.tipKey = band.key;
+      bandEl.style.cssText = 'width:' + width.toFixed(1) + 'px;height:100%;flex-shrink:0;background:' + band.color + ';opacity:' + band.opacity + ';' + (band.isHuman ? 'cursor:pointer;min-width:4px;' : '');
+
+      if (band.isHuman) {
+        bandEl.addEventListener('click', function() {
+          callout.style.display = callout.style.display === 'none' ? 'block' : 'none';
+        });
+      }
+
+      strip.appendChild(bandEl);
+
+      var lblEl = document.createElement('div');
+      lblEl.className = 'dtp-strip-label';
+      lblEl.style.width = width.toFixed(1) + 'px';
+      lblEl.textContent = band.label;
+      labelsRow.appendChild(lblEl);
+    });
+
+    // Shared tooltip: one handler on the strip for all bands/sub-bands
+    strip.addEventListener('mouseover', function(e) {
+      var key = e.target.dataset.tipKey;
+      if (key) showTip(e.target, BAND_TIPS[key]);
+    });
+    strip.addEventListener('mouseout', function(e) {
+      if (!strip.contains(e.relatedTarget)) hideTip();
+    });
+  });
+}
+
 /* --- Tab switching --- */
 (function initTabs(){
   const tabs    = document.querySelectorAll('.view-tab');
@@ -3075,6 +3839,7 @@ function renderLastDay() {
     'home':           document.getElementById('home-view'),
     'dinodex':        document.getElementById('dinodex-view'),
     'timeline':       document.getElementById('timeline-view'),
+    'deep-time':      document.getElementById('deep-time-view'),
     'moving-earth':   document.getElementById('moving-earth-view'),
     'fossil-hunters': document.getElementById('fossil-hunters-view'),
     'last-day':       document.getElementById('last-day-view'),
@@ -3091,6 +3856,17 @@ function renderLastDay() {
       Object.values(views).forEach(v => { if(v) v.style.display = 'none'; });
       const target = views[tab.dataset.view];
       if(target) target.style.display = '';
+      if(tab.dataset.view === 'deep-time') {
+        if(!dtTrackRendered) {
+          renderDeepTimeTrack();
+          dtTrackRendered = true;
+        }
+        if(!dtpPerspectiveRendered) {
+          initDtpTrexTimeline();
+          initDtpYardstick();
+          dtpPerspectiveRendered = true;
+        }
+      }
     });
   });
 })();
