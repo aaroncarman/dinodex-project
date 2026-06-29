@@ -1440,6 +1440,50 @@
 .hpw-pipeline-label{display:block;font-family:"Helvetica Neue",Arial,sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:5px;line-height:1.3}
 .hpw-pipeline-desc{display:block;font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;color:var(--sediment);line-height:1.35}
 
+/* ---- Dating: stratigraphy figure ---- */
+.hpw-dating-figure{margin:32px 0 48px;border:1.5px solid var(--ink)}
+.hpw-dating-svg{width:100%;height:auto;display:block}
+.hpw-dating-caption{display:block;border-top:1px solid var(--line);padding:9px 14px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sediment);line-height:1.45}
+@media(max-width:600px){
+  .hpw-dating-figure{overflow-x:auto}
+  .hpw-dating-svg{min-width:560px}
+}
+
+/* ---- Classification: cladogram figure ---- */
+.hpw-clado-figure{margin:32px 0 40px;border:1.5px solid var(--ink)}
+.hpw-clado-svg{width:100%;height:auto;display:block;background:var(--bone-deep)}
+.hpw-clado-caption{display:block;border-top:1px solid var(--line);padding:9px 14px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sediment);line-height:1.45}
+@media(max-width:600px){
+  .hpw-clado-figure{overflow-x:auto}
+  .hpw-clado-svg{min-width:560px}
+}
+
+/* ---- Reading Bones: methods table ---- */
+.hpw-methods-wrap{margin:32px 0 48px;border:1.5px solid var(--ink);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.hpw-methods-table{display:grid;grid-template-columns:200px 1fr 1fr;min-width:600px}
+.hpw-methods-row{display:contents}
+.hpw-methods-cell{padding:13px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:13.5px;line-height:1.55;color:var(--ink-soft)}
+.hpw-methods-cell:last-child{border-right:none}
+.hpw-methods-head .hpw-methods-cell{font-family:"Helvetica Neue",Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:11px 16px;border-bottom:1.5px solid var(--ink)}
+.hpw-methods-head .hpw-mc-method{background:var(--ink);color:var(--bone)}
+.hpw-methods-head .hpw-mc-can{background:var(--moss);color:var(--bone)}
+.hpw-methods-head .hpw-mc-cannot{background:var(--rust);color:var(--bone)}
+.hpw-mc-method{background:var(--bone-deep);border-right:1.5px solid var(--ink)}
+.hpw-method-name{display:block;font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink);margin-bottom:2px}
+.hpw-method-sub{display:block;font-family:"Helvetica Neue",Arial,sans-serif;font-size:10px;color:var(--sediment);font-style:italic}
+.hpw-methods-row:nth-child(even) .hpw-mc-can,.hpw-methods-row:nth-child(even) .hpw-mc-cannot{background:var(--bone-deep)}
+.hpw-methods-row:nth-child(odd) .hpw-mc-can,.hpw-methods-row:nth-child(odd) .hpw-mc-cannot{background:var(--bone)}
+.hpw-methods-row:last-child .hpw-methods-cell{border-bottom:none}
+
+/* ---- Becoming Knowledge: process loop diagram ---- */
+.hpw-loop-figure{margin:32px 0 48px;border:1.5px solid var(--ink)}
+.hpw-loop-svg{width:100%;height:auto;display:block;background:var(--bone-deep)}
+.hpw-loop-caption{display:block;border-top:1px solid var(--line);padding:9px 14px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sediment);line-height:1.45}
+@media(max-width:600px){
+  .hpw-loop-figure{overflow-x:auto}
+  .hpw-loop-svg{min-width:560px}
+}
+
 /* Stub placeholder sections (2-6) */
 .hpw-section--stub{padding-top:56px;margin-top:16px}
 .hpw-section--stub .hpw-h2{color:var(--sediment)}
@@ -3134,29 +3178,487 @@
 
     </section><!-- /#hpw-sec-field-to-lab -->
 
-    <section id="hpw-sec-dating" class="hpw-section hpw-section--stub">
+    <section id="hpw-sec-dating" class="hpw-section">
+
       <span class="hpw-kicker">Dating</span>
-      <h2 class="hpw-h2">Dating</h2>
-      <p class="stub-note">This section is being researched and written.</p>
-    </section>
+      <h2 class="hpw-h2">How We Know When</h2>
 
-    <section id="hpw-sec-classification" class="hpw-section hpw-section--stub">
+      <div class="hpw-prose">
+        <p>Working out when a fossil lived is a distinct problem from working out what it was. The two main categories of approach - relative dating and absolute dating - answer different questions and are most powerful when used together.</p>
+      </div>
+
+      <h3 class="hpw-h3">Sequence before numbers</h3>
+      <div class="hpw-prose">
+        <p>The foundational approach is stratigraphy: in an undisturbed sequence of rock layers, lower layers are older than upper ones. This establishes the ordering of events without any numbers attached. It places animal A before animal B without saying how many years separate them. Complicating factors - unconformities where erosion removed a section of the sequence, faults that displaced layers, or folding that tilted the whole thing - mean that establishing the correct order is itself a skill requiring geological interpretation, not just observation.</p>
+        <p>Biostratigraphy extends this principle geographically. Certain fossil species - index fossils - existed for only a short time geologically but were geographically widespread. Finding the same index fossil in two distant locations suggests those layers are approximately contemporaneous. The method was well-established by the early nineteenth century, long before radiometric dating was possible, and it remains a useful cross-check where other methods are unavailable.</p>
+      </div>
+
+      <h3 class="hpw-h3">Radiometric dating and the bracketing problem</h3>
+      <div class="hpw-prose">
+        <p>Absolute dating assigns actual numbers of years by measuring the predictable decay of radioactive isotopes into stable daughter products. The central problem for palaeontology is that sedimentary rock - where fossils are found - cannot be reliably dated this way. Sedimentary rock is made of particles eroded from older material, so its constituent minerals could be millions of years older than the layer they now sit in. Measuring their isotope ratios would return the age of those source materials, not the moment of deposition.</p>
+        <p>What can be dated is volcanic material - specifically the minerals that crystallise when magma or ash cools. When a mineral crystallises from cooling lava, gases including argon (a decay product of potassium) escape completely into the atmosphere. After crystallisation, any argon that accumulates in the mineral lattice must have come from radioactive decay since that moment. Measuring the ratio of potassium to argon gives the time elapsed since the mineral solidified - which is also the time since the ash fell or the lava erupted.</p>
+        <p>The practical approach is bracketing: date a volcanic ash layer above the fossil-bearing rock and another below it. The fossil is younger than the upper date and older than the lower one. Its age is constrained between two independently dated events rather than measured directly.</p>
+        <p>Different isotope systems suit different timescales. Argon-argon dating is well-suited to Mesozoic material - it can date volcanic rocks from hundreds of thousands to several billion years old with high precision. Uranium-lead dating, using much longer half-lives, is most useful for the oldest rocks on Earth. Radiocarbon dating, the best-known system to a general audience, works only on organic carbon and reaches back only around 50,000 years - entirely irrelevant for dinosaurs, which are at minimum 66 million years old.</p>
+      </div>
+
+      <!-- Stratigraphy bracketing diagram -->
+      <figure class="hpw-dating-figure">
+        <svg class="hpw-dating-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="Diagram showing a fossil bracketed between two dated volcanic ash layers">
+
+          <!-- ── LAYER STACK (left 480px) ────────────────────────── -->
+
+          <!-- Layer 5 top: volcanic ash (youngest) -->
+          <rect x="0" y="0" width="480" height="60" fill="#D4CBB8"/>
+          <line x1="0" y1="12" x2="480" y2="12" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="24" x2="480" y2="24" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="36" x2="480" y2="36" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="48" x2="480" y2="48" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <text x="12" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.12em" fill="#241F1A">VOLCANIC ASH</text>
+          <text x="12" y="37" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#A6492E">Dated to 68 Ma</text>
+
+          <!-- Layer 4: sedimentary rock -->
+          <rect x="0" y="60" width="480" height="60" fill="#C0B49C"/>
+          <line x1="0" y1="60" x2="480" y2="60" stroke="#241F1A" stroke-width="0.8" stroke-opacity="0.3"/>
+
+          <!-- Layer 3: fossil-bearing layer (highlighted) -->
+          <rect x="0" y="120" width="480" height="60" fill="#B8AA90"/>
+          <line x1="0" y1="120" x2="480" y2="120" stroke="#241F1A" stroke-width="0.8" stroke-opacity="0.3"/>
+          <!-- Fossil: sauropod outline in layer 3 -->
+          <ellipse cx="220" cy="150" rx="36" ry="16" fill="none" stroke="#A6492E" stroke-width="1.5"/>
+          <path d="M186 140 C174 128 168 114 171 105" fill="none" stroke="#A6492E" stroke-width="1.5"/>
+          <ellipse cx="171" cy="101" rx="9" ry="6" fill="none" stroke="#A6492E" stroke-width="1.5"/>
+          <path d="M256 151 C270 150 282 153 291 158" fill="none" stroke="#A6492E" stroke-width="1.5"/>
+          <line x1="199" y1="165" x2="199" y2="178" stroke="#A6492E" stroke-width="1.5"/>
+          <line x1="212" y1="166" x2="212" y2="180" stroke="#A6492E" stroke-width="1.5"/>
+          <line x1="232" y1="166" x2="232" y2="180" stroke="#A6492E" stroke-width="1.5"/>
+          <line x1="245" y1="165" x2="245" y2="178" stroke="#A6492E" stroke-width="1.5"/>
+          <text x="12" y="145" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.12em" fill="#4A4138">FOSSIL-BEARING SEDIMENT</text>
+
+          <!-- Layer 2: sedimentary rock -->
+          <rect x="0" y="180" width="480" height="60" fill="#C8BCA4"/>
+          <line x1="0" y1="180" x2="480" y2="180" stroke="#241F1A" stroke-width="0.8" stroke-opacity="0.3"/>
+
+          <!-- Layer 1 bottom: volcanic ash (oldest) -->
+          <rect x="0" y="240" width="480" height="60" fill="#D4CBB8"/>
+          <line x1="0" y1="240" x2="480" y2="240" stroke="#C8BCA4" stroke-width="1"/>
+          <line x1="0" y1="252" x2="480" y2="252" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="264" x2="480" y2="264" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="276" x2="480" y2="276" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <line x1="0" y1="288" x2="480" y2="288" stroke="#C8BCA4" stroke-width="0.6" stroke-dasharray="4 4"/>
+          <text x="12" y="263" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.12em" fill="#241F1A">VOLCANIC ASH</text>
+          <text x="12" y="277" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#A6492E">Dated to 72 Ma</text>
+
+          <!-- Outer border left panel -->
+          <rect x="0.75" y="0.75" width="479" height="298.5" fill="none" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- ── RIGHT PANEL: bracket and annotation (480-720px) ─── -->
+
+          <!-- Top tick (68 Ma ash centre at 30px) -->
+          <line x1="510" y1="30" x2="530" y2="30" stroke="#A6492E" stroke-width="1.5"/>
+          <!-- Bottom tick (72 Ma ash centre at 270px) -->
+          <line x1="510" y1="270" x2="530" y2="270" stroke="#A6492E" stroke-width="1.5"/>
+          <!-- Vertical connecting bracket -->
+          <line x1="530" y1="30" x2="530" y2="270" stroke="#A6492E" stroke-width="1.5"/>
+          <!-- Arrow to fossil layer midpoint -->
+          <line x1="530" y1="150" x2="548" y2="150" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="548,146 558,150 548,154" fill="#A6492E"/>
+
+          <!-- Age range label -->
+          <text x="566" y="154" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em" fill="#A6492E">68 - 72 Ma</text>
+          <text x="566" y="175" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">fossil age range</text>
+
+          <!-- Constraint labels -->
+          <text x="540" y="26" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#6B5B47">younger than 68 Ma</text>
+          <text x="540" y="282" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#6B5B47">older than 72 Ma</text>
+
+          <!-- Depth direction labels -->
+          <text x="400" y="14" font-family="Helvetica Neue, Arial, sans-serif" font-size="8" font-weight="700" letter-spacing="0.08em" fill="#6B5B47">YOUNGER</text>
+          <text x="390" y="293" font-family="Helvetica Neue, Arial, sans-serif" font-size="8" font-weight="700" letter-spacing="0.08em" fill="#6B5B47">OLDER</text>
+
+        </svg>
+        <figcaption class="hpw-dating-caption">The bracketing principle. The fossil cannot be dated directly - but the volcanic ash layers above and below it can. The fossil must be younger than the upper ash and older than the lower one.</figcaption>
+      </figure>
+
+      <h3 class="hpw-h3">Magnetostratigraphy</h3>
+      <div class="hpw-prose">
+        <p>A third approach exploits a different physical record. Iron-bearing minerals in cooling lava, and in some fine-grained sediments, lock in the direction of Earth's magnetic field at the moment of formation. Earth's magnetic field has reversed polarity hundreds of times through geological history - north and south magnetic poles swapping - producing an irregular sequence of normal and reversed intervals. This sequence has been compiled into the Geomagnetic Polarity Timescale: a global record of reversals calibrated in years by radiometric dating. A local rock section can be sampled for its polarity pattern and that pattern matched against the timescale to establish age, much as a barcode is matched against a database.</p>
+        <p>Magnetostratigraphy is particularly useful where volcanic ash is absent and direct radiometric dating is not possible. Because polarity reversals are geologically abrupt and globally simultaneous, they provide time markers that can be correlated across very different depositional environments. The method is most powerful when combined with biostratigraphic and radiometric constraints to confirm the pattern-match.</p>
+      </div>
+
+      <h3 class="hpw-h3">Convergence and uncertainty</h3>
+      <div class="hpw-prose">
+        <p>The most reliable ages come when multiple independent methods agree. A fossil bracketed by two argon-argon dates, with biostratigraphic position consistent with both, and a magnetostratigraphy that places it in the right polarity interval, carries far more confidence than one constrained by a single method. When methods conflict, that is a signal to investigate further rather than to choose the most convenient answer.</p>
+        <p>Every published age carries an uncertainty range, reflecting the precision of isotope measurements, the assumptions in the decay model, and the stratigraphic exactness of the bracketing. The "±" value attached to a date is not a weakness in the science - it is an honest statement of what the evidence can and cannot resolve. Understanding what those ranges mean, and resisting the urge to drop them for narrative convenience, is part of reading geochronological literature carefully.</p>
+      </div>
+
+    </section><!-- /#hpw-sec-dating -->
+
+    <section id="hpw-sec-classification" class="hpw-section">
+
       <span class="hpw-kicker">Classification</span>
-      <h2 class="hpw-h2">Classification</h2>
-      <p class="stub-note">This section is being researched and written.</p>
-    </section>
+      <h2 class="hpw-h2">Classification and Phylogenetics</h2>
 
-    <section id="hpw-sec-reading-bones" class="hpw-section hpw-section--stub">
+      <div class="hpw-prose">
+        <p>The names given to extinct animals are not merely labels. They encode claims about evolutionary relationships, and when those claims are revised, the names change too. Understanding how classification works - and why it keeps changing - requires knowing something about the two systems it depends on: nomenclature, the rules for naming, and phylogenetics, the methods for establishing relationships.</p>
+      </div>
+
+      <h3 class="hpw-h3">The naming system</h3>
+      <div class="hpw-prose">
+        <p>Every species in the scientific literature has a two-part Latin name - a binomial - consisting of a capitalised genus name and a lowercase species epithet, both italicised. <em>Tyrannosaurus rex</em>, <em>Velociraptor mongoliensis</em>, <em>Triceratops horridus</em>. The system was formalised by Carl Linnaeus in the eighteenth century and is now governed by the International Code of Zoological Nomenclature (ICZN).</p>
+        <p>A key rule is priority: the first validly published name for a species takes precedence over all later ones. When two researchers independently name the same animal, the earlier name stands. When a name changes - as happens regularly in palaeontology - the animal itself has not changed. What has changed is the scientific understanding of its relationships. A species moved from one genus to another retains its species epithet but acquires a new full name. The creature is the same; the filing has been updated.</p>
+      </div>
+
+      <h3 class="hpw-h3">Holotypes and what happens when they are lost</h3>
+      <div class="hpw-prose">
+        <p>Before a species is formally recognised, a researcher must publish a technical description anchored to a specific physical specimen: the holotype. This single specimen is permanently deposited in an accredited public institution and becomes the reference point to which all subsequent finds are compared. The holotype does not need to be complete, typical, or particularly well-preserved - its only function is nomenclatural. It is the permanent anchor of the name.</p>
+        <p>What happens if the holotype is destroyed? The holotype of <em>Spinosaurus aegyptiacus</em> was held in Munich and lost in a wartime bombing in 1944. Without it, the name entered a prolonged state of uncertainty. The ICZN allows the designation of a replacement specimen - a neotype - under specific conditions, but this is a workaround that requires formal application and community consensus. The loss of original type material is a genuine scientific loss, not a technical inconvenience.</p>
+      </div>
+
+      <h3 class="hpw-h3">The species concept problem</h3>
+      <div class="hpw-prose">
+        <p>In living animals, species can in principle be defined by reproductive isolation - populations that do not interbreed are different species. For extinct animals, reproductive behaviour is impossible to observe. Palaeontologists must define species on morphology alone: what the bones look like.</p>
+        <p>This creates genuine ambiguity. Two specimens that look different might be the same species at different growth stages, different sexes, or from different geographic populations. Two that look similar might have been reproductively isolated for millions of years. The species concept in palaeontology is not a solved problem, and it underlies much of the taxonomic instability that gives the field its reputation for constant name-changing. The instability is real, but it reflects the difficulty of the evidence rather than carelessness in the science.</p>
+      </div>
+
+      <h3 class="hpw-h3">From classification to cladistics</h3>
+      <div class="hpw-prose">
+        <p>Earlier approaches to classification grouped organisms by overall similarity. This produced groupings that sometimes reflected shared ancestry and sometimes did not. Dolphins, fish, and ichthyosaurs all share a streamlined body plan - none of that similarity indicates common descent.</p>
+        <p>Modern palaeontology uses cladistics, developed by the German entomologist Willi Hennig in the mid-twentieth century and adopted widely in palaeontology from the 1980s onwards. Cladistics groups organisms by shared derived characteristics - features inherited from a specific common ancestor rather than arrived at independently. These shared derived features are called synapomorphies. A synapomorphy is a character state that appears in a group of organisms and marks their shared ancestry: it was present in their common ancestor and inherited by all descendants.</p>
+        <p>The result is a cladogram: a branching diagram of hypothesised evolutionary relationships. A cladogram is not a proven family tree. It is a hypothesis built by coding observable characters across a set of taxa and finding the arrangement requiring the fewest evolutionary changes - the most parsimonious explanation. Different researchers scoring the same characters differently, or selecting different characters, can arrive at different trees. New specimens add new data to the matrix and the optimal tree may shift. This is not a weakness in the method. It is what a hypothesis-driven science looks like when it is working correctly.</p>
+      </div>
+
+      <!-- Cladogram schematic -->
+      <figure class="hpw-clado-figure">
+        <svg class="hpw-clado-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-label="Simplified cladogram showing relationships between crocodilians, ornithischian dinosaurs, sauropods, and theropods">
+
+          <!-- ── CLADOGRAM LINES ──────────────────────────────── -->
+
+          <!-- Root vertical line -->
+          <line x1="60" y1="70" x2="60" y2="202" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Root to Crocodilians -->
+          <line x1="60" y1="70" x2="510" y2="70" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Root to Node 1 -->
+          <line x1="60" y1="202" x2="200" y2="202" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Node 1 vertical: Ornithischians to Node 2 -->
+          <line x1="200" y1="150" x2="200" y2="255" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Node 1 to Ornithischians -->
+          <line x1="200" y1="150" x2="510" y2="150" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Node 1 to Node 2 -->
+          <line x1="200" y1="255" x2="360" y2="255" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Node 2 vertical: Sauropods to Theropods -->
+          <line x1="360" y1="220" x2="360" y2="290" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Node 2 to Sauropods -->
+          <line x1="360" y1="220" x2="510" y2="220" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- Horizontal branch: Node 2 to Theropods -->
+          <line x1="360" y1="290" x2="510" y2="290" stroke="#241F1A" stroke-width="1.5"/>
+
+          <!-- ── NODE DOTS ────────────────────────────────────── -->
+
+          <circle cx="200" cy="202" r="5" fill="#A6492E"/>
+          <circle cx="360" cy="255" r="5" fill="#A6492E"/>
+          <circle cx="60" cy="136" r="4" fill="#4A4138"/>
+
+          <!-- ── TAXON LABELS ────────────────────────────────── -->
+
+          <text x="518" y="66" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#241F1A">Crocodilians</text>
+          <text x="518" y="81" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#6B5B47">outgroup</text>
+
+          <text x="518" y="146" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#241F1A">Ornithischians</text>
+          <text x="518" y="161" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#6B5B47">e.g. Stegosaurus, Triceratops</text>
+
+          <text x="518" y="216" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#241F1A">Sauropods</text>
+          <text x="518" y="231" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#6B5B47">e.g. Diplodocus, Brachiosaurus</text>
+
+          <text x="518" y="286" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#241F1A">Theropods &#x2192; Birds</text>
+          <text x="518" y="301" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#6B5B47">e.g. T. rex, Velociraptor, modern birds</text>
+
+          <!-- ── NODE LABELS ────────────────────────────────── -->
+
+          <rect x="60" y="212" width="152" height="36" fill="#ECE6D8" stroke="#C8BCA4" stroke-width="1"/>
+          <text x="136" y="226" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em" fill="#A6492E">DINOSAURIA</text>
+          <text x="136" y="240" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">open hip socket</text>
+
+          <rect x="202" y="265" width="152" height="36" fill="#ECE6D8" stroke="#C8BCA4" stroke-width="1"/>
+          <text x="278" y="279" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em" fill="#A6492E">SAURISCHIA</text>
+          <text x="278" y="293" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">elongated neck vertebrae</text>
+
+          <!-- Root label -->
+          <text x="12" y="115" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.08em" fill="#6B5B47">ROOT</text>
+          <text x="12" y="127" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#6B5B47">Archosauria</text>
+
+          <!-- Legend -->
+          <circle cx="60" cy="326" r="5" fill="#A6492E"/>
+          <text x="72" y="330" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#4A4138">Node dot = last common ancestor defined by a synapomorphy</text>
+
+          <!-- Outer border -->
+          <rect x="0.75" y="0.75" width="718.5" height="338.5" fill="none" stroke="#241F1A" stroke-width="1.5"/>
+
+        </svg>
+        <figcaption class="hpw-clado-caption">A simplified schematic - not a definitive published tree. Each node represents a hypothesised common ancestor, defined by a shared derived feature (synapomorphy) not found in the outgroup. The branching pattern is a hypothesis that can be revised as new evidence is added.</figcaption>
+      </figure>
+
+      <div class="hpw-prose">
+        <p>What the diagram above illustrates is the logic, not a settled conclusion. Any node could shift if new specimens added characters that changed the most parsimonious arrangement. That has happened repeatedly in dinosaur systematics - the controversial Baron et al. (2017) analysis moved ornithischians out of their traditional position and grouped them with theropods, which would require rewriting the nodes above. The analysis remains contested. The family tree keeps getting redrawn not because palaeontologists are careless, but because the underlying data is genuinely ambiguous at some points and each new find adds to it.</p>
+      </div>
+
+    </section><!-- /#hpw-sec-classification -->
+
+    <section id="hpw-sec-reading-bones" class="hpw-section">
+
       <span class="hpw-kicker">Reading Bones</span>
-      <h2 class="hpw-h2">Reading Bones</h2>
-      <p class="stub-note">This section is being researched and written.</p>
-    </section>
+      <h2 class="hpw-h2">Reading Biology from Fossils</h2>
 
-    <section id="hpw-sec-becoming-knowledge" class="hpw-section hpw-section--stub">
+      <div class="hpw-prose">
+        <p>Reading biology from a fossil is an inferential process. The further a claim from what the bones directly show, the more cautiously it should be held. Palaeontology has developed a range of methods for extending beyond the skeleton, each with different confidence levels and different limits.</p>
+      </div>
+
+      <h3 class="hpw-h3">What the skeleton directly shows</h3>
+      <div class="hpw-prose">
+        <p>The most direct observations come from the skeleton itself: anatomy and body proportions, the shape and articulation of skeletal elements, and pathology - healed fractures, bone infections, tumours, and arthritic changes that record injury, disease, and survival. The rough surfaces, ridges, and flanges where muscles once anchored are also directly readable: muscle attachment scars provide the raw data for reconstructing how an animal moved.</p>
+        <p>From that data, biomechanists reconstruct locomotion, posture, and bite mechanics. Finite element analysis applies engineering stress calculations to digital models of bones and skulls, predicting how they respond to different forces and loads. These models are hypothesis-testing tools rather than measurements of behaviour: they tell you which movements were mechanically plausible, not which movements the animal actually used.</p>
+      </div>
+
+      <h3 class="hpw-h3">Reading deeper into bone</h3>
+      <div class="hpw-prose">
+        <p>Thin-sectioning a fossil bone reveals internal microstructure. The type of bone tissue and the pattern of growth marks known as Lines of Arrested Growth (LAGs) give estimates of age at death and growth rate. LAGs form annually in many vertebrates - analogously to tree rings - and counting them provides a minimum age for the individual. The spacing between LAGs indicates growth rate at each stage, and the overall bone tissue type carries implications for metabolic rate: the rapidly-deposited fibrolamellar bone seen in birds and mammals indicates fast growth consistent with high metabolism, while the slower lamellar bone typical of non-avian reptiles indicates slower growth. Most non-avian dinosaurs show fibrolamellar bone, a significant line of evidence in debates about dinosaur physiology.</p>
+        <p>Stable isotope ratios in bone and tooth enamel encode information about diet and environment. Carbon isotopes distinguish different plant food types and trophic levels. Oxygen isotopes reflect body temperature regulation and the composition of water consumed, which varies geographically and seasonally - providing signals for migration and thermoregulation. Strontium isotopes carry a geological signature that differs between rock formations, giving independent evidence for movement across an animal's lifetime.</p>
+        <p>Dental microwear - microscopic scratch and pit patterns on tooth surfaces - reflects what an animal ate in the weeks before death, as distinct from what its tooth shape was designed for. An herbivore's dentition might suggest browsing while microwear indicates unusually high grit content, pointing to low-growing abrasive plants or incidental soil ingestion. Diet inferred from tooth shape and diet inferred from microwear can diverge, and both are informative.</p>
+      </div>
+
+      <h3 class="hpw-h3">Phylogenetic bracketing</h3>
+      <div class="hpw-prose">
+        <p>Many biological features do not survive fossilisation. For these, palaeontologists use phylogenetic bracketing - inferring likely features in an extinct animal by examining what its closest living relatives share. If a feature appears consistently in both sides of the living bracket around a fossil group, it can be inferred in that group with reasonable confidence, even without direct evidence.</p>
+        <p>The canonical example is the four-chambered heart. No dinosaur heart has ever been preserved. But both birds - the living descendants of theropod dinosaurs - and crocodilians - the closest living relatives of dinosaurs outside the avian line - have four-chambered hearts. The inference that non-avian dinosaurs also had four-chambered hearts is therefore well-supported, not by direct fossil evidence but by the logic that such a fundamental cardiovascular structure would not have evolved independently in two such closely related lineages.</p>
+        <p>The strength of a bracketing inference depends on how consistently the feature appears across both sides of the bracket. Features that are universal and stable in living bracket groups support stronger inferences than those that vary between sexes, ages, or populations. Bracketing is a method of reasoning under constrained uncertainty - a principled way of handling the absence of direct evidence, not a licence to assume extinct animals resembled modern ones in every detail.</p>
+      </div>
+
+      <h3 class="hpw-h3">Trace fossils and behaviour</h3>
+      <div class="hpw-prose">
+        <p>Trace fossils - footprints, trackways, nesting sites, bonebeds, coprolites - provide evidence of behaviour that body fossils almost never can. A trackway records gait and can be used to estimate walking speed from stride length and inferred hip height. Multiple trackways of the same type moving in the same direction suggest possible gregarious behaviour, though mass-death assemblages without social structure can produce similar patterns. Nesting sites with eggs in structured arrangements and evidence of young remaining in the nest - as at the Maiasaura sites in Montana - imply active parental care.</p>
+        <p>The primary limitation of trace fossils is identification. The animal that made a trackway can rarely be assigned to a species unless body fossils are found at the same site in the same rock unit. A three-toed theropod footprint could have been made by any of dozens of species. Ichnology - the study of trace fossils - operates at a different taxonomic resolution from body fossil palaeontology, and its behavioural inferences carry their own layers of uncertainty.</p>
+      </div>
+
+      <!-- Methods table visual -->
+      <div class="hpw-methods-wrap">
+        <div class="hpw-methods-table" role="table" aria-label="Palaeontological methods: what each can and cannot show">
+
+          <!-- Header row -->
+          <div class="hpw-methods-row hpw-methods-head" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="columnheader">Method</div>
+            <div class="hpw-methods-cell hpw-mc-can" role="columnheader">What it can show</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="columnheader">What it cannot show</div>
+          </div>
+
+          <!-- Bone histology -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Bone histology</span>
+              <span class="hpw-method-sub">LAGs &amp; tissue type</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Age at death; growth rate at each life stage; tissue type as a metabolic indicator</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">Exact metabolic rate; soft tissue; destroys material in the process</div>
+          </div>
+
+          <!-- Stable isotopes -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Stable isotopes</span>
+              <span class="hpw-method-sub">C, O, Sr ratios in bone &amp; enamel</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Trophic level; thermoregulation signals; geographic movement across lifetime</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">Specific food sources; exact migration routes; behavioural reason for movement</div>
+          </div>
+
+          <!-- Dental microwear -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Dental microwear</span>
+              <span class="hpw-method-sub">Microscopic tooth surface scratches</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Diet in the weeks before death; food hardness and grit content</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">Lifetime diet; soft or liquid foods (leave no scratch marks); species-level identification</div>
+          </div>
+
+          <!-- Biomechanics / FEA -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Biomechanics &amp; FEA</span>
+              <span class="hpw-method-sub">Stress modelling of bones</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Which postures and forces were mechanically plausible; stress distribution in bone under load</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">How the animal actually moved; exact muscle mass and attachment; real-world behaviour</div>
+          </div>
+
+          <!-- Trace fossils -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Trace fossils</span>
+              <span class="hpw-method-sub">Tracks, nests, bonebeds, coprolites</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Gait; speed estimates; possible gregariousness; diet (coprolites); evidence of nesting behaviour</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">Which species made a trackway (usually); specific behavioural intent; individual identity</div>
+          </div>
+
+          <!-- Phylogenetic bracketing -->
+          <div class="hpw-methods-row" role="row">
+            <div class="hpw-methods-cell hpw-mc-method" role="cell">
+              <span class="hpw-method-name">Phylogenetic bracketing</span>
+              <span class="hpw-method-sub">Inference from living relatives</span>
+            </div>
+            <div class="hpw-methods-cell hpw-mc-can" role="cell">Likely presence of soft features shared by both living bracket groups (e.g. four-chambered heart)</div>
+            <div class="hpw-methods-cell hpw-mc-cannot" role="cell">Exact form of inferred features; features that vary across the bracket groups</div>
+          </div>
+
+        </div><!-- /.hpw-methods-table -->
+      </div><!-- /.hpw-methods-wrap -->
+
+      <h3 class="hpw-h3">What fossils almost never tell us</h3>
+      <div class="hpw-prose">
+        <p>Colour is almost always lost. A small number of exceptional specimens have preserved melanosomes - the microscopic pigment-producing organelles responsible for certain colours - allowing limited colour inference in those cases. But these are rare, and the reconstructions they support are partial: melanosome analysis identifies some colour patterns but not the full palette, and many colours depend on structural features that do not preserve.</p>
+        <p>Sound and vocalisation are inferred at best from inner ear morphology and analogy with living relatives. Most behaviour is invisible in bone. The exact distribution of soft tissue - musculature, fat, skin texture, and features carried by organs - requires either exceptional preservation or inference from relatives, and carries degrees of uncertainty that popular accounts tend to understate.</p>
+        <p>The principle applies throughout this guide. Every entry rests on a chain of inference from physical fossil evidence. The length of that chain is the measure of how cautiously each claim should be held - which is why evidence quality and confidence levels are noted where the inference runs longest.</p>
+      </div>
+
+    </section><!-- /#hpw-sec-reading-bones -->
+
+    <section id="hpw-sec-becoming-knowledge" class="hpw-section">
+
       <span class="hpw-kicker">Becoming Knowledge</span>
-      <h2 class="hpw-h2">Becoming Knowledge</h2>
-      <p class="stub-note">This section is being researched and written.</p>
-    </section>
+      <h2 class="hpw-h2">From Interpretation to Knowledge</h2>
+
+      <div class="hpw-prose">
+        <p>Publishing a new species description is the beginning of its scientific life, not the end. The process by which a preliminary observation becomes an accepted interpretation - and the conditions under which that acceptance can be withdrawn - is as important to understand as any of the methods described in the preceding sections.</p>
+      </div>
+
+      <h3 class="hpw-h3">Formal description and peer review</h3>
+      <div class="hpw-prose">
+        <p>A new species is formally recognised through the publication of a technical description in a peer-reviewed journal. The description must identify the holotype, establish its repository, provide a diagnosis distinguishing the taxon from all known relatives, and justify the new name. The description is then reviewed by other experts in the field before publication - typically two or three, working anonymously, checking the methodology, the character scoring, and the conclusions.</p>
+        <p>Peer review is an important quality control mechanism, but its limits in palaeontology are worth understanding. Reviewers assess manuscripts from descriptions and photographs; access to the physical specimen is not usually possible during review. Publication of a description is therefore the start of wider scrutiny rather than its conclusion. Subsequent researchers who access the specimen may find that the published description misses features, overstates their significance, or rests on a character scoring that does not hold up under re-examination.</p>
+        <p>The role of specimen access in resolving disputes is substantial. Many disagreements in palaeontological literature persist precisely because researchers cannot readily examine the material on which competing claims rest. Fossils in well-resourced public institutions with open access policies generate more settled science than equally significant specimens held in private collections or in institutions that restrict study.</p>
+      </div>
+
+      <!-- Description process loop diagram -->
+      <figure class="hpw-loop-figure">
+        <svg class="hpw-loop-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" role="img" aria-label="Diagram showing the iterative process from specimen access through to publication and potential revision">
+
+          <!-- Step 1: Specimen access -->
+          <rect x="10" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="55" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">SPECIMEN</text>
+          <text x="55" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">ACCESS</text>
+          <text x="55" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Examine</text>
+          <text x="55" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">physical</text>
+          <text x="55" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">material</text>
+
+          <line x1="100" y1="80" x2="108" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="108,76 116,80 108,84" fill="#A6492E"/>
+
+          <!-- Step 2: Character coding -->
+          <rect x="110" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="155" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">CHARACTER</text>
+          <text x="155" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">CODING</text>
+          <text x="155" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Score</text>
+          <text x="155" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">morphological</text>
+          <text x="155" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">features</text>
+
+          <line x1="200" y1="80" x2="208" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="208,76 216,80 208,84" fill="#A6492E"/>
+
+          <!-- Step 3: Analysis -->
+          <rect x="210" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="255" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">ANALYSIS</text>
+          <text x="255" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Phylogenetic,</text>
+          <text x="255" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">statistical,</text>
+          <text x="255" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">interpretive</text>
+
+          <line x1="300" y1="80" x2="308" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="308,76 316,80 308,84" fill="#A6492E"/>
+
+          <!-- Step 4: Description written -->
+          <rect x="310" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="355" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">DESCRIPTION</text>
+          <text x="355" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">WRITTEN</text>
+          <text x="355" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Holotype,</text>
+          <text x="355" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">diagnosis,</text>
+          <text x="355" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">name</text>
+
+          <line x1="400" y1="80" x2="408" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="408,76 416,80 408,84" fill="#A6492E"/>
+
+          <!-- Step 5: Peer review -->
+          <rect x="410" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="455" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">PEER</text>
+          <text x="455" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">REVIEW</text>
+          <text x="455" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Expert</text>
+          <text x="455" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">evaluation</text>
+          <text x="455" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">before pub.</text>
+
+          <line x1="500" y1="80" x2="508" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="508,76 516,80 508,84" fill="#A6492E"/>
+
+          <!-- Step 6: Publication -->
+          <rect x="510" y="40" width="90" height="105" fill="#E2DAC8" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="555" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#A6492E">PUBLICATION</text>
+          <text x="555" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">Formal</text>
+          <text x="555" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">scientific</text>
+          <text x="555" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#4A4138">record</text>
+
+          <line x1="600" y1="80" x2="608" y2="80" stroke="#A6492E" stroke-width="1.5"/>
+          <polygon points="608,76 616,80 608,84" fill="#A6492E"/>
+
+          <!-- Step 7: Community scrutiny (dark, ongoing) -->
+          <rect x="610" y="40" width="100" height="105" fill="#241F1A" stroke="#241F1A" stroke-width="1.5"/>
+          <text x="660" y="81" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#ECE6D8">COMMUNITY</text>
+          <text x="660" y="93" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.1em" fill="#ECE6D8">SCRUTINY</text>
+          <text x="660" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="rgba(236,230,216,0.8)">Independent</text>
+          <text x="660" y="122" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="rgba(236,230,216,0.8)">re-examination</text>
+          <text x="660" y="134" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="rgba(236,230,216,0.8)">ongoing</text>
+
+          <!-- Feedback loop arrow -->
+          <line x1="660" y1="145" x2="660" y2="182" stroke="#A6492E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="660" y1="182" x2="55" y2="182" stroke="#A6492E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="55" y1="182" x2="55" y2="147" stroke="#A6492E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="51,147 55,139 59,147" fill="#A6492E"/>
+
+          <!-- Feedback label -->
+          <text x="357" y="200" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.08em" fill="#A6492E">NEW EVIDENCE OR BETTER ANALYSIS &rarr; REVISION</text>
+
+          <!-- Outer border -->
+          <rect x="0.75" y="0.75" width="718.5" height="228.5" fill="none" stroke="#241F1A" stroke-width="1.5"/>
+
+        </svg>
+        <figcaption class="hpw-loop-caption">The process is not linear. Community scrutiny can prompt re-examination of any earlier step when new specimens, methods, or analyses challenge an existing interpretation.</figcaption>
+      </figure>
+
+      <h3 class="hpw-h3">Quantitative and statistical methods</h3>
+      <div class="hpw-prose">
+        <p>From the 1970s onwards, a shift began in how palaeontology asks questions. Where the field had traditionally been largely descriptive - naming and classifying organisms, mapping their occurrence in the rock record - researchers began applying quantitative and statistical methods to questions about biodiversity, extinction rates, and evolutionary dynamics. This transformation has accelerated substantially since.</p>
+        <p>Diversity curves - graphs of species richness through geological time - are a central output of this work. The fundamental problem is that raw counts of named species from any given time interval are heavily influenced by how much rock from that interval has been studied and how intensively. An interval that produced more sediment, or that happened to be excavated by more researchers, will appear more diverse than one that is geologically sparse or geographically remote, regardless of what was actually living then. Methods developed to correct for this include Shareholder Quorum Subsampling (SQS), which standardises species counts to comparable levels of sampling completeness rather than arbitrary sample size, allowing genuine patterns of diversity change to be separated from sampling artefacts.</p>
+        <p>Bayesian methods have transformed phylogenetics by allowing uncertainty in tree topology to be quantified explicitly rather than resolved to a single best estimate. Instead of producing one most parsimonious tree, Bayesian analyses produce a distribution of trees consistent with the data, with probabilities attached. This is a more honest representation of what the evidence can and cannot determine. Body size trends through geological time, extinction rate calculations, and tests of evolutionary hypotheses all require statistical frameworks that are now standard tools in the field.</p>
+      </div>
+
+      <h3 class="hpw-h3">What it takes to overturn consensus</h3>
+      <div class="hpw-prose">
+        <p>Overturning an established interpretation requires better evidence or a demonstrably stronger analysis of existing evidence - not just a new hypothesis. The history of palaeontology contains genuine paradigm shifts driven by both kinds of change.</p>
+        <p>The feathered dinosaur discoveries from China, beginning with <em>Sinosauropteryx</em> formally described in 1996, represented a shift driven primarily by new material. The connection between non-avian dinosaurs and birds had been argued on anatomical grounds since Thomas Huxley in the nineteenth century and John Ostrom in the 1970s, but remained contested. The Yixian Formation specimens settled the question not through better argument but through direct physical evidence that could not reasonably be explained any other way. When the evidence is overwhelming and independently reproducible, even long-held alternatives tend to collapse.</p>
+        <p>The cladistic revolution of the 1980s, by contrast, was a methodological shift. The underlying fossils had not changed. What changed was the analytical framework applied to them - from subjective grouping by overall similarity to rigorous analysis of shared derived characters. The same material, analysed differently, produced significantly different conclusions about evolutionary relationships. Both types of shift - new evidence and new methods - continue to operate in the field today.</p>
+      </div>
+
+      <h3 class="hpw-h3">The transformation of the field by technology</h3>
+      <div class="hpw-prose">
+        <p>Palaeontology is not a Victorian discipline working with Victorian methods. From the 1980s onwards, technological transformation has substantially expanded what the fossil record can be made to yield.</p>
+        <p>CT scanning allows specimens to be imaged internally without preparation, revealing anatomy that physical extraction would require months to uncover or might destroy entirely. Stable isotope analysis opened windows onto diet, migration, and palaeoclimate. Melanosome analysis, developed from the 2010s onwards, recovered colour information from exceptional specimens, establishing that some dinosaurs had complex and specific colour patterns rather than the uniform grey-green of earlier reconstructions. Ancient protein sequencing has extended molecular phylogenetics into the deep past for some non-dinosaurian lineages, though the Mesozoic remains beyond the reach of current biomolecular methods. Geometric morphometrics quantifies shape variation statistically across specimens, providing more rigorous tests of species boundaries and evolutionary trends than subjective visual comparison alone. Computational phylogenetics handles character matrices of thousands of characters across hundreds of taxa routinely, where a few decades ago such analyses were not computationally feasible.</p>
+        <p>Each of these methods has changed what questions can be asked, and some have changed the answers to questions that seemed settled. The field's capacity to revise itself in response to better tools is not a sign of instability. It is the intended behaviour of a science that takes its evidential standards seriously.</p>
+      </div>
+
+    </section><!-- /#hpw-sec-becoming-knowledge -->
 
   </div><!-- /.wrap -->
 </div><!-- /#how-palaeontology-works-view -->
