@@ -1547,13 +1547,20 @@ function glInit() {
 }
 
 /* ============================================================
-   LAZY INIT — fires once on first Glossary tab click
+   LAZY INIT — fires once on first Glossary nav click
    ============================================================ */
 (function() {
-  var glTab = document.querySelector('.view-tab[data-view="glossary"]');
-  if (!glTab) return;
-  glTab.addEventListener('click', function onFirstGlossaryOpen() {
-    glInit();
-    glTab.removeEventListener('click', onFirstGlossaryOpen);
-  });
+  function attachGlInit() {
+    var glTab = document.querySelector('.sidebar-nav-item[data-view="glossary"]');
+    if (!glTab) return;
+    glTab.addEventListener('click', function onFirstGlossaryOpen() {
+      glInit();
+      glTab.removeEventListener('click', onFirstGlossaryOpen);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachGlInit);
+  } else {
+    attachGlInit();
+  }
 })();

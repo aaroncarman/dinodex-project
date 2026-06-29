@@ -30,9 +30,11 @@ When these goals conflict, ask which one is in front today rather than guessing.
 
 ## 2. Current architecture (as of this writing — verify before trusting)
 
-- **`index.html`** — the live app. ~3,550 lines. Contains:
+- **`index.html`** — the live app. ~4,730 lines. Contains:
   - All CSS in one `<style>` block in `<head>`.
-  - All DOM scaffolding: a tab nav (`#viewTabs`) that shows/hides view `<div>`s.
+  - All DOM scaffolding: a collapsible sidebar (`#sidebar`) that shows/hides view `<div>`s.
+    Toggled by `#sidebar-toggle` (fixed hamburger button). Desktop pushes `#main-content`
+    via `margin-left:240px`; mobile overlays with `#sidebar-backdrop`.
   - One large inline `<script>` with all app logic and render functions. All data
     has been extracted to external files — the inline script contains logic only.
 - **External data files**, loaded via `<script>` tags before the inline script:
@@ -44,9 +46,28 @@ When these goals conflict, ask which one is in front today rather than guessing.
     `FOSSILS_SCIENCE_CASES` (11). Extracted in Phase 0 — render functions in
     index.html unchanged, data now external.
 
-### Views (tabs)
-Home · DinoDex · Timeline · Moving Earth · Fossil Hunters · Fossils That Changed
-Science · The Last Day · Research Desk · Glossary.
+### Views — sidebar groups (15 total, of which 5 are stubs)
+
+Nav is a collapsible `#sidebar` (dark bark-coloured panel). Items are `.sidebar-nav-item`
+buttons with `data-view` attributes; the home button is `.sidebar-home`. `initTabs()`
+and `goToView()` both target these selectors. The old `#viewTabs` horizontal nav is gone.
+
+| Sidebar group | Views | Status |
+|---|---|---|
+| *(Home button)* | Home | Live |
+| The Animals | DinoDex · Dinosaurs Through Time · Anatomy 101 | Live · Live · **Stub** |
+| Time & Earth | Deep Time · Moving Earth · Mesozoic Ecosystems | Live · Live · **Stub** |
+| Extinction & Evolution | The Last Day · Mass Extinctions · Theropods to Birds | Live · **Stub** · **Stub** |
+| The Methods | How Palaeontology Works | **Stub** |
+| The People & Discoveries | Fossil Hunters · Fossils That Changed Science · Research Desk | Live |
+| Reference | Glossary · Responsible AI | Live |
+
+**Renames:** `data-view='timeline'` / `id='timeline-view'` → `data-view='dinosaurs-through-time'`
+/ `id='dinosaurs-through-time-view'`. Update any cross-links accordingly.
+
+**Stubs** (view div present, eyebrow/title/lede/`.stub-note` only, awaiting content):
+`anatomy-101-view`, `mesozoic-ecosystems-view`, `mass-extinctions-view`,
+`theropods-to-birds-view`, `how-palaeontology-works-view`.
 
 ### Known structural debt (don't "fix" silently — discuss first)
 - CSS is one monolithic block; not yet split. Low priority until the project grows
@@ -55,6 +76,13 @@ Science · The Last Day · Research Desk · Glossary.
   fine for a static portfolio site; do not introduce a bundler/framework without an
   explicit decision, because that trades simplicity for capability and the owner wants
   to make that trade deliberately.
+- `top:50px` offsets on `.people-era-rail` and `.lastday-rail` (sticky sub-nav rails in
+  Fossil Hunters and The Last Day) were sized against the old nav bar. With the nav gone
+  they add 50px of breathing room from the viewport top when stuck — harmless, but could
+  be zeroed or set to `top:16px` whenever those views are revisited.
+- `min-height:calc(100vh - 50px)` on several views is also a legacy of the old nav.
+  Visually harmless (minimum height is slightly smaller than the viewport) but could be
+  updated to `100vh` in a future tidy-up pass.
 - Several `glossaryLinks` and `researchLinks` values in the 26 entries added in the
   last sprint may reference IDs not yet present in `glossary.js` or `research-cases.js`.
   These need auditing before cross-references are relied upon.
