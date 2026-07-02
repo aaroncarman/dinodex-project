@@ -41,7 +41,7 @@ var SPECIES = [
   id:"eoraptor", name:"Eoraptor", epithet:"E. lunensis", pron:"EE-oh-rap-tor",
   period:"triassic", clade:"Basal sauropodomorph", diet:"omnivore",
   age:"~231 Ma (Late Triassic)", startMa:232, endMa:229, length:"1 m", mass:"~10 kg", place:"Ischigualasto, Argentina",
-  img:"images/species/eoraptor.png", cardImgPosition:"50% 100%",
+  img:"images/species/eoraptor.png", cardImgPosition:"right center",
   overview:"A small, early dinosaur from the Late Triassic Ischigualasto Formation of Argentina, Eoraptor is among the oldest members of the group and dates to within a few million years of the dinosaur lineage's origin. At roughly 1 metre long, it retains a generalist body plan - currently classified as a basal sauropodomorph, though its exact position is still debated - that sits close to the common ancestor of the great sauropod and theropod lineages.",
   insights:[
     ["Two diets in one jaw","It carries <b>pointed meat-eating teeth and leaf-shaped plant teeth together</b> - anatomy frozen at an evolutionary fork, before its lineage had chosen a side."],
@@ -409,7 +409,7 @@ var SPECIES = [
   id:"yiqi", name:"Yi qi", epithet:"Yi qi", pron:"EE-chee",
   period:"jurassic", clade:"Scansoriopterygid theropod", diet:"omnivore",
   age:"~159 Ma (Late Jurassic)", startMa:161, endMa:157, length:"~0.3 m", mass:"~0.4 kg", place:"Hebei, China",
-  img:"images/species/yi_qi.jpg", modalImgFit:"contain",
+  img:"images/species/yi_qi.jpg", cardImgPosition:"right center", modalImgFit:"contain",
   overview:"A pigeon-sized scansoriopterygid theropod from the Late Jurassic of Hebei, China, Yi qi is remarkable for an elongated rod-like wrist bone that appears to have supported a bat-like wing membrane rather than the feathered wings seen in other paravian dinosaurs. Known from a single specimen, it represents a unique experiment in dinosaurian aerial locomotion that has no known descendants.",
   insights:[
     ["Bat wings on a dinosaur","Instead of a feathered airfoil, it stretched <b>skin membranes</b> supported by a bizarre extra wrist rod - flight gear more like a bat or flying squirrel than a bird."],
@@ -2720,7 +2720,7 @@ var SPECIES = [
   id:"tenontosaurus", name:"Tenontosaurus", epithet:"T. tilletti", pron:"teh-NON-toh-SAW-rus",
   period:"cretaceous", clade:"Iguanodontian ornithopod", diet:"herbivore",
   age:"~115-108 Ma (Early Cretaceous)", startMa:115, endMa:108, length:"6.5-8 m", mass:"~1,000-2,000 kg", place:"Montana, Wyoming and Oklahoma, USA",
-  img:"images/species/tenontosaurus.jpg",
+  img:"images/species/tenontosaurus.png",
   overview:"A medium to large ornithopod from the Early Cretaceous of western North America, Tenontosaurus tilletti was a facultatively bipedal herbivore reaching 6.5 to 8 metres, best known for its unusually long tail stiffened by a dense network of ossified tendons and for its repeated association in the fossil record with the dromaeosaurid Deinonychus. That association - multiple Deinonychus individuals found with Tenontosaurus carcasses - generated the pack-hunting hypothesis that shaped how the public and scientists alike thought about raptor behaviour for decades.",
   insights:[
     ["The animal that launched the pack-hunting hypothesis","Ostrom noticed that multiple Deinonychus individuals were repeatedly found with Tenontosaurus carcasses. A single Deinonychus at roughly 70-100 kg could not plausibly kill a one-tonne Tenontosaurus alone, so he proposed <b>cooperative pack hunting</b>. The inference was vivid and directly influenced both the Dinosaur Renaissance and Jurassic Park's portrayal of raptors as coordinated hunters."],
@@ -2794,7 +2794,7 @@ var SPECIES = [
   id:"patagotitan", name:"Patagotitan", epithet:"P. mayorum", pron:"PAT-ah-goh-TY-tan",
   period:"cretaceous", clade:"Lithostrotian titanosaur sauropod", diet:"herbivore",
   age:"~101 Ma (Early Cretaceous)", startMa:102, endMa:100, length:"~37 m", mass:"~44-70 tonnes (method-dependent)", place:"Chubut Province, Patagonia, Argentina",
-  img:"images/species/patagotitan.jpg",
+  img:"images/species/patagotitan.png",
   overview:"A giant titanosaur from the Albian of Patagonia, Patagotitan mayorum is one of the most complete giant sauropods known and a serious candidate for the largest land animal yet described, with remains of at least six individuals from a single quarry in Chubut Province, Argentina. Its estimated length of around 37 metres and mass somewhere between 44 and 70 tonnes - the range itself the result of different estimation methods giving strikingly different answers - makes it the clearest illustration in the fossil record of how much the question 'how big was it?' depends on which method you trust.",
   insights:[
     ["How do you weigh a dinosaur?","The 2017 description produced two different mass figures: <b>69 tonnes</b> from a limb-bone scaling equation and a range of <b>44-78 tonnes</b> from volumetric 3D modelling. These are not minor rounding differences - the lower volumetric bound is barely half the scaling estimate. The choice of method is the answer, and the field has not settled which is more reliable at extreme body sizes."],
@@ -2872,7 +2872,7 @@ var SPECIES = [
   id:"nigersaurus", name:"Nigersaurus", epithet:"N. taqueti", pron:"NYE-jer-SAW-rus",
   period:"cretaceous", clade:"Rebbachisaurid sauropod", diet:"herbivore",
   age:"~115-105 Ma (Early Cretaceous)", startMa:115, endMa:105, length:"~9-14 m", mass:"~1,900-4,000 kg", place:"Niger, West Africa",
-  img:"images/species/nigersaurus.jpg",
+  img:"images/species/nigersaurus.png",
   overview:"A rebbachisaurid sauropod from the Early Cretaceous of the Tenere Desert, Niger, Nigersaurus taqueti carried over 500 replaceable teeth arranged in transverse batteries at the front of a downward-facing muzzle, replacing each tooth as fast as every 14 days as it grazed continuously at ground level - a feeding system convergent with hadrosaurs and ceratopsids, arrived at by an entirely separate lineage. Its skull bones are reduced to thin struts enclosing enormous fenestrae, the least structural material of any large-bodied herbivore skull known, all weight stripped away to support the one function of sweeping a wide muzzle through low vegetation.",
   insights:[
     ["A skull built for the ground","The muzzle faces directly downward rather than forward, and the inner ear's semicircular canal - revealed by CT scanning - confirms this as a habitual posture, not an accident of preservation. Nigersaurus was <b>grazing at ground level</b>, cropping low ferns and horsetails like a Cretaceous lawnmower rather than reaching into tree canopies like most sauropods."],
@@ -2909,7 +2909,7 @@ var SPECIES = [
   id:"gastonia", name:"Gastonia", epithet:"G. burgei", pron:"gas-TOH-nee-ah",
   period:"cretaceous", clade:"Polacanthid ankylosaur", diet:"herbivore",
   age:"~126 Ma (Early Cretaceous)", startMa:128, endMa:124, length:"~5-6 m", mass:"~1,900 kg", place:"Utah, USA",
-  img:"images/species/gastonia.jpg",
+  img:"images/species/gastonia.png",
   overview:"A polacanthid ankylosaur from the Early Cretaceous of Utah, Gastonia burgei was a medium-sized armoured herbivore around 5 to 6 metres long, carrying a fused sacral shield, large triangular shoulder spines and a tail armed with horizontal osteoderms rather than the club seen in derived ankylosaurids. More complete material exists for Gastonia than for any other polacanthid, making it the anatomical reference against which less well-preserved members of the group are reconstructed - including the type specimen found in the same quarry as Utahraptor, the largest known dromaeosaurid.",
   insights:[
     ["The best-known polacanthid","Hundreds of disarticulated bones have been recovered from the Gaston Quarry and the nearby Dalton Wells Quarry, representing multiple individuals. This abundance makes Gastonia the <b>reference species for polacanthid anatomy</b> - reconstructions of the British Polacanthus, known from far less material, rely heavily on Gastonia comparisons to fill in missing elements."],
@@ -2946,7 +2946,7 @@ var SPECIES = [
   id:"abelisaurus", name:"Abelisaurus", epithet:"A. comahuensis", pron:"ah-BEL-ih-SAW-rus",
   period:"cretaceous", clade:"Abelisaurid theropod", diet:"carnivore",
   age:"~83-80 Ma (Late Cretaceous)", startMa:83, endMa:80, length:"~7-7.5 m", mass:"~1,500 kg (estimated from skull-to-body scaling)", place:"Rio Negro Province, Patagonia, Argentina",
-  img:"images/species/abelisaurus.jpg",
+  img:"images/species/abelisaurus.png",
   overview:"An abelisaurid theropod from the Late Cretaceous of Patagonia, Abelisaurus comahuensis is known from a single partial skull - yet that skull was distinctive enough for Bonaparte and Novas to establish a new family, Abelisauridae, and predict a Gondwanan distribution for the group at a time when almost nothing was known of southern hemisphere large theropods. Everything about the animal below the neck is inferred from better-preserved relatives described in the four decades since.",
   insights:[
     ["One skull, one family","Bonaparte and Novas recognised that the skull's proportions - high cranium, huge antorbital fenestra, wide lower temporal fenestra, near-closed orbits - were sufficiently different from all known theropod families to warrant a new one. A single damaged skull created <b>the taxonomic framework for understanding Gondwanan large predators</b> across four continents."],
@@ -2983,7 +2983,7 @@ var SPECIES = [
   id:"nyasasaurus", name:"Nyasasaurus", epithet:"N. parringtoni", pron:"NYE-ah-sah-SAW-rus",
   period:"triassic", clade:"Dinosauriform archosaur (possibly earliest dinosaur)", diet:"unknown - no skull or teeth preserved",
   age:"~243 Ma (Middle Triassic)", startMa:245, endMa:242, length:"~2-3 m (estimated from vertebral dimensions)", mass:"unknown - too fragmentary for reliable estimate", place:"Tanzania, East Africa",
-  img:"images/species/nyasasaurus.jpg",
+  img:"images/species/nyasasaurus.png",
   overview:"A dinosauriform archosaur from the Middle Triassic of Tanzania, Nyasasaurus parringtoni is either the oldest known dinosaur or the closest known relative of the group - the humerus and vertebrae that constitute its entire fossil record cannot resolve which. If it is a dinosaur, it predates the next oldest unambiguous members of the group from Argentina by approximately 10 to 15 million years, and its bone histology shows the rapid growth rates characteristic of early dinosaurs rather than the slower growth of most contemporary archosaurs.",
   insights:[
     ["Dinosaur or dinosaur's closest relative - the material cannot tell us","Nyasasaurus possesses a combination of features consistent with early dinosaurs - an elongated deltopectoral crest on the humerus, at least three sacral vertebrae, and rapidly deposited woven bone tissue - but the known material is too incomplete to place it unambiguously <b>inside or outside Dinosauria</b>. Nesbitt et al.'s own phrasing was 'either the earliest known member of, or the sister-taxon to, Dinosauria'. Both remain live possibilities."],
@@ -3020,7 +3020,7 @@ var SPECIES = [
   id:"neovenator", name:"Neovenator", epithet:"N. salerii", pron:"NEE-oh-veh-NAY-tor",
   period:"cretaceous", clade:"Allosauroid theropod (basal carcharodontosaurian)", diet:"carnivore",
   age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:124, length:"~7.5-10 m", mass:"~1,000-2,000 kg", place:"Isle of Wight, England",
-  img:"images/species/neovenator.jpg",
+  img:"images/species/neovenator.png",
   overview:"An allosauroid theropod from the Early Cretaceous of the Isle of Wight, Neovenator salerii is the most complete large theropod known from the Cretaceous of Europe, with approximately 70% of the skeleton preserved from a cliff exposure at Brighstone Bay. At 7.5 to 10 metres it was the apex predator of its Barremian English ecosystem, and its placement at the base of Carcharodontosauridae links the European Early Cretaceous directly to the giant predators that dominated Africa and South America later in the period.",
   insights:[
     ["Europe's most complete large Cretaceous theropod","Large Cretaceous theropods from Europe are rare and often fragmentary. Neovenator is exceptional in comprising roughly <b>70% of the skeleton</b>, making it the reference specimen for European Early Cretaceous large predators and the most informative large theropod from the entire Cretaceous record of the continent."],
@@ -3060,7 +3060,7 @@ var SPECIES = [
   id:"hypsilophodon", name:"Hypsilophodon", epithet:"H. foxii", pron:"hip-sih-LOF-oh-don",
   period:"cretaceous", clade:"Basal ornithopod dinosaur", diet:"herbivore",
   age:"~126 Ma (Early Cretaceous)", startMa:128, endMa:124, length:"~1.8 m", mass:"~20 kg", place:"Isle of Wight, England",
-  img:"images/species/hypsilophodon.jpg",
+  img:"images/species/hypsilophodon.png",
   overview:"A small bipedal ornithopod from the Barremian Wessex Formation of the Isle of Wight, Hypsilophodon foxii spent nearly a century in textbooks as a tree-climbing dinosaur before Galton's landmark 1974 monograph demolished that reconstruction entirely and showed it was instead a fast, ground-dwelling cursorial herbivore. It is among the best-known small ornithopods from the European Early Cretaceous, known from multiple specimens including several nearly complete individuals, all from a single geological horizon on the Isle of Wight.",
   insights:[
     ["A tree-climber that never climbed trees","The arboreal interpretation began in 1882 with the observation that its first toe appeared reversed like a bird's perching foot. For ninety years, reconstructions showed it gripping branches. Galton's 1974 study showed the foot anatomy <b>did not support a reversed hallux</b> and that its long hindlimbs and stiffened tail were classic adaptations for fast ground-running, not climbing. The vivid image persisted in textbooks for decades after the anatomy had been corrected."],
@@ -3208,7 +3208,7 @@ var SPECIES = [
   id:"acrocanthosaurus", name:"Acrocanthosaurus", epithet:"A. atokensis", pron:"ak-roh-KAN-thoh-SAW-rus",
   period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
   age:"~125-100 Ma (Early Cretaceous)", startMa:125, endMa:100, length:"~11-11.5 m", mass:"~4,900-6,200 kg", place:"Oklahoma, Texas, Wyoming and Maryland, USA",
-  img:"images/species/acrocanthosaurus.jpg",
+  img:"images/species/acrocanthosaurus.png",
   overview:"A large carcharodontosaurid theropod from the Barremian to early Cenomanian of North America, Acrocanthosaurus atokensis was the undisputed apex predator of its ecosystem across what is now the south-central United States, reaching around 11.5 metres with a range evidenced by fossils from Oklahoma and Texas west to Wyoming and teeth as far east as Maryland. Its most distinctive feature is a row of tall neural spines along the neck, back and hips, which most likely supported a ridge of powerful musculature rather than a sail - functionally closer to a bison's shoulder hump than to Spinosaurus's elongated spine scaffold.",
   insights:[
     ["North America's answer to Giganotosaurus","Acrocanthosaurus was a carcharodontosaurid - the same lineage as Giganotosaurus and Carcharodontosaurus - making it the northern relative of the giant southern-hemisphere predators. It filled the <b>apex predator role in Early Cretaceous North America</b> in the long interval between the decline of Jurassic allosauroids and the rise of large tyrannosaurs."],
@@ -3248,7 +3248,7 @@ var SPECIES = [
   id:"carcharodontosaurus", name:"Carcharodontosaurus", epithet:"C. saharicus", pron:"kar-KAR-oh-DON-toh-SAW-rus",
   period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
   age:"~100-94 Ma (Late Cretaceous)", startMa:100, endMa:94, length:"~12-13 m", mass:"~7,000-9,000 kg", place:"Morocco, Algeria, Tunisia (North Africa)",
-  img:"images/species/carcharodontosaurus.jpg",
+  img:"images/species/carcharodontosaurus.png",
   overview:"A giant carcharodontosaurid theropod from the Cenomanian of North Africa, Carcharodontosaurus saharicus rivalled Tyrannosaurus rex in length and was the apex predator of its Saharan ecosystem. Its fossil history is one of the most complicated in palaeontology - the original Egyptian material described by Stromer in 1931 was destroyed in the 1944 RAF bombing of Munich, and a 2025 study further reclassified those lost specimens as a distinct genus, Tameryraptor, leaving a Moroccan skull found by Sereno in 1995 as the sole basis for Carcharodontosaurus as currently understood.",
   insights:[
     ["Original material destroyed, then reclassified","Ernst Stromer described Carcharodontosaurus saharicus in 1931 from Egyptian material. That material was <b>destroyed in the 1944 RAF bombing of Munich's Bavarian State Collections</b>, leaving the species known only from Stromer's descriptions and photographs for half a century. A 2025 study by Kellermann and colleagues then argued that the lost Egyptian specimen actually represents a distinct genus, Tameryraptor markgrafi, meaning the name Carcharodontosaurus now rests entirely on the Moroccan neotype."],
@@ -3285,7 +3285,7 @@ var SPECIES = [
   id:"suchomimus", name:"Suchomimus", epithet:"S. tenerensis", pron:"SOO-koh-MY-mus",
   period:"cretaceous", clade:"Spinosaurid theropod (baryonychine)", diet:"carnivore",
   age:"~125-112 Ma (Early Cretaceous)", startMa:125, endMa:112, length:"~9.5-11 m", mass:"~2,500-3,800 kg", place:"Niger, West Africa",
-  img:"images/species/suchomimus.jpg",
+  img:"images/species/suchomimus.png",
   overview:"A spinosaurid theropod from the Early Cretaceous Elrhaz Formation of Niger, Suchomimus tenerensis was described by Sereno and colleagues in 1998 from material discovered in 1997. At 9.5 to 11 metres it was a large predator with an elongated, narrow, crocodile-like skull, robust forelimbs bearing an enlarged thumb claw, and a low dorsal ridge of modestly elongated neural spines - immediately comparable to the British Baryonyx but substantially larger. Its presence in West Africa directly parallels the existing Baryonyx entry and shows the spinosaurid body plan extended across both sides of the Cretaceous Tethys.",
   insights:[
     ["Baryonyx's African cousin","Suchomimus is a baryonychine spinosaurid, the same subfamily as Baryonyx walkeri from England. The two share the same elongated skull, thumb-claw anatomy and inferred fish-eating ecology, separated by the Tethys Sea. Their <b>similar body plans on opposite sides of a Cretaceous ocean</b> illustrate how the spinosaurid lineage had spread across Europe and Africa before the continents fully separated."],
@@ -3322,7 +3322,7 @@ var SPECIES = [
   id:"zuniceratops", name:"Zuniceratops", epithet:"Z. christopheri", pron:"ZOO-nee-SER-ah-tops",
   period:"cretaceous", clade:"Neoceratopsian ornithischian (non-ceratopsid)", diet:"herbivore",
   age:"~90-93 Ma (Late Cretaceous)", startMa:93, endMa:90, length:"~3-3.5 m", mass:"~150-175 kg", place:"New Mexico, USA",
-  img:"images/species/zuniceratops.jpg",
+  img:"images/species/zuniceratops.png",
   overview:"A neoceratopsian from the Turonian Moreno Hill Formation of New Mexico, Zuniceratops christopheri is the earliest known ceratopsian with fully developed brow horns and the oldest known ceratopsian from North America. It lived approximately 10 million years before the familiar ceratopsid giants like Triceratops, bridging the anatomical gap between early small ceratopsians and the large-frilled horned dinosaurs of the later Cretaceous, and its presence in North America supports the hypothesis that ceratopsids originated there rather than in Asia.",
   insights:[
     ["The oldest brow horns","All earlier ceratopsians - including Protoceratops - either lacked brow horns entirely or had only rudimentary swellings. Zuniceratops is the first ceratopsian known to carry <b>fully developed postorbital brow horns</b>, the feature that would define the spectacular later ceratopsids. This establishes the Turonian of New Mexico as the time and place when the horned face condition was first achieved."],
@@ -3436,7 +3436,7 @@ var SPECIES = [
   id:"ouranosaurus", name:"Ouranosaurus", epithet:"O. nigeriensis", pron:"oo-RAH-noh-SAW-rus",
   period:"cretaceous", clade:"Hadrosauriform ornithopod", diet:"herbivore",
   age:"~125-112 Ma (Early Cretaceous)", startMa:125, endMa:112, length:"~7-8.3 m", mass:"~2,200-4,000 kg", place:"Niger, West Africa",
-  img:"images/species/ouranosaurus.jpg",
+  img:"images/species/ouranosaurus.png",
   overview:"A hadrosauriform ornithopod from the Aptian Elrhaz Formation of Niger, Ouranosaurus nigeriensis is one of the most anatomically distinctive non-hadrosaur ornithopods known, carrying tall neural spines along its back that most likely supported a display sail rather than a thermoregulatory structure. Known from two nearly complete skeletons, it is among the best-evidenced large ornithopods from Africa and represents an independent African evolution of the hadrosauriform body plan.",
   insights:[
     ["A sail whose function the bone tissue addresses","The neural spines of Ouranosaurus reached up to 63 centimetres. Whether these supported a skin sail or a fatty hump is not resolved from bone shape alone. Histological study of the spines by Bertozzo and colleagues (2017) found <b>low vascular density</b> in the spine tissue, which argues against a thermoregulatory sail - high vascularity would be expected if the structure were primarily for heat exchange. The same study found the structure grew dramatically during ontogeny from around age three, consistent with a <b>display function</b> that became more important with sexual maturity."],
@@ -3473,7 +3473,7 @@ var SPECIES = [
   id:"mapusaurus", name:"Mapusaurus", epithet:"M. roseae", pron:"MAP-oo-SAW-rus",
   period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
   age:"~97-93 Ma (Late Cretaceous)", startMa:97, endMa:93, length:"~10-12 m", mass:"~3,000 kg", place:"Neuquen Province, Patagonia, Argentina",
-  img:"images/species/mapusaurus.jpg",
+  img:"images/species/mapusaurus.png",
   overview:"A large carcharodontosaurid from the Cenomanian Huincul Formation of Patagonia, Mapusaurus roseae was described by Coria and Currie in 2006 from a bonebed containing the remains of at least seven to nine individuals spanning multiple growth stages. Closely related to Giganotosaurus from the same formation, it is the primary fossil evidence for large theropod aggregation behaviour in South America, though whether the bonebed reflects social living, seasonal gathering, or coincidental accumulation remains genuinely debated.",
   insights:[
     ["Seven to nine individuals in one deposit","The Canadon del Gato bonebed preserves disarticulated remains of a minimum of seven individuals - possibly nine - ranging from juveniles around 5 metres to adults exceeding 11 metres, all identified as Mapusaurus. This is a <b>monospecific theropod bonebed</b> - all the identifiable bones belong to one genus - which is sufficiently unusual to demand explanation."],
@@ -3621,7 +3621,7 @@ var SPECIES = [
   id:"concavenator", name:"Concavenator", epithet:"C. corcovatus", pron:"kon-KAV-en-AY-tor",
   period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
   age:"~130 Ma (Early Cretaceous)", startMa:132, endMa:129, length:"~6 m", mass:"~1,000 kg", place:"Cuenca Province, Spain",
-  img:"images/species/concavenator.jpg",
+  img:"images/species/concavenator.png",
   overview:"A carcharodontosaurid theropod from the Barremian Las Hoyas Formation of central Spain, Concavenator corcovatus is known from an exceptionally well-preserved near-complete skeleton - one of the best large theropod specimens from the European Early Cretaceous. Its most distinctive feature is a narrow hump formed by two dramatically elongated neural spines above the hips, whose function is unknown. More contentiously, the ulna appears to preserve small bumps whose nature - quill knobs for feather anchoring or intermuscular lines - is disputed but has not been resolved against either interpretation by subsequent study.",
   insights:[
     ["A hump above the hips","Two vertebrae above the hips carry neural spines dramatically taller than all others in the skeleton, forming a narrow, localised hump rather than the long sail of Spinosaurus or Ouranosaurus. The structure is too limited in extent to be a thermoregulatory sail and too prominent to ignore. <b>Display, species recognition, and fat storage</b> have all been proposed, but no function has been confirmed. It is one of the most genuinely puzzling skeletal features in the theropod record."],
@@ -3669,7 +3669,7 @@ var SPECIES = [
   length:"~7.7-9 m",
   mass:"~2.8-3.8 t",
   place:"Alberta (Canada); Montana (USA)",
-  img:"images/species/corythosaurus.jpg",
+  img:"images/species/corythosaurus.png",
   overview:"A large hadrosaurid ornithopod of the Late Cretaceous Dinosaur Park Formation, Corythosaurus carried a tall, hollow, helmet-shaped crest formed by elaborated nasal bones that looped upward above the skull. The crest's internal passages are the primary evidence for acoustic signalling, but visual display and species recognition likely contributed too. Corythosaurus is among the most comprehensively preserved hadrosaurs known: multiple specimens retain articulated skeletons, skin impressions across much of the body, and in at least one case plant material interpreted as gut contents - making it a reference animal for understanding lambeosaurine anatomy and ecology.",
   insights:[
     ["A crest built for sound",

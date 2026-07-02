@@ -211,6 +211,11 @@ unless noted otherwise.
 trace fossils (tracks, eggs, coprolites), AI tools / chatbot feature (parked pending
 clearer use case).
 
+**Pending revisit — homepage cards:** Cards for Anatomy 101, Mesozoic Ecosystems, Mass
+Extinctions, and Theropods to Birds were written before those sections had real content.
+Revisit card copy once each section is actually built, to make sure the description still
+matches what the section became.
+
 ---
 
 ## 8. Interaction style the owner wants
