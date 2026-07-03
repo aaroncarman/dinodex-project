@@ -1364,7 +1364,43 @@ window.GLOSSARY_TERMS = [
     exampleSpeciesIds: ["confuciusornis"],
     relatedTerms: ["Lagerstätte", "Feathers", "Avialan", "Paravian", "Cretaceous"],
     keywords: ["Liaoning", "China", "feathered dinosaurs", "exceptional preservation", "Yixian", "Jiufotang", "volcanic ash", "Early Cretaceous", "bird origins"],
-    sourceNotes: "Standard assemblage name. Chang et al. (2003) provide a comprehensive review; Zhou (2006) covers the avifauna specifically. Age estimates refined to approximately 132–120 Ma in recent work."
+    sourceNotes: "Standard assemblage name. Chang et al. (2003) provide a comprehensive review; Zhou (2006) covers the avifauna specifically. Age estimates refined to approximately 132-120 Ma in recent work."
+  },
+
+  {
+    id: "furcula",
+    term: "Furcula",
+    category: "Anatomy & Ecology",
+    difficulty: "useful",
+    aliases: ["wishbone", "fused clavicles"],
+    simpleDefinition: "A fused, often V- or U-shaped bone formed from the paired collarbones, braced across the front of the chest - present throughout theropod evolution long before it took on its familiar role in bird flight.",
+    scientificExplanation: "The furcula is formed by the fusion of the two clavicles at the midline, producing a single bone that braces the shoulder girdle against the sternum. It is present in theropods from at least the Late Triassic - Coelophysis and Tawa hallae (both roughly 212-201 Ma) already show a fused furcula, meaning the bone is essentially as old as unambiguous theropods themselves, tens of millions of years before the origin of flight. In living birds, the furcula acts as a spring, storing and releasing elastic energy during the wingbeat cycle and resisting the compressive forces the wings place on the shoulder. Its original function in non-flying theropods is inferred rather than observed directly: a plausible reading is that it reinforced the shoulder against the stresses of grasping and restraining prey with the forelimbs, with the flight-spring role co-opted later in the lineage leading to birds. Whether the fused clavicle condition in theropods is fully homologous with the avian furcula at a developmental level, or represents convergent fusion of the same ancestral elements, remains an open question in some analyses.",
+    whyItMatters: "The furcula is a clean example of a structure that evolved for one purpose and was later repurposed for another. Its presence deep in theropod history, long before flight, undercuts the idea that bird traits appeared as a flight-first package.",
+    dinodexContext: "Several DinoDex theropods across the coelurosaur-to-bird transition preserve a furcula, including Anchiornis and Confuciusornis. Its appearance well before Avialae is a key data point in the Theropods to Birds tab's feature-acquisition timeline.",
+    exampleUsage: "A fused furcula is already present in Coelophysis, a Late Triassic theropod with no plausible connection to flight - a reminder that the bone's role as a flight spring in birds came later than the bone itself.",
+    examples: ["Coelophysis bauri (Late Triassic, earliest known)", "Tawa hallae (Late Triassic)", "Anchiornis huxleyi (Late Jurassic paravian)", "Modern Aves (furcula as elastic flight spring)"],
+    exampleSpeciesIds: ["anchiornis", "confuciusornis"],
+    relatedTerms: ["Maniraptoran", "Theropod", "Pneumaticity", "Feathers"],
+    keywords: ["wishbone", "clavicle", "shoulder", "Coelophysis", "Triassic", "flight spring", "theropod", "bird origins"],
+    sourceNotes: "Rowe (1993) and Nesbitt et al. (2009, Tawa hallae) establish the Late Triassic presence of the furcula in theropods. Developmental homology with the avian furcula is discussed but not fully settled in the literature."
+  },
+
+  {
+    id: "coelurosauria",
+    term: "Coelurosauria",
+    category: "Anatomy & Ecology",
+    difficulty: "useful",
+    aliases: ["coelurosaur", "coelurosaurs"],
+    simpleDefinition: "A large group of theropod dinosaurs that includes tyrannosaurs, ornithomimosaurs, and all maniraptorans - the branch of the theropod family tree that birds belong to.",
+    scientificExplanation: "Coelurosauria is a major clade within Theropoda, uniting tyrannosauroids, compsognathids, ornithomimosaurs, and Maniraptora (which in turn contains the lineage leading to birds). Filamentous integument - simple, unbranched feather-like structures - is now documented or inferred broadly across this clade, including in tyrannosauroids such as Yutyrannus and small-bodied forms such as Sinosauropteryx, rather than being restricted to the immediate ancestors of birds. This distribution shows that simple feathers are a coelurosaur-wide feature, not a late innovation confined to the bird lineage. More derived structures - pennaceous (vaned) feathers, the furcula in its bird-like form, elongated grasping arms - are concentrated further up the tree, within Maniraptora.",
+    whyItMatters: "Coelurosauria is the level at which feathers stop being a 'bird thing' and become a widespread theropod trait. Placing a species within this clade, rather than closer to Avialae, is often exactly what shows a feature evolved for reasons unrelated to flight.",
+    dinodexContext: "Yutyrannus and Sinosauropteryx are both coelurosaurs outside Maniraptora in DinoDex, and both preserve simple filamentous feathers - direct evidence used in the Theropods to Birds tab to separate the origin of feathers from the origin of flight.",
+    exampleUsage: "Yutyrannus huali, a large tyrannosauroid coelurosaur with no plausible flight capability, preserves filamentous feathers - proof that feathers evolved well outside, and well before, the bird lineage itself.",
+    examples: ["Yutyrannus huali (tyrannosauroid)", "Sinosauropteryx prima (compsognathid)", "Ornithomimosauria (ostrich-mimic theropods)", "Maniraptora (nested within Coelurosauria)"],
+    exampleSpeciesIds: ["yutyrannus", "sinosauropteryx"],
+    relatedTerms: ["Theropod", "Maniraptoran", "Feathers", "Paravian"],
+    keywords: ["clade", "tyrannosauroid", "compsognathid", "ornithomimosaur", "filaments", "theropod", "bird origins"],
+    sourceNotes: "Standard cladistic grouping. Xu et al. (2014) reviews the distribution of feather evidence across Coelurosauria."
   }
 
 ];
