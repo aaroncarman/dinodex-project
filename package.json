@@ -1,0 +1,23 @@
+{
+  "name": "dinodex-project",
+  "version": "1.0.0",
+  "description": "A Field Guide to Deep Time - Interactive dinosaur and paleontology resource",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaroncarman/dinodex-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaroncarman/dinodex-project/issues"
+  },
+  "homepage": "https://github.com/aaroncarman/dinodex-project#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
