@@ -1,4 +1,4 @@
-# DinoDex — Project Instructions for Claude
+# ilikedinosaurs.com — Project Instructions for Claude
 
 > Place this file at the repo root. Claude Code reads `CLAUDE.md` automatically as
 > persistent context. The chat-based Claude should also be pointed at it. Keep it
@@ -9,7 +9,7 @@
 
 ## 1. What this project is
 
-DinoDex is a single-page, static field guide to dinosaurs and deep time. It is three
+ilikedinosaurs.com is a single-page, static field guide to dinosaurs and deep time. It is three
 things at once, and decisions should serve all three:
 
 1. **A learning artifact for a paleo enthusiast** — content accuracy and intellectual

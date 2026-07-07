@@ -117,9 +117,7 @@ var ME2_FLORA_BARS = [
     label: 'Hell Creek, ~66 Ma',
     segments: [
       { name: 'Angiosperms', pct: 90, tone: 'angiosperm' },
-      { name: 'Conifers', pct: 5, tone: 'gymnosperm' },
-      { name: 'Ferns', pct: 4, tone: 'fern' },
-      { name: 'Other', pct: 1, tone: 'other' }
+      { name: 'Conifers, ferns & other', pct: 10, tone: 'minor' }
     ]
   }
 ];
