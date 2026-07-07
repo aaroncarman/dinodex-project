@@ -2108,6 +2108,90 @@
 .ttb-strip-rows{display:flex;flex-direction:column;gap:36px;margin-top:8px}
 .ttb-strip-row-label{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .ttb-strip-row-note{font-size:13px;color:var(--ink-soft);margin-top:8px;max-width:660px;line-height:1.5}
+
+/* ============================================================
+   MESOZOIC ECOSYSTEMS - new, additive only, prefix me2-
+   (Moving Earth already uses the me- prefix; this tab has its
+   own shape and does not reuse the period-selector pattern.)
+   Reuses .eyebrow/.title/.lede, .dtp-strip family, .facts/.fact,
+   .overview, .evo, .insights, and .strata-bar/.strata-seg
+   directly rather than duplicating their CSS.
+   ============================================================ */
+#mesozoic-ecosystems-view{min-height:calc(100vh - 52px);background:var(--bone);padding-bottom:80px}
+
+.me2-header{padding:48px 0 28px}
+.me2-sub{margin-top:14px;font-size:17px;color:var(--ink-soft);max-width:680px;font-style:italic;line-height:1.7}
+
+.me2-section{margin-bottom:64px;padding-top:4px}
+.me2-section-kicker{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rust);display:block;margin-bottom:5px}
+.me2-section-title{font-size:clamp(24px,3.6vw,42px);font-weight:400;line-height:1.05;letter-spacing:-.01em;margin-bottom:22px;border-top:2px solid var(--ink);padding-top:18px}
+
+/* Hook - renders immediately, no lazy gate */
+.me2-hook{font-size:clamp(21px,2.8vw,28px);line-height:1.5;font-style:italic;color:var(--ink);max-width:780px;padding:8px 0 0;margin-bottom:28px}
+.me2-timeline-wrap{position:relative;padding-top:10px}
+.me2-timeline-points{position:relative;height:58px;margin-bottom:2px}
+.me2-timeline-point{position:absolute;bottom:0;transform:translateX(-50%);display:flex;flex-direction:column-reverse;align-items:center;width:140px;text-align:center}
+.me2-timeline-dot{width:9px;height:9px;border-radius:50%;background:var(--rust);margin-top:4px;flex:0 0 auto}
+.me2-timeline-point-label{font-family:"Helvetica Neue",Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);line-height:1.3}
+.me2-timeline-point-ma{font-family:"Helvetica Neue",Arial,sans-serif;font-size:9px;color:var(--sediment);margin-bottom:2px}
+.me2-timeline-after{display:flex;align-items:baseline;gap:12px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.me2-timeline-after-tag{flex:0 0 auto;font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sediment)}
+.me2-timeline-after-text{font-size:13px;color:var(--ink-soft);line-height:1.5}
+.me2-timeline-note{font-size:14.5px;color:var(--ink-soft);line-height:1.6;max-width:720px;margin-top:16px}
+@media(max-width:768px){
+  .me2-timeline-points{height:auto;display:flex;flex-direction:column;gap:8px}
+  .me2-timeline-point{position:static;transform:none;width:auto;flex-direction:row;justify-content:flex-start;text-align:left}
+  .me2-timeline-dot{margin:0 8px 0 0}
+}
+
+/* Frame - text only */
+.me2-frame{font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:720px}
+.me2-frame b{color:var(--ink)}
+.me2-frame-link{font-family:"Helvetica Neue",Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);background:none;border:none;border-bottom:1.5px solid var(--rust);cursor:pointer;padding:0 0 2px;margin-top:14px;display:inline-block}
+.me2-frame-link:hover{color:var(--ink);border-color:var(--ink)}
+
+/* Section 1 - climate cards */
+.me2-climate-ice-note{font-size:15.5px;font-style:italic;color:var(--ink);border-left:3px solid var(--moss);background:var(--bone-deep);padding:12px 18px;max-width:720px;margin-bottom:20px;line-height:1.5}
+.me2-climate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.me2-climate-card{border:1.5px solid var(--ink);background:var(--bone);padding:20px 22px}
+.me2-climate-card h4{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:14px}
+.me2-climate-card .facts{grid-template-columns:repeat(2,1fr);margin-bottom:16px}
+.me2-climate-card .overview{font-size:15px;margin:0}
+.me2-climate-note{font-size:13.5px;color:var(--sediment);margin-top:16px;max-width:720px;line-height:1.5}
+@media(max-width:900px){.me2-climate-grid{grid-template-columns:1fr}}
+
+/* Section 2 - flora */
+.me2-flora-bars{display:flex;flex-direction:column;gap:22px;margin:24px 0}
+.me2-flora-bar-label{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.me2-flora-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.me2-flora-legend-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-soft)}
+.me2-flora-legend-swatch{width:11px;height:11px;flex:0 0 auto;border:1px solid var(--ink)}
+
+/* Section 3 - food web diagram */
+.me2-foodweb-plant{border:1.5px solid var(--ink);background:var(--bone-deep);padding:14px 18px;margin-bottom:24px}
+.me2-foodweb-plant b{color:var(--ink)}
+.me2-foodweb-diagram{position:relative;margin-bottom:20px;border:1.5px solid var(--ink)}
+.me2-foodweb-svg{width:100%;height:auto;display:block;background:var(--bone-deep)}
+.me2-foodweb-node-g{cursor:pointer}
+.me2-foodweb-node-g:hover .me2-foodweb-rect{fill:var(--bone)}
+.me2-foodweb-node-g.active .me2-foodweb-rect{fill:var(--ink)}
+.me2-foodweb-node-g.active text{fill:var(--bone)}
+.me2-foodweb-link-documented{stroke:var(--ink);stroke-width:2}
+.me2-foodweb-link-inferred{stroke:var(--sediment);stroke-width:1.5;stroke-dasharray:5,4}
+.me2-foodweb-link.highlight.me2-foodweb-link-documented{stroke:var(--rust);stroke-width:2.5}
+.me2-foodweb-link.highlight.me2-foodweb-link-inferred{stroke:var(--rust);stroke-width:2}
+.me2-foodweb-evidence{border:1.5px dashed var(--line);background:var(--bone-deep);padding:14px 18px;min-height:28px;font-size:14px;color:var(--ink-soft);line-height:1.55;margin-bottom:16px}
+.me2-foodweb-evidence.documented{border-color:var(--ink);border-style:solid}
+.me2-foodweb-evidence b{color:var(--ink)}
+.me2-foodweb-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-soft);margin-bottom:16px}
+.me2-foodweb-legend-item{display:flex;align-items:center;gap:6px}
+.me2-foodweb-legend-line{width:24px;height:0;border-top:2px solid var(--ink);flex:0 0 auto}
+.me2-foodweb-legend-line.inferred{border-top:2px dashed var(--sediment)}
+.me2-foodweb-note{font-size:14.5px;color:var(--ink-soft);line-height:1.6;max-width:740px;margin-top:8px}
+@media(max-width:768px){
+  .me2-foodweb-diagram{overflow-x:auto}
+  .me2-foodweb-svg{min-width:520px}
+}
 </style>
 </head>
 <body>
@@ -2748,14 +2832,7 @@
   </div>
 </div>
 
-<div id="mesozoic-ecosystems-view" style="display:none">
-  <div class="wrap stub-view-wrap">
-    <div class="eyebrow">Time &amp; Earth &middot; Ecosystems</div>
-    <h1 class="home-title">Mesozoic Ecosystems</h1>
-    <p class="lede">The environments, food webs, and ecological relationships of the Triassic, Jurassic, and Cretaceous worlds.</p>
-    <p class="stub-note">This section is being researched and built.</p>
-  </div>
-</div>
+<div id="mesozoic-ecosystems-view" style="display:none"></div>
 
 <div id="mass-extinctions-view" style="display:none">
   <div class="wrap stub-view-wrap">
@@ -4031,6 +4108,7 @@
 <script src="fossil-hunters.js"></script>
 <script src="last-day.js"></script>
 <script src="theropods-to-birds.js"></script>
+<script src="mesozoic-ecosystems.js"></script>
 <script>
 /* ============================================================
    DATA - 60 species. Content is synthesized, not copied:
@@ -5552,6 +5630,287 @@ function renderTheropodsToBirds() {
 }
 
 /* ============================================================
+   MESOZOIC ECOSYSTEMS
+   References ME2_* data from mesozoic-ecosystems.js. The hook
+   (with its timeline strip) is built from percentage-based
+   widths/positions, so it needs no post-paint measurement pass
+   and renders in the same synchronous call as the rest of the
+   view - see renderMesozoicEcosystems().
+   ============================================================ */
+
+function me2ConfColor(conf) {
+  if (conf === 'strong') return 'var(--moss)';
+  if (conf === 'moderate') return 'var(--gold)';
+  return 'var(--sediment)';
+}
+
+var ME2_FLORA_TONE_COLOR = {
+  gymnosperm: 'var(--moss)',
+  angiosperm: 'var(--gold)',
+  fern: 'var(--sediment)',
+  other: 'var(--line)'
+};
+
+/* ---- Hook (renders immediately - see call site) ---- */
+function renderME2Hook() {
+  var totalSpan = ME2_TIMELINE_START_MA - ME2_TIMELINE_END_MA;
+  function pctFor(ma) { return ((ME2_TIMELINE_START_MA - ma) / totalSpan) * 100; }
+
+  var eraBands = [
+    { end: 201, color: 'var(--strata-tri)' },
+    { end: 145, color: 'var(--strata-jur)' },
+    { end: 66,  color: 'var(--strata-cre)' }
+  ];
+  var prevMa = ME2_TIMELINE_START_MA;
+  var bandsHtml = '';
+  eraBands.forEach(function(b) {
+    var w = ((prevMa - b.end) / totalSpan) * 100;
+    bandsHtml += '<div class="dtp-band" style="width:' + w.toFixed(2) + '%;background:' + b.color + '"></div>';
+    prevMa = b.end;
+  });
+
+  /* Each point's label is 140px wide and centred via translateX(-50%);
+     clamp() keeps that box fully inside .me2-timeline-points regardless
+     of the container's actual rendered width (e.g. narrower once the
+     sidebar pushes #main-content), instead of overhanging the edge and
+     getting cut off by body{overflow-x:hidden}. */
+  var pointsHtml = '';
+  ME2_TIMELINE_POINTS.forEach(function(p) {
+    var pct = pctFor(p.ma);
+    var maLabel = p.maRangeLabel || (p.ma + ' Ma');
+    pointsHtml += '<div class="me2-timeline-point" style="left:clamp(72px, ' + pct.toFixed(1) + '%, calc(100% - 72px))">';
+    pointsHtml += '<div class="me2-timeline-dot"></div>';
+    pointsHtml += '<div class="me2-timeline-point-ma">' + maLabel + '</div>';
+    pointsHtml += '<div class="me2-timeline-point-label">' + p.label + '</div>';
+    pointsHtml += '</div>';
+  });
+
+  var html = '<section class="me2-section" id="me2-hook">';
+  html += '<p class="me2-hook">' + ME2_HOOK_TEXT + '</p>';
+  html += '<div class="me2-timeline-wrap">';
+  html += '<div class="me2-timeline-points">' + pointsHtml + '</div>';
+  html += '<div class="dtp-strip-wrap" style="padding-top:0"><div class="dtp-strip">' + bandsHtml + '</div></div>';
+  html += '<div class="dtp-strip-ticks"><span class="dtp-tick-label">' + ME2_TIMELINE_START_MA + ' Ma (Triassic begins)</span><span class="dtp-tick-label">' + ME2_TIMELINE_END_MA + ' Ma (K-Pg)</span></div>';
+  html += '<div class="me2-timeline-after"><span class="me2-timeline-after-tag">And then</span><div class="me2-timeline-after-text"><b>' + ME2_TIMELINE_AFTER.label + '.</b> ' + ME2_TIMELINE_AFTER.note + '</div></div>';
+  html += '</div>';
+  html += '<p class="me2-timeline-note">' + ME2_TIMELINE_REVISION_NOTE + '</p>';
+  html += '</section>';
+  return html;
+}
+
+/* ---- Frame ---- */
+function renderME2Frame() {
+  var html = '<section class="me2-section" id="me2-frame">';
+  html += '<span class="me2-section-kicker">From Moving Earth</span>';
+  html += '<p class="me2-frame">' + ME2_FRAME_TEXT + '</p>';
+  html += '<button class="me2-frame-link" onclick="goToView(\'moving-earth\')">Revisit Moving Earth &rarr;</button>';
+  html += '</section>';
+  return html;
+}
+
+/* ---- Section 1: climate ---- */
+function renderME2Climate() {
+  var html = '<section class="me2-section" id="me2-climate">';
+  html += '<span class="me2-section-kicker">Climate</span>';
+  html += '<h3 class="me2-section-title">Three Very Different Worlds</h3>';
+  html += '<p class="me2-climate-ice-note">' + ME2_CLIMATE_ICE_NOTE + '</p>';
+  html += '<div class="me2-climate-grid">';
+  ME2_CLIMATE_CARDS.forEach(function(c) {
+    html += '<div class="me2-climate-card">';
+    html += '<h4>' + c.period + '</h4>';
+    html += '<div class="facts">';
+    html += '<div class="fact"><div class="k">CO2</div><div class="v">' + c.co2 + '</div></div>';
+    html += '<div class="fact"><div class="k">Sea level</div><div class="v">' + c.seaLevel + '</div></div>';
+    html += '</div>';
+    html += '<p class="overview">' + c.character + '</p>';
+    html += '</div>';
+  });
+  html += '</div>';
+  html += '<p class="me2-climate-note">' + ME2_CLIMATE_CONFIDENCE_NOTE + '</p>';
+  html += '</section>';
+  return html;
+}
+
+/* ---- Section 2: flora ---- */
+function renderME2FloraBar(bar) {
+  var html = '<div class="me2-flora-bar-label">' + bar.label + '</div>';
+  html += '<div class="strata-bar">';
+  bar.segments.forEach(function(seg) {
+    html += '<div class="strata-seg" style="flex:0 0 ' + seg.pct + '%;background:' + ME2_FLORA_TONE_COLOR[seg.tone] + '">' + seg.pct + '%<span class="span">' + seg.name + '</span></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+function renderME2Flora() {
+  var html = '<section class="me2-section" id="me2-flora">';
+  html += '<span class="me2-section-kicker">Flora</span>';
+  html += '<h3 class="me2-section-title">From Gymnosperm To Flower</h3>';
+  html += '<p class="lastday-prose" style="max-width:760px"><span style="display:block;margin-bottom:14px">' + ME2_FLORA_INTRO + '</span><span style="display:block">' + ME2_FLORA_REVOLUTION + '</span></p>';
+
+  html += '<div class="evo" style="margin:22px 0">';
+  html += '<div class="sec-h" style="margin:18px 22px 0">' + ME2_FLORA_CORRECTION.heading + '</div>';
+  html += '<div style="margin:14px 22px 18px"><p>' + ME2_FLORA_CORRECTION.body + '</p></div>';
+  html += '</div>';
+
+  html += '<p class="lastday-prose" style="max-width:760px">' + ME2_FLORA_SETUP + '</p>';
+
+  html += '<div class="me2-flora-bars">';
+  ME2_FLORA_BARS.forEach(function(bar) {
+    html += '<div>' + renderME2FloraBar(bar) + '</div>';
+  });
+  html += '</div>';
+  html += '<div class="me2-flora-legend">';
+  html += '<div class="me2-flora-legend-item"><span class="me2-flora-legend-swatch" style="background:' + ME2_FLORA_TONE_COLOR.gymnosperm + '"></span>Gymnosperms (conifers, cycads, ginkgoes)</div>';
+  html += '<div class="me2-flora-legend-item"><span class="me2-flora-legend-swatch" style="background:' + ME2_FLORA_TONE_COLOR.angiosperm + '"></span>Angiosperms (flowering plants)</div>';
+  html += '<div class="me2-flora-legend-item"><span class="me2-flora-legend-swatch" style="background:' + ME2_FLORA_TONE_COLOR.fern + '"></span>Ferns</div>';
+  html += '<div class="me2-flora-legend-item"><span class="me2-flora-legend-swatch" style="background:' + ME2_FLORA_TONE_COLOR.other + '"></span>Other</div>';
+  html += '</div>';
+  html += '</section>';
+  return html;
+}
+
+/* ---- Section 3: food webs - Hell Creek ---- */
+/* Greedy word-wrap for SVG text, which never wraps on its own. maxChars is
+   a conservative character-count estimate for the target font-size/width -
+   tuned against this diagram's node box widths, not a generic default. */
+function me2WrapText(text, maxChars) {
+  var words = text.split(' ');
+  var lines = [];
+  var current = '';
+  words.forEach(function(word) {
+    var candidate = current ? current + ' ' + word : word;
+    if (candidate.length > maxChars && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  });
+  if (current) lines.push(current);
+  return lines;
+}
+
+function me2FoodwebNode(node, x, y, w, h) {
+  var name = ttbSpeciesName(node.speciesId);
+  var roleLines = me2WrapText(node.role, 30);
+  var roleTspans = roleLines.map(function(line, i) {
+    return '<tspan x="' + (x + w / 2) + '" dy="' + (i === 0 ? 0 : 11) + '">' + line + '</tspan>';
+  }).join('');
+  return '<g class="me2-foodweb-node-g" data-node="' + node.id + '" onclick="me2FoodwebSelect(\'' + node.id + '\')" style="cursor:pointer">' +
+    '<rect id="me2-node-' + node.id + '" class="me2-foodweb-rect" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="var(--bone)" stroke="var(--ink)" stroke-width="1.5"/>' +
+    '<text x="' + (x + w / 2) + '" y="' + (y + 20) + '" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="var(--ink)">' + name + '</text>' +
+    '<text x="' + (x + w / 2) + '" y="' + (y + 34) + '" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="8" fill="var(--sediment)">' + roleTspans + '</text>' +
+    '</g>';
+}
+
+function renderME2Foodweb() {
+  var fw = ME2_FOODWEB;
+  var byId = {};
+  fw.nodes.forEach(function(n) { byId[n.id] = n; });
+
+  var W = 700, H = 280;
+  var apexW = 160, apexH = 58, apexX = (W - apexW) / 2, apexY = 8;
+  var herbW = 155, herbH = 58, herbY = H - herbH - 8;
+  var herbivores = fw.nodes.filter(function(n) { return n.id !== 'tyrannosaurus'; });
+  var gap = 12;
+  var totalHerbW = herbivores.length * herbW + (herbivores.length - 1) * gap;
+  var startX = (W - totalHerbW) / 2;
+
+  var svg = '<svg class="me2-foodweb-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Hell Creek Formation food web diagram, plant base to apex predator">';
+
+  /* edges drawn first, under the nodes */
+  herbivores.forEach(function(n, i) {
+    var hx = startX + i * (herbW + gap);
+    var edge = fw.edges.filter(function(e) { return e.from === n.id; })[0];
+    var cls = 'me2-foodweb-link ' + (edge && edge.status === 'documented' ? 'me2-foodweb-link-documented' : 'me2-foodweb-link-inferred');
+    svg += '<path id="me2-edge-' + n.id + '" class="' + cls + '" fill="none" d="M' + (hx + herbW / 2) + ' ' + herbY + ' C ' + (hx + herbW / 2) + ' ' + (apexY + apexH + 60) + ', ' + (apexX + apexW / 2) + ' ' + (herbY - 60) + ', ' + (apexX + apexW / 2) + ' ' + (apexY + apexH) + '"/>';
+  });
+
+  svg += me2FoodwebNode(byId.tyrannosaurus, apexX, apexY, apexW, apexH);
+  herbivores.forEach(function(n, i) {
+    var hx = startX + i * (herbW + gap);
+    svg += me2FoodwebNode(n, hx, herbY, herbW, herbH);
+  });
+
+  svg += '</svg>';
+
+  var html = '<section class="me2-section" id="me2-foodweb">';
+  html += '<span class="me2-section-kicker">Food Webs</span>';
+  html += '<h3 class="me2-section-title">A Hell Creek Case Study</h3>';
+
+  html += '<div class="me2-foodweb-plant"><b>' + fw.plantBase.label + '.</b> ' + fw.plantBase.detail + '</div>';
+
+  html += '<div class="me2-foodweb-legend">';
+  html += '<div class="me2-foodweb-legend-item"><span class="me2-foodweb-legend-line"></span>Documented - direct fossil evidence of the interaction</div>';
+  html += '<div class="me2-foodweb-legend-item"><span class="me2-foodweb-legend-line inferred"></span>Inferred - reasonable, but not confirmed by a specific fossil</div>';
+  html += '</div>';
+
+  html += '<div class="me2-foodweb-diagram">' + svg + '</div>';
+
+  html += '<div class="me2-foodweb-evidence" id="me2FoodwebEvidence">Click any animal above to open its DinoDex entry and see what the evidence for its place in this food web actually shows.</div>';
+
+  html += '<p class="me2-foodweb-note">' + fw.distinctionNote + '</p>';
+  html += '<p class="me2-foodweb-note">' + fw.documentedEvidenceNote + '</p>';
+  html += '<p class="me2-foodweb-note">' + fw.extraNote + '</p>';
+  html += '</section>';
+  return html;
+}
+
+/* ---- Interactions ---- */
+function me2FoodwebSelect(nodeId) {
+  var fw = ME2_FOODWEB;
+  var node = fw.nodes.filter(function(n) { return n.id === nodeId; })[0];
+  if (!node) return;
+  openModal(node.speciesId);
+
+  document.querySelectorAll('.me2-foodweb-node-g').forEach(function(g) { g.classList.remove('active'); });
+  var activeGroup = document.querySelector('.me2-foodweb-node-g[data-node="' + nodeId + '"]');
+  if (activeGroup) activeGroup.classList.add('active');
+
+  document.querySelectorAll('.me2-foodweb-link').forEach(function(l) { l.classList.remove('highlight'); });
+
+  var evidenceBox = document.getElementById('me2FoodwebEvidence');
+  if (!evidenceBox) return;
+
+  if (nodeId === 'tyrannosaurus') {
+    evidenceBox.className = 'me2-foodweb-evidence';
+    evidenceBox.innerHTML = fw.distinctionNote;
+    return;
+  }
+
+  var edge = fw.edges.filter(function(e) { return e.from === nodeId; })[0];
+  if (!edge) return;
+  var edgeEl = document.getElementById('me2-edge-' + nodeId);
+  if (edgeEl) edgeEl.classList.add('highlight');
+
+  var name = ttbSpeciesName(node.speciesId);
+  var statusLabel = edge.status === 'documented' ? 'Documented' : 'Inferred';
+  evidenceBox.className = 'me2-foodweb-evidence' + (edge.status === 'documented' ? ' documented' : '');
+  evidenceBox.innerHTML = '<b>' + name + ' &rarr; Tyrannosaurus (' + statusLabel + ').</b> ' + edge.evidence;
+}
+
+function renderMesozoicEcosystems() {
+  var container = document.getElementById('mesozoic-ecosystems-view');
+  if (!container) return;
+
+  var html = '<div class="wrap">';
+  html += '<div class="me2-header">';
+  html += '<div class="eyebrow">Time &amp; Earth &middot; Ecosystems</div>';
+  html += '<h2 class="title" style="font-size:clamp(30px,4.5vw,52px)">Mesozoic Ecosystems</h2>';
+  html += '<p class="me2-sub">What the Mesozoic world actually looked like - climate, flora, and who ate whom.</p>';
+  html += '</div>';
+  html += renderME2Hook();
+  html += renderME2Frame();
+  html += renderME2Climate();
+  html += renderME2Flora();
+  html += renderME2Foodweb();
+  html += '</div>';
+
+  container.innerHTML = html;
+}
+
+/* ============================================================
    DEEP TIME
    ============================================================ */
 var DT_ERAS = [
@@ -5576,6 +5935,7 @@ var ACT1_MULTIPLIER = 7;
 var dtTrackRendered = false;
 var dtpPerspectiveRendered = false;
 var ttbRendered = false;
+var me2Rendered = false;
 
 var DEEP_TIME_ANCHORS = [
   {
@@ -6089,6 +6449,12 @@ function initDtpCircles() {
         if(!ttbRendered) {
           renderTheropodsToBirds();
           ttbRendered = true;
+        }
+      }
+      if(tab.dataset.view === 'mesozoic-ecosystems') {
+        if(!me2Rendered) {
+          renderMesozoicEcosystems();
+          me2Rendered = true;
         }
       }
       /* Mobile: close sidebar after navigation */

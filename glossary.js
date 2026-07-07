@@ -1401,6 +1401,60 @@ window.GLOSSARY_TERMS = [
     relatedTerms: ["Theropod", "Maniraptoran", "Feathers", "Paravian"],
     keywords: ["clade", "tyrannosauroid", "compsognathid", "ornithomimosaur", "filaments", "theropod", "bird origins"],
     sourceNotes: "Standard cladistic grouping. Xu et al. (2014) reviews the distribution of feather evidence across Coelurosauria."
+  },
+
+  {
+    id: "coprolite",
+    term: "Coprolite",
+    category: "Fossils & Evidence",
+    difficulty: "useful",
+    aliases: ["fossil dung", "fossilised faeces"],
+    simpleDefinition: "Fossilised dung - direct physical evidence of what an animal actually ate, preserved as a trace fossil rather than a body part.",
+    scientificExplanation: "A coprolite is a trace fossil formed when faecal material is mineralised before it decomposes, most often through rapid burial and the infiltration of minerals such as calcium phosphate. Coprolites can preserve identifiable plant fragments, seeds, bone splinters, phytoliths, and other dietary remains, making them one of the few fossil types that speak directly to diet rather than to it being inferred from tooth shape or jaw mechanics alone. Attributing a coprolite to a specific species is usually difficult and relies on size, associated remains, and depositional context rather than certainty. A well-known titanosaur coprolite assemblage from the Late Cretaceous of India (Prasad et al. 2005, Science) contained grass phytoliths, providing the first firm confirmation that some Late Cretaceous dinosaurs ate grass - overturning the earlier assumption that grasses were a purely Cenozoic phenomenon no dinosaur ever encountered.",
+    whyItMatters: "Coprolites are one of the only fossil types that record diet as a direct event rather than an inference from anatomy. They have repeatedly overturned assumptions about what was and wasn't available for Mesozoic animals to eat, including the presence of grass in the Late Cretaceous.",
+    dinodexContext: "The Mesozoic Ecosystems tab's Hell Creek food web and its grass timeline both lean on coprolite evidence - titanosaur coprolites from India are the firmest confirmation that dinosaurs encountered and ate grass before the K-Pg extinction.",
+    exampleUsage: "Grass phytoliths recovered from titanosaur coprolites in India were the first firm evidence that grasses existed - and were eaten - well before the end of the Cretaceous.",
+    examples: ["Titanosaur coprolites, Late Cretaceous, India (grass phytoliths)", "Tyrannosaur coprolites containing crushed bone fragments", "Hadrosaur coprolites with angiosperm chemical traces"],
+    exampleSpeciesIds: [],
+    relatedTerms: ["Trace fossil", "Fossil record", "Phytolith"],
+    keywords: ["fossil dung", "diet", "trace fossil", "phytolith", "titanosaur", "grass", "India", "Prasad"],
+    sourceNotes: "Prasad et al. (2005), Science, is the key reference for the Indian titanosaur coprolite grass phytolith discovery."
+  },
+
+  {
+    id: "phytolith",
+    term: "Phytolith",
+    category: "Fossils & Evidence",
+    difficulty: "advanced",
+    aliases: ["plant opal", "silica body"],
+    simpleDefinition: "A microscopic, durable particle of silica formed inside a living plant's cells - tough enough to survive long after the rest of the plant has rotted away, and often distinctive enough to identify which plant group produced it.",
+    scientificExplanation: "Phytoliths form when plants take up dissolved silica from groundwater and deposit it within and between their cells, producing rigid microscopic structures that persist long after the surrounding organic tissue decays. Different plant families produce phytoliths with characteristic shapes, which makes them useful for identifying plant groups - including grasses - even when no other plant fossil survives at a site. Phytoliths recovered from the teeth of an Early Cretaceous basal hadrosauroid in China (described 2018, National Science Review) pushed the confirmed presence of grass back to roughly 113-101 Ma, tens of millions of years earlier than the previously firmest evidence from Late Cretaceous coprolites.",
+    whyItMatters: "Phytoliths let palaeontologists detect plants, including grasses, in places and times where no macroscopic plant fossil survives. The 2018 Chinese discovery is a clean example of a single find shifting a timeline that had seemed settled.",
+    dinodexContext: "The grass timeline in the Mesozoic Ecosystems tab's hook rests on phytolith evidence: the earliest confirmed grass comes from phytoliths preserved with a basal duck-billed dinosaur's teeth, not from a plant fossil itself.",
+    exampleUsage: "Phytoliths preserved alongside a basal hadrosauroid's teeth in Early Cretaceous China pushed the confirmed date of grass back to around 113-101 million years ago.",
+    examples: ["Grass phytoliths with Early Cretaceous hadrosauroid teeth, China (2018)", "Grass phytoliths in Late Cretaceous titanosaur coprolites, India", "Phytolith assemblages used to reconstruct ancient grassland extent"],
+    exampleSpeciesIds: [],
+    relatedTerms: ["Coprolite", "Cretaceous Terrestrial Revolution"],
+    keywords: ["silica", "microfossil", "grass", "diet", "China", "hadrosauroid", "2018", "plant opal"],
+    sourceNotes: "2018 National Science Review paper on Early Cretaceous grass phytoliths from a Chinese basal hadrosauroid is the key reference for the earlier date."
+  },
+
+  {
+    id: "cretaceous-terrestrial-revolution",
+    term: "Cretaceous Terrestrial Revolution",
+    category: "Deep Time",
+    difficulty: "useful",
+    aliases: ["Angiosperm Terrestrial Revolution", "KTR"],
+    simpleDefinition: "The interval, roughly 125 to 80 million years ago, in which flowering plants (angiosperms) went from a minor presence to the dominant plant group across much of the world.",
+    scientificExplanation: "The Cretaceous Terrestrial Revolution describes the interval in which angiosperm diversity climbed sharply while gymnosperm (conifer, cycad, ginkgo) diversity declined over the same span, reshaping terrestrial plant communities across much of the world. It is tempting to read this as a partnership with plant-eating dinosaurs, but a well-cited analysis (Lloyd et al. 2008, Proceedings of the Royal Society B) found no clear correlation between angiosperm diversification and dinosaur diversity patterns over the same interval. Insects and, later, mammals appear to have been the more significant partners in spreading flowering plants. Gymnosperms remained a substantial part of many herbivorous dinosaurs' diet even after angiosperms had spread widely, though direct evidence - fruit remnants in an Early Cretaceous ankylosaur's gut, angiosperm chemical traces in some hadrosaur coprolites - confirms some dinosaurs did eat angiosperm material.",
+    whyItMatters: "The Cretaceous Terrestrial Revolution is often flattened into a simple story where flowers caused dinosaur diversity to bloom alongside them. The evidence doesn't support that clean a narrative, and the correction matters as a case study in resisting a tidy but unsupported story.",
+    dinodexContext: "The Mesozoic Ecosystems tab's Flora section uses this interval as its centrepiece, including the correction to the popular 'flowers drove dinosaur diversity' story. By the very end of the Cretaceous, Hell Creek Formation leaf fossils show roughly 90% of identified plant species were already angiosperms.",
+    exampleUsage: "The Cretaceous Terrestrial Revolution transformed Hell Creek's forests so thoroughly that, by around 66 Ma, roughly 90% of identified plant species there were flowering plants, with conifers reduced to about 5%.",
+    examples: ["Angiosperm diversity climb, ~125-80 Ma", "Hell Creek Formation leaf assemblage (~90% angiosperm by ~66 Ma)", "Early Cretaceous ankylosaur gut contents with fruit remnants (a different, unnamed ankylosaur - not DinoDex's Late Cretaceous Ankylosaurus)"],
+    exampleSpeciesIds: [],
+    relatedTerms: ["Phytolith", "Coprolite", "Mesozoic"],
+    keywords: ["angiosperm", "gymnosperm", "flowering plants", "Cretaceous", "Lloyd", "diversification", "Hell Creek", "flora"],
+    sourceNotes: "Lloyd et al. (2008), Proceedings of the Royal Society B, is the key reference for the lack of clear angiosperm-dinosaur diversification correlation."
   }
 
 ];
