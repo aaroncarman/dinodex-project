@@ -1013,7 +1013,7 @@ var SPECIES = [
 },
 {
   id:"quetzalcoatlus", name:"Quetzalcoatlus", epithet:"Q. northropi", pron:"KET-sal-koh-AHT-lus",
-  period:"cretaceous", clade:"Azhdarchid pterosaur", diet:"carnivore",
+  period:"cretaceous", clade:"Azhdarchid pterosaur (not a dinosaur)", diet:"carnivore",
   age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"10-11 m wingspan", mass:"~200-250 kg", place:"Texas, USA",
   img:"images/species/quetzalcoatlus.jpg", modalImgFit:"contain",
   overview:"An azhdarchid pterosaur of the latest Cretaceous of Texas, Quetzalcoatlus had an estimated wingspan of 10-11 metres - among the largest of any known flying animal - and stood roughly giraffe-height on the ground. The current leading model has it as a terrestrial stalker, striding on stiff legs to ambush small prey, rather than a fish-plunger or soaring carrion feeder, though flight biomechanics at this scale remain genuinely challenging to model with confidence.",
@@ -1182,7 +1182,7 @@ var SPECIES = [
 },
 {
   id:"beelzebufo", name:"Beelzebufo", epithet:"B. ampinga", pron:"bee-EL-zeh-BOO-foh",
-  period:"cretaceous", clade:"Frog (non-dinosaur exception)", diet:"carnivore",
+  period:"cretaceous", clade:"Frog (not a dinosaur)", diet:"carnivore",
   age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~0.4 m", mass:"~4 kg", place:"Madagascar",
   img:"images/species/beelzebufo.jpg",
   overview:"A large frog from the Late Cretaceous of Madagascar, Beelzebufo was roughly the size of a football with a broad, powerful skull suggesting it could take vertebrate prey - possibly among the largest frogs that ever lived. It is included in the DinoDex as one of the rare non-dinosaur entries, representing the wider cast of formidable Mesozoic animals that shared the world with dinosaurs.",
@@ -1539,7 +1539,7 @@ var SPECIES = [
 },
 {
   id:"nothosaurus", name:"Nothosaurus", epithet:"N. mirabilis", pron:"noh-thoh-SAW-rus",
-  period:"triassic", clade:"Marine reptile (Sauropterygia)", diet:"carnivore",
+  period:"triassic", clade:"Marine reptile (Sauropterygia) (not a dinosaur)", diet:"carnivore",
   age:"~240-210 Ma (Middle to Late Triassic)", startMa:240, endMa:210, length:"~3-4 m", mass:"~150-200 kg", place:"Central Europe; China; Middle East",
   img:"images/species/nothosaurus.jpg", modalImgFit:"cover", modalImgPosition:"50% 80%",
   overview:"A sauropterygian marine reptile from the Middle to Late Triassic of Europe, the Middle East, and China, Nothosaurus was an amphibious predator around 3-4 metres long with webbed feet, a long flexible neck, and interlocking needle teeth suited for catching fish. It represents an early stage in the transition toward fully aquatic life in the lineage that probably gave rise to the plesiosaurs of the Jurassic and Cretaceous.",
@@ -1746,7 +1746,7 @@ var SPECIES = [
 },
 {
   id:"ichthyosaurus", name:"Ichthyosaurus", epithet:"I. communis", pron:"IK-thee-oh-SAW-rus",
-  period:"jurassic", clade:"Marine reptile (ichthyosaur)", diet:"carnivore",
+  period:"jurassic", clade:"Marine reptile (ichthyosaur) (not a dinosaur)", diet:"carnivore",
   age:"~200-175 Ma (Early to Middle Jurassic)", startMa:200, endMa:175, length:"~2-3.5 m", mass:"~90-160 kg", place:"England; Germany; Belgium",
   img:"images/species/ichthyosaurus.jpg",
   overview:"A marine reptile from the Early to Middle Jurassic of England and Germany, Ichthyosaurus was around 2-3.5 metres long with a streamlined body, large eyes, and crescent-shaped tail fin - independently arriving at a dolphin-like body plan through the same constraints of fast open-water swimming. One of the first large fossil reptiles to be systematically described, it was central to early 19th-century debates about extinction and the deep history of life.",
@@ -1782,7 +1782,7 @@ var SPECIES = [
 
 {
   id:"plesiosaurus", name:"Plesiosaurus", epithet:"P. dolichodeirus", pron:"PLEE-zee-oh-SAW-rus",
-  period:"jurassic", clade:"Marine reptile (plesiosaur)", diet:"carnivore",
+  period:"jurassic", clade:"Marine reptile (plesiosaur) (not a dinosaur)", diet:"carnivore",
   age:"~200-175 Ma (Early Jurassic)", startMa:200, endMa:175, length:"~3.5 m", mass:"~90 kg", place:"Dorset, England",
   img:"images/species/plesiosaurus.jpg",
   overview:"A plesiosaur from the Early Jurassic of Dorset, England, Plesiosaurus was around 3.5 metres long with a small head, a moderately long neck, and four broad paddle-like flippers used to fly through the water in the manner of sea turtles rather than swimming with a fish-like tail stroke. One of the first Mesozoic marine reptiles to receive a complete formal description, it defined the basic body plan of the plesiosaur group and was among the fossils found by Mary Anning at Lyme Regis.",
@@ -1820,7 +1820,7 @@ var SPECIES = [
 },
 {
   id:"liopleurodon", name:"Liopleurodon", epithet:"L. ferox", pron:"LY-oh-PLOOR-oh-don",
-  period:"jurassic", clade:"Marine reptile (pliosaur)", diet:"carnivore",
+  period:"jurassic", clade:"Marine reptile (pliosaur) (not a dinosaur)", diet:"carnivore",
   age:"~160-155 Ma (Late Jurassic)", startMa:160, endMa:155, length:"~5-7 m", mass:"~1-1.7 t", place:"England; France; Germany; Mexico",
   img:"images/species/liopleurodon.jpg",
   overview:"A large pliosaur from the Late Jurassic of England, France, and Germany, Liopleurodon was around 5-7 metres long - a powerfully built, short-necked marine predator with four broad flippers and a large skull bearing interlocking conical teeth for seizing large prey. Its actual documented size is well-supported by fossil evidence; claims of a 25-metre animal broadcast in a 1999 television documentary had no basis in the specimen record.",
@@ -1889,7 +1889,7 @@ var SPECIES = [
 },
 {
   id:"mosasaurus", name:"Mosasaurus", epithet:"M. hoffmannii", pron:"MOH-zah-SAW-rus",
-  period:"cretaceous", clade:"Marine reptile (mosasaur)", diet:"carnivore",
+  period:"cretaceous", clade:"Marine reptile (mosasaur) (not a dinosaur)", diet:"carnivore",
   age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~13-14 m", mass:"~10-15 t", place:"Netherlands; North America",
   img:"images/species/mosasaurus.jpg",
   overview:"A large mosasaur - a giant marine lizard, not a dinosaur or plesiosaur - from the Late Cretaceous of the Netherlands and North America, Mosasaurus was around 13-14 metres long and an apex predator of the terminal Cretaceous seas, with powerful jaws, conical teeth, and a deep laterally compressed tail for propulsion. Jaw fragments found near Maastricht in the 18th century were among the first large extinct reptile bones to be formally examined, and the specimen played a role in the early scientific recognition that species could go extinct.",
@@ -2526,7 +2526,7 @@ var SPECIES = [
 
 {
   id:"hatzegopteryx", name:"Hatzegopteryx", epithet:"H. thambema", pron:"HAT-seg-OP-ter-iks",
-  period:"cretaceous", clade:"Azhdarchid pterosaur", diet:"carnivore",
+  period:"cretaceous", clade:"Azhdarchid pterosaur (not a dinosaur)", diet:"carnivore",
   age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~10-12 m wingspan (uncertain)", mass:"~200-250 kg (uncertain)", place:"Haţeg Basin, Romania",
   img:"images/species/hatzegopteryx.jpg", imgFit:"contain",
   overview:"An azhdarchid pterosaur from the Late Cretaceous Haţeg Basin of Romania, Hatzegopteryx had an estimated wingspan of 10-12 metres and a massively built skull and reinforced neck bones that distinguish it from other azhdarchids of comparable size. It lived on an island ecosystem populated by dwarf dinosaurs, making it likely the apex predator of that environment - a flying reptile filling a role usually occupied by large theropods.",
@@ -2565,7 +2565,7 @@ var SPECIES = [
 
 {
   id:"elasmosaurus", name:"Elasmosaurus", epithet:"E. platyurus", pron:"ee-LAZ-moh-SAW-rus",
-  period:"cretaceous", clade:"Marine reptile, elasmosaurid plesiosaur", diet:"carnivore",
+  period:"cretaceous", clade:"Marine reptile, elasmosaurid plesiosaur (not a dinosaur)", diet:"carnivore",
   age:"~80-77 Ma (Late Cretaceous)", startMa:80, endMa:77, length:"~10-11 m", mass:"~2 tonnes (uncertain)", place:"Western Interior Seaway, North America",
   img:"images/species/elasmosaurus.jpg", imgFit:"contain",
   overview:"An elasmosaurid plesiosaur from the Late Cretaceous Western Interior Seaway, Elasmosaurus was around 10-11 metres long with an extraordinary neck of over 70 vertebrae comprising roughly half its total body length, and a small head at the end of it. Edward Drinker Cope's original reconstruction famously placed the head on the tail end; its correction by rival O.C. Marsh became one of the more memorable episodes in the 19th-century 'Bone Wars.'",
@@ -2604,7 +2604,7 @@ var SPECIES = [
 
 {
   id:"postosuchus", name:"Postosuchus", epithet:"P. kirkpatricki", pron:"POST-oh-SOO-kus",
-  period:"triassic", clade:"Pseudosuchian archosaur, rauisuchian-grade predator", diet:"carnivore",
+  period:"triassic", clade:"Pseudosuchian archosaur, rauisuchian-grade predator (not a dinosaur)", diet:"carnivore",
   age:"~221-203 Ma (Late Triassic)", startMa:221, endMa:203, length:"~4-5 m", mass:"~250-300 kg", place:"Texas, USA",
   img:"images/species/postosuchus.jpg", imgFit:"contain",
   overview:"A large rauisuchian archosaur from the Late Triassic of Texas, Postosuchus was around 4-5 metres long and not a dinosaur but a member of the pseudosuchian - crocodile-relative - lineage that dominated large-predator niches before dinosaurs came to the fore. Its upright posture, deep skull, and serrated teeth give it a superficially theropod-like appearance, illustrating how similar predatory body plans can evolve independently in unrelated lineages.",
@@ -2981,7 +2981,7 @@ var SPECIES = [
 },
 {
   id:"nyasasaurus", name:"Nyasasaurus", epithet:"N. parringtoni", pron:"NYE-ah-sah-SAW-rus",
-  period:"triassic", clade:"Dinosauriform archosaur (possibly earliest dinosaur)", diet:"unknown - no skull or teeth preserved",
+  period:"triassic", clade:"Dinosauriform archosaur (contested: dinosaur or dinosauromorph)", diet:"unknown - no skull or teeth preserved",
   age:"~243 Ma (Middle Triassic)", startMa:245, endMa:242, length:"~2-3 m (estimated from vertebral dimensions)", mass:"unknown - too fragmentary for reliable estimate", place:"Tanzania, East Africa",
   img:"images/species/nyasasaurus.png",
   overview:"A dinosauriform archosaur from the Middle Triassic of Tanzania, Nyasasaurus parringtoni is either the oldest known dinosaur or the closest known relative of the group - the humerus and vertebrae that constitute its entire fossil record cannot resolve which. If it is a dinosaur, it predates the next oldest unambiguous members of the group from Argentina by approximately 10 to 15 million years, and its bone histology shows the rapid growth rates characteristic of early dinosaurs rather than the slower growth of most contemporary archosaurs.",
@@ -3095,7 +3095,7 @@ var SPECIES = [
 },
 {
   id:"pisanosaurus", name:"Pisanosaurus", epithet:"P. mertii", pron:"pee-SAH-noh-SAW-rus",
-  period:"triassic", clade:"Dinosauriform - ornithischian or silesaurid (contested)", diet:"herbivore",
+  period:"triassic", clade:"Dinosauriform, either ornithischian or silesaurid (contested: dinosaur or dinosauromorph)", diet:"herbivore",
   age:"~229 Ma (Late Triassic)", startMa:231, endMa:228, length:"~1 m", mass:"unknown - too fragmentary for reliable estimate", place:"La Rioja Province, Argentina",
   img:"images/species/pisanosaurus.jpg",
   overview:"A small dinosauriform from the Carnian Ischigualasto Formation of Argentina, Pisanosaurus mertii has been the solitary candidate for a Triassic ornithischian for most of the last six decades - the only possible evidence that the bird-hipped lineage existed alongside the earliest saurischians. A 2018 phylogenetic reassessment by Agnolin and Rozadilla raised a serious challenge to that placement, arguing the material is better interpreted as a silesaurid dinosauriform rather than a true dinosaur, though a 2024 analysis recovered it within Ornithischia once more.",
@@ -3726,6 +3726,46 @@ var SPECIES = [
   conceptTags:["display","communication","skin-impressions","hadrosaur","lambeosaurine"],
   glossaryLinks:["ornithischian","cretaceous","display-structure","hadrosauroid","dental-battery","preservation","specimen","fossil-record","ontogeny","integument"],
   researchLinks:["soft-tissue"]
+},
+
+{
+  id:"lystrosaurus", name:"Lystrosaurus", epithet:"L. curvatus", pron:"LIS-troh-SAW-rus",
+  period:"triassic", clade:"Dicynodont therapsid (not a dinosaur)", diet:"herbivore",
+  age:"~252-248 Ma (latest Permian-Early Triassic)", startMa:252, endMa:248, length:"~1 m", mass:"~100 kg", place:"South Africa, Antarctica, India, China, Mongolia, Russia",
+  img:"images/species/lystrosaurus.jpg", imgFit:"contain",
+  overview:"A dicynodont therapsid found across nearly every corner of Pangaea, Lystrosaurus was a stocky, beaked herbivore roughly the size of a large dog, one of the very few land vertebrates to survive the end-Permian mass extinction - the most severe extinction event in Earth's history. In the immediate aftermath, it became astonishingly common, at times accounting for the great majority of known land vertebrate fossils anywhere in the world, before declining as the Triassic world recovered its diversity.",
+  insights:[
+    ["The genus survived - not every species in it","Only the smaller, less specialised <b>L. curvatus</b> crossed the Permian-Triassic boundary and diversified afterward. The larger, more specialised L. maccaigi is known only from Permian rock and did not survive - a reminder that 'this genus survived' can hide very different fates within it."],
+    ["Nobody agrees on why it survived","Burrowing, possible hibernation, a generalist diet, broad habitat tolerance, and even unusually large eggs have all been proposed as contributing factors - <b>several credible explanations, no single confirmed cause</b>."],
+    ["Proof continents had moved","Finding Lystrosaurus in Antarctica in 1969, matching species already known from Africa, India and China, was direct fossil evidence that these now-separated continents were once joined - a find that helped confirm continental drift."],
+    ["A marker for a vanished world","Lystrosaurus fossils are so common right at the Permian-Triassic boundary that they help identify it in the rock record - <b>this genus quite literally marks the end of one world and the start of another</b>."]
+  ],
+  behaviour:"<p>Lystrosaurus was a low browser, using a horny beak and a pair of tusk-like canines - its only teeth - to crop tough vegetation. Its heavily built body and semi-sprawling gait suggest a slow-moving, ground-dwelling animal, and burrowing behaviour is well supported by trace fossils and skeletal features suited to digging.</p><p>In the Early Triassic recovery world, Lystrosaurus briefly became one of the most numerous large land animals anywhere on Earth, before declining in relative abundance as the ecosystem diversified.</p>",
+  evolution:"<p>Lystrosaurus belonged to Dicynodontia, a group of synapsids - the broader lineage that would eventually include mammals - not archosaurs, and not remotely related to dinosaurs. Its story sits right at the hinge between two worlds: already established in the Late Permian, its survival into the Early Triassic makes it one of the clearest windows into which traits helped an animal endure Earth's worst extinction.</p>",
+  study:[
+    {q:"Why did Lystrosaurus survive the end-Permian extinction when so much else didn't?",
+     why:"Understanding what let it through such a severe bottleneck could reveal what determines survival in any mass extinction, including future ones.",
+     interps:[
+       ["Burrowing lifestyle provided shelter from extreme surface conditions","conf-moderate","Widely supported by skeletal and trace-fossil evidence; considered one of the strongest contributing factors."],
+       ["Possible hibernation or torpor","conf-low","Suggested by growth-ring patterns in fossil tusks; a genuinely new and still-developing line of evidence."],
+       ["Generalist diet and broad habitat tolerance","conf-moderate","Consistent with its wide geographic spread across Pangaea even before the extinction."],
+       ["Large egg size giving hatchlings a head start","conf-low","Based on a recently described embryo fossil; too new to be considered settled."]
+     ]}
+  ],
+  matters:"Lystrosaurus is the clearest single answer to 'what did the world look like right after the worst extinction in its history.' For a few million years, an animal that most people have never heard of was among the most common large land animals on Earth - proof that survival and dominance don't require being impressive, just being suited to what comes next.",
+  fossilRecord:{
+    knownFrom:"Extensive skeletal material across multiple continents, including South Africa's Karoo Basin, Antarctica, India, China, Mongolia and European Russia",
+    evidenceLevel:"Rich",
+    locality:"Karoo Basin, South Africa (most extensively studied); Coalsack Bluff, Antarctica; multiple sites across India, China, Mongolia and Russia",
+    formation:"Balfour and Katberg Formations (South Africa), among others across its Pangaea-wide range",
+    material:["Skulls","Postcranial skeletons","Tusks with growth-ring data","A described embryo"],
+    note:"Lystrosaurus is one of the best-sampled non-dinosaurian tetrapods in the fossil record, with material spanning nearly every Pangaean landmass. Four to six species are currently recognised; not all of them survived the extinction boundary."
+  },
+  hook:"Lystrosaurus survived the worst extinction Earth has ever had and then, for a few million years, became one of the most common large land animals anywhere on the planet - and nobody is entirely sure why.",
+  learnerLevel:"beginner",
+  conceptTags:["mass-extinction","survivorship"],
+  glossaryLinks:["permian","triassic","therapsid","mass-extinction","specimen","fossil-record"],
+  researchLinks:[]
 }
 
 ];

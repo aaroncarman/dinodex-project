@@ -38,7 +38,7 @@ When these goals conflict, ask which one is in front today rather than guessing.
   - One large inline `<script>` with all app logic and render functions. All data
     has been extracted to external files — the inline script contains logic only.
 - **External data files**, loaded via `<script>` tags before the inline script:
-  - `species.js` — `var SPECIES = [...]` — **100** entries. Rich schema (see §3).
+  - `species.js` — `var SPECIES = [...]` — **102** entries. Rich schema (see §3).
   - `glossary.js` — `window.GLOSSARY_TERMS = [...]` — **74** terms, `gl*`-prefixed logic.
   - `research-cases.js` — `var RESEARCH_CASES = [...]` — **10** open-question cases.
   - `fossil-hunters.js` — `var PEOPLE = [...]` — **12** people.
@@ -76,13 +76,13 @@ and `goToView()` both target these selectors. The old `#viewTabs` horizontal nav
   fine for a static portfolio site; do not introduce a bundler/framework without an
   explicit decision, because that trades simplicity for capability and the owner wants
   to make that trade deliberately.
-- `top:50px` offsets on `.people-era-rail` and `.lastday-rail` (sticky sub-nav rails in
-  Fossil Hunters and The Last Day) were sized against the old nav bar. With the nav gone
-  they add 50px of breathing room from the viewport top when stuck — harmless, but could
-  be zeroed or set to `top:16px` whenever those views are revisited.
-- `min-height:calc(100vh - 50px)` on several views is also a legacy of the old nav.
-  Visually harmless (minimum height is slightly smaller than the viewport) but could be
-  updated to `100vh` in a future tidy-up pass.
+- **Resolved**: the sticky sub-nav rails (`.people-era-rail`, `.lastday-rail`, `.hpw-rail`,
+  `.ttb-rail`) and every view's `min-height:calc(100vh - ...)` used to hardcode a legacy
+  nav-bar offset (`50px`/`52px`). The banner height is now a single CSS custom property,
+  `--banner-h` (set in `:root`, overridden inside the sitewide `@media(max-width:768px)`
+  block for mobile), and everything that sits below the banner reads that variable
+  instead. Change the banner's height in one place and the sidebar, main content, sticky
+  rails, and every view's min-height all stay correctly in sync.
 - Several `glossaryLinks` and `researchLinks` values in the 26 entries added in the
   last sprint may reference IDs not yet present in `glossary.js` or `research-cases.js`.
   These need auditing before cross-references are relied upon.

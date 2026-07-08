@@ -1455,6 +1455,42 @@ window.GLOSSARY_TERMS = [
     relatedTerms: ["Phytolith", "Coprolite", "Mesozoic"],
     keywords: ["angiosperm", "gymnosperm", "flowering plants", "Cretaceous", "Lloyd", "diversification", "Hell Creek", "flora"],
     sourceNotes: "Lloyd et al. (2008), Proceedings of the Royal Society B, is the key reference for the lack of clear angiosperm-dinosaur diversification correlation."
+  },
+
+  {
+    id: "permian",
+    term: "Permian",
+    category: "Deep Time",
+    difficulty: "core",
+    aliases: ["Permian Period", "Permian period"],
+    simpleDefinition: "The final period of the Palaeozoic Era (approximately 299-252 million years ago), ending in the most severe mass extinction in the history of life and clearing the way for the Triassic world dinosaurs would later inherit.",
+    scientificExplanation: "The Permian Period (299-252 Ma) was dominated by synapsids (the mammal-line lineage) and large amphibians rather than archosaurs. Pangaea was fully assembled by this time, producing strongly seasonal, continental climates across its interior. The period ends with the end-Permian mass extinction (~252 Ma), the most severe extinction event in Earth's history, triggered by Siberian Traps volcanism and estimated to have eliminated roughly 81-96% of marine species and 70-75% of terrestrial vertebrate species. The handful of terrestrial vertebrates that crossed the boundary, including Lystrosaurus, inherited a devastated world that took millions of years to recover.",
+    whyItMatters: "The Permian is the world before the one dinosaurs arose in. Understanding what dominated it, and how completely the end-Permian extinction cleared that away, is essential context for why archosaurs - and eventually dinosaurs - had room to rise in the Triassic at all.",
+    dinodexContext: "Lystrosaurus is DinoDex's clearest window into the Permian-Triassic boundary itself - it was already established in the Late Permian and became one of the few large land vertebrates to survive into the Triassic recovery world.",
+    exampleUsage: "Lystrosaurus was already widespread across Pangaea by the Late Permian, making it one of the few land vertebrates whose story spans both sides of Earth's worst mass extinction.",
+    examples: ["End-Permian mass extinction (~252 Ma)", "Siberian Traps volcanism", "Lystrosaurus - Permian-Triassic boundary survivor"],
+    exampleSpeciesIds: ["lystrosaurus"],
+    relatedTerms: ["Triassic", "Mass extinction", "Therapsid"],
+    keywords: ["Palaeozoic", "Siberian Traps", "end-Permian", "synapsid", "Pangaea", "Great Dying", "boundary"],
+    sourceNotes: "Dates from ICS 2023 or current edition. Extinction severity estimates vary between studies and should be treated as approximate."
+  },
+
+  {
+    id: "therapsid",
+    term: "Therapsid",
+    category: "Classification",
+    difficulty: "useful",
+    aliases: ["Therapsida"],
+    simpleDefinition: "A major group of synapsids (the mammal-line lineage) that included the dominant land vertebrates of the Permian, and eventually gave rise to mammals - not archosaurs, and not related to dinosaurs.",
+    scientificExplanation: "Therapsida is a clade within Synapsida, the broader lineage that split from the reptile line (which includes archosaurs and dinosaurs) very early in amniote evolution. Therapsids diversified through the Permian and included the dicynodonts (beaked, mostly herbivorous forms such as Lystrosaurus), gorgonopsians, and cynodonts - the group that would eventually give rise to true mammals. Many therapsid lineages were severely affected by the end-Permian mass extinction; a small number, including some dicynodonts, survived into the Triassic before ultimately being ecologically eclipsed by archosaurs and, later, dinosaurs.",
+    whyItMatters: "Therapsids are a useful reminder that dinosaurs were not the only large land vertebrates competing for ecological space - before archosaurs rose to dominance, therapsids were the incumbents, and their story is a separate evolutionary lineage from dinosaurs entirely.",
+    dinodexContext: "Lystrosaurus is DinoDex's therapsid entry - a dicynodont, not a dinosaur or even an archosaur, included because its survival across the Permian-Triassic boundary is directly relevant to the world dinosaurs later inherited.",
+    exampleUsage: "Lystrosaurus, a dicynodont therapsid, belonged to the mammal-line lineage entirely separate from the archosaur line that would eventually produce dinosaurs.",
+    examples: ["Lystrosaurus - dicynodont therapsid, Permian-Triassic survivor", "Gorgonopsians - Permian apex predator therapsids", "Cynodonts - the therapsid lineage leading to true mammals"],
+    exampleSpeciesIds: ["lystrosaurus"],
+    relatedTerms: ["Permian", "Archosaur", "Mass extinction"],
+    keywords: ["synapsid", "dicynodont", "mammal-line", "Permian", "Lystrosaurus", "cynodont", "gorgonopsian"],
+    sourceNotes: "Standard classification. Kammerer et al. and other dicynodont systematic reviews cover Lystrosaurus's placement within Dicynodontia."
   }
 
 ];
