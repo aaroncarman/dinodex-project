@@ -82,6 +82,44 @@ their current behaviour explicitly opted out. (3) Glossary's accordion is
 different enough in kind (no overlay at all) that it probably shouldn't move
 onto this utility at all — flagging that as a likely "leave alone."
 
+### Step 1 done; steps 2-3 evaluated and declined — closing this phase
+
+Step 1 shipped: `openModal`/`openPersonModal` now share `openOverlayModal()`.
+Verified byte-identical via snapshot diff (21 views, 102 species modals, 12
+person modals).
+
+For step 2, chose to preserve current behaviour rather than add focus-trap/
+Escape (that choice being the zero-behaviour-change default the whole refactor
+has followed) — but on reading the actual `openFossilExhibit`/
+`closeFossilExhibit` and `rdOpenDetail`/`rdCloseCase` code closely to do the
+merge, there isn't a real merge to do. Unlike DinoDex/Person (which were
+byte-identical copy-paste), these two share no implementation at all — only
+the label "show a detail view":
+
+- Fossils Science: `panel.classList.add('open')`, locks body scroll, **wipes**
+  `innerHTML` on close.
+- Research Desk: swaps `style.display` between two separate permanent
+  elements (`#rd-grid-area` / `#rd-detail`), calls `window.scrollTo(0,0)`,
+  deliberately does **not** wipe content on close (avoids a flash of empty
+  content next time it opens).
+
+A shared `openDetailSurface(panel, html, opts)` covering both would need an
+`opts` branch for nearly every line already in each function — that's
+indirection, not deduplication, and it risks quietly normalising away
+Research Desk's "don't wipe" choice the next time someone edits the shared
+function without realising one caller depends on the old content still being
+there. Declining to implement, per the brief's instruction to stop and flag
+rather than force a merge that erases a real behavioural difference.
+
+Glossary's accordion (step 3 candidate) was already flagged as a likely
+"leave alone" and nothing since has changed that.
+
+**Phase 3 is closed at step 1.** No further modal/panel unification is
+planned unless a future change gives Fossils Science and Research Desk an
+actual reason to converge (e.g. if a product decision adds focus-trap +
+Escape to both — at that point they'd likely become similar enough to share
+real code, and this section should be revisited).
+
 ---
 
 ## Phase 4: forward-compatibility notes (documentation only, no implementation)
