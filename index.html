@@ -4539,16 +4539,19 @@ function buildDetail(s){
 }
 
 let lastFocus=null;
-function openModal(id){
-  const s = SPECIES.find(x=>x.id===id);
-  if(!s) return;
+function openOverlayModal(html){
   lastFocus = document.activeElement;
-  modal.innerHTML = buildDetail(s);  // lazy: detail HTML created on demand
+  modal.innerHTML = html;
   modal.scrollTop = 0;
   scrim.classList.add('open');
   document.body.style.overflow='hidden';
   document.getElementById('closeBtn').addEventListener('click',closeModal);
   document.getElementById('closeBtn').focus();
+}
+function openModal(id){
+  const s = SPECIES.find(x=>x.id===id);
+  if(!s) return;
+  openOverlayModal(buildDetail(s));  // lazy: detail HTML created on demand
 }
 function closeModal(){
   scrim.classList.remove('open');
@@ -5031,13 +5034,7 @@ function buildPersonDetail(p){
 function openPersonModal(id){
   var p = PEOPLE.find(function(x){ return x.id === id; });
   if(!p) return;
-  lastFocus = document.activeElement;
-  modal.innerHTML = buildPersonDetail(p);
-  modal.scrollTop = 0;
-  scrim.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('closeBtn').addEventListener('click', closeModal);
-  document.getElementById('closeBtn').focus();
+  openOverlayModal(buildPersonDetail(p));
 }
 
 /* --- Fossil Hunters timeline helpers --- */
