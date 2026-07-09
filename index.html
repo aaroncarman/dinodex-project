@@ -4955,14 +4955,18 @@ function renderPeople(eraFilter){
   });
 }
 
+function buildLinkedSpeciesPill(id, ariaPrefix, className){
+  var sp = SPECIES.find(function(s){ return s.id === id; });
+  if(sp){
+    return '<button class="' + className + '" onclick="openModal(\'' + id + '\')" aria-label="' + ariaPrefix + sp.name + '">' + sp.name + '</button>';
+  }
+  return '<span class="' + className + ' missing">' + id.replace(/-/g,' ') + '</span>';
+}
+
 function buildLinkedSpeciesPills(ids){
   if(!ids || !ids.length) return '';
   var pills = ids.map(function(id){
-    var sp = SPECIES.find(function(s){ return s.id === id; });
-    if(sp){
-      return '<button class="linked-species-pill" onclick="openModal(\'' + id + '\')" aria-label="Open DinoDex entry for ' + sp.name + '">' + sp.name + '</button>';
-    }
-    return '<span class="linked-species-pill missing">' + id.replace(/-/g,' ') + '</span>';
+    return buildLinkedSpeciesPill(id, 'Open DinoDex entry for ', 'linked-species-pill');
   });
   return '<div style="margin-top:28px;padding-top:24px;border-top:1.5px solid var(--line)">' +
     '<div class="linked-species-header">Animals in the DinoDex</div>' +
@@ -5160,17 +5164,9 @@ function renderPeopleTimeline(){
 /* ============================================================
    THE LAST DAY - data, helpers, render
    ============================================================ */
-function buildLDLinkedSpeciesPill(id, ariaPrefix) {
-  var sp = SPECIES.find(function(s) { return s.id === id; });
-  if (sp) {
-    return '<button class="ld-linked-species" onclick="openModal(\'' + id + '\')" aria-label="' + ariaPrefix + sp.name + '">' + sp.name + '</button>';
-  }
-  return '<span class="ld-linked-species missing">' + id.replace(/-/g,' ') + '</span>';
-}
-
 function renderLastDayLinks(ids) {
   if (!ids || !ids.length) return '';
-  var pills = ids.map(function(id) { return buildLDLinkedSpeciesPill(id, 'Open DinoDex entry for '); });
+  var pills = ids.map(function(id) { return buildLinkedSpeciesPill(id, 'Open DinoDex entry for ', 'ld-linked-species'); });
   return '<div class="lastday-links-bar">' + pills.join('') + '</div>';
 }
 
@@ -5233,7 +5229,7 @@ function renderSurvivalCards() {
     if (sg.examples && sg.examples.length) {
       html += '<div class="survival-card-links">';
       sg.examples.forEach(function(eid) {
-        html += buildLDLinkedSpeciesPill(eid, 'Open ');
+        html += buildLinkedSpeciesPill(eid, 'Open ', 'ld-linked-species');
       });
       html += '</div>';
     }
