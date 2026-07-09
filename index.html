@@ -4174,6 +4174,17 @@
    ============================================================ */
 /* Robust image fallback: replace broken images with a labelled placeholder
    in both cards and the modal hero. */
+function imgTag(src, alt, opts){
+  opts = opts || {};
+  var out = '<img';
+  if(opts.loading) out += ' loading="'+opts.loading+'"';
+  out += ' src="'+src+'" alt="'+alt+'"';
+  if(opts.cls) out += ' class="'+opts.cls+'"';
+  if(opts.position) out += ' style="object-position:'+opts.position+'"';
+  if(opts.crossorigin) out += ' crossorigin="anonymous"';
+  out += ' onerror="imgFallback(this)">';
+  return out;
+}
 function imgFallback(img){
   if(img.dataset.fb) return;
   img.dataset.fb='1';
@@ -4398,7 +4409,7 @@ function renderGrid(){
     card.innerHTML = `
       <div class="card-img">
         <span class="card-period" data-p="${s.period}">${periodLabel[s.period]}${(s.eras&&s.eras.length)?'<i class="span-i">+</i>':''}</span>
-        ${s.img ? `<img loading="lazy" src="${s.img}" alt="${s.name}"${(s.cardImgFit||s.imgFit)==='cover'?' class="cover"':''}${(s.cardImgPosition||s.imgPosition)?' style="object-position:'+(s.cardImgPosition||s.imgPosition)+'"':''} crossorigin="anonymous" onerror="imgFallback(this)">` : `<div class="img-fallback">${s.name} - image pending</div>`}
+        ${s.img ? imgTag(s.img, s.name, {loading:'lazy', cls:(s.cardImgFit||s.imgFit)==='cover'?'cover':'', position:(s.cardImgPosition||s.imgPosition)||'', crossorigin:true}) : `<div class="img-fallback">${s.name} - image pending</div>`}
       </div>
       <div class="card-body">
         <div class="card-clade">${s.clade}</div>
@@ -4489,7 +4500,7 @@ function buildDetail(s){
   return `
     <button class="close" aria-label="Close" id="closeBtn">×</button>
     <div class="m-hero">
-      ${s.img ? `<img src="${s.img}" alt="${s.name}"${(s.modalImgFit||s.imgFit)==='contain'?' class="contain"':''}${(s.modalImgPosition||s.imgPosition)?' style="object-position:'+(s.modalImgPosition||s.imgPosition)+'"':''} crossorigin="anonymous" onerror="imgFallback(this)">` : `<div class="img-fallback" style="height:240px">${s.name} - image pending</div>`}
+      ${s.img ? imgTag(s.img, s.name, {cls:(s.modalImgFit||s.imgFit)==='contain'?'contain':'', position:(s.modalImgPosition||s.imgPosition)||'', crossorigin:true}) : `<div class="img-fallback" style="height:240px">${s.name} - image pending</div>`}
       <div class="m-hero-grad"></div>
       <div class="m-hero-text">
         <span class="m-period-tab" data-p="${s.period}">${periodLabel[s.period]} · ${s.clade}</span>
@@ -5169,12 +5180,10 @@ function buildLastDaySection(id, ch, bodyHTML, links, facts, chain, afterHTML, i
   html += '<h3 class="lastday-title">' + ch.title + '</h3>';
   html += '</div>';
   if (imgConfig) {
-    var imgCls = imgConfig.contain ? ' class="contain"' : '';
-    var imgSty = imgConfig.position ? ' style="object-position:' + imgConfig.position + '"' : '';
     html += '<div class="lastday-section-main">';
     html += '<div class="lastday-section-copy"><div class="lastday-prose">' + bodyHTML + '</div></div>';
     html += '<figure class="lastday-section-figure">';
-    html += '<img src="' + imgConfig.src + '" alt="' + imgConfig.alt + '"' + imgCls + imgSty + ' onerror="imgFallback(this)">';
+    html += imgTag(imgConfig.src, imgConfig.alt, {cls: imgConfig.contain ? 'contain' : '', position: imgConfig.position || ''});
     html += '<figcaption>' + imgConfig.caption + '</figcaption>';
     html += '</figure>';
     html += '</div>';
@@ -6021,7 +6030,7 @@ function mxPairingCol(label, cfg) {
   }
   var html = '<div class="mx-pairing-col">';
   html += '<div class="mx-pairing-label">' + label + '</div>';
-  html += '<img src="' + src + '" alt="' + alt + '" onerror="imgFallback(this)">';
+  html += imgTag(src, alt);
   if (caption) html += '<div class="mx-pairing-caption">' + caption + '</div>';
   if (linkHtml) html += linkHtml;
   html += '</div>';
@@ -6031,7 +6040,7 @@ function mxPairingCol(label, cfg) {
 function renderMXHook() {
   var html = '<section class="mx-section" id="mx-hook">';
   html += '<figure class="mx-hook-figure">';
-  html += '<img src="' + MASSEXT_HOOK_IMG.src + '" alt="' + MASSEXT_HOOK_IMG.alt + '" onerror="imgFallback(this)">';
+  html += imgTag(MASSEXT_HOOK_IMG.src, MASSEXT_HOOK_IMG.alt);
   html += '<figcaption>' + MASSEXT_HOOK_IMG.caption + '</figcaption>';
   html += '</figure>';
   html += '<p class="mx-hook">' + MASSEXT_HOOK_TEXT + '</p>';
@@ -6064,7 +6073,7 @@ function renderMXEndTriassic() {
   html += '<div class="mx-section-stats"><span>' + d.date + '</span><span><b>' + d.lossHeadline + '</b></span></div>';
   html += '<div class="mx-prose"><p>' + d.body + '</p></div>';
   html += '<figure class="mx-supporting-figure">';
-  html += '<img src="' + d.supportingImg.src + '" alt="' + d.supportingImg.alt + '" onerror="imgFallback(this)">';
+  html += imgTag(d.supportingImg.src, d.supportingImg.alt);
   html += '</figure>';
   html += '<p class="mx-supporting-caveat">' + d.supportingImg.dateCaveat + '</p>';
   html += '<div class="mx-prose"><p>' + d.bodyRemoved + '</p></div>';
@@ -6379,7 +6388,7 @@ function buildDotCard(speciesId) {
       '<div class="card-img">' +
         '<span class="card-period" data-p="' + s.period + '">' + periodLabel[s.period] + '</span>' +
         (s.img
-          ? '<img src="' + s.img + '" alt="' + s.name + '" crossorigin="anonymous" onerror="imgFallback(this)">'
+          ? imgTag(s.img, s.name, {crossorigin:true})
           : '<div class="img-fallback">' + s.name + ' - image pending</div>') +
       '</div>' +
       '<div class="card-body">' +
@@ -6783,7 +6792,7 @@ function renderAnatMuscleSection() {
   html += '<figure class="anat-figure">' + anatMuscleSvg();
   html += '<figcaption>Schematic, not to scale. The muscle mass and attachment point are illustrative of the anatomical relationship, not a precise reconstruction.</figcaption>';
   html += '</figure>';
-  html += '<figure class="anat-photo-figure"><img src="' + ANAT_MUSCLE_IMAGE.src + '" alt="' + ANAT_MUSCLE_IMAGE.alt + '" onerror="imgFallback(this)">';
+  html += '<figure class="anat-photo-figure">' + imgTag(ANAT_MUSCLE_IMAGE.src, ANAT_MUSCLE_IMAGE.alt);
   html += '<figcaption>' + ANAT_MUSCLE_IMAGE.caption + '</figcaption></figure>';
   html += '<div class="anat-correction">';
   html += '<span class="anat-correction-heading">' + ANAT_MUSCLE_ROMER_CORRECTION.heading + '</span>';
@@ -6832,7 +6841,7 @@ function renderAnatSkullSection() {
   html += '</figure>';
   html += '<div class="anat-photo-pair">';
   ANAT_SKULL_IMAGES.forEach(function(img) {
-    html += '<figure class="anat-photo-figure"><img src="' + img.src + '" alt="' + img.alt + '" onerror="imgFallback(this)"><figcaption>' + img.caption + '</figcaption></figure>';
+    html += '<figure class="anat-photo-figure">' + imgTag(img.src, img.alt) + '<figcaption>' + img.caption + '</figcaption></figure>';
   });
   html += '</div>';
   html += '<div class="anat-prose" style="margin-top:20px"><p>' + ANAT_TEETH_TREX + '</p><p>' + ANAT_TEETH_TRICERATOPS + '</p></div>';
@@ -6850,7 +6859,7 @@ function renderAnatPostureSection() {
   html += '<span class="anat-correction-heading">' + ANAT_POSTURE_TRICERATOPS_REVISION.heading + '</span>';
   html += '<p>' + ANAT_POSTURE_TRICERATOPS_REVISION.body + '</p>';
   html += '</div>';
-  html += '<figure class="anat-trackway-figure"><img src="' + ANAT_POSTURE_IMAGE.src + '" alt="' + ANAT_POSTURE_IMAGE.alt + '" onerror="imgFallback(this)">';
+  html += '<figure class="anat-trackway-figure">' + imgTag(ANAT_POSTURE_IMAGE.src, ANAT_POSTURE_IMAGE.alt);
   html += '<figcaption>' + ANAT_POSTURE_IMAGE.caption + '</figcaption></figure>';
   html += '</section>';
   return html;
