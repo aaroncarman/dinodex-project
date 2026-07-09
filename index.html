@@ -5160,15 +5160,17 @@ function renderPeopleTimeline(){
 /* ============================================================
    THE LAST DAY - data, helpers, render
    ============================================================ */
+function buildLDLinkedSpeciesPill(id, ariaPrefix) {
+  var sp = SPECIES.find(function(s) { return s.id === id; });
+  if (sp) {
+    return '<button class="ld-linked-species" onclick="openModal(\'' + id + '\')" aria-label="' + ariaPrefix + sp.name + '">' + sp.name + '</button>';
+  }
+  return '<span class="ld-linked-species missing">' + id.replace(/-/g,' ') + '</span>';
+}
+
 function renderLastDayLinks(ids) {
   if (!ids || !ids.length) return '';
-  var pills = ids.map(function(id) {
-    var sp = SPECIES.find(function(s) { return s.id === id; });
-    if (sp) {
-      return '<button class="ld-linked-species" onclick="openModal(\'' + id + '\')" aria-label="Open DinoDex entry for ' + sp.name + '">' + sp.name + '</button>';
-    }
-    return '<span class="ld-linked-species missing">' + id.replace(/-/g,' ') + '</span>';
-  });
+  var pills = ids.map(function(id) { return buildLDLinkedSpeciesPill(id, 'Open DinoDex entry for '); });
   return '<div class="lastday-links-bar">' + pills.join('') + '</div>';
 }
 
@@ -5231,12 +5233,7 @@ function renderSurvivalCards() {
     if (sg.examples && sg.examples.length) {
       html += '<div class="survival-card-links">';
       sg.examples.forEach(function(eid) {
-        var sp = SPECIES.find(function(s) { return s.id === eid; });
-        if (sp) {
-          html += '<button class="ld-linked-species" onclick="openModal(\'' + eid + '\')" aria-label="Open ' + sp.name + '">' + sp.name + '</button>';
-        } else {
-          html += '<span class="ld-linked-species missing">' + eid.replace(/-/g,' ') + '</span>';
-        }
+        html += buildLDLinkedSpeciesPill(eid, 'Open ');
       });
       html += '</div>';
     }
