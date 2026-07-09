@@ -7360,39 +7360,51 @@ function goToView(viewName){
 (function(){
   'use strict';
 
-  function renderFossilLinkedSpecies(ids){
+  function wrapFossilSection(title, pillsHtml){
+    if(!pillsHtml) return '';
+    return '<div class="fossil-detail-section"><h4>'+title+'</h4><div class="fossil-linked-pills">'+pillsHtml+'</div></div>';
+  }
+
+  function renderFossilLinkedEntities(ids, opts){
     if(!ids || !ids.length) return '';
-    var pills = ids.map(function(sid){
-      var sp = (window.SPECIES || []).find(function(s){ return s.id === sid; });
-      var label = sp ? sp.name : sid;
-      return '<button class="pill" onclick="openModal(\''+sid+'\')" title="Open '+label+' in DinoDex">'+label+'</button>';
+    var pills = ids.map(function(id){
+      var item = (window[opts.arrayName] || []).find(function(x){ return x.id === id; });
+      var label = item ? item[opts.labelField] : id;
+      return '<button class="pill'+opts.pillClass+'" onclick="'+opts.onClick(id)+'" title="'+opts.title(label)+'">'+label+'</button>';
     }).join('');
-    return '<div class="fossil-detail-section"><h4>Species in DinoDex</h4><div class="fossil-linked-pills">'+pills+'</div></div>';
+    return wrapFossilSection(opts.sectionTitle, pills);
+  }
+
+  function renderFossilLinkedSpecies(ids){
+    return renderFossilLinkedEntities(ids, {
+      arrayName:'SPECIES', labelField:'name', pillClass:'',
+      onClick:function(id){ return "openModal('"+id+"')"; },
+      title:function(label){ return 'Open '+label+' in DinoDex'; },
+      sectionTitle:'Species in DinoDex'
+    });
   }
 
   function renderFossilLinkedPeople(ids){
-    if(!ids || !ids.length) return '';
-    var pills = ids.map(function(pid){
-      var person = (window.PEOPLE || []).find(function(p){ return p.id === pid; });
-      var label = person ? person.name : pid;
-      return '<button class="pill pill-person" onclick="openPersonModal(\''+pid+'\')" title="Open '+label+' in Fossil Hunters">'+label+'</button>';
-    }).join('');
-    return '<div class="fossil-detail-section"><h4>Fossil Hunters</h4><div class="fossil-linked-pills">'+pills+'</div></div>';
+    return renderFossilLinkedEntities(ids, {
+      arrayName:'PEOPLE', labelField:'name', pillClass:' pill-person',
+      onClick:function(id){ return "openPersonModal('"+id+"')"; },
+      title:function(label){ return 'Open '+label+' in Fossil Hunters'; },
+      sectionTitle:'Fossil Hunters'
+    });
   }
 
   function renderFossilLinkedResearch(ids){
-    if(!ids || !ids.length) return '';
-    var pills = ids.map(function(rid){
-      var rc = (window.RESEARCH_CASES || []).find(function(r){ return r.id === rid; });
-      var label = rc ? rc.title : rid;
-      return '<button class="pill pill-rd" onclick="window.rdOpenCaseFile && window.rdOpenCaseFile(\''+rid+'\')" title="Open in Research Desk">'+label+'</button>';
-    }).join('');
-    return '<div class="fossil-detail-section"><h4>Research Desk Cases</h4><div class="fossil-linked-pills">'+pills+'</div></div>';
+    return renderFossilLinkedEntities(ids, {
+      arrayName:'RESEARCH_CASES', labelField:'title', pillClass:' pill-rd',
+      onClick:function(id){ return "window.rdOpenCaseFile && window.rdOpenCaseFile('"+id+"')"; },
+      title:function(label){ return 'Open in Research Desk'; },
+      sectionTitle:'Research Desk Cases'
+    });
   }
 
   function renderFossilLastDay(show){
     if(!show) return '';
-    return '<div class="fossil-detail-section"><h4>The Last Day</h4><div class="fossil-linked-pills"><button class="pill pill-lastday" onclick="document.querySelector(\'[data-view=last-day]\').click()" title="Go to The Last Day tab">The Last Day &rarr;</button></div></div>';
+    return wrapFossilSection('The Last Day', '<button class="pill pill-lastday" onclick="document.querySelector(\'[data-view=last-day]\').click()" title="Go to The Last Day tab">The Last Day &rarr;</button>');
   }
 
   function openFossilExhibit(id){
