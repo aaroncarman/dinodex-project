@@ -2288,6 +2288,138 @@
 .anat-trackway-figure{border:1.5px solid var(--ink);background:var(--bone-deep);margin:20px 0;max-width:560px}
 .anat-trackway-figure img{width:100%;height:auto;display:block}
 .anat-trackway-figure figcaption{border-top:1px solid var(--line);padding:9px 12px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+
+/* ============================================================
+   CHAT WIDGET - new, additive only
+   Reuses: --bone/--ink/--rust/--moss/--gold/--line/--shadow custom
+   properties, the site's flat hard-offset-shadow visual signature
+   (see .card:hover), Iowan Old Style for conversational prose and
+   Helvetica Neue for UI chrome, matching every other section.
+   ============================================================ */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#chat-launcher{
+  position:fixed;right:20px;bottom:20px;z-index:110;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--ink);border:1.5px solid var(--ink);color:var(--bone);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:5px 7px 0 var(--shadow);
+  transition:background .2s,box-shadow .15s,transform .15s;
+}
+#chat-launcher:hover{background:var(--rust);border-color:var(--rust)}
+#chat-launcher:active{box-shadow:2px 3px 0 var(--shadow);transform:translate(3px,4px)}
+#chat-launcher:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+#chat-launcher svg{width:26px;height:26px}
+#chat-launcher .chat-launcher-close-icon{display:none}
+#chat-widget.open #chat-launcher .chat-launcher-chat-icon{display:none}
+#chat-widget.open #chat-launcher .chat-launcher-close-icon{display:block}
+
+#chat-panel{
+  position:fixed;right:20px;bottom:88px;z-index:110;
+  width:380px;max-width:calc(100vw - 40px);
+  max-height:min(600px,calc(100vh - 120px));
+  display:flex;flex-direction:column;
+  background:var(--bone);border:1.5px solid var(--ink);
+  box-shadow:8px 12px 0 var(--shadow);
+}
+#chat-panel[hidden]{display:none}
+
+.chat-panel-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 16px;border-bottom:1.5px solid var(--ink);background:var(--bone-deep);
+  flex:0 0 auto;
+}
+.chat-panel-title{
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+}
+.chat-panel-minimize{
+  background:none;border:none;cursor:pointer;color:var(--ink-soft);
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:20px;line-height:1;
+  padding:4px 8px;
+}
+.chat-panel-minimize:hover{color:var(--rust)}
+.chat-panel-minimize:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+
+#chat-messages{
+  flex:1 1 auto;overflow-y:auto;padding:16px;
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  display:flex;flex-direction:column;gap:14px;
+}
+.chat-intro{
+  color:var(--ink-soft);font-size:14.5px;line-height:1.55;font-style:italic;
+}
+.chat-turn{display:flex;flex-direction:column;gap:8px}
+.chat-bubble{
+  font-size:14.5px;line-height:1.55;padding:10px 13px;
+  border:1.5px solid var(--ink);max-width:92%;
+}
+.chat-bubble-question{
+  align-self:flex-end;background:var(--ink);color:var(--bone);
+  border-color:var(--ink);
+}
+.chat-bubble-answer{
+  align-self:flex-start;background:var(--bone-deep);color:var(--ink);
+}
+.chat-bubble-system{
+  align-self:stretch;max-width:none;background:none;border:1.5px dashed var(--line);
+  color:var(--ink-soft);font-style:italic;font-size:13.5px;
+}
+.chat-bubble-thinking{
+  align-self:flex-start;background:var(--bone-deep);color:var(--ink-soft);
+  font-style:italic;
+}
+.chat-bubble-thinking .chat-dot{
+  display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--ink-soft);
+  margin-right:3px;animation:chat-pulse 1.1s infinite ease-in-out;
+}
+.chat-bubble-thinking .chat-dot:nth-child(2){animation-delay:.15s}
+.chat-bubble-thinking .chat-dot:nth-child(3){animation-delay:.3s}
+@keyframes chat-pulse{0%,80%,100%{opacity:.25}40%{opacity:1}}
+
+.chat-pillrow{align-self:flex-start;max-width:92%}
+.chat-pillrow-label{
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:9.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--sediment);
+  display:block;margin-bottom:6px;
+}
+.chat-pills{display:flex;flex-wrap:wrap;gap:6px}
+.chat-pill{
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;font-weight:700;
+  padding:6px 11px;border:1.5px solid var(--ink);background:var(--bone);color:var(--ink);
+  cursor:pointer;transition:background .15s,color .15s;
+}
+.chat-pill:hover{background:var(--rust);border-color:var(--rust);color:var(--bone)}
+.chat-pill:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.chat-pillrow-suggestions .chat-pill{border-style:dashed}
+
+#chat-form{
+  display:flex;gap:8px;padding:12px;border-top:1.5px solid var(--ink);
+  background:var(--bone-deep);flex:0 0 auto;
+}
+#chat-input{
+  flex:1 1 auto;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:14.5px;padding:9px 11px;border:1.5px solid var(--ink);background:var(--bone);
+  color:var(--ink);
+}
+#chat-input:focus-visible{outline:2px solid var(--rust);outline-offset:1px}
+#chat-input:disabled{opacity:.6}
+#chat-send{
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:0 16px;cursor:pointer;
+  border:1.5px solid var(--ink);background:var(--ink);color:var(--bone);
+  transition:background .2s;
+}
+#chat-send:hover:not(:disabled){background:var(--rust);border-color:var(--rust)}
+#chat-send:disabled{opacity:.5;cursor:default}
+#chat-send:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+
+@media(max-width:768px){
+  #chat-panel{
+    right:12px;left:12px;bottom:80px;width:auto;max-width:none;
+    max-height:calc(100vh - var(--banner-h) - 96px);
+  }
+  #chat-launcher{right:16px;bottom:16px}
+}
 </style>
 </head>
 <body>
@@ -4148,6 +4280,34 @@
 
 <div class="scrim" id="scrim">
   <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+</div>
+
+<!-- Chat widget - new, additive only. See initChatWidget() in the main
+     script block, and /api/chat.js for the backend. -->
+<div id="chat-widget">
+  <button id="chat-launcher" aria-expanded="false" aria-controls="chat-panel" aria-label="Ask the DinoDex assistant">
+    <svg class="chat-launcher-chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9l-4.5 4V16H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"/>
+    </svg>
+    <svg class="chat-launcher-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <div id="chat-panel" role="dialog" aria-labelledby="chat-panel-title" hidden>
+    <div class="chat-panel-header">
+      <span id="chat-panel-title" class="chat-panel-title">Ask DinoDex</span>
+      <button id="chat-panel-minimize" class="chat-panel-minimize" aria-label="Minimize chat">&#8722;</button>
+    </div>
+    <div id="chat-messages" aria-live="polite">
+      <p class="chat-intro">Ask about any dinosaur or idea on this site - or just tell me what you're curious about, and I'll point you to it.</p>
+    </div>
+    <form id="chat-form" autocomplete="off">
+      <label for="chat-input" class="sr-only">Your question</label>
+      <input type="text" id="chat-input" placeholder="Ask a question&hellip;" maxlength="500">
+      <button type="submit" id="chat-send">Send</button>
+    </form>
+  </div>
 </div>
 
 </div><!-- /#main-content -->
@@ -7561,6 +7721,232 @@ function initHpwCompleteness() {
       window.dispatchEvent(new Event('resize'));
     }
   });
+})();
+
+/* ============================================================
+   CHAT WIDGET - new, additive only
+   Reuses: goToView(), openModal(), openPersonModal(), window.rdOpenCaseFile,
+   glExpandTerm(). Talks to /api/chat (see api/chat.js).
+   ============================================================ */
+(function initChatWidget(){
+
+  var widget    = document.getElementById('chat-widget');
+  var launcher  = document.getElementById('chat-launcher');
+  var panel     = document.getElementById('chat-panel');
+  var minimizeBtn = document.getElementById('chat-panel-minimize');
+  var messagesEl  = document.getElementById('chat-messages');
+  var form      = document.getElementById('chat-form');
+  var input     = document.getElementById('chat-input');
+  var sendBtn   = document.getElementById('chat-send');
+
+  var conversation = []; // in-memory only: [{question, answer}, ...] - cleared on full page reload
+  var inFlight = false;
+  var rateLimited = false;
+
+  /* ---- Step 3: one-time ?testkey= URL param, remembered for the session ---- */
+  (function initTestKey(){
+    var params = new URLSearchParams(window.location.search);
+    var fromUrl = params.get('testkey');
+    if(fromUrl){
+      try { sessionStorage.setItem('dinodex_chat_test_key', fromUrl); } catch(e){ /* sessionStorage unavailable - degrade to no bypass */ }
+    }
+  })();
+  function getTestKey(){
+    try { return sessionStorage.getItem('dinodex_chat_test_key'); } catch(e){ return null; }
+  }
+
+  /* ---- open / minimize (never resets conversation - see chat-widget CSS/markup notes) ---- */
+  function openPanel(){
+    panel.hidden = false;
+    widget.classList.add('open');
+    launcher.setAttribute('aria-expanded','true');
+    input.focus();
+    if(rateLimited){
+      // "Disable the input until the panel is closed and reopened" - the
+      // server remains the authority on the actual daily cap; this only
+      // resets the widget's own UI-level lock so a visitor isn't stuck
+      // staring at a disabled box in a later session/day.
+      rateLimited = false;
+      setInputDisabled(false);
+    }
+  }
+  function minimizePanel(){
+    panel.hidden = true;
+    widget.classList.remove('open');
+    launcher.setAttribute('aria-expanded','false');
+    launcher.focus();
+  }
+
+  launcher.addEventListener('click', function(){
+    if(panel.hidden) openPanel(); else minimizePanel();
+  });
+  minimizeBtn.addEventListener('click', minimizePanel);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !panel.hidden) minimizePanel();
+  });
+
+  /* ---- rendering helpers ---- */
+  function scrollToBottom(){
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+  function appendBubble(kind, text){
+    var el = document.createElement('div');
+    el.className = 'chat-bubble chat-bubble-' + kind;
+    el.textContent = text;
+    messagesEl.appendChild(el);
+    scrollToBottom();
+    return el;
+  }
+  function appendThinkingBubble(){
+    var el = document.createElement('div');
+    el.className = 'chat-bubble chat-bubble-thinking';
+    el.innerHTML = '<span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span>';
+    messagesEl.appendChild(el);
+    scrollToBottom();
+    return el;
+  }
+  function appendPillRow(label, items, extraClass){
+    if(!items || !items.length) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'chat-pillrow' + (extraClass ? ' ' + extraClass : '');
+    var labelEl = document.createElement('span');
+    labelEl.className = 'chat-pillrow-label';
+    labelEl.textContent = label;
+    var pills = document.createElement('div');
+    pills.className = 'chat-pills';
+    items.forEach(function(item){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'chat-pill';
+      btn.textContent = item.label;
+      if(item.reason) btn.title = item.reason;
+      btn.addEventListener('click', function(){ dispatchPillClick(item.sourceType, item.id); });
+      pills.appendChild(btn);
+    });
+    wrap.appendChild(labelEl);
+    wrap.appendChild(pills);
+    messagesEl.appendChild(wrap);
+    scrollToBottom();
+  }
+
+  /* ---- click-through dispatch, single small function rather than
+     scattered inline conditionals ---- */
+  function dispatchPillClick(sourceType, id){
+    minimizePanel(); // minimize, not reset - conversation stays intact for when they come back
+    switch(sourceType){
+      case 'species':
+        if(typeof openModal === 'function') openModal(id);
+        break;
+      case 'fossil-hunter':
+        if(typeof openPersonModal === 'function') openPersonModal(id);
+        break;
+      case 'research-case':
+        goToView('research-desk');
+        if(window.rdOpenCaseFile) window.rdOpenCaseFile(id);
+        break;
+      case 'glossary':
+        goToView('glossary');
+        // glExpandTerm() is a toggle, shared with the glossary's own manual
+        // browsing UI - it must stay a toggle there. So check the card's
+        // current state first (same class glExpandTerm itself reads) and
+        // only call it when the term isn't already open, otherwise a
+        // second click on the same suggestion would close the term instead
+        // of leaving the visitor looking at what they just asked about.
+        // Still expands but does not scroll to it yet - a pre-existing
+        // site limitation (glScrollToTerm is currently just an alias for
+        // glExpandTerm), not something being fixed here.
+        var glCard = document.getElementById('gl-card-' + id);
+        var glAlreadyOpen = glCard && glCard.classList.contains('gl-open');
+        if(!glAlreadyOpen && typeof glExpandTerm === 'function') glExpandTerm(id);
+        break;
+      case 'last-day':
+        goToView('last-day');
+        break;
+      case 'hpw':
+      case 'anatomy-101':
+      case 'mass-extinctions':
+      case 'mesozoic-ecosystems':
+      case 'theropods-to-birds':
+        goToView(id); // id is already the correct view name for these sourceTypes
+        break;
+      default:
+        break;
+    }
+  }
+
+  /* ---- send flow ---- */
+  function setInputDisabled(disabled){
+    input.disabled = disabled;
+    sendBtn.disabled = disabled;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(inFlight || rateLimited) return;
+    var question = input.value.trim();
+    if(!question) return;
+    sendMessage(question);
+  });
+
+  function sendMessage(question){
+    inFlight = true;
+    setInputDisabled(true);
+    input.value = '';
+    appendBubble('question', question);
+    var thinking = appendThinkingBubble();
+
+    var historyPayload = conversation.slice(-6).map(function(turn){
+      return { question: turn.question, answer: turn.answer };
+    });
+    var headers = { 'Content-Type': 'application/json' };
+    var testKey = getTestKey();
+    if(testKey) headers['x-test-key'] = testKey;
+
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ question: question, history: historyPayload })
+    }).then(function(res){
+      return res.json().then(function(data){ return data; });
+    }).then(function(data){
+      thinking.remove();
+      handleResponse(question, data);
+    }).catch(function(){
+      thinking.remove();
+      appendBubble('system', "Something went wrong reaching the bot - worth trying again in a moment.");
+    }).then(function(){
+      inFlight = false;
+      if(!rateLimited) setInputDisabled(false);
+      input.focus();
+    });
+  }
+
+  function handleResponse(question, data){
+    if(!data || typeof data !== 'object'){
+      appendBubble('system', "Something went wrong reaching the bot - worth trying again in a moment.");
+      return;
+    }
+    if(data.status === 'rate_limited'){
+      rateLimited = true;
+      appendBubble('system', data.message);
+      setInputDisabled(true); // stays disabled until the panel is closed and reopened
+      return;
+    }
+    if(data.status === 'error'){
+      appendBubble('system', data.message);
+      return;
+    }
+    // status === 'ok'
+    if(data.answer){
+      appendBubble('answer', data.answer);
+      conversation.push({ question: question, answer: data.answer });
+    }
+    // Suggestions/citations can stand alone for pure interest-expression
+    // messages (answer === null) - render them either way.
+    appendPillRow('Sources:', data.citations);
+    appendPillRow('You might also like:', data.suggestions, 'chat-pillrow-suggestions');
+  }
+
 })();
 </script>
 </body>

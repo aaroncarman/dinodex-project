@@ -72,10 +72,33 @@ function push(chunk) {
   chunks.push(chunk);
 }
 
+/* ---- citeId -> canonical display-name lookup, built in the same pass ----
+   The model shouldn't have to reproduce these - the source files already
+   have each entity's real name, so we capture it here once and let the
+   chatbot backend attach it server-side instead of trusting the model to
+   restate it correctly every time.
+
+   Nested by sourceType rather than a single flat { citeId: label } object,
+   because citeId strings are NOT globally unique across source files (e.g.
+   species.js and research-cases.js both use the id "spinosaurus" for their
+   own, unrelated entries). Nesting means each sourceType keeps its own
+   namespace, so "spinosaurus" under "species" and "spinosaurus" under
+   "research-case" can never overwrite each other - the ambiguity is
+   resolved by the caller knowing which sourceType it's asking about
+   (api/chat.js resolves labels from the specific chunks it retrieved,
+   which always carry sourceType alongside citeId). */
+const labels = {};
+function setLabel(sourceType, citeId, value) {
+  if (!labels[sourceType]) labels[sourceType] = {};
+  labels[sourceType][citeId] = value;
+}
+
 /* ============================================================
    SPECIES.js
    ============================================================ */
 for (const s of ctx.SPECIES) {
+  setLabel('species', s.id, s.name);
+
   push({
     id: `species:${s.id}:profile`,
     sourceFile: 'species.js',
@@ -131,6 +154,8 @@ for (const s of ctx.SPECIES) {
    GLOSSARY.js
    ============================================================ */
 for (const g of ctx.GLOSSARY_TERMS) {
+  setLabel('glossary', g.id, g.term);
+
   push({
     id: `glossary:${g.id}`,
     sourceFile: 'glossary.js',
@@ -146,6 +171,8 @@ for (const g of ctx.GLOSSARY_TERMS) {
    RESEARCH-CASES.js
    ============================================================ */
 for (const c of ctx.RESEARCH_CASES) {
+  setLabel('research-case', c.id, c.title);
+
   push({
     id: `research-case:${c.id}:overview`,
     sourceFile: 'research-cases.js',
@@ -197,6 +224,8 @@ for (const c of ctx.RESEARCH_CASES) {
    FOSSIL-HUNTERS.js
    ============================================================ */
 for (const p of ctx.PEOPLE) {
+  setLabel('fossil-hunter', p.id, p.name);
+
   push({
     id: `fossil-hunter:${p.id}`,
     sourceFile: 'fossil-hunters.js',
@@ -216,6 +245,8 @@ for (const p of ctx.PEOPLE) {
 /* ============================================================
    LAST-DAY.js — one chunk per chapter
    ============================================================ */
+setLabel('last-day', 'last-day', 'The Last Day');
+
 for (const ch of ctx.LAST_DAY_CHAPTERS) {
   push({
     id: `last-day:${ch.id}`,
@@ -237,6 +268,14 @@ for (const ch of ctx.LAST_DAY_CHAPTERS) {
    HPW-CONTENT.js — already pre-chunked in Phase 0a
    ============================================================ */
 for (const item of ctx.HPW_CONTENT) {
+  // Several sections share the same citeId (item.view) since goToView()
+  // lands on the whole six-part view, not a specific section anchor - so
+  // this is one label per view, not per section, within the "hpw"
+  // sourceType namespace. First heading encountered (file order) wins; it
+  // is more specific than the six-word sidebar tab name (e.g. "How a
+  // fossil forms" vs. "The Record").
+  if (!labels.hpw || !labels.hpw[item.view]) setLabel('hpw', item.view, item.heading);
+
   push({
     id: `hpw:${item.id}`,
     sourceFile: 'hpw-content.js',
@@ -251,6 +290,7 @@ for (const item of ctx.HPW_CONTENT) {
 /* ============================================================
    ANATOMY-101.js — loose ANAT_* vars, correction-vs-hedge applied
    ============================================================ */
+setLabel('anatomy-101', 'anatomy-101', 'Anatomy 101');
 {
   const A = ctx;
   push({
@@ -323,6 +363,7 @@ for (const item of ctx.HPW_CONTENT) {
 /* ============================================================
    MASS-EXTINCTIONS.js — loose MASSEXT_* vars
    ============================================================ */
+setLabel('mass-extinctions', 'mass-extinctions', 'Mass Extinctions');
 {
   const M = ctx;
   push({
@@ -398,6 +439,7 @@ for (const item of ctx.HPW_CONTENT) {
 /* ============================================================
    MESOZOIC-ECOSYSTEMS.js — loose ME2_* vars
    ============================================================ */
+setLabel('mesozoic-ecosystems', 'mesozoic-ecosystems', 'Mesozoic Ecosystems');
 {
   const E = ctx;
   push({
@@ -510,6 +552,7 @@ for (const item of ctx.HPW_CONTENT) {
 /* ============================================================
    THEROPODS-TO-BIRDS.js — loose TTB_* vars
    ============================================================ */
+setLabel('theropods-to-birds', 'theropods-to-birds', 'Theropods to Birds');
 {
   const T = ctx;
   push({
@@ -632,6 +675,39 @@ for (const c of chunks) {
   if (!ok) brokenCiteIds.push(`${c.id} -> citeId "${c.citeId}"`);
 }
 
+/* citeId strings are NOT globally unique across source files (e.g. a
+   species and a research-case can share the same slug, like
+   "spinosaurus"). That used to be a real landmine when labels were kept in
+   one flat { citeId: label } map - whichever source ran last would
+   silently overwrite the other's label. Nesting labels one level deeper by
+   sourceType (see setLabel() above) removes the landmine at the source:
+   "spinosaurus" under "species" and "spinosaurus" under "research-case"
+   are different keys in different objects, so they can never collide in
+   cite-labels.json itself, and api/chat.js resolves labels per-request
+   from the specific (sourceType, citeId) pairs of the chunks it actually
+   retrieved - never from a bare citeId alone.
+   This check still detects every citeId that appears under more than one
+   sourceType, purely as an informational note for future maintainers (it's
+   no longer something a build failure needs to guard against). */
+const idCollisions = [];
+const citeIdToOwners = {};
+for (const [sourceType, byId] of Object.entries(labels)) {
+  for (const citeId of Object.keys(byId)) {
+    (citeIdToOwners[citeId] = citeIdToOwners[citeId] || []).push(sourceType);
+  }
+}
+for (const [citeId, owners] of Object.entries(citeIdToOwners)) {
+  if (owners.length > 1) {
+    const ownLabelsByType = Object.fromEntries(owners.map(o => [o, labels[o][citeId]]));
+    idCollisions.push({
+      id: citeId,
+      ownLabelsByType,
+      structurallyResolved: true, // nested lookup means no cross-contamination is possible any more
+      currentlyBenign: new Set(Object.values(ownLabelsByType)).size === 1
+    });
+  }
+}
+
 const emptyText = chunks.filter(c => !c.text || !c.text.trim());
 
 const bySourceType = {};
@@ -645,7 +721,17 @@ const taggedChunks = chunks
   .filter(c => c.confidence === 'moderate' || c.confidence === 'low')
   .map(c => ({ id: c.id, confidence: c.confidence, title: c.title }));
 
+/* every unique (sourceType, citeId) pair that actually appears in
+   content-index.json must resolve to a label - same category of problem
+   as an unresolved crossRef */
+const uniqueSourceCiteIdPairs = [...new Set(chunks.map(c => `${c.sourceType} ${c.citeId}`))]
+  .map(key => { const [sourceType, citeId] = key.split(' '); return { sourceType, citeId }; });
+const missingLabels = uniqueSourceCiteIdPairs
+  .filter(({ sourceType, citeId }) => !labels[sourceType] || !labels[sourceType][citeId])
+  .map(({ sourceType, citeId }) => `${sourceType}:${citeId}`);
+
 fs.writeFileSync(path.join(ROOT, 'content-index.json'), JSON.stringify(chunks, null, 2));
+fs.writeFileSync(path.join(ROOT, 'cite-labels.json'), JSON.stringify(labels, null, 2));
 
 console.log('=== BUILD REPORT ===');
 console.log('Total chunks:', chunks.length);
@@ -654,4 +740,8 @@ console.log('By confidence:', byConfidence);
 console.log('Broken citeIds:', brokenCiteIds.length ? brokenCiteIds : 'none');
 console.log('Empty-text chunks (should be none, already skipped at push-time):', emptyText.length);
 console.log('Moderate/low tagged chunks:', taggedChunks.length);
+console.log('Unique (sourceType, citeId) pairs in content-index.json:', uniqueSourceCiteIdPairs.length);
+console.log('Unique citeIds in cite-labels.json, by sourceType:', Object.fromEntries(Object.entries(labels).map(([k, v]) => [k, Object.keys(v).length])));
+console.log('(sourceType, citeId) pairs with no resolvable label:', missingLabels.length ? missingLabels : 'none');
+console.log('citeId strings shared across more than one sourceType (informational only - see comment above; nested lookup means these cannot cross-contaminate):', idCollisions.length ? idCollisions : 'none');
 console.log(JSON.stringify(taggedChunks, null, 2));

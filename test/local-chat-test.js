@@ -77,12 +77,20 @@ async function invoke(handlerModule, reqOpts) {
 async function runOfflineTests() {
   console.log('\n=== OFFLINE TESTS (mocked Upstash + Anthropic) ===');
 
-  // Provide fake env vars so the handler doesn't hit the
-  // "not configured" fail-safe path during these offline tests.
-  process.env.ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || 'test-fake-anthropic-key';
-  process.env.UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL || 'https://fake-upstash.example.com';
-  process.env.UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || 'fake-upstash-token';
-  process.env.CHATBOT_TEST_KEY = process.env.CHATBOT_TEST_KEY || 'fake-test-key-for-offline-run';
+  // Force fake env vars for the *duration of this function only*, even if
+  // .env.local supplies real ones - otherwise the mocked fetch below (which
+  // only intercepts requests to fake-upstash.example.com) would silently let
+  // real credentials fall through to realFetch() and hit production Upstash.
+  const realEnv = {
+    ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+    UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
+    UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+    CHATBOT_TEST_KEY: process.env.CHATBOT_TEST_KEY
+  };
+  process.env.ANTHROPIC_API_KEY = 'test-fake-anthropic-key';
+  process.env.UPSTASH_REDIS_REST_URL = 'https://fake-upstash.example.com';
+  process.env.UPSTASH_REDIS_REST_TOKEN = 'fake-upstash-token';
+  process.env.CHATBOT_TEST_KEY = 'fake-test-key-for-offline-run';
 
   // In-memory fake Redis so INCR/EXPIRE behave like the real thing.
   const fakeRedis = new Map();
@@ -110,7 +118,10 @@ async function runOfflineTests() {
 
     if (u.includes('api.anthropic.com')) {
       const parsedBody = JSON.parse(opts.body);
-      const userMsg = parsedBody.messages[0].content;
+      // The final message is always the current question + passages block,
+      // regardless of how many history turns precede it - route on that,
+      // not messages[0] (which is only correct when there's no history).
+      const userMsg = parsedBody.messages[parsedBody.messages.length - 1].content;
       // Simulate three distinct Claude behaviours based on what the
       // handler actually sent it, so we can test all three paths from
       // the validation checklist without real API calls.
@@ -118,6 +129,12 @@ async function runOfflineTests() {
         return { ok: true, json: async () => ({ content: [{ text: 'not valid json {{{' }] }) };
       }
       if (userMsg.includes('Retrieved passages: none')) {
+        // The mock model still tries to suggest a page (id: 'coelophysis')
+        // even though nothing was retrieved for this question - which is
+        // exactly the scenario the request-scoped label resolver should
+        // catch: 'coelophysis' is a perfectly real site citeId, but it was
+        // NOT among the (zero) passages actually retrieved for THIS
+        // request, so it must still be dropped.
         return {
           ok: true,
           json: async () => ({
@@ -125,7 +142,23 @@ async function runOfflineTests() {
               answer: "That's not something this site covers yet.",
               inScope: false,
               citations: [],
-              suggestions: [{ id: 'dinodex', label: 'DinoDex', reason: 'Browse the full species field guide instead.' }]
+              suggestions: [{ id: 'coelophysis', reason: 'Browse the full species field guide instead.' }]
+            }) }]
+          })
+        };
+      }
+      if (userMsg.includes('I really like pterosaurs')) {
+        // 'pteranodon' is genuinely retrieved for this question (confirmed
+        // against the real search index), so this exercises the normal
+        // success path rather than the "nothing retrieved" edge case above.
+        return {
+          ok: true,
+          json: async () => ({
+            content: [{ text: JSON.stringify({
+              answer: null,
+              inScope: true,
+              citations: [],
+              suggestions: [{ id: 'pteranodon', reason: 'A well-known flying reptile with a very different anatomy to a dinosaur.' }]
             }) }]
           })
         };
@@ -137,8 +170,8 @@ async function runOfflineTests() {
           content: [{ text: '```json\n' + JSON.stringify({
             answer: 'Tyrannosaurus rex is known from more than forty identified specimens.',
             inScope: true,
-            citations: [{ id: 'tyrannosaurus', label: 'Tyrannosaurus rex' }],
-            suggestions: [{ id: 'hpw-record', label: 'The Record', reason: 'Explains why specimen completeness varies so much between species.' }]
+            citations: [{ id: 'tyrannosaurus' }],
+            suggestions: [{ id: 'hpw-record', reason: 'Explains why specimen completeness varies so much between species.' }]
           }) + '\n```' }]
         })
       };
@@ -187,6 +220,11 @@ async function runOfflineTests() {
     check('  ...answer is a non-empty string', typeof body.answer === 'string' && body.answer.length > 0);
     check('  ...inScope true', body.inScope === true);
     check('  ...has at least one citation', Array.isArray(body.citations) && body.citations.length > 0);
+    check('  ...citation label came from cite-labels.json, not the model (model sent no label)',
+      body.citations[0] && body.citations[0].label === 'Tyrannosaurus rex', JSON.stringify(body.citations));
+    check('  ...citation carries sourceType for the widget\'s click-through dispatch', body.citations[0] && body.citations[0].sourceType === 'species', JSON.stringify(body.citations));
+    check('  ...suggestion label came from cite-labels.json too', body.suggestions[0] && body.suggestions[0].label === 'How a fossil forms', JSON.stringify(body.suggestions));
+    check('  ...suggestion carries sourceType too', body.suggestions[0] && body.suggestions[0].sourceType === 'hpw', JSON.stringify(body.suggestions));
     check('  ...message is null', body.message === null);
   }
 
@@ -199,6 +237,40 @@ async function runOfflineTests() {
     check('Out-of-scope question still returns HTTP 200', status === 200, `got ${status}`);
     check('  ...inScope false', body.inScope === false);
     check('  ...still status "ok" (model handled it, not an error)', body.status === 'ok');
+    // Nothing was actually retrieved for this question (confirmed against
+    // the real search index), so even though the mock model suggested a
+    // perfectly real site citeId ('coelophysis'), it wasn't among the
+    // passages retrieved for THIS request and must still be dropped - the
+    // request-scoped resolver has nothing to resolve it against.
+    check('  ...suggestion with no matching retrieved passage is dropped, not shown with a stale/global label', body.suggestions.length === 0, JSON.stringify(body.suggestions));
+  }
+
+  // --- model hallucinates a citeId that doesn't exist in the site's content ---
+  {
+    const realFetch2 = global.fetch;
+    global.fetch = async function (url, opts) {
+      if (String(url).includes('api.anthropic.com')) {
+        return { ok: true, json: async () => ({ content: [{ text: JSON.stringify({
+          answer: 'Test answer.',
+          inScope: true,
+          citations: [{ id: 'tyrannosaurus' }, { id: 'this-citeid-does-not-exist' }],
+          suggestions: [{ id: 'this-one-also-does-not-exist', reason: 'bogus' }]
+        }) }] }) };
+      }
+      return realFetch2(url, opts);
+    };
+    // Reuse a question confirmed to actually retrieve a tyrannosaurus chunk,
+    // so requestLabels genuinely contains 'tyrannosaurus' and this test
+    // proves real-citeId-kept vs. hallucinated-citeId-dropped, rather than
+    // both being dropped simply because nothing was retrieved at all.
+    const { status, body } = await invoke(handler, {
+      body: { question: 'How many Tyrannosaurus rex specimens are known?' },
+      headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+    });
+    check('Hallucinated citeId: response still 200', status === 200, `got ${status}`);
+    check('  ...real citeId kept, with its label attached', body.citations.length === 1 && body.citations[0].id === 'tyrannosaurus' && body.citations[0].label === 'Tyrannosaurus rex', JSON.stringify(body.citations));
+    check('  ...unresolvable citeId silently dropped, not shipped with a missing/blank label', body.suggestions.length === 0, JSON.stringify(body.suggestions));
+    global.fetch = realFetch2;
   }
 
   // --- interest-only message, no direct question ---
@@ -209,6 +281,169 @@ async function runOfflineTests() {
     });
     check('Interest-only message returns HTTP 200', status === 200, `got ${status}`);
     check('  ...has suggestions', Array.isArray(body.suggestions) && body.suggestions.length > 0);
+    check('  ...suggestion label resolved from the actually-retrieved chunk', body.suggestions[0] && body.suggestions[0].label === 'Pteranodon', JSON.stringify(body.suggestions));
+  }
+
+  // ============================================================
+  // MULTI-TURN TESTS
+  // ============================================================
+
+  // --- no history at all (undefined, not even an empty array) - old
+  // stateless behaviour must still work unchanged ---
+  {
+    const { status, body } = await invoke(handler, {
+      body: { question: 'How many Tyrannosaurus rex specimens are known?' }, // no "history" key at all
+      headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+    });
+    check('No "history" field at all: still HTTP 200, unchanged behaviour', status === 200, `got ${status}`);
+    check('  ...status "ok", citation label attached as before', body.status === 'ok' && body.citations[0] && body.citations[0].label === 'Tyrannosaurus rex', JSON.stringify(body));
+  }
+
+  // --- sanitizeHistory() unit checks: cap + drop malformed entries ---
+  {
+    const { sanitizeHistory } = handler._internal;
+    const eightValidTurns = Array.from({ length: 8 }, (_, i) => ({ question: `Q${i}`, answer: `A${i}` }));
+    const capped = sanitizeHistory(eightValidTurns);
+    check('sanitizeHistory caps 8 valid entries down to the last 6', capped.length === 6 && capped[0].question === 'Q2' && capped[5].question === 'Q7', JSON.stringify(capped));
+
+    const messy = [
+      { question: 'Real question', answer: 'Real answer' },
+      { question: 'Missing answer field' }, // dropped
+      { question: 42, answer: 'Non-string question' }, // dropped
+      { question: '', answer: 'Empty question string' }, // dropped
+      null, // dropped
+      'just a string, not an object', // dropped
+      { question: '   ', answer: 'Whitespace-only question' }, // dropped
+      { question: 'Another real one', answer: 'Another real answer' }
+    ];
+    const sanitizedMessy = sanitizeHistory(messy);
+    check('sanitizeHistory drops every malformed entry, keeps only the 2 well-formed ones',
+      sanitizedMessy.length === 2 && sanitizedMessy[0].question === 'Real question' && sanitizedMessy[1].question === 'Another real one',
+      JSON.stringify(sanitizedMessy));
+
+    check('sanitizeHistory(undefined) returns []', Array.isArray(sanitizeHistory(undefined)) && sanitizeHistory(undefined).length === 0);
+    check('sanitizeHistory(non-array) returns []', Array.isArray(sanitizeHistory('not an array')) && sanitizeHistory('not an array').length === 0);
+  }
+
+  // --- oversized/malformed history sent in an actual request: confirm the
+  // server caps and sanitises it before it ever reaches Anthropic, rather
+  // than trusting the client's own array as-is ---
+  {
+    const sharedMockFetch = global.fetch;
+    let capturedMessages = null;
+    global.fetch = async function (url, opts) {
+      if (String(url).includes('api.anthropic.com')) {
+        capturedMessages = JSON.parse(opts.body).messages;
+        return { ok: true, json: async () => ({ content: [{ text: JSON.stringify({
+          answer: 'Fine.', inScope: true, citations: [], suggestions: []
+        }) }] }) };
+      }
+      return sharedMockFetch(url, opts);
+    };
+    const oversizedHistory = Array.from({ length: 12 }, (_, i) => ({ question: `Old question ${i}`, answer: `Old answer ${i}` }));
+    oversizedHistory.push({ question: 'malformed, no answer field' }); // should be dropped entirely, not just left un-capped
+    const { status } = await invoke(handler, {
+      body: { question: 'Current question.', history: oversizedHistory },
+      headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+    });
+    check('Oversized/malformed history request: still HTTP 200', status === 200, `got ${status}`);
+    // 12 valid turns capped to 6 -> 12 messages (6 user + 6 assistant) + 1 final user message = 13
+    check('  ...only the last 6 (valid) history turns reached Anthropic, not all 12+1',
+      capturedMessages.length === 13, `got ${capturedMessages ? capturedMessages.length : 'null'} messages: ${JSON.stringify(capturedMessages)}`);
+    check('  ...oldest surviving history turn is "Old question 6" (0-5 were trimmed off)',
+      capturedMessages[0].content === 'Old question 6', capturedMessages[0].content);
+    check('  ...malformed trailing entry (no answer) was dropped, not passed through as garbage',
+      !capturedMessages.some(m => m.content === 'malformed, no answer field'));
+    global.fetch = sharedMockFetch;
+  }
+
+  // --- genuine multi-turn structure sent to Anthropic, plus the
+  // previous-question search-weighting improvement for vague follow-ups ---
+  {
+    // Confirmed against the real search index: "What about its arms?" alone
+    // does not retrieve anything about Tyrannosaurus, but folding in the
+    // previous turn's question as lower-weighted context does.
+    const aloneResults = handler._internal.searchChunks('What about its arms?');
+    const withContextResults = handler._internal.searchChunks('What about its arms?', 'Tell me about Tyrannosaurus.');
+    check('Vague follow-up alone does not retrieve Tyrannosaurus content', !aloneResults.some(c => c.citeId === 'tyrannosaurus'), JSON.stringify(aloneResults.map(c => c.citeId)));
+    check('Same follow-up WITH the previous question as context does retrieve it', withContextResults.some(c => c.citeId === 'tyrannosaurus'), JSON.stringify(withContextResults.map(c => c.citeId)));
+
+    const sharedMockFetch = global.fetch;
+    let capturedBody = null;
+    global.fetch = async function (url, opts) {
+      if (String(url).includes('api.anthropic.com')) {
+        capturedBody = JSON.parse(opts.body);
+        return { ok: true, json: async () => ({ content: [{ text: JSON.stringify({
+          answer: 'Its forelimbs were short, with two functional fingers.', inScope: true, citations: [{ id: 'tyrannosaurus' }], suggestions: []
+        }) }] }) };
+      }
+      return sharedMockFetch(url, opts);
+    };
+    const { status, body } = await invoke(handler, {
+      body: {
+        question: 'What about its arms?',
+        history: [{ question: 'Tell me about Tyrannosaurus.', answer: 'Tyrannosaurus rex was a large bipedal theropod from the Late Cretaceous.' }]
+      },
+      headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+    });
+    check('Follow-up request: HTTP 200', status === 200, `got ${status}`);
+    check('  ...answer is coherent with the prior turn (mock stands in for a real grounded answer)', body.answer && body.answer.toLowerCase().includes('forelimb'));
+    check('  ...system prompt still sent in full, unchanged, every call', capturedBody.system === handler._internal.SYSTEM_PROMPT);
+    check('  ...messages: [prior user, prior assistant, current user] - genuine multi-turn structure, not one flattened block',
+      capturedBody.messages.length === 3 &&
+      capturedBody.messages[0].role === 'user' && capturedBody.messages[0].content === 'Tell me about Tyrannosaurus.' &&
+      capturedBody.messages[1].role === 'assistant' && capturedBody.messages[1].content === 'Tyrannosaurus rex was a large bipedal theropod from the Late Cretaceous.' &&
+      capturedBody.messages[2].role === 'user' && capturedBody.messages[2].content.includes('What about its arms?'),
+      JSON.stringify(capturedBody.messages));
+    check('  ...prior assistant turn is plain text, not the JSON envelope, so the model is not reading its own past output-format back at itself',
+      !capturedBody.messages[1].content.trim().startsWith('{'));
+    global.fetch = sharedMockFetch;
+  }
+
+  // --- NEW: cross-sourceType citeId collision (spinosaurus is the real,
+  // currently-existing example) resolved correctly with no cross-
+  // contamination, using the actual buildRequestLabels()/searchChunks()
+  // logic rather than a further mock ---
+  {
+    const { searchChunks, buildRequestLabels } = handler._internal;
+
+    // Construct a synthetic "retrieved passages" set the way a real request
+    // might: one species chunk and one research-case chunk that legitimately
+    // share the bare citeId "spinosaurus" (confirmed to actually exist in
+    // cite-labels.json under both sourceTypes with the same real name).
+    const speciesChunk = searchChunks('Was Spinosaurus a swimmer?').find(c => c.sourceType === 'species' && c.citeId === 'spinosaurus');
+    const caseChunk = searchChunks('Was Spinosaurus a swimmer?').find(c => c.sourceType === 'research-case' && c.citeId === 'spinosaurus');
+    check('Setup: both a species and a research-case "spinosaurus" chunk exist to retrieve', Boolean(speciesChunk) && Boolean(caseChunk));
+
+    const requestLabels = buildRequestLabels([speciesChunk, caseChunk].filter(Boolean));
+    check('  ...request-scoped label for "spinosaurus" resolves (no cross-contamination possible - both sourceTypes happen to share the same real name here)',
+      requestLabels.spinosaurus && requestLabels.spinosaurus.label === 'Spinosaurus', JSON.stringify(requestLabels));
+
+    // Now prove the model referencing only ONE of the two ambiguous ids
+    // still resolves correctly and doesn't spuriously pull in the other.
+    // Save/restore the shared mock exactly like the hallucinated-citeId
+    // block above, so later tests (malformed JSON, rate-limit bypass
+    // checks) keep using the original shared mock, not this one-off.
+    const sharedMockFetch = global.fetch;
+    global.fetch = async function (url, opts) {
+      if (String(url).includes('api.anthropic.com')) {
+        return { ok: true, json: async () => ({ content: [{ text: JSON.stringify({
+          answer: 'Spinosaurus may have been semi-aquatic.',
+          inScope: true,
+          citations: [{ id: 'spinosaurus' }],
+          suggestions: []
+        }) }] }) };
+      }
+      return sharedMockFetch(url, opts); // Upstash (and anything else) still goes through the real shared mock
+    };
+    const { status, body } = await invoke(handler, {
+      body: { question: 'Was Spinosaurus a swimmer?' },
+      headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+    });
+    check('Collision question end-to-end: HTTP 200', status === 200, `got ${status}`);
+    check('  ...single citation resolves to the correct shared label, no duplication or cross-contamination',
+      body.citations.length === 1 && body.citations[0].id === 'spinosaurus' && body.citations[0].label === 'Spinosaurus', JSON.stringify(body.citations));
+    global.fetch = sharedMockFetch;
   }
 
   // --- malformed JSON from Claude -> error envelope, not a crash ---
@@ -259,6 +494,12 @@ async function runOfflineTests() {
   }
 
   global.fetch = realFetch;
+
+  // restore real credentials (if any) so a subsequent live test uses them
+  for (const [key, value] of Object.entries(realEnv)) {
+    if (value === undefined) delete process.env[key];
+    else process.env[key] = value;
+  }
 }
 
 /* ============================================================
@@ -279,6 +520,32 @@ async function runLiveTest() {
   check('Live call returns HTTP 200', status === 200, `got ${status}`);
   check('Live call status "ok"', body.status === 'ok');
   check('Live call produced a non-empty answer', typeof body.answer === 'string' && body.answer.length > 0);
+
+  console.log('\n--- LIVE two-turn follow-up conversation ---');
+  const turn1Question = 'Tell me about Coelophysis.';
+  const { status: s1, body: b1 } = await invoke(handler, {
+    body: { question: turn1Question },
+    headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+  });
+  console.log('  turn 1 question:', turn1Question);
+  console.log('  turn 1 answer:', b1.answer);
+  check('Live turn 1: HTTP 200 with a real answer', s1 === 200 && typeof b1.answer === 'string' && b1.answer.length > 0);
+
+  const turn2Question = 'Did it hunt in groups?'; // deliberately pronoun-based, no species name
+  const { status: s2, body: b2 } = await invoke(handler, {
+    body: {
+      question: turn2Question,
+      history: [{ question: turn1Question, answer: b1.answer }]
+    },
+    headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+  });
+  console.log('  turn 2 question (pronoun-based follow-up):', turn2Question);
+  console.log('  turn 2 answer:', b2.answer);
+  console.log('  turn 2 citations:', JSON.stringify(b2.citations));
+  check('Live turn 2: HTTP 200 with a real answer', s2 === 200 && typeof b2.answer === 'string' && b2.answer.length > 0);
+  check('Live turn 2 answer stayed on Coelophysis, not a cold/generic answer ("it" resolved via history)',
+    /coelophysis/i.test(b2.answer) || (b2.citations || []).some(c => c.id === 'coelophysis'),
+    `answer: ${b2.answer} | citations: ${JSON.stringify(b2.citations)}`);
 }
 
 (async () => {
@@ -294,5 +561,8 @@ async function runLiveTest() {
   }
 
   console.log(`\n=== RESULT: ${passed} passed, ${failed} failed ===`);
-  process.exit(failed ? 1 : 0);
+  // Set exitCode rather than forcing process.exit() - a forced exit can race
+  // an open fetch keep-alive socket (from the real Anthropic/Upstash calls
+  // above) and trip a benign libuv teardown assertion on some platforms.
+  process.exitCode = failed ? 1 : 0;
 })();

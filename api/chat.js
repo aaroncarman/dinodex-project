@@ -21,6 +21,7 @@ const DAILY_LIMIT = 10;
 const MIN_SCORE = 3; // a single generic shared word (e.g. "world", "good") shouldn't count as relevant
 const MIN_DISTINCT_MATCHES = 2; // require overlap on more than one distinct query token
 const MAX_PASSAGES = 8;
+const MAX_HISTORY_TURNS = 6; // server-enforced cap, independent of whatever the client sends
 
 const SYSTEM_PROMPT = `You are the DinoDex assistant for ilikedinosaurs.com, a palaeontology
 education site. You answer questions and point visitors toward relevant
@@ -69,24 +70,45 @@ fences, matching exactly this shape:
             with nothing to factually answer),
   "inScope": boolean (false if the question falls outside what the
             passages cover),
-  "citations": [ { "id": string, "label": string } ],
-  "suggestions": [ { "id": string, "label": string, "reason": string } ]
+  "citations": [ { "id": string } ],
+  "suggestions": [ { "id": string, "reason": string } ]
 }
 "id" values must be the citeId/view-id fields exactly as given in the
-passages - the site uses these to link directly to the right page.`;
+passages - the site uses these to link directly to the right page. Do not
+include a "label" or display-name field on citations or suggestions - the
+site already knows each page's name and will attach it itself.`;
 
-/* ---- load content-index.json once at cold start, not per-request ---- */
+/* ---- load content-index.json and cite-labels.json once at cold start ---- */
 const CONTENT_INDEX = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'content-index.json'), 'utf8')
 );
+const CITE_LABELS = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'cite-labels.json'), 'utf8')
+);
 
 const STOPWORDS = new Set([
+  // grammatical function words
   'a','an','the','is','are','was','were','be','been','being','to','of','in','on','at',
   'for','and','or','but','if','so','than','then','that','this','these','those','it',
   'its','with','as','by','from','about','into','over','after','before','between',
   'do','does','did','have','has','had','can','could','would','should','will','shall',
   'not','no','what','when','where','why','how','who','which','you','your','i','me',
-  'my','we','our','they','them','their','he','she','him','her','there','here','also'
+  'my','we','our','they','them','their','he','she','him','her','there','here','also',
+  // conversational scaffolding - the words a visitor wraps around their
+  // actual question ("tell me about X", "can you explain X", "describe
+  // X", "I want to know about X", "give me some information on X") rather
+  // than content words themselves. Without these, a normal, natural
+  // question can fail MIN_DISTINCT_MATCHES entirely: e.g. "tell" alone
+  // used to count as a second "content" match alongside the actual
+  // subject, which is exactly the wrong thing for a generic verb that
+  // carries no topical signal of its own.
+  'tell','explain','describe','show','give','please','know','want','like','us','some','more','information',
+  // filler intensifiers - carry emphasis, not topical content (e.g. "I
+  // REALLY like pterosaurs" is the system prompt's own canonical
+  // interest-expression example; "really" must not count as a second
+  // "content" word alongside "pterosaurs" or it silently defeats the
+  // single-content-word relaxation below)
+  'really','very','just','actually','quite'
 ]);
 
 function tokenize(text) {
@@ -104,16 +126,29 @@ const SEARCH_INDEX = CONTENT_INDEX.map(chunk => ({
   textTokens: tokenize(chunk.text)
 }));
 
-function searchChunks(question) {
+/* previousQuestion (optional): for a follow-up like "what about its arms",
+   the current question alone often has too little signal to retrieve
+   anything useful. Folding the prior turn's tokens in as lower-weighted
+   supporting context (half the weight of a current-question match, at
+   each tier) helps without letting old context override what THIS
+   question is actually asking - it's a nudge, not an equal vote. */
+function searchChunks(question, previousQuestion) {
   const qTokens = tokenize(question);
   if (!qTokens.length) return [];
   const qSet = new Set(qTokens);
+  const prevSet = new Set((previousQuestion ? tokenize(previousQuestion) : []).filter(t => !qSet.has(t)));
 
   const scored = SEARCH_INDEX.map(({ chunk, titleTokens, textTokens }) => {
     let score = 0;
     const matched = new Set();
-    for (const t of titleTokens) if (qSet.has(t)) { score += 2; matched.add(t); } // title matches weighted higher
-    for (const t of textTokens) if (qSet.has(t)) { score += 1; matched.add(t); }
+    for (const t of titleTokens) {
+      if (qSet.has(t)) { score += 2; matched.add(t); } // title match, current question
+      else if (prevSet.has(t)) { score += 1; matched.add(t); } // title match, previous question only - supporting context
+    }
+    for (const t of textTokens) {
+      if (qSet.has(t)) { score += 1; matched.add(t); } // body match, current question
+      else if (prevSet.has(t)) { score += 0.5; matched.add(t); } // body match, previous question only
+    }
     return { chunk, score, distinctMatches: matched.size };
   }).filter(r => r.score >= MIN_SCORE && (r.distinctMatches >= MIN_DISTINCT_MATCHES || qSet.size === 1));
 
@@ -121,6 +156,35 @@ function searchChunks(question) {
 
   if (!scored.length) return [];
   return scored.slice(0, MAX_PASSAGES).map(r => r.chunk);
+}
+
+/* citeId strings are not globally unique across sourceTypes (e.g. species.js
+   and research-cases.js both use "spinosaurus" for unrelated entries), so
+   labels are resolved per-request from the specific chunks actually
+   retrieved for this question - which always carry sourceType alongside
+   citeId - rather than from a single global citeId -> label map. `passages`
+   is already sorted best-score-first by searchChunks(), so the first chunk
+   seen for a given citeId is the highest-scoring one; if a second, later
+   chunk in this same request shares that citeId under a *different*
+   sourceType with a genuinely different label, that's the rare true
+   ambiguity case - keep the first (higher-scoring) one and just log a note. */
+function buildRequestLabels(passages) {
+  // Stores { label, sourceType } per citeId, not just the bare label
+  // string - the chat widget's click-through dispatch needs sourceType to
+  // know which site function to call (openModal, goToView, etc.), and
+  // resolving it here (where sourceType is already known per chunk) is
+  // simpler and more reliable than trying to re-derive it client-side.
+  const resolved = {};
+  for (const chunk of passages) {
+    const label = CITE_LABELS[chunk.sourceType] && CITE_LABELS[chunk.sourceType][chunk.citeId];
+    if (!label) continue; // shouldn't happen if the content index build validated cleanly, but don't crash if it did not
+    if (resolved[chunk.citeId] === undefined) {
+      resolved[chunk.citeId] = { label, sourceType: chunk.sourceType };
+    } else if (resolved[chunk.citeId].label !== label) {
+      console.log(`Note: citeId "${chunk.citeId}" was ambiguous within this request (matched more than one sourceType with different labels). Kept "${resolved[chunk.citeId].label}" (higher search score); also saw "${label}" from sourceType "${chunk.sourceType}".`);
+    }
+  }
+  return resolved;
 }
 
 /* ---- envelope helper ---- */
@@ -196,6 +260,30 @@ function stripCodeFences(text) {
     .trim();
 }
 
+/* House style bans en dashes (–) and em dashes (—) in favour of plain
+   hyphens, but testing showed Haiku doesn't reliably follow that rule from
+   the system prompt alone. This is a cheap server-side safety net, not a
+   fix to the prompt - it does not touch SYSTEM_PROMPT itself. */
+function sanitizeDashes(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(/[–—]/g, ' - ').replace(/ {2,}/g, ' ').trim();
+}
+
+/* "history" is client-supplied, so it's validated the same way "question"
+   is: never trust the client's own trimming/shape, even though the widget
+   is only ever expected to send well-formed { question, answer } pairs.
+   Caps to the last MAX_HISTORY_TURNS entries server-side regardless of how
+   many the client sent - defense in depth against an inflated payload. */
+function sanitizeHistory(rawHistory) {
+  if (!Array.isArray(rawHistory)) return [];
+  const cleaned = rawHistory.filter(turn =>
+    turn &&
+    typeof turn.question === 'string' && turn.question.trim() &&
+    typeof turn.answer === 'string' && turn.answer.trim()
+  ).map(turn => ({ question: turn.question.trim(), answer: turn.answer.trim() }));
+  return cleaned.slice(-MAX_HISTORY_TURNS);
+}
+
 function buildUserMessage(question, passages) {
   if (!passages.length) {
     return `Visitor message: "${question}"\n\nRetrieved passages: none. No passage in the content index scored as relevant to this message.`;
@@ -206,7 +294,24 @@ function buildUserMessage(question, passages) {
   return `Visitor message: "${question}"\n\nRetrieved passages:\n${passageBlocks}`;
 }
 
-async function callAnthropic(question, passages) {
+/* Real multi-turn structure, not history flattened into one block of text:
+   each prior turn becomes its own user/assistant message pair (the
+   assistant side is the recorded answer as plain text only - not the full
+   JSON envelope, so the model isn't reading its own past output-format
+   structure back at itself, just the substance of what it said). The
+   current question plus retrieved passages form the final user message,
+   exactly as in the single-turn case. */
+function buildMessages(question, passages, history) {
+  const messages = [];
+  for (const turn of history) {
+    messages.push({ role: 'user', content: turn.question });
+    messages.push({ role: 'assistant', content: turn.answer });
+  }
+  messages.push({ role: 'user', content: buildUserMessage(question, passages) });
+  return messages;
+}
+
+async function callAnthropic(question, passages, history) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     throw new Error('ANTHROPIC_API_KEY is not configured');
@@ -223,7 +328,7 @@ async function callAnthropic(question, passages) {
       model: MODEL,
       max_tokens: MAX_TOKENS,
       system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: buildUserMessage(question, passages) }]
+      messages: buildMessages(question, passages, history)
     })
   });
 
@@ -252,6 +357,7 @@ module.exports = async function handler(req, res) {
     sendJson(res, 400, envelope({ status: 'error', message: 'Request body must be JSON with a non-empty "question" string.' }));
     return;
   }
+  const history = sanitizeHistory(body && body.history); // [] if absent/malformed - fully backward compatible
 
   /* ---- Step 0: test-key bypass ---- */
   const testKeyHeader = req.headers['x-test-key'];
@@ -281,13 +387,26 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  /* ---- Step 2: search content-index.json (already capped at MAX_PASSAGES) ---- */
-  const passages = searchChunks(question);
+  /* ---- Step 2: search content-index.json (already capped at MAX_PASSAGES) ----
+     Search on the current question primarily; the immediately previous
+     question (if any) is folded in as lower-weighted supporting context
+     for follow-ups like "what about its arms" - see searchChunks(). */
+  const previousQuestion = history.length ? history[history.length - 1].question : null;
+  const passages = searchChunks(question, previousQuestion);
+  if (!passages.length) {
+    // Content-quality signal for later review, not an activity log: the
+    // question text alone, nothing that could identify who asked it (no
+    // IP, no history, no request metadata). Purely a side effect - does
+    // not alter the response, which still proceeds through the normal
+    // "no relevant passages" path below exactly as before.
+    console.log('Zero-result question:', question);
+  }
+  const requestLabels = buildRequestLabels(passages);
 
   /* ---- Step 3 / 4: call Anthropic, handle failures ---- */
   let rawText;
   try {
-    rawText = await callAnthropic(question, passages);
+    rawText = await callAnthropic(question, passages, history);
   } catch (err) {
     console.error('Anthropic API call failed:', err);
     sendJson(res, 500, envelope({
@@ -309,14 +428,29 @@ module.exports = async function handler(req, res) {
     return;
   }
 
+  // Labels (and sourceType, for the widget's click-through dispatch) are
+  // resolved against requestLabels - built from the specific chunks
+  // retrieved for THIS question (see buildRequestLabels above), not the
+  // global cite-labels.json - so there's no bare-citeId ambiguity to begin
+  // with. If the model names an id that isn't in requestLabels at all, it
+  // wasn't actually among the passages it was given - likely hallucinated
+  // or misremembered - so drop that citation/suggestion entirely rather
+  // than shipping a labelless, possibly broken link.
+  const citations = (Array.isArray(parsed.citations) ? parsed.citations : [])
+    .filter(c => c && requestLabels[c.id])
+    .map(c => ({ id: c.id, label: requestLabels[c.id].label, sourceType: requestLabels[c.id].sourceType }));
+  const suggestions = (Array.isArray(parsed.suggestions) ? parsed.suggestions : [])
+    .filter(s => s && requestLabels[s.id])
+    .map(s => ({ id: s.id, label: requestLabels[s.id].label, sourceType: requestLabels[s.id].sourceType, reason: sanitizeDashes(s.reason) }));
+
   sendJson(res, 200, envelope({
     status: 'ok',
-    answer: typeof parsed.answer === 'string' ? parsed.answer : null,
+    answer: sanitizeDashes(typeof parsed.answer === 'string' ? parsed.answer : null),
     inScope: typeof parsed.inScope === 'boolean' ? parsed.inScope : null,
-    citations: Array.isArray(parsed.citations) ? parsed.citations : [],
-    suggestions: Array.isArray(parsed.suggestions) ? parsed.suggestions : []
+    citations,
+    suggestions
   }));
 };
 
 /* exported for local testing only (see test/local-chat-test.js) */
-module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp };
+module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT };
