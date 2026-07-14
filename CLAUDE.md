@@ -39,14 +39,22 @@ When these goals conflict, ask which one is in front today rather than guessing.
     has been extracted to external files — the inline script contains logic only.
 - **External data files**, loaded via `<script>` tags before the inline script:
   - `species.js` — `var SPECIES = [...]` — **102** entries. Rich schema (see §3).
-  - `glossary.js` — `window.GLOSSARY_TERMS = [...]` — **74** terms, `gl*`-prefixed logic.
+  - `glossary.js` — `window.GLOSSARY_TERMS = [...]` — **81** terms, `gl*`-prefixed logic.
   - `research-cases.js` — `var RESEARCH_CASES = [...]` — **10** open-question cases.
   - `fossil-hunters.js` — `var PEOPLE = [...]` — **12** people.
   - `last-day.js` — three arrays: `LAST_DAY_CHAPTERS` (8), `SURVIVAL_GROUPS` (8),
     `FOSSILS_SCIENCE_CASES` (11). Extracted in Phase 0 — render functions in
     index.html unchanged, data now external.
+  - `anatomy-101.js`, `mass-extinctions.js`, `mesozoic-ecosystems.js`,
+    `theropods-to-birds.js` — loose top-level `ANAT_*` / `MASSEXT_*` / `ME2_*` /
+    `TTB_*` vars (not a single array like the files above); each backs one of the
+    four sidebar tabs formerly listed as stubs, now fully built.
+  - `hpw-content.js` — `var HPW_CONTENT = [...]`, 34 sections. Structured extraction
+    of the six `hpw-*-view` HTML blocks in index.html, built for the chatbot content
+    index (see `build-content-index.js` / `content-index.json`); index.html's own
+    HTML for those views is untouched and remains the live render source.
 
-### Views — sidebar groups (15 total, of which 5 are stubs)
+### Views — sidebar groups (15 total, all live)
 
 Nav is a collapsible `#sidebar` (dark bark-coloured panel). Items are `.sidebar-nav-item`
 buttons with `data-view` attributes; the home button is `.sidebar-home`. `initTabs()`
@@ -55,19 +63,20 @@ and `goToView()` both target these selectors. The old `#viewTabs` horizontal nav
 | Sidebar group | Views | Status |
 |---|---|---|
 | *(Home button)* | Home | Live |
-| The Animals | DinoDex · Dinosaurs Through Time · Anatomy 101 | Live · Live · **Stub** |
-| Time & Earth | Deep Time · Moving Earth · Mesozoic Ecosystems | Live · Live · **Stub** |
-| Extinction & Evolution | The Last Day · Mass Extinctions · Theropods to Birds | Live · **Stub** · **Stub** |
-| The Methods | How Palaeontology Works | **Stub** |
+| The Animals | DinoDex · Dinosaurs Through Time · Anatomy 101 | Live · Live · Live |
+| Time & Earth | Deep Time · Moving Earth · Mesozoic Ecosystems | Live · Live · Live |
+| Extinction & Evolution | The Last Day · Mass Extinctions · Theropods to Birds | Live · Live · Live |
+| The Methods | How Palaeontology Works | Live |
 | The People & Discoveries | Fossil Hunters · Fossils That Changed Science · Research Desk | Live |
 | Reference | Glossary · Responsible AI | Live |
 
 **Renames:** `data-view='timeline'` / `id='timeline-view'` → `data-view='dinosaurs-through-time'`
 / `id='dinosaurs-through-time-view'`. Update any cross-links accordingly.
 
-**Stubs** (view div present, eyebrow/title/lede/`.stub-note` only, awaiting content):
-`anatomy-101-view`, `mesozoic-ecosystems-view`, `mass-extinctions-view`,
-`theropods-to-birds-view`, `how-palaeontology-works-view`.
+Anatomy 101, Mesozoic Ecosystems, Mass Extinctions, and Theropods to Birds (each backed
+by its own `*.js` data file — see §2 data files list) and How Palaeontology Works (six
+separate `hpw-*-view` divs, not a single `how-palaeontology-works-view`) have all shipped
+full content. None of the sidebar's 15 views are stubs any longer.
 
 ### Known structural debt (don't "fix" silently — discuss first)
 - CSS is one monolithic block; not yet split. Low priority until the project grows
@@ -201,11 +210,10 @@ unless noted otherwise.
 |---|-----|-------|-------|
 | 1 | **Responsible AI** | Medium | Personal and reflective tone first, factual disclosure underneath. Claude drafts, owner rewrites in own voice. Covers: AI used extensively; accuracy limitations acknowledged; open-source/copyright intent; epistemic risks of AI-assisted research. |
 | 2 | **Deep Time Scale** | Brief | Experiential rather than encyclopaedic — help the reader *feel* the numbers. A few well-chosen anchors (e.g. humans to K-Pg, K-Pg to Permian, Permian to Cambrian). Not a timeline (that tab exists). |
-| 3 | **How Palaeontology Works** | Detailed | Most detailed of the new additions — owner wants to learn from it. Cover: taphonomy, excavation, preparation, dating methods (radiometric, biostratigraphy, magnetostratigraphy), what fossils can and can't tell us. Cross-reference lightly to Anatomy 101 (planned). |
-| 4 | **Theropods to Birds** | Full narrative | The evolutionary transition as a story with evidence/inference tension throughout. Key fossil moments, which features came first, what they were originally for, when "bird" actually begins. Similar depth to The Last Day tab. |
-| 5 | **Mass Extinctions** | Brief per event | Cover the Big Five: End-Ordovician, Late Devonian, End-Permian, End-Triassic, K-Pg. Brief treatment of each; End-Permian and End-Triassic especially relevant to dinosaur origins. |
-| 6 | **Mesozoic Ecosystems** | Medium | What the Mesozoic world actually looked like — flora, climate, geography, not just fauna. Briefer than The Last Day. |
-| 7 | **Anatomy 101** | Medium | Lower priority. Its own tab (not a subsection of How Palaeontology Works — different conceptual territory: reading an animal vs. understanding the science). Cross-references into How Palaeontology Works. |
+
+Previous planned items (How Palaeontology Works, Theropods to Birds, Mass Extinctions,
+Mesozoic Ecosystems, Anatomy 101) are now built and live — next build sequence not yet
+decided.
 
 **Deferred / out of scope for now:** Living relatives (crocodilians, birds as analogues),
 trace fossils (tracks, eggs, coprolites), AI tools / chatbot feature (parked pending
