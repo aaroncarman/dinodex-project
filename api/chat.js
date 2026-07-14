@@ -23,43 +23,121 @@ const MIN_DISTINCT_MATCHES = 2; // require overlap on more than one distinct que
 const MAX_PASSAGES = 8;
 const MAX_HISTORY_TURNS = 6; // server-enforced cap, independent of whatever the client sends
 
+/* Fixed list of top-level views, each with the citeId/view-id goToView()
+   actually accepts and a one-line purpose. Descriptions are drawn from
+   each view's own real header/lede copy already written in index.html
+   (or, for HPW, its h2 + opening sentence) - not invented - so the site
+   map stays honest about what's actually on each page. This is the single
+   source of truth for both the SYSTEM_PROMPT text below and the resolver
+   fallback in buildRequestLabels() (see there for why a fallback is
+   needed): the two can never drift apart because the prompt text is
+   generated from this array, not hand-duplicated. */
+const SITE_MAP = [
+  { id: 'dinodex', label: 'DinoDex', desc: 'the species field guide - profiles of dinosaurs and other Mesozoic animals, separating what the fossils show from what is still argued about' },
+  { id: 'dinosaurs-through-time', label: 'Dinosaurs Through Time', desc: 'animals grouped by broad geological period (Triassic, Jurassic, Cretaceous)' },
+  { id: 'anatomy-101', label: 'Anatomy 101', desc: 'what dinosaur anatomy actually is and how it functioned' },
+  { id: 'deep-time', label: 'Deep Time', desc: 'the 4.54-billion-year timescale drawn to true proportion, to feel how little of it is dinosaurs' },
+  { id: 'moving-earth', label: 'Moving Earth', desc: 'continental drift and geography across the Mesozoic' },
+  { id: 'mesozoic-ecosystems', label: 'Mesozoic Ecosystems', desc: 'what the Mesozoic world actually looked like - climate, flora, and who ate whom' },
+  { id: 'last-day', label: 'The Last Day', desc: 'the Chicxulub impact and the end-Cretaceous extinction' },
+  { id: 'mass-extinctions', label: 'Mass Extinctions', desc: 'the end-Permian and end-Triassic extinctions that shaped dinosaur origins, plus a K-Pg recap' },
+  { id: 'theropods-to-birds', label: 'Theropods to Birds', desc: 'the evidence for how feathered theropod dinosaurs became birds' },
+  { id: 'hpw-record', label: 'How Palaeontology Works: The Record', desc: 'what a fossil is, how it forms, and why the fossil record is incomplete' },
+  { id: 'hpw-field-to-lab', label: 'How Palaeontology Works: Field to Lab', desc: 'finding and recovering fossils, from prospecting to the lab' },
+  { id: 'hpw-dating', label: 'How Palaeontology Works: Dating', desc: 'how fossils are dated - stratigraphy, radiometric dating, magnetostratigraphy' },
+  { id: 'hpw-classification', label: 'How Palaeontology Works: Classification', desc: 'naming and phylogenetics, cladistics, and why classifications keep changing' },
+  { id: 'hpw-reading-bones', label: 'How Palaeontology Works: Reading Bones', desc: 'what can and cannot be inferred about biology from a fossil' },
+  { id: 'hpw-becoming-knowledge', label: 'How Palaeontology Works: Becoming Knowledge', desc: 'peer review, statistics, and how a claim becomes accepted science' },
+  { id: 'fossil-hunters', label: 'Fossil Hunters', desc: 'the people behind the discoveries, from early collectors to modern researchers' },
+  { id: 'fossils-science', label: 'Fossils That Changed Science', desc: 'eleven specific discoveries that forced the field to redraw the ancient world' },
+  { id: 'research-desk', label: 'Research Desk', desc: 'open scientific questions and live debates still being argued - e.g. did Spinosaurus swim, is Nanotyrannus a real genus. The place for "what is still unresolved" questions' },
+  { id: 'glossary', label: 'Glossary', desc: 'definitions of palaeontology terms' },
+  { id: 'responsible-ai', label: 'Responsible AI', desc: 'a disclosure about this site\'s own AI-assisted construction, its limitations, and its approach to uncertainty' }
+];
+const SITE_MAP_TEXT = SITE_MAP.map(v => `- ${v.id} - ${v.label}: ${v.desc}`).join('\n');
+
 const SYSTEM_PROMPT = `You are the DinoDex assistant for ilikedinosaurs.com, a palaeontology
 education site. You answer questions and point visitors toward relevant
-pages, using ONLY the passages provided to you below as retrieved context.
-You have no other source of information about dinosaurs, palaeontology, or
-this site - do not draw on anything outside the provided passages, even if
-you believe you know the answer.
+pages, using ONLY the passages provided to you below as retrieved context,
+plus the fixed site map further down. You have no other source of
+information about dinosaurs, palaeontology, or this site - do not draw on
+anything outside the provided passages and site map, even if you believe
+you know the answer.
 
 HOUSE VOICE: precise, calm, a little wry, never breathless. British English.
 Plain hyphens only, never en dashes or em dashes. Never use the words
 "revolutionary," "iconic," "pioneer," "genuinely," "honestly," or "actually."
 
-GROUNDING RULES:
-- Answer only using the passages provided. If they don't cover what's being
-  asked, say so plainly - something like "that's not something this site
-  covers yet" - rather than guessing, padding, or reaching for general
-  knowledge.
-- Each provided passage carries a confidence level: strong, moderate, low,
-  or none (meaning plain settled description). Preserve that language
-  exactly as given. If a passage is tagged moderate or low, your answer
-  must carry that same hedge - never flatten "a live hypothesis" into a
-  stated fact, and never state a strong-confidence passage more tentatively
-  than the source does either. Getting this backwards is the one mistake
-  that matters most here.
-- If retrieved passages disagree with each other (e.g. two interpretations
-  of the same question), present both, not just one.
+WHICH KIND OF MESSAGE IS THIS:
+1. A QUESTION, however phrased - this needs a real prose answer. This
+   covers direct factual questions AND hedged, conversational, or
+   navigational ones: anything with a question mark, or a request for
+   information, or a "where/how/is there/does the site cover" framing,
+   counts as a question even when softly phrased. Examples that all need
+   a real answer field, not just suggestions: "did T. rex have feathers?",
+   "what's a bonebed?", "is there somewhere that discusses X?", "how can I
+   learn more about Y?", "where would I find something on Z?", "can you
+   tell me about W?", "does the site cover the debate over X?", "where
+   should I start?", "I'm interested in the current questions being asked
+   in palaeo, how can I learn more about that?".
+2. A PLAIN STATEMENT OF INTEREST, with no question structure at all - just
+   naming something the visitor likes, nothing asked. Examples: "I really
+   like pterosaurs.", "flying reptiles are so cool.", "dinosaurs are
+   amazing.", "I've always loved Triceratops." For these only, set answer
+   to null and go straight to suggestions.
+If in doubt which of these two a message is, treat it as a question (type
+1). An unwanted answer costs little; a visitor with a real question who
+gets only suggestions and no answer is the worse failure.
 
-TWO KINDS OF VISITOR MESSAGE:
-1. A factual question ("did T. rex have feathers?", "what's a bonebed?") -
-   answer it from the passages, following the grounding rules above.
-2. An expression of interest with no direct question ("I really like
-   pterosaurs," "where should I start?") - don't force an answer; instead
-   go straight to suggesting relevant pages (see below).
+GROUNDING RULES AND ANSWER CONFIDENCE - for every question (type 1 above),
+judge which of three states you are actually in before writing the answer:
+
+1. STRONG MATCH - retrieved passages directly answer the question. Answer
+   confidently, cite the passages you used, inScope: true. Each passage
+   carries a confidence level: strong, moderate, low, or none (meaning
+   plain settled description). Preserve that language exactly as given -
+   if a passage is tagged moderate or low, your answer must carry that
+   same hedge, never flattening "a live hypothesis" into a stated fact,
+   and never stating a strong-confidence passage more tentatively than the
+   source does either. Getting this backwards is the one mistake that
+   matters most here. If retrieved passages disagree with each other (e.g.
+   two interpretations of the same question), present both, not just one.
+
+2. WEAK / TANGENTIAL MATCH - something relevant was retrieved, but it does
+   not directly or fully answer what was actually asked. Say plainly that
+   you are not confident this fully covers what they asked, and say WHY in
+   concrete terms - what is missing, or how the retrieved material only
+   partially overlaps with the question - rather than a vague "I'm not
+   sure." Right level of specificity: "The site covers general theropod
+   pack-hunting evidence, but doesn't have anything specific on whether
+   Coelophysis itself hunted in groups" rather than just "I'm not
+   confident about this." Still include the closest related passages as
+   citations, but frame them explicitly as the closest related material,
+   not a direct answer. inScope: true (something relevant exists, even if
+   imperfectly).
+
+3. NO RELEVANT MATCH AT ALL - say plainly this is not something the site
+   covers. citations: [] (nothing to cite - do not cite passages that
+   were not actually relevant just to fill the field). inScope: false. For
+   suggestions in this state, fall back to the SITE MAP below and suggest
+   the most broadly relevant tab for the general topic (DinoDex for
+   anything animal-specific, Research Desk for open scientific questions,
+   Glossary for definitional questions, and so on) rather than leaving the
+   suggestions empty - do not leave a visitor at a dead end if there is
+   anywhere reasonable to point them.
+
+SITE MAP - the site's fixed top-level sections, each with its id and
+purpose. Use this for wayfinding/navigational questions (state 1 or 2
+above, when the question is really "is X covered" or "where would I find
+X") even when passage search alone does not surface a direct match, and as
+the fallback source for suggestions in state 3:
+${SITE_MAP_TEXT}
 
 ALWAYS INCLUDE - after any answer, and standing alone for interest-only
 messages - a short set of 1-3 relevant pages to explore next, drawn from
-the crossRefs of the passages you used. Keep this brief: a name and a
-half-sentence of why it's relevant, not a restatement of the passage.
+the crossRefs of the passages you used, or from the site map per the rules
+above. Keep this brief: a name and a half-sentence of why it's relevant,
+not a restatement of the passage.
 
 Keep the answer field under roughly 120 words.
 
@@ -68,15 +146,15 @@ fences, matching exactly this shape:
 {
   "answer": string or null (null only for pure interest-expression messages
             with nothing to factually answer),
-  "inScope": boolean (false if the question falls outside what the
-            passages cover),
+  "inScope": boolean (false only for state 3 - no relevant match at all),
   "citations": [ { "id": string } ],
   "suggestions": [ { "id": string, "reason": string } ]
 }
 "id" values must be the citeId/view-id fields exactly as given in the
-passages - the site uses these to link directly to the right page. Do not
-include a "label" or display-name field on citations or suggestions - the
-site already knows each page's name and will attach it itself.`;
+passages, or one of the ids in the site map above - the site uses these to
+link directly to the right page. Do not include a "label" or display-name
+field on citations or suggestions - the site already knows each page's
+name and will attach it itself.`;
 
 /* ---- load content-index.json and cite-labels.json once at cold start ---- */
 const CONTENT_INDEX = JSON.parse(
@@ -402,6 +480,16 @@ module.exports = async function handler(req, res) {
     console.log('Zero-result question:', question);
   }
   const requestLabels = buildRequestLabels(passages);
+  // Site-map ids (see SITE_MAP above) are always resolvable, independent of
+  // what got retrieved this request - the model needs to be able to
+  // suggest a whole tab (e.g. Research Desk) as a state-3 fallback even
+  // when nothing about that tab was among the passages actually searched.
+  // Never overwrites a real retrieved-passage label with the same id.
+  for (const view of SITE_MAP) {
+    if (requestLabels[view.id] === undefined) {
+      requestLabels[view.id] = { label: view.label, sourceType: 'view' };
+    }
+  }
 
   /* ---- Step 3 / 4: call Anthropic, handle failures ---- */
   let rawText;
@@ -436,7 +524,14 @@ module.exports = async function handler(req, res) {
   // wasn't actually among the passages it was given - likely hallucinated
   // or misremembered - so drop that citation/suggestion entirely rather
   // than shipping a labelless, possibly broken link.
-  const citations = (Array.isArray(parsed.citations) ? parsed.citations : [])
+  const answer = sanitizeDashes(typeof parsed.answer === 'string' && parsed.answer.trim() ? parsed.answer : null);
+
+  // Citations only mean anything as "what I used to answer this" - with no
+  // answer there's nothing for them to support, so force them empty
+  // regardless of what the model returned. Suggestions are unaffected:
+  // they're meaningful on their own for the interest-only path (no prose
+  // answer, but still worth pointing somewhere).
+  const citations = !answer ? [] : (Array.isArray(parsed.citations) ? parsed.citations : [])
     .filter(c => c && requestLabels[c.id])
     .map(c => ({ id: c.id, label: requestLabels[c.id].label, sourceType: requestLabels[c.id].sourceType }));
   const suggestions = (Array.isArray(parsed.suggestions) ? parsed.suggestions : [])
@@ -445,7 +540,7 @@ module.exports = async function handler(req, res) {
 
   sendJson(res, 200, envelope({
     status: 'ok',
-    answer: sanitizeDashes(typeof parsed.answer === 'string' ? parsed.answer : null),
+    answer,
     inScope: typeof parsed.inScope === 'boolean' ? parsed.inScope : null,
     citations,
     suggestions
@@ -453,4 +548,4 @@ module.exports = async function handler(req, res) {
 };
 
 /* exported for local testing only (see test/local-chat-test.js) */
-module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT };
+module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT, SITE_MAP };

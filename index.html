@@ -2340,11 +2340,12 @@
 .chat-panel-minimize:hover{color:var(--rust)}
 .chat-panel-minimize:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
 
-#chat-messages{
+.chat-messages{
   flex:1 1 auto;overflow-y:auto;padding:16px;
   font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   display:flex;flex-direction:column;gap:14px;
 }
+#chat-messages{max-height:100%}
 .chat-intro{
   color:var(--ink-soft);font-size:14.5px;line-height:1.55;font-style:italic;
 }
@@ -2392,26 +2393,49 @@
 .chat-pill:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
 .chat-pillrow-suggestions .chat-pill{border-style:dashed}
 
-#chat-form{
+.chat-form{
   display:flex;gap:8px;padding:12px;border-top:1.5px solid var(--ink);
   background:var(--bone-deep);flex:0 0 auto;
 }
-#chat-input{
+.chat-input-field{
   flex:1 1 auto;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   font-size:14.5px;padding:9px 11px;border:1.5px solid var(--ink);background:var(--bone);
   color:var(--ink);
 }
-#chat-input:focus-visible{outline:2px solid var(--rust);outline-offset:1px}
-#chat-input:disabled{opacity:.6}
-#chat-send{
+.chat-input-field:focus-visible{outline:2px solid var(--rust);outline-offset:1px}
+.chat-input-field:disabled{opacity:.6}
+.chat-send-btn{
   font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;padding:0 16px;cursor:pointer;
   border:1.5px solid var(--ink);background:var(--ink);color:var(--bone);
   transition:background .2s;
 }
-#chat-send:hover:not(:disabled){background:var(--rust);border-color:var(--rust)}
-#chat-send:disabled{opacity:.5;cursor:default}
-#chat-send:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.chat-send-btn:hover:not(:disabled){background:var(--rust);border-color:var(--rust)}
+.chat-send-btn:disabled{opacity:.5;cursor:default}
+.chat-send-btn:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+
+/* ---- Ask tab (full-page view) - shares .chat-* classes with the
+   floating panel above; these rules are Ask-tab-specific layout only ---- */
+#ask-view{min-height:calc(100vh - var(--banner-h));background:var(--bone);padding-bottom:80px}
+.ask-lede{font-size:16px;color:var(--ink-soft);line-height:1.6;max-width:640px;margin:14px 0 22px}
+.ask-limits{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:8px;max-width:640px}
+.ask-limits li{font-size:14px;color:var(--ink-soft);line-height:1.55;padding-left:18px;position:relative}
+.ask-limits li::before{content:"-";position:absolute;left:0;color:var(--rust)}
+.ask-examples{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.ask-example-btn{
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-style:italic;
+  font-size:13.5px;padding:8px 14px;border:1.5px solid var(--line);background:var(--bone-deep);
+  color:var(--ink-soft);cursor:pointer;transition:border-color .15s,color .15s;text-align:left;
+}
+.ask-example-btn:hover{border-color:var(--rust);color:var(--ink)}
+.ask-example-btn:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.ask-conversation{
+  border:1.5px solid var(--ink);background:var(--bone);box-shadow:8px 12px 0 var(--shadow);
+  max-width:720px;display:flex;flex-direction:column;height:min(640px,70vh);
+}
+@media(max-width:600px){
+  .ask-conversation{height:min(560px,75vh)}
+}
 
 @media(max-width:768px){
   #chat-panel{
@@ -2476,6 +2500,7 @@
     <div class="sidebar-group">
       <div class="sidebar-group-header">Reference</div>
       <button class="sidebar-nav-item" data-view="glossary">Glossary</button>
+      <button class="sidebar-nav-item" data-view="ask">Ask</button>
       <button class="sidebar-nav-item" data-view="responsible-ai">Responsible AI</button>
     </div>
 
@@ -4299,14 +4324,46 @@
       <span id="chat-panel-title" class="chat-panel-title">Ask DinoDex</span>
       <button id="chat-panel-minimize" class="chat-panel-minimize" aria-label="Minimize chat">&#8722;</button>
     </div>
-    <div id="chat-messages" aria-live="polite">
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
       <p class="chat-intro">Ask about any dinosaur or idea on this site - or just tell me what you're curious about, and I'll point you to it.</p>
     </div>
-    <form id="chat-form" autocomplete="off">
+    <form id="chat-form" class="chat-form" autocomplete="off">
       <label for="chat-input" class="sr-only">Your question</label>
-      <input type="text" id="chat-input" placeholder="Ask a question&hellip;" maxlength="500">
-      <button type="submit" id="chat-send">Send</button>
+      <input type="text" id="chat-input" class="chat-input-field" placeholder="Ask a question&hellip;" maxlength="500">
+      <button type="submit" id="chat-send" class="chat-send-btn">Send</button>
     </form>
+  </div>
+</div>
+
+<!-- ===== ASK TAB VIEW ===== -->
+<div id="ask-view" style="display:none">
+  <div class="wrap">
+    <span class="eyebrow">Reference &middot; Ask DinoDex</span>
+    <h1 class="title">Ask <em>DinoDex</em></h1>
+    <p class="ask-lede">A search assistant for this site, not a general dinosaur chatbot. It answers only from what is actually written here, points you to the right page when a plain search wouldn't, and says plainly when something isn't covered rather than guessing.</p>
+    <ul class="ask-limits">
+      <li>Answers are grounded only in this site's own content - no outside knowledge, no invented facts.</li>
+      <li>If something isn't covered, it says so directly instead of filling the gap with a guess.</li>
+      <li>It remembers the last few turns of your conversation, so follow-up questions work without repeating yourself.</li>
+      <li>There's a limit of 10 questions per visitor per day, which resets the next day - mostly to keep running costs sane, not to ration curiosity.</li>
+    </ul>
+    <div class="ask-examples" role="list" aria-label="Example questions">
+      <button type="button" class="ask-example-btn" data-example="Did T. rex have feathers?">"Did T. rex have feathers?"</button>
+      <button type="button" class="ask-example-btn" data-example="What's a bonebed?">"What's a bonebed?"</button>
+      <button type="button" class="ask-example-btn" data-example="I'm interested in the open questions palaeontologists are still arguing about.">"I'm interested in the open questions palaeontologists are still arguing about."</button>
+      <button type="button" class="ask-example-btn" data-example="I really like pterosaurs.">"I really like pterosaurs."</button>
+    </div>
+
+    <div class="ask-conversation">
+      <div id="ask-messages" class="chat-messages" aria-live="polite">
+        <p class="chat-intro">Ask about any dinosaur or idea on this site - or just tell me what you're curious about, and I'll point you to it.</p>
+      </div>
+      <form id="ask-form" class="chat-form" autocomplete="off">
+        <label for="ask-input" class="sr-only">Your question</label>
+        <input type="text" id="ask-input" class="chat-input-field" placeholder="Ask a question&hellip;" maxlength="500">
+        <button type="submit" id="ask-send" class="chat-send-btn">Send</button>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -7052,6 +7109,7 @@ function renderAnatomy101() {
     'research-desk':          document.getElementById('research-desk-view'),
     'fossils-science':        document.getElementById('fossils-science-view'),
     'glossary':               document.getElementById('glossary-view'),
+    'ask':                    document.getElementById('ask-view'),
     'responsible-ai':         document.getElementById('responsible-ai-view'),
     'anatomy-101':            document.getElementById('anatomy-101-view'),
     'mesozoic-ecosystems':    document.getElementById('mesozoic-ecosystems-view'),
@@ -7724,22 +7782,41 @@ function initHpwCompleteness() {
 })();
 
 /* ============================================================
-   CHAT WIDGET - new, additive only
+   CHAT WIDGET ENGINE - new, additive only
+   Shared conversation engine used by BOTH the floating panel and the
+   full-page Ask tab - they are two views onto the same conversation, not
+   two separate chat instances. Every render/state function below loops
+   over both surfaces; a question asked in one is visible in the other.
    Reuses: goToView(), openModal(), openPersonModal(), window.rdOpenCaseFile,
    glExpandTerm(). Talks to /api/chat (see api/chat.js).
    ============================================================ */
 (function initChatWidget(){
 
-  var widget    = document.getElementById('chat-widget');
-  var launcher  = document.getElementById('chat-launcher');
-  var panel     = document.getElementById('chat-panel');
+  var widget      = document.getElementById('chat-widget');
+  var launcher    = document.getElementById('chat-launcher');
+  var panel       = document.getElementById('chat-panel');
   var minimizeBtn = document.getElementById('chat-panel-minimize');
-  var messagesEl  = document.getElementById('chat-messages');
-  var form      = document.getElementById('chat-form');
-  var input     = document.getElementById('chat-input');
-  var sendBtn   = document.getElementById('chat-send');
 
-  var conversation = []; // in-memory only: [{question, answer}, ...] - cleared on full page reload
+  /* Each "surface" is one rendering target: a messages container plus its
+     own input/send/form. Both stay in sync because every render call
+     writes into every surface's messages container, and disabling the
+     input disables every surface's input together. */
+  var surfaces = [
+    {
+      messages: document.getElementById('chat-messages'),
+      form: document.getElementById('chat-form'),
+      input: document.getElementById('chat-input'),
+      sendBtn: document.getElementById('chat-send')
+    },
+    {
+      messages: document.getElementById('ask-messages'),
+      form: document.getElementById('ask-form'),
+      input: document.getElementById('ask-input'),
+      sendBtn: document.getElementById('ask-send')
+    }
+  ];
+
+  var conversation = []; // in-memory only: [{question, answer}, ...] - cleared on full page reload, shared by every surface
   var inFlight = false;
   var rateLimited = false;
 
@@ -7755,12 +7832,12 @@ function initHpwCompleteness() {
     try { return sessionStorage.getItem('dinodex_chat_test_key'); } catch(e){ return null; }
   }
 
-  /* ---- open / minimize (never resets conversation - see chat-widget CSS/markup notes) ---- */
+  /* ---- floating panel open / minimize (never resets conversation) ---- */
   function openPanel(){
     panel.hidden = false;
     widget.classList.add('open');
     launcher.setAttribute('aria-expanded','true');
-    input.focus();
+    document.getElementById('chat-input').focus();
     if(rateLimited){
       // "Disable the input until the panel is closed and reopened" - the
       // server remains the authority on the actual daily cap; this only
@@ -7771,6 +7848,7 @@ function initHpwCompleteness() {
     }
   }
   function minimizePanel(){
+    if(panel.hidden) return;
     panel.hidden = true;
     widget.classList.remove('open');
     launcher.setAttribute('aria-expanded','false');
@@ -7785,54 +7863,67 @@ function initHpwCompleteness() {
     if(e.key === 'Escape' && !panel.hidden) minimizePanel();
   });
 
-  /* ---- rendering helpers ---- */
-  function scrollToBottom(){
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+  /* ---- rendering helpers - every one loops across all surfaces ---- */
+  function scrollToBottom(el){
+    el.scrollTop = el.scrollHeight;
   }
   function appendBubble(kind, text){
-    var el = document.createElement('div');
-    el.className = 'chat-bubble chat-bubble-' + kind;
-    el.textContent = text;
-    messagesEl.appendChild(el);
-    scrollToBottom();
-    return el;
+    var els = [];
+    surfaces.forEach(function(s){
+      var el = document.createElement('div');
+      el.className = 'chat-bubble chat-bubble-' + kind;
+      el.textContent = text;
+      s.messages.appendChild(el);
+      scrollToBottom(s.messages);
+      els.push(el);
+    });
+    return els;
   }
   function appendThinkingBubble(){
-    var el = document.createElement('div');
-    el.className = 'chat-bubble chat-bubble-thinking';
-    el.innerHTML = '<span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span>';
-    messagesEl.appendChild(el);
-    scrollToBottom();
-    return el;
+    var els = [];
+    surfaces.forEach(function(s){
+      var el = document.createElement('div');
+      el.className = 'chat-bubble chat-bubble-thinking';
+      el.innerHTML = '<span class="chat-dot"></span><span class="chat-dot"></span><span class="chat-dot"></span>';
+      s.messages.appendChild(el);
+      scrollToBottom(s.messages);
+      els.push(el);
+    });
+    return els;
+  }
+  function removeAll(els){
+    els.forEach(function(el){ el.remove(); });
   }
   function appendPillRow(label, items, extraClass){
     if(!items || !items.length) return;
-    var wrap = document.createElement('div');
-    wrap.className = 'chat-pillrow' + (extraClass ? ' ' + extraClass : '');
-    var labelEl = document.createElement('span');
-    labelEl.className = 'chat-pillrow-label';
-    labelEl.textContent = label;
-    var pills = document.createElement('div');
-    pills.className = 'chat-pills';
-    items.forEach(function(item){
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'chat-pill';
-      btn.textContent = item.label;
-      if(item.reason) btn.title = item.reason;
-      btn.addEventListener('click', function(){ dispatchPillClick(item.sourceType, item.id); });
-      pills.appendChild(btn);
+    surfaces.forEach(function(s){
+      var wrap = document.createElement('div');
+      wrap.className = 'chat-pillrow' + (extraClass ? ' ' + extraClass : '');
+      var labelEl = document.createElement('span');
+      labelEl.className = 'chat-pillrow-label';
+      labelEl.textContent = label;
+      var pills = document.createElement('div');
+      pills.className = 'chat-pills';
+      items.forEach(function(item){
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'chat-pill';
+        btn.textContent = item.label;
+        if(item.reason) btn.title = item.reason;
+        btn.addEventListener('click', function(){ dispatchPillClick(item.sourceType, item.id); });
+        pills.appendChild(btn);
+      });
+      wrap.appendChild(labelEl);
+      wrap.appendChild(pills);
+      s.messages.appendChild(wrap);
+      scrollToBottom(s.messages);
     });
-    wrap.appendChild(labelEl);
-    wrap.appendChild(pills);
-    messagesEl.appendChild(wrap);
-    scrollToBottom();
   }
 
   /* ---- click-through dispatch, single small function rather than
      scattered inline conditionals ---- */
   function dispatchPillClick(sourceType, id){
-    minimizePanel(); // minimize, not reset - conversation stays intact for when they come back
+    minimizePanel(); // minimize the floating panel if it's open - conversation stays intact for when they come back. No-op if it's already closed (e.g. clicked from the Ask tab).
     switch(sourceType){
       case 'species':
         if(typeof openModal === 'function') openModal(id);
@@ -7867,6 +7958,7 @@ function initHpwCompleteness() {
       case 'mass-extinctions':
       case 'mesozoic-ecosystems':
       case 'theropods-to-birds':
+      case 'view': // whole-tab suggestions from the system prompt's fixed site map
         goToView(id); // id is already the correct view name for these sourceTypes
         break;
       default:
@@ -7876,22 +7968,34 @@ function initHpwCompleteness() {
 
   /* ---- send flow ---- */
   function setInputDisabled(disabled){
-    input.disabled = disabled;
-    sendBtn.disabled = disabled;
+    surfaces.forEach(function(s){
+      s.input.disabled = disabled;
+      s.sendBtn.disabled = disabled;
+    });
   }
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(inFlight || rateLimited) return;
-    var question = input.value.trim();
-    if(!question) return;
-    sendMessage(question);
+  surfaces.forEach(function(s){
+    s.form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(inFlight || rateLimited) return;
+      var question = s.input.value.trim();
+      if(!question) return;
+      sendMessage(question, s);
+    });
   });
 
-  function sendMessage(question){
+  var askExamples = document.querySelectorAll('.ask-example-btn');
+  askExamples.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if(inFlight || rateLimited) return;
+      sendMessage(btn.dataset.example, surfaces[1]);
+    });
+  });
+
+  function sendMessage(question, originSurface){
     inFlight = true;
     setInputDisabled(true);
-    input.value = '';
+    if(originSurface) originSurface.input.value = '';
     appendBubble('question', question);
     var thinking = appendThinkingBubble();
 
@@ -7909,15 +8013,15 @@ function initHpwCompleteness() {
     }).then(function(res){
       return res.json().then(function(data){ return data; });
     }).then(function(data){
-      thinking.remove();
+      removeAll(thinking);
       handleResponse(question, data);
     }).catch(function(){
-      thinking.remove();
+      removeAll(thinking);
       appendBubble('system', "Something went wrong reaching the bot - worth trying again in a moment.");
     }).then(function(){
       inFlight = false;
       if(!rateLimited) setInputDisabled(false);
-      input.focus();
+      if(originSurface) originSurface.input.focus();
     });
   }
 
