@@ -1,1 +1,3 @@
 refactor-snapshots/
+.env.local
+.env
