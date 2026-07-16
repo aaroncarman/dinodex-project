@@ -21,6 +21,8 @@ const DAILY_LIMIT = 10;
 const MIN_SCORE = 3; // a single generic shared word (e.g. "world", "good") shouldn't count as relevant
 const MIN_DISTINCT_MATCHES = 2; // require overlap on more than one distinct query token
 const MAX_PASSAGES = 8;
+const MAX_PASSAGES_CEILING = 14; // sanity backstop only - see reserveThinSourceSeats(), not a number an ordinary question should reach
+const THIN_SOURCE_FRACTION = 0.25; // see THIN_SOURCE_TYPES below for the reasoning
 const MAX_HISTORY_TURNS = 6; // server-enforced cap, independent of whatever the client sends
 
 /* Fixed list of top-level views, each with the citeId/view-id goToView()
@@ -133,11 +135,46 @@ X") even when passage search alone does not surface a direct match, and as
 the fallback source for suggestions in state 3:
 ${SITE_MAP_TEXT}
 
+SOURCETYPE-MATCHING RULE - check this explicitly before finalizing any
+answer that names a site section (e.g. Research Desk, Glossary) AND gives
+specific examples of its content in the same breath: a site map
+description tells you what a section is FOR, in general terms - that is a
+structural fact about the site and safe to state on its own. But a
+specific example is only a real example of that section if the retrieved
+passage it comes from actually has that section's own sourceType. Research
+Desk's sourceType is "research-case" - full stop. A retrieved passage with
+sourceType "species" (or "glossary", "hpw", etc.) is content that lives on
+that entity's own page, in its own tab, never in Research Desk, no matter
+how debate-like or "open question"-shaped its content reads. This applies
+however the open question is phrased - it does not matter whether the
+retrieved species passage frames something as unresolved, contested, or a
+"live question": that framing lives on the species' own page, not in
+Research Desk, unless a passage with sourceType "research-case" was
+separately retrieved for it.
+Before writing the word "Research Desk" next to any specific example,
+check that example's citation sourceType. If it is not "research-case":
+do not present it as something Research Desk covers. Either drop it as an
+illustration of Research Desk, or say plainly where it actually lives -
+"covered on its own DinoDex species page, not in Research Desk" - so the
+two are never blended into one undifferentiated claim. If none of the
+passages you retrieved has sourceType "research-case" at all, do not
+invent Research Desk examples from the species/glossary/hpw passages you
+did retrieve - describe Research Desk's general purpose only (what kind of
+question it is for), and separately mention the specific open questions
+you actually found, attributed to their real pages, as a distinct
+sentence, not folded into "Research Desk covers...".
+
 ALWAYS INCLUDE - after any answer, and standing alone for interest-only
-messages - a short set of 1-3 relevant pages to explore next, drawn from
-the crossRefs of the passages you used, or from the site map per the rules
-above. Keep this brief: a name and a half-sentence of why it's relevant,
-not a restatement of the passage.
+messages - relevant pages to explore next, drawn from the crossRefs of the
+passages you used, or from the site map per the rules above. The count
+should scale with how many things are genuinely relevant, not an
+artificial small number - if five species all genuinely touch the same
+open question, all five are fair game to suggest. Keep a practical ceiling
+of around 5 so this doesn't turn into an unwieldy wall of pills for a very
+broad question, but the default should be "as many as are genuinely
+relevant, not padded," not "always pick 1-3." Keep each one brief: a name
+and a half-sentence of why it's relevant, not a restatement of the
+passage.
 
 Keep the answer field under roughly 120 words.
 
@@ -162,6 +199,33 @@ const CONTENT_INDEX = JSON.parse(
 );
 const CITE_LABELS = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'cite-labels.json'), 'utf8')
+);
+
+/* Some sourceTypes have far fewer chunks than others (e.g. ~40 research-case
+   chunks across 10 cases vs. ~284 species chunks across 102 species). For a
+   broad question, several "pretty good" species matches can fill every slot
+   in the top-N selection, crowding out a research-case chunk that's a
+   genuinely strong match but scores marginally lower - not because it's a
+   worse answer, just because species has far more chunks competing for the
+   same slots. THIN_SOURCE_TYPES is computed from the actual content index at
+   cold start, not hardcoded, so it stays correct as content is added without
+   needing maintenance.
+   Rule: a sourceType counts as "thin" if its chunk count is under
+   THIN_SOURCE_FRACTION (25%) of the largest sourceType's count. Chosen
+   because it cleanly separates the two large flat catalogs (species and
+   glossary - both well above that line) from every curated/narrative
+   section (research-case, fossil-hunter, last-day, hpw, and the four
+   narrative tabs - all comfortably under it), without hand-picking a list
+   that would need revisiting every time content is added. */
+const SOURCE_TYPE_COUNTS = {};
+for (const chunk of CONTENT_INDEX) {
+  SOURCE_TYPE_COUNTS[chunk.sourceType] = (SOURCE_TYPE_COUNTS[chunk.sourceType] || 0) + 1;
+}
+const LARGEST_SOURCE_TYPE_COUNT = Math.max(...Object.values(SOURCE_TYPE_COUNTS));
+const THIN_SOURCE_TYPES = new Set(
+  Object.entries(SOURCE_TYPE_COUNTS)
+    .filter(([, count]) => count < LARGEST_SOURCE_TYPE_COUNT * THIN_SOURCE_FRACTION)
+    .map(([sourceType]) => sourceType)
 );
 
 const STOPWORDS = new Set([
@@ -233,7 +297,38 @@ function searchChunks(question, previousQuestion) {
   scored.sort((a, b) => b.score - a.score);
 
   if (!scored.length) return [];
-  return scored.slice(0, MAX_PASSAGES).map(r => r.chunk);
+
+  // Step 1/2 (relevance bar + top-N) are unchanged above/below. Step 3: among
+  // every chunk that cleared the relevance bar - not just the initial top-N -
+  // reserve a seat for any "thin" sourceType chunk that didn't make that cut,
+  // so a good-enough-but-outnumbered match is never invisible. This never
+  // displaces an already-selected higher-scoring chunk - it only adds seats,
+  // up to MAX_PASSAGES_CEILING as a sanity backstop against a pathological
+  // case, not a number an ordinary question should ever reach.
+  const initial = scored.slice(0, MAX_PASSAGES);
+  const initialChunks = new Set(initial.map(r => r.chunk));
+  // Reserve at most one seat per (sourceType, citeId), not per chunk - some
+  // sources (e.g. research-cases.js) split one entity into up to 4 chunks
+  // sharing a single citeId, and the goal is "make sure the entity isn't
+  // invisible," not "give every one of its sub-chunks its own seat." scored
+  // is already sorted best-first, so the first chunk seen per entity here is
+  // its highest-scoring one. This grouping applies only to the reservation
+  // pass - the top-8 above is untouched and can still include multiple
+  // chunks from the same entity if they genuinely earn it on their own merit.
+  const reservedByEntity = new Map();
+  for (const r of scored) {
+    if (initialChunks.has(r.chunk)) continue;
+    if (!THIN_SOURCE_TYPES.has(r.chunk.sourceType)) continue;
+    const entityKey = r.chunk.sourceType + ':' + r.chunk.citeId;
+    if (!reservedByEntity.has(entityKey)) reservedByEntity.set(entityKey, r);
+  }
+  const reserved = [];
+  for (const r of reservedByEntity.values()) {
+    reserved.push(r);
+    if (initial.length + reserved.length >= MAX_PASSAGES_CEILING) break;
+  }
+
+  return initial.concat(reserved).map(r => r.chunk);
 }
 
 /* citeId strings are not globally unique across sourceTypes (e.g. species.js
@@ -465,7 +560,9 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  /* ---- Step 2: search content-index.json (already capped at MAX_PASSAGES) ----
+  /* ---- Step 2: search content-index.json (top MAX_PASSAGES, plus any
+     reserved thin-source-type seats, up to MAX_PASSAGES_CEILING - see
+     searchChunks()) ----
      Search on the current question primarily; the immediately previous
      question (if any) is folded in as lower-weighted supporting context
      for follow-ups like "what about its arms" - see searchChunks(). */
@@ -548,4 +645,4 @@ module.exports = async function handler(req, res) {
 };
 
 /* exported for local testing only (see test/local-chat-test.js) */
-module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT, SITE_MAP };
+module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT, SITE_MAP, SOURCE_TYPE_COUNTS, THIN_SOURCE_TYPES };

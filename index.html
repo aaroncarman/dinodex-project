@@ -1994,6 +1994,8 @@
   color:var(--rust);
   border-left-color:var(--rust);
 }
+/* Standalone item between the home button and the first group (e.g. Ask) - not nested in any .sidebar-group */
+.sidebar-nav-item--standalone{margin-bottom:28px}
 
 /* ============================================================
    THEROPODS TO BIRDS - new, additive only, prefix ttb-
@@ -2417,8 +2419,8 @@
 /* ---- Ask tab (full-page view) - shares .chat-* classes with the
    floating panel above; these rules are Ask-tab-specific layout only ---- */
 #ask-view{min-height:calc(100vh - var(--banner-h));background:var(--bone);padding-bottom:80px}
-.ask-lede{font-size:16px;color:var(--ink-soft);line-height:1.6;max-width:640px;margin:14px 0 22px}
-.ask-limits{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:8px;max-width:640px}
+.ask-lede{font-size:16px;color:var(--ink-soft);line-height:1.6;max-width:none;margin:14px 0 22px}
+.ask-limits{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:8px;max-width:none}
 .ask-limits li{font-size:14px;color:var(--ink-soft);line-height:1.55;padding-left:18px;position:relative}
 .ask-limits li::before{content:"-";position:absolute;left:0;color:var(--rust)}
 .ask-examples{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
@@ -2431,7 +2433,7 @@
 .ask-example-btn:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
 .ask-conversation{
   border:1.5px solid var(--ink);background:var(--bone);box-shadow:8px 12px 0 var(--shadow);
-  max-width:720px;display:flex;flex-direction:column;height:min(640px,70vh);
+  max-width:none;display:flex;flex-direction:column;height:min(640px,70vh);
 }
 @media(max-width:600px){
   .ask-conversation{height:min(560px,75vh)}
@@ -2458,6 +2460,8 @@
   <div class="sidebar-inner">
 
     <button class="sidebar-home" data-view="home">i<span class="brand-accent">like</span>dinosaurs<span class="brand-accent">.com</span></button>
+
+    <button class="sidebar-nav-item sidebar-nav-item--standalone" data-view="ask">Ask</button>
 
     <div class="sidebar-group">
       <div class="sidebar-group-header">The Animals</div>
@@ -2500,7 +2504,6 @@
     <div class="sidebar-group">
       <div class="sidebar-group-header">Reference</div>
       <button class="sidebar-nav-item" data-view="glossary">Glossary</button>
-      <button class="sidebar-nav-item" data-view="ask">Ask</button>
       <button class="sidebar-nav-item" data-view="responsible-ai">Responsible AI</button>
     </div>
 
@@ -2631,6 +2634,12 @@
           <span class="home-card-label">AI Usage</span>
           <span class="home-card-title">Responsible AI</span>
           <span class="home-card-desc">A note on how this site was built, its limitations, and the approach taken to copyright.</span>
+          <span class="home-card-arrow">Open &rarr;</span>
+        </button>
+        <button class="home-section-card" onclick="goToView('ask')">
+          <span class="home-card-label">Reference</span>
+          <span class="home-card-title">Ask DinoDex</span>
+          <span class="home-card-desc">A search assistant grounded only in this site - ask a question or say what you're curious about.</span>
           <span class="home-card-arrow">Open &rarr;</span>
         </button>
       </div>

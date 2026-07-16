@@ -216,8 +216,9 @@ Mesozoic Ecosystems, Anatomy 101) are now built and live — next build sequence
 decided.
 
 **Deferred / out of scope for now:** Living relatives (crocodilians, birds as analogues),
-trace fossils (tracks, eggs, coprolites), AI tools / chatbot feature (parked pending
-clearer use case).
+trace fossils (tracks, eggs, coprolites).
+
+The AI chatbot feature listed here as deferred in earlier drafts is now built — see §9.
 
 **Pending revisit — homepage cards:** Cards for Anatomy 101, Mesozoic Ecosystems, Mass
 Extinctions, and Theropods to Birds were written before those sections had real content.
@@ -235,4 +236,112 @@ matches what the section became.
 - For anything ambiguous or multi-path, lay out the options and let the owner choose
   rather than picking silently.
 - Keep an eye on all three project goals (§1) and say which one a given suggestion
+  serves.
+
+---
+
+## 9. The chatbot ("Ask DinoDex")
+
+A grounded Q&A assistant, backend at `/api/chat.js` (a Vercel serverless function), with
+two frontend surfaces in `index.html` — a floating launcher/panel present on every view,
+and a full-page `ask` tab (standalone in the sidebar, right after Home) — that render the
+**same conversation**, not two separate chat instances. No frameworks, no build step,
+same as the rest of the site: plain `fetch()`, a `<script>` IIFE, and template strings.
+
+**Content index.** `build-content-index.js` reads every data file (`species.js`,
+`glossary.js`, `research-cases.js`, `fossil-hunters.js`, `last-day.js`, the four narrative
+tabs, and `hpw-content.js` — a structured extraction of the six How Palaeontology Works
+views, since those live as hand-written HTML in `index.html` with no data file of their
+own) and flattens them into `content-index.json`: one chunk per natural unit of content
+(a species profile, a fossil-record note, a study/debate entry, a glossary term, a
+research case's `mostlyAgreed`/`competingInterpretations`/`unresolved` arrays as three
+separate chunks, etc.), each tagged with `sourceType`, `citeId`, and a `confidence` level
+carried through from the source data's own `conf-strong/moderate/low` markers. The build
+also emits `cite-labels.json` — a `{ sourceType: { citeId: displayName } }` lookup, nested
+by sourceType rather than flat, because bare citeIds are **not** globally unique (e.g.
+`species.js` and `research-cases.js` both use the id `spinosaurus` for unrelated entries).
+Labels are resolved per-request from the specific chunks actually retrieved for that
+question, never from a global flat map — this is what makes citations/suggestions safe to
+attach server-side instead of trusting the model to restate a page's name correctly.
+Re-run `node build-content-index.js` after editing any source data file; it also reports
+broken citeIds and any citeId shared across more than one sourceType, so a collision is a
+visible, tracked fact rather than a silent landmine.
+
+**Search.** A plain keyword-overlap scorer in `api/chat.js` (title matches weighted above
+body matches; a chunk needs ≥2 distinct query-token matches unless the query is a single
+content word) — deliberately simple, per the original plan to add embeddings only if this
+proves too blunt in practice. The stopword list needs active curation: it must strip not
+just grammatical function words but ordinary conversational scaffolding ("tell me about",
+"can you explain", "I want to know about") and filler intensifiers ("really", "very") —
+both have caused real, silently-empty search results for completely ordinary phrasing.
+For follow-up questions, the previous turn's question is folded in as lower-weighted
+supporting context (half score per tier), not an equal signal, so "what about its arms"
+can resolve without the current question alone carrying the topic.
+
+**Rate limiting.** 10 questions per IP per day, tracked in Upstash Redis
+(`chatbot:ratelimit:<ip>:<date>`, 24h TTL, atomic `INCR`-first to avoid a check-then-
+increment race). The `x-test-key` request header, checked against the `CHATBOT_TEST_KEY`
+env var, bypasses this entirely — used for testing (both automated and manual), never a
+real visitor path. `?testkey=` as a one-time URL param stores it in `sessionStorage` for
+the rest of that browser session.
+
+**Multi-turn.** The widget sends `history: [{question, answer}, ...]`, capped server-side
+to the last 6 exchanges regardless of what the client sends (never trust client-supplied
+shape or size). This becomes genuine alternating `user`/`assistant` messages to the
+Anthropic API — the assistant side is the plain recorded answer text, not the JSON
+envelope, so the model isn't reading its own past output-format structure back at itself.
+The system prompt is sent in full on every call, unchanged by history length.
+
+**Site map.** `SITE_MAP` in `api/chat.js` is a fixed array of the 20 top-level views (all
+six HPW sub-views listed individually, since they cover different things), each with its
+real `goToView()` id and a description pulled from that view's own existing header/lede
+copy — never invented. The prompt text is *generated* from this array (`SITE_MAP_TEXT`),
+so the two can never drift apart. It exists because the model otherwise has no way to
+answer wayfinding questions ("where would I find X", "does the site cover Y") when content
+search alone doesn't surface a direct match, and it also backs the state-3 suggestion
+fallback below. Site-map ids are merged into the per-request label resolver as an
+always-available fallback (never overriding a real retrieved-passage label) — otherwise
+the model naming a whole tab as a suggestion would get silently dropped by the same
+hallucination guard that protects real citations.
+
+**Answer confidence — three states, not a binary in/out of scope.** The system prompt
+requires the model to judge which of three states a retrieval result is actually in before
+answering: (1) **strong match** — passages directly answer the question, answer
+confidently, `inScope: true`; (2) **weak/tangential match** — something relevant was
+retrieved but doesn't fully answer what was asked, so the answer must say so plainly and
+specifically (what's missing, not a vague "I'm not sure"), citing the closest related
+material but framed as related, not confirming, `inScope: true`; (3) **no relevant match**
+— say so plainly, `citations: []`, but suggestions still fall back to the site map so a
+visitor is never left at a dead end. `inScope` stays a simple boolean (true covers states
+1 and 2; false is state 3 only) — the nuance lives in the prompt's judgement, not the
+schema.
+
+**Sourcetype-matching rule** (added after a real accuracy bug): the model would sometimes
+name a site section (e.g. "Research Desk") and then illustrate it with examples that were
+real and correctly grounded, but actually lived elsewhere — a species page's own study
+entry, not a Research Desk case — blending "what a section is generally for" with content
+that happened to exist somewhere else into one undifferentiated claim. The fix lives in
+the system prompt: an example is only a genuine example of a section if the retrieved
+passage's own `sourceType` actually matches that section (Research Desk's is
+`research-case` - full stop), and if none of the retrieved passages have that sourceType,
+the model must describe the section's general purpose only and attribute any specific
+examples it did find to where they actually live. Confirmed empirically that a soft,
+example-laden version of this rule was not reliable (Haiku kept blending anyway); the
+version that worked reliably is closer to a hard requirement — check every named-section
+claim against its citation's sourceType before writing it, with an explicit
+no-passages-of-that-type fallback. Server-side, `citations` are also forced empty whenever
+`answer` is null (a citation only means anything as "what I used to answer this").
+
+**Known model-reliability limits, worked around at the code layer rather than the prompt
+alone:** en/em dashes in the model's prose (house style bans them) are stripped
+server-side after the fact (`sanitizeDashes()`) rather than trusted to the system prompt's
+instruction, since testing showed Haiku doesn't reliably comply. The same pattern - prompt
+first, code-level safety net if the prompt alone proves unreliable - is the default
+assumption for any future chatbot behaviour that turns out to be inconsistently followed.
+
+**Testing.** `test/local-chat-test.js` runs a large offline suite against a mocked
+Upstash/Anthropic (`node test/local-chat-test.js`), then one real end-to-end call if a
+local `.env.local` (gitignored) supplies real credentials. There's no committed dev
+server; manual/browser testing has used a disposable local static server plus Playwright,
+built fresh each time in the scratchpad rather than checked into the project.
   serves.
