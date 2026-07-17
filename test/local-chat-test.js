@@ -581,6 +581,33 @@ async function runLiveTest() {
   check('Live turn 2 answer stayed on Coelophysis, not a cold/generic answer ("it" resolved via history)',
     /coelophysis/i.test(b2.answer) || (b2.citations || []).some(c => c.id === 'coelophysis'),
     `answer: ${b2.answer} | citations: ${JSON.stringify(b2.citations)}`);
+
+  // --- Standing spot-check, not a pass/fail assertion (LLM output isn't
+  // deterministic): interest-only statements should now get real, grounded
+  // content per Phase 2, not answer:null. Read this by eye on every run. ---
+  console.log('\n--- LIVE spot-check: interest-only statement (Phase 2) ---');
+  const interestQuestion = 'I really like pterosaurs.';
+  const { status: sInterest, body: bInterest } = await invoke(handler, {
+    body: { question: interestQuestion },
+    headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+  });
+  console.log('  message:', interestQuestion);
+  console.log('  HTTP status:', sInterest);
+  console.log('  full response:', JSON.stringify(bInterest, null, 2));
+
+  // --- Standing spot-check, not a pass/fail assertion: the Research-Desk
+  // sourcetype-attribution problem (Phase 3). Read by eye on every run -
+  // check whether any specific example named alongside "Research Desk" is
+  // actually one of the citations' research-case sourceType entries. ---
+  console.log('\n--- LIVE spot-check: Research Desk sourcetype attribution (Phase 3) ---');
+  const openQuestionsMessage = "I'm interested in the open questions palaeontologists are still arguing about.";
+  const { status: sOpenQ, body: bOpenQ } = await invoke(handler, {
+    body: { question: openQuestionsMessage },
+    headers: { 'x-test-key': process.env.CHATBOT_TEST_KEY }
+  });
+  console.log('  message:', openQuestionsMessage);
+  console.log('  HTTP status:', sOpenQ);
+  console.log('  full response:', JSON.stringify(bOpenQ, null, 2));
 }
 
 (async () => {

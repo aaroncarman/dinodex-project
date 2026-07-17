@@ -58,6 +58,37 @@ const SITE_MAP = [
 ];
 const SITE_MAP_TEXT = SITE_MAP.map(v => `- ${v.id} - ${v.label}: ${v.desc}`).join('\n');
 
+/* ---- load content-index.json and cite-labels.json once at cold start ----
+   Moved above SYSTEM_PROMPT (rather than after it, where these used to
+   live) because SYSTEM_PROMPT's template string now also interpolates
+   RESEARCH_CASE_MAP_TEXT, computed from CITE_LABELS below. */
+const CONTENT_INDEX = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'content-index.json'), 'utf8')
+);
+const CITE_LABELS = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'cite-labels.json'), 'utf8')
+);
+/* Flat [{sourceType, citeId, alias}] list - a species' short epithet
+   ("T. rex"), a glossary term's alternate phrasings - built by
+   build-content-index.js from the source data's own epithet/aliases
+   fields. Merged into ENTITY_NAMES below so a colloquial abbreviation
+   still resolves to the right entity even though CITE_LABELS (used for
+   citation display) keeps only the one canonical name per entity. */
+const ENTITY_ALIASES = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'entity-aliases.json'), 'utf8')
+);
+
+/* Same pattern as SITE_MAP: a fixed, authoritative list generated from real
+   data (CITE_LABELS['research-case'], itself built from research-cases.js
+   by build-content-index.js) rather than hand-typed, so it can't drift out
+   of sync with the actual 10 cases. Exists to give the model something
+   concrete to check a "Research Desk covers..." claim against, the same
+   mechanism that already prevents SITE_MAP wayfinding hallucination,
+   applied to the analogous Research-Desk-attribution problem. */
+const RESEARCH_CASE_MAP = Object.entries(CITE_LABELS['research-case'] || {})
+  .map(([id, title]) => ({ id, title }));
+const RESEARCH_CASE_MAP_TEXT = RESEARCH_CASE_MAP.map(c => `- ${c.id} - ${c.title}`).join('\n');
+
 const SYSTEM_PROMPT = `You are the DinoDex assistant for ilikedinosaurs.com, a palaeontology
 education site. You answer questions and point visitors toward relevant
 pages, using ONLY the passages provided to you below as retrieved context,
@@ -85,11 +116,30 @@ WHICH KIND OF MESSAGE IS THIS:
 2. A PLAIN STATEMENT OF INTEREST, with no question structure at all - just
    naming something the visitor likes, nothing asked. Examples: "I really
    like pterosaurs.", "flying reptiles are so cool.", "dinosaurs are
-   amazing.", "I've always loved Triceratops." For these only, set answer
-   to null and go straight to suggestions.
-If in doubt which of these two a message is, treat it as a question (type
-1). An unwanted answer costs little; a visitor with a real question who
-gets only suggestions and no answer is the worse failure.
+   amazing.", "I've always loved Triceratops." These are not questions, but
+   they are not nothing either: apply the exact same grounding-state logic
+   below (strong / weak / no relevant match) to what was retrieved about
+   the topic. If anything relevant was found, write a real answer field -
+   2-3 concrete, cited facts, naming the specific species or pages the
+   retrieved passages actually support - with the same confidence hedging
+   (strong/moderate/low/none) as for a question. Frame it as an offer, not
+   a reply to a question that wasn't asked: "Pterosaurs are worth a look -"
+   rather than "You asked about pterosaurs." Only fall back to a null
+   answer here if grounding state 3 genuinely applies (nothing relevant was
+   retrieved at all) - in that case, same as for a question in state 3,
+   skip straight to suggestions.
+3. A message with NO TOPICAL CONTENT at all - a plain greeting or thanks
+   ("hi", "thanks!") with nothing to search for and nothing expressed to
+   ground an answer against. null remains appropriate here, since states
+   1-3 below don't meaningfully apply when nothing was asked or named.
+   Always include 2-3 suggestions from the SITE MAP below even so - a
+   short, inviting set of popular starting points (DinoDex, Research Desk,
+   and one other varied pick), never an empty suggestions array. Keep this
+   consistent every time - do not vary between offering suggestions and
+   leaving the array empty for the same kind of message.
+If in doubt which of these a message is, treat it as a question (type 1).
+An unwanted answer costs little; a visitor with a real question who gets
+only suggestions and no answer is the worse failure.
 
 GROUNDING RULES AND ANSWER CONFIDENCE - for every question (type 1 above),
 judge which of three states you are actually in before writing the answer:
@@ -135,6 +185,24 @@ X") even when passage search alone does not surface a direct match, and as
 the fallback source for suggestions in state 3:
 ${SITE_MAP_TEXT}
 
+QUESTIONS ABOUT THE SITE ITSELF (not about a specific dinosaur, species, or
+topic) - "what does this site cover", "what's here", "where should I
+start", "I'm not sure what this site covers" - are a distinct case from
+grounding states 1-3 above, and never fall through to a null answer or
+inScope: false. The SITE MAP above is itself the answer material and is
+always available, regardless of whether content search retrieved
+anything for a query like this (it usually won't, since there's no
+specific topic to search for). Write a real answer in your own words,
+summarizing the site's actual scope from the SITE MAP list - do not claim
+uncertainty or "nothing here" when the site map plainly lists what's
+covered. Default to a general overview rather than steering toward one
+specific section; only name a specific section (or a short few) directly
+when the visitor is actually asking for direction - "where should I
+start", "where would I find X" - since that's what they asked for.
+inScope: true. citations: [] (the site map isn't a citable passage, so
+there is nothing to cite here). suggestions: draw from the site map as
+usual.
+
 SOURCETYPE-MATCHING RULE - check this explicitly before finalizing any
 answer that names a site section (e.g. Research Desk, Glossary) AND gives
 specific examples of its content in the same breath: a site map
@@ -164,6 +232,14 @@ question it is for), and separately mention the specific open questions
 you actually found, attributed to their real pages, as a distinct
 sentence, not folded into "Research Desk covers...".
 
+RESEARCH DESK CASE LIST - the complete, fixed list of every real Research
+Desk case (10 total, nothing more). Before naming Research Desk alongside
+any specific example, check that example against this list. If it is not
+one of these 10, it is NOT a Research Desk example, full stop - regardless
+of how debate-like, unresolved, or "open question"-shaped its content
+reads:
+${RESEARCH_CASE_MAP_TEXT}
+
 ALWAYS INCLUDE - after any answer, and standing alone for interest-only
 messages - relevant pages to explore next, drawn from the crossRefs of the
 passages you used, or from the site map per the rules above. The count
@@ -178,11 +254,22 @@ passage.
 
 Keep the answer field under roughly 120 words.
 
+FINAL CHECK BEFORE YOU RESPOND - a condensed restatement of the
+sourcetype-matching rule above, repeated here because it matters: if your
+answer names "Research Desk" next to a specific example, that example must
+be one of the 10 cases in the RESEARCH DESK CASE LIST above. If it isn't,
+either cut it or say plainly it lives on its own species/glossary/hpw page,
+not in Research Desk. Do not skip this check.
+
 OUTPUT FORMAT: respond with ONLY valid JSON, no preamble, no markdown
 fences, matching exactly this shape:
 {
-  "answer": string or null (null only for pure interest-expression messages
-            with nothing to factually answer),
+  "answer": string or null (null only for: a type-3 no-topical-content
+            message, e.g. a greeting; OR a type-1 question or type-2
+            interest-statement that lands in grounding state 3, no
+            relevant match at all. Otherwise always a real answer,
+            including for interest-statements with relevant matches AND
+            for questions about the site itself, per the section above),
   "inScope": boolean (false only for state 3 - no relevant match at all),
   "citations": [ { "id": string } ],
   "suggestions": [ { "id": string, "reason": string } ]
@@ -192,14 +279,6 @@ passages, or one of the ids in the site map above - the site uses these to
 link directly to the right page. Do not include a "label" or display-name
 field on citations or suggestions - the site already knows each page's
 name and will attach it itself.`;
-
-/* ---- load content-index.json and cite-labels.json once at cold start ---- */
-const CONTENT_INDEX = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '..', 'content-index.json'), 'utf8')
-);
-const CITE_LABELS = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '..', 'cite-labels.json'), 'utf8')
-);
 
 /* ---- direct name-match pass: catches a named entity buried in ordinary
    phrasing that the stopword/tokenizer path misses (e.g. "my favourite
@@ -229,6 +308,14 @@ for (const [sourceType, byId] of Object.entries(CITE_LABELS)) {
       regex: new RegExp('(?<![a-zA-Z0-9])' + escapeRegex(name) + '(?![a-zA-Z0-9])', 'i')
     });
   }
+}
+for (const { sourceType, citeId, alias } of ENTITY_ALIASES) {
+  ENTITY_NAMES.push({
+    name: alias,
+    sourceType,
+    citeId,
+    regex: new RegExp('(?<![a-zA-Z0-9])' + escapeRegex(alias) + '(?![a-zA-Z0-9])', 'i')
+  });
 }
 
 /* Sanity checks, run once at cold start and logged (not silently handled -
@@ -773,4 +860,4 @@ module.exports = async function handler(req, res) {
 };
 
 /* exported for local testing only (see test/local-chat-test.js) */
-module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT, SITE_MAP, SOURCE_TYPE_COUNTS, THIN_SOURCE_TYPES };
+module.exports._internal = { searchChunks, tokenize, envelope, checkAndIncrementRateLimit, getClientIp, buildRequestLabels, sanitizeHistory, buildMessages, SYSTEM_PROMPT, SITE_MAP, SOURCE_TYPE_COUNTS, THIN_SOURCE_TYPES, RESEARCH_CASE_MAP };

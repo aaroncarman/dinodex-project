@@ -93,11 +93,29 @@ function setLabel(sourceType, citeId, value) {
   labels[sourceType][citeId] = value;
 }
 
+/* Separate from labels (which are the single canonical display name per
+   entity, used for citations). Aliases are additional strings - a
+   species' short epithet ("T. rex"), a glossary term's alternate
+   phrasings - that a visitor might type instead of the canonical name.
+   Consumed by api/chat.js's entity name-match pass (ENTITY_NAMES) so a
+   colloquial abbreviation still resolves to the right entity even though
+   the display label stays the full canonical name. Flat array, not
+   nested by sourceType, since api/chat.js only ever needs to iterate all
+   of them once at cold start. */
+const aliases = [];
+function addAlias(sourceType, citeId, alias) {
+  if (!alias) return;
+  aliases.push({ sourceType, citeId, alias });
+}
+
 /* ============================================================
    SPECIES.js
    ============================================================ */
 for (const s of ctx.SPECIES) {
   setLabel('species', s.id, s.name);
+  if (s.epithet && s.epithet.toLowerCase() !== s.name.toLowerCase()) {
+    addAlias('species', s.id, s.epithet);
+  }
 
   push({
     id: `species:${s.id}:profile`,
@@ -155,6 +173,7 @@ for (const s of ctx.SPECIES) {
    ============================================================ */
 for (const g of ctx.GLOSSARY_TERMS) {
   setLabel('glossary', g.id, g.term);
+  for (const alias of g.aliases || []) addAlias('glossary', g.id, alias);
 
   push({
     id: `glossary:${g.id}`,
@@ -732,6 +751,7 @@ const missingLabels = uniqueSourceCiteIdPairs
 
 fs.writeFileSync(path.join(ROOT, 'content-index.json'), JSON.stringify(chunks, null, 2));
 fs.writeFileSync(path.join(ROOT, 'cite-labels.json'), JSON.stringify(labels, null, 2));
+fs.writeFileSync(path.join(ROOT, 'entity-aliases.json'), JSON.stringify(aliases, null, 2));
 
 console.log('=== BUILD REPORT ===');
 console.log('Total chunks:', chunks.length);
@@ -742,6 +762,7 @@ console.log('Empty-text chunks (should be none, already skipped at push-time):',
 console.log('Moderate/low tagged chunks:', taggedChunks.length);
 console.log('Unique (sourceType, citeId) pairs in content-index.json:', uniqueSourceCiteIdPairs.length);
 console.log('Unique citeIds in cite-labels.json, by sourceType:', Object.fromEntries(Object.entries(labels).map(([k, v]) => [k, Object.keys(v).length])));
+console.log('Entity aliases written to entity-aliases.json:', aliases.length);
 console.log('(sourceType, citeId) pairs with no resolvable label:', missingLabels.length ? missingLabels : 'none');
 console.log('citeId strings shared across more than one sourceType (informational only - see comment above; nested lookup means these cannot cross-contaminate):', idCollisions.length ? idCollisions : 'none');
 console.log(JSON.stringify(taggedChunks, null, 2));

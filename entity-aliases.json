@@ -1,0 +1,1467 @@
+[
+  {
+    "sourceType": "species",
+    "citeId": "coelophysis",
+    "alias": "C. bauri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "eoraptor",
+    "alias": "E. lunensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "herrerasaurus",
+    "alias": "H. ischigualastensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "plateosaurus",
+    "alias": "P. trossingensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "dilophosaurus",
+    "alias": "D. wetherilli"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "allosaurus",
+    "alias": "A. fragilis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "stegosaurus",
+    "alias": "S. stenops"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "brachiosaurus",
+    "alias": "B. altithorax"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "diplodocus",
+    "alias": "D. carnegii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "archaeopteryx",
+    "alias": "A. lithographica"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "compsognathus",
+    "alias": "C. longipes"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "spinosaurus",
+    "alias": "S. aegyptiacus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "tyrannosaurus",
+    "alias": "T. rex"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "giganotosaurus",
+    "alias": "G. carolinii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "carnotaurus",
+    "alias": "C. sastrei"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "baryonyx",
+    "alias": "B. walkeri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "iguanodon",
+    "alias": "I. bernissartensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "deinonychus",
+    "alias": "D. antirrhopus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "microraptor",
+    "alias": "M. gui"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "therizinosaurus",
+    "alias": "T. cheloniformis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "oviraptor",
+    "alias": "O. philoceratops"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "velociraptor",
+    "alias": "V. mongoliensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "parasaurolophus",
+    "alias": "P. walkeri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "triceratops",
+    "alias": "T. horridus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ankylosaurus",
+    "alias": "A. magniventris"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "pachycephalosaurus",
+    "alias": "P. wyomingensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "pteranodon",
+    "alias": "P. longiceps"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "quetzalcoatlus",
+    "alias": "Q. northropi"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "deinocheirus",
+    "alias": "D. mirificus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "argentinosaurus",
+    "alias": "A. huinculensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "majungasaurus",
+    "alias": "M. crenatissimus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "sinosauropteryx",
+    "alias": "S. prima"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "beelzebufo",
+    "alias": "B. ampinga"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "heterodontosaurus",
+    "alias": "H. tucki"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "gallimimus",
+    "alias": "G. bullatus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "maiasaura",
+    "alias": "M. peeblesorum"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "styracosaurus",
+    "alias": "S. albertensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "edmontosaurus",
+    "alias": "E. regalis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "mononykus",
+    "alias": "M. olecranus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "eudimorphodon",
+    "alias": "E. ranzii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "mussaurus",
+    "alias": "M. patagonicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "tawa",
+    "alias": "T. hallae"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "nothosaurus",
+    "alias": "N. mirabilis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "scelidosaurus",
+    "alias": "S. harrisonii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "megalosaurus",
+    "alias": "M. bucklandii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ceratosaurus",
+    "alias": "C. nasicornis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "cryolophosaurus",
+    "alias": "C. ellioti"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "rhamphorhynchus",
+    "alias": "R. muensteri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ichthyosaurus",
+    "alias": "I. communis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "plesiosaurus",
+    "alias": "P. dolichodeirus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "liopleurodon",
+    "alias": "L. ferox"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "morganucodon",
+    "alias": "M. oehleri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "mosasaurus",
+    "alias": "M. hoffmannii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "hesperornis",
+    "alias": "H. regalis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "lesothosaurus",
+    "alias": "L. diagnosticus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "anchiornis",
+    "alias": "A. huxleyi"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "protoceratops",
+    "alias": "P. andrewsi"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "deinosuchus",
+    "alias": "D. riograndensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "magyarosaurus",
+    "alias": "M. dacus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ornithomimus",
+    "alias": "O. edmontonicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "brontosaurus",
+    "alias": "B. excelsus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "pachyrhinosaurus",
+    "alias": "P. lakustai"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "yutyrannus",
+    "alias": "Y. huali"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "wulong",
+    "alias": "W. bohaiensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "utahraptor",
+    "alias": "U. ostrommaysorum"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "albertosaurus",
+    "alias": "A. sarcophagus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "torvosaurus",
+    "alias": "T. tanneri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "dreadnoughtus",
+    "alias": "D. schrani"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "nanuqsaurus",
+    "alias": "N. hoglundi"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "hatzegopteryx",
+    "alias": "H. thambema"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "elasmosaurus",
+    "alias": "E. platyurus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "postosuchus",
+    "alias": "P. kirkpatricki"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "psittacosaurus",
+    "alias": "P. mongoliensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "borealopelta",
+    "alias": "B. markmitchelli"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "tenontosaurus",
+    "alias": "T. tilletti"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "centrosaurus",
+    "alias": "C. apertus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "patagotitan",
+    "alias": "P. mayorum"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "effigia",
+    "alias": "E. okeeffeae"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "nigersaurus",
+    "alias": "N. taqueti"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "gastonia",
+    "alias": "G. burgei"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "abelisaurus",
+    "alias": "A. comahuensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "nyasasaurus",
+    "alias": "N. parringtoni"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "neovenator",
+    "alias": "N. salerii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "hypsilophodon",
+    "alias": "H. foxii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "pisanosaurus",
+    "alias": "P. mertii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "amargasaurus",
+    "alias": "A. cazaui"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "confuciusornis",
+    "alias": "C. sanctus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "acrocanthosaurus",
+    "alias": "A. atokensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "carcharodontosaurus",
+    "alias": "C. saharicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "suchomimus",
+    "alias": "S. tenerensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "zuniceratops",
+    "alias": "Z. christopheri"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "rajasaurus",
+    "alias": "R. narmadensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "huayangosaurus",
+    "alias": "H. taibaii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ouranosaurus",
+    "alias": "O. nigeriensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "mapusaurus",
+    "alias": "M. roseae"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "daspletosaurus",
+    "alias": "D. torosus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "kosmoceratops",
+    "alias": "K. richardsoni"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "camptosaurus",
+    "alias": "C. dispar"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "concavenator",
+    "alias": "C. corcovatus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "corythosaurus",
+    "alias": "C. casuarius"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "lystrosaurus",
+    "alias": "L. curvatus"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "adaptive-radiation",
+    "alias": "evolutionary radiation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "adaptive-radiation",
+    "alias": "clade diversification"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "bipedal",
+    "alias": "biped"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "bipedal",
+    "alias": "bipedality"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "bipedal",
+    "alias": "two-legged locomotion"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "bonebed",
+    "alias": "bone bed"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "bonebed",
+    "alias": "mass death assemblage"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsian",
+    "alias": "Ceratopsia"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsian",
+    "alias": "ceratopsid"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsian",
+    "alias": "horned dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "clade",
+    "alias": "monophyletic group"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cladistics",
+    "alias": "cladistic analysis"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cladistics",
+    "alias": "parsimony analysis"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cladistics",
+    "alias": "phylogenetic systematics"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "convergent-evolution",
+    "alias": "convergence"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "convergent-evolution",
+    "alias": "homoplasy"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cretaceous",
+    "alias": "Cretaceous Period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cretaceous",
+    "alias": "Cretaceous period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cursorial",
+    "alias": "cursoriality"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cursorial",
+    "alias": "running adaptation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "diagnosis",
+    "alias": "formal diagnosis"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "diagnosis",
+    "alias": "differential diagnosis"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dinosauria",
+    "alias": "Dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dinosauria",
+    "alias": "dinosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "display-structure",
+    "alias": "display feature"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "display-structure",
+    "alias": "ornamentation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "display-structure",
+    "alias": "visual signal"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dromaeosaurid",
+    "alias": "Dromaeosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dromaeosaurid",
+    "alias": "raptor"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dromaeosaurid",
+    "alias": "raptors"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "fossil-formation",
+    "alias": "fossilisation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "fossil-formation",
+    "alias": "fossilization"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "fossil-record",
+    "alias": "fossil evidence"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "fossil-record",
+    "alias": "palaeontological record"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "genus",
+    "alias": "genera"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "holotype",
+    "alias": "type specimen"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "holotype",
+    "alias": "name-bearing specimen"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "integument",
+    "alias": "integumentary system"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "integument",
+    "alias": "body covering"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jurassic",
+    "alias": "Jurassic Period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jurassic",
+    "alias": "Jurassic period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "kpg-boundary",
+    "alias": "K-T boundary"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "kpg-boundary",
+    "alias": "Cretaceous-Palaeogene boundary"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "kpg-boundary",
+    "alias": "end-Cretaceous extinction"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "lagerstaette",
+    "alias": "Lagerstätten"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "lagerstaette",
+    "alias": "exceptional preservation site"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "lagerstaette",
+    "alias": "fossil lagerstaette"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "maastrichtian",
+    "alias": "Maastrichtian Age"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "maastrichtian",
+    "alias": "latest Cretaceous"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "maniraptoran",
+    "alias": "Maniraptora"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "maniraptoran",
+    "alias": "maniraptorans"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mass-extinction",
+    "alias": "extinction event"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mass-extinction",
+    "alias": "mass die-off"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mass-extinction",
+    "alias": "Big Five extinctions"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mesozoic",
+    "alias": "Mesozoic Era"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mesozoic",
+    "alias": "Age of Reptiles"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mesozoic",
+    "alias": "Age of Dinosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "mosaic-evolution",
+    "alias": "mosaic character distribution"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ornithischian",
+    "alias": "Ornithischia"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ornithischian",
+    "alias": "bird-hipped dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "paravian",
+    "alias": "Paraves"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "phylogeny",
+    "alias": "phylogenetic tree"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "phylogeny",
+    "alias": "evolutionary tree"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "phylogeny",
+    "alias": "cladogram"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumaticity",
+    "alias": "pneumatised skeleton"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumaticity",
+    "alias": "air sacs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumaticity",
+    "alias": "skeletal pneumaticity"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "preservation",
+    "alias": "fossil preservation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "preservation",
+    "alias": "completeness"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "preservation",
+    "alias": "preservation quality"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "quadrupedal",
+    "alias": "quadruped"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "quadrupedal",
+    "alias": "quadrupedality"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "quadrupedal",
+    "alias": "four-legged locomotion"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "sauropod",
+    "alias": "Sauropoda"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "sauropod",
+    "alias": "sauropodomorph"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "species",
+    "alias": "sp."
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "species",
+    "alias": "species epithet"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "specimen",
+    "alias": "fossil specimen"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "specimen",
+    "alias": "material"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "taphonomy",
+    "alias": "taphonomic"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "taxonomy",
+    "alias": "biological classification"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "taxonomy",
+    "alias": "systematics"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "theropod",
+    "alias": "Theropoda"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trace-fossil",
+    "alias": "ichnofossil"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trace-fossil",
+    "alias": "ichnology"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trace-fossil",
+    "alias": "trace evidence"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "transitional-fossil",
+    "alias": "transitional form"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "transitional-fossil",
+    "alias": "missing link"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "triassic",
+    "alias": "Triassic Period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "triassic",
+    "alias": "Triassic period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "archosaur",
+    "alias": "Archosauria"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "archosaur",
+    "alias": "ruling reptile"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pseudosuchian",
+    "alias": "Pseudosuchia"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pseudosuchian",
+    "alias": "crocodile-line archosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "thyreophora",
+    "alias": "thyreophorans"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "thyreophora",
+    "alias": "shield-bearers"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "thyreophora",
+    "alias": "armoured ornithischians"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ankylosaur",
+    "alias": "Ankylosauria"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ankylosaur",
+    "alias": "ankylosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ankylosaur",
+    "alias": "armoured dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "nodosaurid",
+    "alias": "Nodosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "nodosaurid",
+    "alias": "nodosaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "stegosaur",
+    "alias": "Stegosauria"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "stegosaur",
+    "alias": "stegosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "stegosaur",
+    "alias": "plated dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ornithopod",
+    "alias": "Ornithopoda"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ornithopod",
+    "alias": "ornithopods"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ornithopod",
+    "alias": "bird-footed dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "iguanodontian",
+    "alias": "Iguanodontia"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "iguanodontian",
+    "alias": "iguanodontians"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "hadrosauroid",
+    "alias": "Hadrosauroidea"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "hadrosauroid",
+    "alias": "hadrosauroids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "hadrosauroid",
+    "alias": "duck-billed dinosaur relatives"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsid",
+    "alias": "Ceratopsidae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsid",
+    "alias": "ceratopsids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ceratopsid",
+    "alias": "large horned dinosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "allosauroid",
+    "alias": "Allosauroidea"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "allosauroid",
+    "alias": "allosauroids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "carcharodontosaurid",
+    "alias": "Carcharodontosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "carcharodontosaurid",
+    "alias": "carcharodontosaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "carcharodontosaurid",
+    "alias": "shark-toothed theropod"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "abelisaurid",
+    "alias": "Abelisauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "abelisaurid",
+    "alias": "abelisaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "spinosaurid",
+    "alias": "Spinosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "spinosaurid",
+    "alias": "spinosaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "spinosaurid",
+    "alias": "fish-eating theropod"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "tyrannosaurid",
+    "alias": "Tyrannosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "tyrannosaurid",
+    "alias": "tyrannosaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "tyrannosaurid",
+    "alias": "tyrannosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "avialan",
+    "alias": "Avialae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "avialan",
+    "alias": "avialans"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "avialan",
+    "alias": "bird-line theropod"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "diplodocoid",
+    "alias": "Diplodocoidea"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "diplodocoid",
+    "alias": "diplodocoids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dicraeosaurid",
+    "alias": "Dicraeosauridae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dicraeosaurid",
+    "alias": "dicraeosaurids"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "titanosaur",
+    "alias": "Titanosauria"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "titanosaur",
+    "alias": "titanosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "titanosaur",
+    "alias": "titanosaurian"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "frill",
+    "alias": "neck frill"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "frill",
+    "alias": "parietal-squamosal frill"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "frill",
+    "alias": "ceratopsian frill"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dental-battery",
+    "alias": "tooth battery"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "dental-battery",
+    "alias": "dental column"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "osteoderm",
+    "alias": "dermal bone"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "osteoderm",
+    "alias": "skin bone"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "osteoderm",
+    "alias": "scute"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumatisation",
+    "alias": "pneumatization"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumatisation",
+    "alias": "skeletal pneumatisation"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pneumatisation",
+    "alias": "air-filled bones"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pygostyle",
+    "alias": "fused tail vertebrae"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "pygostyle",
+    "alias": "tail fan support"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "feathers",
+    "alias": "proto-feathers"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "feathers",
+    "alias": "filamentous integument"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "feathers",
+    "alias": "pennaceous feathers"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "feathers",
+    "alias": "dinofuzz"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "melanosome",
+    "alias": "melanosomes"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "melanosome",
+    "alias": "fossil melanosomes"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "melanosome",
+    "alias": "colour organelles"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trackway",
+    "alias": "fossil trackway"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trackway",
+    "alias": "ichnite sequence"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "trackway",
+    "alias": "footprint trail"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "predation",
+    "alias": "carnivory"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "predation",
+    "alias": "predator-prey interaction"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "predation",
+    "alias": "hunting"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ontogeny",
+    "alias": "ontogenetic"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ontogeny",
+    "alias": "individual development"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "ontogeny",
+    "alias": "growth series"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "gondwana",
+    "alias": "Gondwanaland"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "gondwana",
+    "alias": "southern supercontinent"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "morrison-formation",
+    "alias": "Morrison Fm"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "morrison-formation",
+    "alias": "Morrison beds"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "wealden",
+    "alias": "Wealden Supergroup"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "wealden",
+    "alias": "Wealden Group"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "wealden",
+    "alias": "Wealden beds"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jehol-biota",
+    "alias": "Jehol assemblage"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jehol-biota",
+    "alias": "Jehol Group"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jehol-biota",
+    "alias": "Yixian biota"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "jehol-biota",
+    "alias": "Liaoning biota"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "furcula",
+    "alias": "wishbone"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "furcula",
+    "alias": "fused clavicles"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "coelurosauria",
+    "alias": "coelurosaur"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "coelurosauria",
+    "alias": "coelurosaurs"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "coprolite",
+    "alias": "fossil dung"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "coprolite",
+    "alias": "fossilised faeces"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "phytolith",
+    "alias": "plant opal"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "phytolith",
+    "alias": "silica body"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cretaceous-terrestrial-revolution",
+    "alias": "Angiosperm Terrestrial Revolution"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "cretaceous-terrestrial-revolution",
+    "alias": "KTR"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "permian",
+    "alias": "Permian Period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "permian",
+    "alias": "Permian period"
+  },
+  {
+    "sourceType": "glossary",
+    "citeId": "therapsid",
+    "alias": "Therapsida"
+  }
+]
