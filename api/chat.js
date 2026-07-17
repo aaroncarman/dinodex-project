@@ -201,6 +201,105 @@ const CITE_LABELS = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'cite-labels.json'), 'utf8')
 );
 
+/* ---- direct name-match pass: catches a named entity buried in ordinary
+   phrasing that the stopword/tokenizer path misses (e.g. "my favourite
+   dino is magyarosaurus, tell me some interesting things about it" -
+   "favourite", "dino", "interesting", "things" all survive stopword
+   stripping as ordinary content words, so the query never collapses to a
+   single term and never gets the MIN_DISTINCT_MATCHES relaxation, even
+   though "magyarosaurus" is sitting right there in the text). This runs
+   independently of tokenization - a case-insensitive, word-boundary
+   match against the real display name, straight against the raw question
+   string. CITE_LABELS (not chunk titles, which carry suffixes like
+   "- overview") is the source of truth for names, since it's already the
+   canonical citeId -> display-name lookup used everywhere else. */
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+const ENTITY_NAMES = [];
+for (const [sourceType, byId] of Object.entries(CITE_LABELS)) {
+  for (const [citeId, name] of Object.entries(byId)) {
+    ENTITY_NAMES.push({
+      name,
+      sourceType,
+      citeId,
+      // (?<!...) / (?!...) rather than \b, because \b treats "." as a
+      // non-word boundary the same as a space - needed for names like
+      // "T. rex" to match as a whole phrase, not fail on the period.
+      regex: new RegExp('(?<![a-zA-Z0-9])' + escapeRegex(name) + '(?![a-zA-Z0-9])', 'i')
+    });
+  }
+}
+
+/* Sanity checks, run once at cold start and logged (not silently handled -
+   see api/chat.js comment history / CLAUDE.md for the actual manual
+   review of what these turned up). Two distinct risk shapes:
+   (1) one name is a whole-word substring of another (e.g. "Cretaceous" -
+       a glossary term - inside "Cretaceous Sauropods" - a research case).
+       Not necessarily wrong (both can be genuinely relevant to the same
+       phrase), but worth knowing about.
+   (2) a name that doubles as an ordinary English word a visitor would use
+       constantly without meaning that specific entity (e.g. the glossary
+       terms "Species", "Genus", "Specimen", "Frill"). A generic
+       common-word list does NOT reliably catch these - "species" isn't a
+       top-200-frequency English word in general, but it is a word this
+       site's visitors will use constantly in ordinary questions, simply
+       because the whole site is about species. That's a contextual
+       judgement a generic wordlist can't make, so this check is
+       necessarily a starting point, not a final answer - real findings
+       were confirmed by manual review, not just this heuristic. */
+const COMMON_ENGLISH_WORDS = new Set(`a about after again all also an and any are as at back be
+because been before being between both but by came can come could day did do does down each
+even first for from get give go going good got had has have he her here him his how i if in
+into is it its just know large last least less like little long look made make man many may me
+might more most much must my need never new no not now of off old on one only or other our out
+over own part people put said same say see she should since so some still such take than that
+the their them then there these they thing think this those thought through time to two under
+until up us use very want was way we well went were what when where which while who why will
+with work would year you your yes new old good great small big high low long short much many
+most few little`.split(/\s+/));
+const NAME_SANITY_WARNINGS = [];
+for (const entity of ENTITY_NAMES) {
+  if (/\s/.test(entity.name)) continue; // multi-word names are much less likely to collide by accident
+  if (COMMON_ENGLISH_WORDS.has(entity.name.toLowerCase())) {
+    NAME_SANITY_WARNINGS.push(`"${entity.name}" (${entity.sourceType}:${entity.citeId}) is a common English word - generic-wordlist check`);
+  }
+}
+// Substring check: does entity A's name appear as a whole-word substring
+// inside entity B's name (different entity)? Not necessarily wrong - e.g.
+// "Cretaceous" (glossary) inside "Cretaceous Sauropods" (research-case)
+// are both genuinely relevant if a visitor types the longer phrase - but
+// worth surfacing rather than assuming it's harmless in every case.
+for (const a of ENTITY_NAMES) {
+  for (const b of ENTITY_NAMES) {
+    if (a === b || a.name.length >= b.name.length) continue;
+    if (a.regex.test(b.name)) {
+      NAME_SANITY_WARNINGS.push(`"${a.name}" (${a.sourceType}:${a.citeId}) is a substring of "${b.name}" (${b.sourceType}:${b.citeId})`);
+    }
+  }
+}
+// Manually reviewed during Phase 1: these single-word glossary terms are
+// ordinary English words this site's visitors will use constantly in
+// unrelated ordinary questions ("how many species...", "what genus...",
+// "the specimen shows...") without meaning "define this glossary term" -
+// the generic wordlist above does not catch them (they're too
+// domain-adjacent, not high-frequency enough in general English), so
+// they're listed explicitly here as a known, flagged risk rather than
+// silently included or silently excluded. No decision has been made to
+// exclude them from name-matching - flagging for review, not resolving.
+const KNOWN_AMBIGUOUS_NAMES = ['Species', 'Genus', 'Specimen', 'Frill'];
+for (const name of KNOWN_AMBIGUOUS_NAMES) {
+  const entity = ENTITY_NAMES.find(e => e.name === name);
+  if (entity) NAME_SANITY_WARNINGS.push(`"${entity.name}" (${entity.sourceType}:${entity.citeId}) is an ordinary English word in this site's own domain - manually flagged, not excluded`);
+}
+if (NAME_SANITY_WARNINGS.length) {
+  console.log('Name-match sanity warnings (' + NAME_SANITY_WARNINGS.length + '):\n  ' + NAME_SANITY_WARNINGS.join('\n  '));
+}
+
+function findNameMatches(rawQuestion) {
+  return ENTITY_NAMES.filter(entity => entity.regex.test(rawQuestion));
+}
+
 /* Some sourceTypes have far fewer chunks than others (e.g. ~40 research-case
    chunks across 10 cases vs. ~284 species chunks across 102 species). For a
    broad question, several "pretty good" species matches can fill every slot
@@ -276,11 +375,15 @@ const SEARCH_INDEX = CONTENT_INDEX.map(chunk => ({
    question is actually asking - it's a nudge, not an equal vote. */
 function searchChunks(question, previousQuestion) {
   const qTokens = tokenize(question);
-  if (!qTokens.length) return [];
   const qSet = new Set(qTokens);
   const prevSet = new Set((previousQuestion ? tokenize(previousQuestion) : []).filter(t => !qSet.has(t)));
 
-  const scored = SEARCH_INDEX.map(({ chunk, titleTokens, textTokens }) => {
+  // Unfiltered - every chunk gets a score, even 0. `scored` (the existing
+  // relevance-bar-passing set) is derived from this below; the name-match
+  // pass further down also needs this unfiltered version, to find a named
+  // entity's best chunk even when nothing about it cleared the bar on
+  // tokenized score alone.
+  const allScored = SEARCH_INDEX.map(({ chunk, titleTokens, textTokens }) => {
     let score = 0;
     const matched = new Set();
     for (const t of titleTokens) {
@@ -292,11 +395,12 @@ function searchChunks(question, previousQuestion) {
       else if (prevSet.has(t)) { score += 0.5; matched.add(t); } // body match, previous question only
     }
     return { chunk, score, distinctMatches: matched.size };
-  }).filter(r => r.score >= MIN_SCORE && (r.distinctMatches >= MIN_DISTINCT_MATCHES || qSet.size === 1));
+  });
 
+  const scored = qTokens.length
+    ? allScored.filter(r => r.score >= MIN_SCORE && (r.distinctMatches >= MIN_DISTINCT_MATCHES || qSet.size === 1))
+    : [];
   scored.sort((a, b) => b.score - a.score);
-
-  if (!scored.length) return [];
 
   // Step 1/2 (relevance bar + top-N) are unchanged above/below. Step 3: among
   // every chunk that cleared the relevance bar - not just the initial top-N -
@@ -328,7 +432,31 @@ function searchChunks(question, previousQuestion) {
     if (initial.length + reserved.length >= MAX_PASSAGES_CEILING) break;
   }
 
-  return initial.concat(reserved).map(r => r.chunk);
+  // Step 4: direct name-match pass, independent of tokenization/stopwords -
+  // see ENTITY_NAMES/findNameMatches() above for why this exists. Runs
+  // against the RAW question string, not qTokens. For each matched entity
+  // not already selected, pull its own single highest-scoring chunk from
+  // allScored (the unfiltered set) even if that score is below MIN_SCORE -
+  // the point is a named entity should never be invisible just because the
+  // surrounding sentence diluted its tokenized score. Same MAX_PASSAGES_CEILING
+  // backstop as the reservation pass; does not touch MIN_SCORE,
+  // MIN_DISTINCT_MATCHES, or the tokenized path above, which are unchanged.
+  const selectedEntityKeys = new Set(
+    initial.concat(reserved).map(r => r.chunk.sourceType + ':' + r.chunk.citeId)
+  );
+  const forced = [];
+  for (const entity of findNameMatches(question)) {
+    const entityKey = entity.sourceType + ':' + entity.citeId;
+    if (selectedEntityKeys.has(entityKey)) continue;
+    const candidates = allScored.filter(r => r.chunk.sourceType === entity.sourceType && r.chunk.citeId === entity.citeId);
+    if (!candidates.length) continue;
+    candidates.sort((a, b) => b.score - a.score);
+    forced.push(candidates[0]);
+    selectedEntityKeys.add(entityKey);
+    if (initial.length + reserved.length + forced.length >= MAX_PASSAGES_CEILING) break;
+  }
+
+  return initial.concat(reserved).concat(forced).map(r => r.chunk);
 }
 
 /* citeId strings are not globally unique across sourceTypes (e.g. species.js

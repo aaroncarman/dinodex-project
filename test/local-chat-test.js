@@ -446,6 +446,41 @@ async function runOfflineTests() {
     global.fetch = sharedMockFetch;
   }
 
+  // --- NEW: direct name-match pass catches an entity name buried in
+  // ordinary phrasing that the stopword/tokenizer path alone misses ---
+  {
+    const { searchChunks } = handler._internal;
+
+    // The exact motivating example: "favourite", "dino", "interesting",
+    // "things" all survive stopword stripping as ordinary content words,
+    // so the query never collapses to a single term and never gets the
+    // MIN_DISTINCT_MATCHES relaxation - even though "magyarosaurus" is
+    // sitting right there in the text.
+    const magyarosaurusResults = searchChunks('my favourite dino is magyarosaurus, tell me some interesting things about it');
+    check('Buried name (Magyarosaurus) is retrieved despite generic surrounding phrasing',
+      magyarosaurusResults.some(c => c.sourceType === 'species' && c.citeId === 'magyarosaurus'),
+      JSON.stringify(magyarosaurusResults.map(c => c.sourceType + ':' + c.citeId)));
+
+    // Two more, differently phrased, to confirm this generalises rather
+    // than just patching the one example.
+    const nyasasaurusResults = searchChunks('so I saw this weird looking creature called nyasasaurus somewhere and got curious about it');
+    check('Buried name (Nyasasaurus) is retrieved from a different sentence shape',
+      nyasasaurusResults.some(c => c.sourceType === 'species' && c.citeId === 'nyasasaurus'),
+      JSON.stringify(nyasasaurusResults.map(c => c.sourceType + ':' + c.citeId)));
+
+    const huayangosaurusResults = searchChunks('a friend of mine keeps talking about huayangosaurus and I have no clue what that even is');
+    check('Buried name (Huayangosaurus) is retrieved from yet another sentence shape',
+      huayangosaurusResults.some(c => c.sourceType === 'species' && c.citeId === 'huayangosaurus'),
+      JSON.stringify(huayangosaurusResults.map(c => c.sourceType + ':' + c.citeId)));
+
+    // Confirm the name-match pass doesn't force a chunk in when the
+    // question has no entity name at all - ordinary topical queries still
+    // go through the existing tokenized path unchanged.
+    const noNameResults = searchChunks('How do I fix a leaking kitchen tap?');
+    check('No buried name -> no forced chunk, ordinary out-of-scope behaviour unchanged',
+      noNameResults.length === 0, JSON.stringify(noNameResults));
+  }
+
   // --- malformed JSON from Claude -> error envelope, not a crash ---
   {
     const { status, body } = await invoke(handler, {
