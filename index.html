@@ -2461,7 +2461,10 @@
 
     <button class="sidebar-home" data-view="home">i<span class="brand-accent">like</span>dinosaurs<span class="brand-accent">.com</span></button>
 
-    <button class="sidebar-nav-item sidebar-nav-item--standalone" data-view="ask">Ask</button>
+    <div class="sidebar-group">
+      <div class="sidebar-group-header">Assistant</div>
+      <button class="sidebar-nav-item" data-view="ask">Ask DinoDex</button>
+    </div>
 
     <div class="sidebar-group">
       <div class="sidebar-group-header">The Animals</div>
@@ -2533,6 +2536,7 @@
       <div class="home-actions">
         <button class="home-btn home-btn--primary" onclick="goToView('dinodex')">Start with the DinoDex</button>
         <button class="home-btn" onclick="goToView('dinosaurs-through-time')">Explore the Timeline</button>
+        <button class="home-btn" onclick="goToView('ask')">Ask DinoDex</button>
       </div>
     </div>
   </div>
@@ -2541,6 +2545,12 @@
       <div class="home-sections-label">Sections</div>
       <div class="home-section-grid">
         <!-- The Animals -->
+        <button class="home-section-card" onclick="goToView('ask')">
+          <span class="home-card-label">Reference</span>
+          <span class="home-card-title">Ask DinoDex</span>
+          <span class="home-card-desc">A search assistant grounded only in this site - ask a question or say what you're curious about.</span>
+          <span class="home-card-arrow">Open &rarr;</span>
+        </button>
         <button class="home-section-card" onclick="goToView('dinodex')">
           <span class="home-card-label">Field Guide</span>
           <span class="home-card-title">DinoDex</span>
@@ -2634,12 +2644,6 @@
           <span class="home-card-label">AI Usage</span>
           <span class="home-card-title">Responsible AI</span>
           <span class="home-card-desc">A note on how this site was built, its limitations, and the approach taken to copyright.</span>
-          <span class="home-card-arrow">Open &rarr;</span>
-        </button>
-        <button class="home-section-card" onclick="goToView('ask')">
-          <span class="home-card-label">Reference</span>
-          <span class="home-card-title">Ask DinoDex</span>
-          <span class="home-card-desc">A search assistant grounded only in this site - ask a question or say what you're curious about.</span>
           <span class="home-card-arrow">Open &rarr;</span>
         </button>
       </div>
