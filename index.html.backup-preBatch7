@@ -4979,10 +4979,6 @@ const GROUP_OVERRIDES = {
   /* ── Sauropod taxonomic history batch - 2 New Entries ── */
   apatosaurus:       'sauropod',
   camarasaurus:      'sauropod',
-
-  /* ── History of the discipline batch - 2 New Entries ── */
-  hadrosaurus:       'ornithischian',
-  ornitholestes:     'theropod',
 };
 
 /* Shared classification - used by both DinoDex filter and Timeline.

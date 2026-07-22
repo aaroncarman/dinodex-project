@@ -4854,7 +4854,6 @@ const GROUP_NOTES = {
   eoraptor:     'Shown under Sauropods for display; its exact position near the base of the sauropodomorph/theropod split remains actively debated.',
   plateosaurus: 'An early sauropodomorph - a sauropod-line relative that predates the true giant sauropods.',
   mussaurus:    'An early sauropodomorph, not a true giant sauropod; shown here as an early sauropod-line relative.',
-  massospondylus:'An early sauropodomorph, not a true giant sauropod; shown here as an early sauropod-line relative.',
   herrerasaurus:'Shown under Theropods for display; its exact position near the base of saurischians/theropods remains actively debated.',
 };
 
@@ -4945,44 +4944,6 @@ const GROUP_OVERRIDES = {
   elasmosaurus:      'marine',       // plesiosaur, not a dinosaur
   postosuchus:       'other',        // pseudosuchian archosaur, not a dinosaur
   psittacosaurus:    'ornithischian',
-
-  /* ── Australia + Africa batch - 6 New Entries ── */
-  muttaburrasaurus:  'ornithischian',
-  minmi:             'ornithischian',
-  kronosaurus:       'marine',       // pliosaur, not a dinosaur
-  kentrosaurus:      'ornithischian',
-  sarcosuchus:       'other',        // crocodyliform, not a dinosaur
-  massospondylus:    'sauropod',     // early sauropodomorph (see GROUP_NOTES)
-
-  /* ── China / Jehol cluster batch - 4 New Entries ── */
-  mamenchisaurus:    'sauropod',
-  dilong:            'theropod',
-  qianzhousaurus:    'theropod',
-  jeholornis:        'theropod',
-
-  /* ── Live debates batch - 2 New Entries ── */
-  gorgosaurus:       'theropod',
-  sinornithosaurus:  'theropod',
-
-  /* ── Evolutionary transitions batch - 3 New Entries ── */
-  kulindadromeus:    'ornithischian',
-  falcarius:         'theropod',
-  repenomamus:       'other',        // early mammal, not a dinosaur
-
-  /* ── Extremes and rare preservation batch - 5 New Entries ── */
-  shonisaurus:       'marine',       // ichthyosaur, not a dinosaur
-  saltasaurus:       'sauropod',
-  rapetosaurus:      'sauropod',
-  pentaceratops:     'ornithischian',
-  supersaurus:       'sauropod',
-
-  /* ── Sauropod taxonomic history batch - 2 New Entries ── */
-  apatosaurus:       'sauropod',
-  camarasaurus:      'sauropod',
-
-  /* ── History of the discipline batch - 2 New Entries ── */
-  hadrosaurus:       'ornithischian',
-  ornitholestes:     'theropod',
 };
 
 /* Shared classification - used by both DinoDex filter and Timeline.
