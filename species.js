@@ -3771,7 +3771,7 @@ var SPECIES = [
   id:"muttaburrasaurus", name:"Muttaburrasaurus", epithet:"M. langdoni", pron:"MUT-ah-BUR-ah-SAW-rus",
   period:"cretaceous", clade:"Rhabdodontomorph ornithopod (basal iguanodontian)", diet:"herbivore",
   age:"~96 Ma (mid-Cretaceous, Cenomanian)", startMa:100, endMa:93, length:"~7 m", mass:"~2.8 t", place:"Queensland, Australia",
-  img:"images/species/muttaburrasaurus.jpg",
+  img:"images/species/muttaburrasaurus.png",
   overview:"A large-bodied ornithopod from the mid-Cretaceous of central Queensland, Muttaburrasaurus is among the most skeletally complete dinosaurs known from Gondwana and is Queensland's official fossil emblem. It carried an unusual, hollow, upward-bulging bony swelling above the snout, and its exact place on the ornithopod family tree has shifted across several competing analyses since its 1981 description. A 2026 re-study of the original holotype using CT, neutron, and synchrotron scanning substantially revised what is known of its skull and feeding habits.",
   insights:[
     ["A snout built to be picky, not indiscriminate","Unusually large olfactory bulbs and distinctive tooth-wear patterns, identified in a 2026 re-study, point to <b>selective feeding on preferred plants</b> rather than the indiscriminate bulk grazing long assumed of large ornithopods."],
@@ -3816,7 +3816,7 @@ var SPECIES = [
   id:"minmi", name:"Minmi", epithet:"M. paravertebra", pron:"MIN-my",
   period:"cretaceous", clade:"Basal ankylosaur", diet:"herbivore",
   age:"~121-112 Ma (Early Cretaceous, Barremian-Aptian)", startMa:121, endMa:112, length:"~3 m", mass:"~300 kg", place:"Queensland, Australia",
-  img:"images/species/minmi.jpg",
+  img:"images/species/minmi.png",
   overview:"A small, lightly armoured ankylosaur from the Early Cretaceous of Queensland, Minmi was the first ankylosaur described from the Southern Hemisphere. It lacked a tail club and skull armour entirely, but carried unusual bony rods alongside its vertebrae - the paravertebrae that give it its species name - along with rare belly armour absent in most of its relatives. A more complete skeleton long shown in documentaries and museum casts under the name Minmi was reassigned to a new genus, Kunbarrasaurus, in 2015.",
   insights:[
     ["The skeleton most people picture isn't this one","A near-complete skeleton found near Richmond, Queensland, was preliminarily assigned to Minmi and widely reproduced in books and documentaries. In 2015 it was formally split off as a new genus, <b>Kunbarrasaurus</b>, leaving true Minmi known only from its more fragmentary holotype."],
@@ -3896,7 +3896,7 @@ var SPECIES = [
   id:"kentrosaurus", name:"Kentrosaurus", epithet:"K. aethiopicus", pron:"KEN-troh-SAW-rus",
   period:"jurassic", clade:"Stegosaurid ornithischian", diet:"herbivore",
   age:"~154-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:154, endMa:150, length:"~4.5-5.5 m", mass:"~1-1.5 t", place:"Tanzania",
-  img:"images/species/kentrosaurus.jpg",
+  img:"images/species/kentrosaurus.png",
   overview:"A small stegosaur from the Late Jurassic Tendaguru Formation of Tanzania, Kentrosaurus carried a double row of plates along its neck and shoulders that transitioned into long, sharp paired spikes down its back, hips, and tail. Excavated by German expeditions before the First World War from a bonebed representing dozens of individuals, most of the original material was destroyed in the bombing of Berlin during the Second World War, leaving the animal's detailed anatomy dependent on pre-war records, photographs, and the roughly one third of specimens that survived.",
   insights:[
     ["Small cousin, same design","Kentrosaurus is roughly half the length of its better-known relative <b>Stegosaurus</b>, found on a different continent in a similar time window - a close relative doing the same basic job of armoured, low-browsing herbivore, just at a smaller scale."],
@@ -3970,7 +3970,7 @@ var SPECIES = [
   id:"massospondylus", name:"Massospondylus", epithet:"M. carinatus", pron:"MASS-oh-SPON-dih-lus",
   period:"jurassic", clade:"Basal sauropodomorph", diet:"herbivore",
   age:"~200-183 Ma (Early Jurassic, Hettangian-Pliensbachian)", startMa:200, endMa:183, length:"~6 m", mass:"~1 t", place:"South Africa; Lesotho; Zimbabwe",
-  img:"images/species/massospondylus.jpg",
+  img:"images/species/massospondylus.png",
   overview:"A basal sauropodomorph from the Early Jurassic of southern Africa, Massospondylus was among the first dinosaur genera ever named, described by Richard Owen in 1854 from fragmentary material. It is known from an exceptional range of growth stages, from the oldest confirmed dinosaur embryos yet found to fully grown adults, and this ontogenetic series has become a central battleground for a long-running and still-unsettled question: whether hatchlings moved on all fours before adopting the bipedal stance seen in adults.",
   insights:[
     ["Among the first dinosaurs ever named","Massospondylus was described in 1854, only a few decades after the word 'dinosaur' itself was coined, making it one of the <b>earliest-named dinosaur genera</b> still considered valid today."],
@@ -4007,7 +4007,7 @@ var SPECIES = [
   id:"mamenchisaurus", name:"Mamenchisaurus", epithet:"M. sinocanadorum", pron:"mah-MEN-chi-SAW-rus",
   period:"jurassic", clade:"Mamenchisaurid sauropod", diet:"herbivore",
   age:"~162 Ma (Late Jurassic, Oxfordian)", startMa:163, endMa:161, length:"~24-26 m (neck alone ~14.4-15.1 m)", mass:"~15-25 t", place:"Xinjiang, China",
-  img:"images/species/mamenchisaurus.jpg",
+  img:"images/species/mamenchisaurus.png",
   overview:"A sauropod genus spanning several named species across Late Jurassic to Early Cretaceous China, Mamenchisaurus is defined by necks that made up close to half the total body length. The best-studied species, M. sinocanadorum, is known from only a handful of bones, yet a detailed 2023 re-analysis used that limited material to establish the longest neck confidently measured for any sauropod. Recent phylogenetic work has also found that the genus, as currently used, does not represent a single natural group.",
   insights:[
     ["The longest neck properly measured, not just claimed","A 2023 CT-based re-analysis of M. sinocanadorum's sparse remains - three neck vertebrae, a rib, and skull fragments - established a neck length of <b>14.4 to 15.1 metres</b>, the longest that can currently be confidently supported for any sauropod species."],
@@ -4050,7 +4050,7 @@ var SPECIES = [
   id:"dilong", name:"Dilong", epithet:"D. paradoxus", pron:"DEE-long",
   period:"cretaceous", clade:"Basal tyrannosauroid", diet:"carnivore",
   age:"~126-125 Ma (Early Cretaceous)", startMa:126, endMa:125, length:"~2 m (adult, estimated); holotype ~1.6 m (probable juvenile)", mass:"~5 kg (holotype individual)", place:"Liaoning, China",
-  img:"images/species/dilong.jpg",
+  img:"images/species/dilong.png",
   overview:"A small, early tyrannosauroid from the Early Cretaceous of Liaoning, Dilong provided the first direct fossil evidence that tyrannosaurs had feathers, described from filamentous protofeather impressions preserved near the jaw and tail. At barely two metres long, it stands in stark contrast to its much later, giant relative Tyrannosaurus, illustrating how far the group's body size shifted over its evolutionary history.",
   insights:[
     ["The first proof tyrannosaurs had feathers","A 2004 description identified <b>filamentous protofeather impressions</b> near the jaw and tail of one specimen, the first direct fossil evidence that any member of Tyrannosauroidea carried feathers rather than scales alone."],
@@ -4087,7 +4087,7 @@ var SPECIES = [
   id:"qianzhousaurus", name:"Qianzhousaurus", epithet:"Q. sinensis", pron:"chee-en-joh-SAW-rus",
   period:"cretaceous", clade:"Alioramin tyrannosaurid (long-snouted)", diet:"carnivore",
   age:"~67-66 Ma (latest Maastrichtian)", startMa:67, endMa:66, length:"~8-9 m", mass:"~750 kg", place:"Jiangxi, China",
-  img:"images/species/qianzhousaurus.jpg",
+  img:"images/species/qianzhousaurus.png",
   overview:"Nicknamed 'Pinocchio rex' on its 2014 description, Qianzhousaurus was a long-snouted tyrannosaurid from the very end of the Cretaceous in southern China, standing in sharp contrast to the deep, thick-toothed skulls of relatives such as Tyrannosaurus and Tarbosaurus. It belongs to Alioramini, a distinct branch of long-snouted tyrannosaurids also including Alioramus from Mongolia, and its fully fused skull settled early questions about whether such an unusual proportion could simply reflect a juvenile animal.",
   insights:[
     ["Not a juvenile - a specialist","Early scepticism suggested the long snout might just belong to a young individual of a deep-skulled species. A detailed 2021 redescription found the skull's cranial sutures <b>fully fused</b>, with bone texture matching mature tyrannosaurid individuals, ruling out the juvenile explanation directly."],
@@ -4161,7 +4161,7 @@ var SPECIES = [
   id:"gorgosaurus", name:"Gorgosaurus", epithet:"G. libratus", pron:"GOR-goh-SAW-rus",
   period:"cretaceous", clade:"Tyrannosaurid theropod (albertosaurine)", diet:"carnivore",
   age:"~76.6-75.1 Ma (Late Cretaceous, Campanian)", startMa:76.6, endMa:75.1, length:"~8-9 m", mass:"~2-2.5 t", place:"Alberta, Canada",
-  img:"images/species/gorgosaurus.jpg",
+  img:"images/species/gorgosaurus.png",
   overview:"A tyrannosaurid from the Campanian Dinosaur Park Formation of Alberta, Gorgosaurus is the best-represented tyrannosaurid in the fossil record, known from dozens of specimens spanning a near-complete growth series. It coexisted with the larger, more robust Daspletosaurus in the same formation, and is closely related to Albertosaurus - so closely that whether Gorgosaurus deserves its own genus at all remains an active point of disagreement.",
   insights:[
     ["The best-sampled tyrannosaur, not the most famous","With dozens of specimens spanning hatchling-adjacent juveniles to full adults, Gorgosaurus provides a <b>near-complete growth series</b> unmatched by almost any other tyrannosaurid, including Tyrannosaurus itself."],
@@ -4235,7 +4235,7 @@ var SPECIES = [
   id:"kulindadromeus", name:"Kulindadromeus", epithet:"K. zabaikalicus", pron:"koo-LIN-da-DROH-me-us",
   period:"jurassic", clade:"Basal neornithischian", diet:"herbivore",
   age:"~168-166 Ma (Middle Jurassic, Bathonian)", startMa:168, endMa:166, length:"~1-1.5 m", mass:"~10-20 kg", place:"Siberia, Russia",
-  img:"images/species/kulindadromeus.jpg",
+  img:"images/species/kulindadromeus.png",
   overview:"A small basal ornithischian from the Middle Jurassic of Siberia, Kulindadromeus is preserved with an extraordinary range of skin coverings on a single skeleton: simple filaments on the head and thorax, larger scales on the tail and lower legs, and complex, branched feather-like structures on the upper limbs. Described in 2014 from hundreds of specimens at one site, it was the first strong evidence that feather-like integument was not confined to theropods, reopening the question of how early in dinosaur evolution such structures first appeared.",
   insights:[
     ["Three skin types, one animal","Kulindadromeus preserves <b>monofilaments, true scales, and complex branched feather-like structures</b> on different parts of the same body - a level of integumentary detail rarely seen in any dinosaur fossil, let alone an ornithischian."],
@@ -4272,7 +4272,7 @@ var SPECIES = [
   id:"falcarius", name:"Falcarius", epithet:"F. utahensis", pron:"fal-KAIR-ee-us",
   period:"cretaceous", clade:"Basal therizinosauroid theropod", diet:"omnivore",
   age:"~127-121 Ma (Early Cretaceous, Barremian)", startMa:127, endMa:121, length:"~4 m", mass:"~100 kg", place:"Utah, USA",
-  img:"images/species/falcarius.jpg",
+  img:"images/species/falcarius.png",
   overview:"A basal therizinosauroid from the Early Cretaceous of Utah, Falcarius sits at the base of a group of theropod dinosaurs that abandoned meat-eating for a plant-based diet - an unusual reversal for a lineage descended from carnivorous ancestors. Its anatomy shows this transition caught partway through: small, leaf-shaped teeth and a widened gut region point toward herbivory, while much of the rest of its skeleton retains a body plan closer to that of carnivorous theropod relatives.",
   insights:[
     ["A carnivore's lineage, turning herbivore","Falcarius belongs to Theropoda, the group that includes almost all carnivorous dinosaurs, yet its <b>small, leaf-shaped teeth</b> are far better suited to processing plant material than to eating meat - direct anatomical evidence of a dietary shift happening within a single lineage."],
@@ -4383,7 +4383,7 @@ var SPECIES = [
   id:"saltasaurus", name:"Saltasaurus", epithet:"S. loricatus", pron:"SAL-tah-SAW-rus",
   period:"cretaceous", clade:"Saltasaurine titanosaur sauropod", diet:"herbivore",
   age:"~70-66 Ma (Late Cretaceous, early Maastrichtian)", startMa:70, endMa:66, length:"~6-12.8 m", mass:"~2.5-7 t", place:"Argentina",
-  img:"images/species/saltasaurus.jpg",
+  img:"images/species/saltasaurus.png",
   overview:"A small titanosaur from the Late Cretaceous of Argentina, Saltasaurus was the first sauropod ever shown to carry bony dermal armour - small oval plates and pebble-like ossicles embedded directly in its skin. The discovery, described in 1980, overturned the long-standing assumption that a giant sauropod's size alone was sufficient protection against predators.",
   insights:[
     ["The first armoured sauropod on record","Saltasaurus provided the first unambiguous evidence that any sauropod carried <b>bony dermal armour</b>, a feature previously associated mainly with armoured ornithischians like ankylosaurs, not with giant long-necked herbivores."],
@@ -4420,7 +4420,7 @@ var SPECIES = [
   id:"rapetosaurus", name:"Rapetosaurus", epithet:"R. krausei", pron:"rah-PEH-toh-SAW-rus",
   period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
   age:"~70-66 Ma (Late Cretaceous, Maastrichtian)", startMa:70, endMa:66, length:"~15 m", mass:"~10 t", place:"Madagascar",
-  img:"images/species/rapetosaurus.jpg",
+  img:"images/species/rapetosaurus.png",
   overview:"A titanosaur from the Late Cretaceous of Madagascar, Rapetosaurus is the best-preserved and most complete titanosaur skull ever described, a rare find given that most titanosaurs are known only from fragmentary body material with no head at all. A juvenile skeleton found with its skull still attached, along with material spanning multiple growth stages, has made Rapetosaurus a key reference point for understanding titanosaur anatomy generally.",
   insights:[
     ["The skull that titanosaurs were missing","Before Rapetosaurus, titanosaur skulls were almost unknown - most species were diagnosed from body bones alone. Its <b>largely complete skull</b> gave researchers their first detailed look at titanosaur head anatomy."],
@@ -4494,7 +4494,7 @@ var SPECIES = [
   id:"supersaurus", name:"Supersaurus", epithet:"S. vivianae", pron:"SOO-per-SAW-rus",
   period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
   age:"~153-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:153, endMa:150, length:"~33-40 m", mass:"~35-40 t", place:"Colorado, USA",
-  img:"images/species/supersaurus.jpg",
+  img:"images/species/supersaurus.png",
   overview:"A diplodocid sauropod from the Late Jurassic Morrison Formation of Colorado, Supersaurus is among the strongest candidates for the longest dinosaur known by total body length. Known mostly from a giant shoulder girdle and a handful of enormous vertebrae rather than a complete skeleton, its exact length remains an open question - and the same 1985 discovery briefly produced two other 'giant' sauropod names that both turned out to be Supersaurus all along.",
   insights:[
     ["One quarry, one animal, three names","In 1985 the same researcher, working from the same Colorado quarry, named three separate giant sauropods: Supersaurus, 'Ultrasaurus', and Dystylosaurus. Later study showed all three were built from bones of <b>the same actual animal</b>, Supersaurus vivianae."],
@@ -4531,7 +4531,7 @@ var SPECIES = [
   id:"apatosaurus", name:"Apatosaurus", epithet:"A. louisae", pron:"ah-PAT-oh-SAW-rus",
   period:"jurassic", clade:"Apatosaurine diplodocid sauropod", diet:"herbivore",
   age:"~152-150 Ma (Late Jurassic, Tithonian)", startMa:152, endMa:150, length:"~21-23 m", mass:"~16-25 t", place:"Colorado; Utah; Wyoming; Oklahoma, USA",
-  img:"images/species/apatosaurus.jpg",
+  img:"images/species/apatosaurus.png",
   overview:"A massive diplodocid sauropod from the Late Jurassic Morrison Formation, Apatosaurus is the senior name in one of palaeontology's most famous naming disputes: Brontosaurus, described two years later from a different specimen, was folded into Apatosaurus in 1903 and stayed that way for over a century before a 2015 study split the two genera apart again. Less well known is a second mix-up specific to Apatosaurus itself - for decades, mounted skeletons carried entirely the wrong head.",
   insights:[
     ["The name that won, by two years","Apatosaurus ajax was named in 1877; Brontosaurus excelsus followed in 1879. When the two were judged too similar to keep separate in 1903, <b>zoological priority rules</b> meant the earlier name survived and Brontosaurus was set aside - not because Apatosaurus was more accurate, but because it was named first."],
@@ -4568,7 +4568,7 @@ var SPECIES = [
   id:"camarasaurus", name:"Camarasaurus", epithet:"C. supremus", pron:"KAM-ah-rah-SAW-rus",
   period:"jurassic", clade:"Camarasaurid macronarian sauropod", diet:"herbivore",
   age:"~155-145 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:155, endMa:145, length:"~15-18 m", mass:"~15-20 t", place:"Colorado; Utah; Wyoming; New Mexico, USA",
-  img:"images/species/camarasaurus.jpg",
+  img:"images/species/camarasaurus.png",
   overview:"The single most common sauropod fossil in the Morrison Formation, Camarasaurus is also among the best-known sauropods overall, with more complete skulls and skeletons documented than for almost any other genus in the group. Four recognised species trace a rare, directly observable evolutionary sequence through the rock layers of the formation, offering a genuine window into how one sauropod lineage changed over several million years.",
   insights:[
     ["More skulls than almost any other sauropod","Camarasaurus is known from over 175 specimens, including <b>six skulls and three nearly complete skeletons</b> from a single quarry at Dinosaur National Monument alone - an exceptional sample for any sauropod, most of which are known from only fragmentary remains."],
@@ -4605,7 +4605,7 @@ var SPECIES = [
   id:"hadrosaurus", name:"Hadrosaurus", epithet:"H. foulkii", pron:"HAD-roh-SAW-rus",
   period:"cretaceous", clade:"Basal hadrosaurid ornithopod", diet:"herbivore",
   age:"~83.6-77.9 Ma (Late Cretaceous, Campanian)", startMa:83.6, endMa:77.9, length:"~7-8 m", mass:"~3-4 t", place:"New Jersey, USA",
-  img:"images/species/hadrosaurus.jpg",
+  img:"images/species/hadrosaurus.png",
   overview:"Excavated from a New Jersey marl pit in 1858, Hadrosaurus foulkii was the first dinosaur skeleton found anywhere outside Europe known from more than isolated teeth, and in 1868 it became the first dinosaur skeleton ever mounted for public display. It also lends its name to the entire hadrosaurid family - even though the specimen that started it all is now regarded by most specialists as too incomplete to diagnose with confidence.",
   insights:[
     ["The first dinosaur assembled for the public to see","When Hadrosaurus went on display at the Academy of Natural Sciences in Philadelphia in 1868, it was the <b>first mounted dinosaur skeleton</b> anywhere in the world, assembled under the direction of sculptor Benjamin Waterhouse Hawkins."],
@@ -4642,7 +4642,7 @@ var SPECIES = [
   id:"ornitholestes", name:"Ornitholestes", epithet:"O. hermanni", pron:"or-NITH-oh-LESS-teez",
   period:"jurassic", clade:"Basal coelurosaurian theropod", diet:"carnivore",
   age:"~155-154 Ma (Late Jurassic, Kimmeridgian)", startMa:155, endMa:154, length:"~2 m", mass:"~12-15 kg", place:"Wyoming, USA",
-  img:"images/species/ornitholestes.jpg",
+  img:"images/species/ornitholestes.png",
   overview:"A small theropod from the Late Jurassic Morrison Formation, Ornitholestes is known from a single, badly crushed skeleton found at Bone Cabin Quarry, Wyoming, in 1900 - the first theropod discovered in the twentieth century. For decades it was popularly illustrated with a small horn on its nose, a detail eventually traced back to a piece of broken skull bone rather than any real anatomical feature.",
   insights:[
     ["A horn that was really a broken bone","A 1988 reinterpretation of the crushed skull proposed a small nasal horn. Later re-examinations in 2003 and 2005 showed the apparent bump was simply <b>displaced bone from post-mortem crushing</b>, not a genuine horn - a correction the original proposer himself accepted in later work."],
