@@ -505,6 +505,126 @@
     "alias": "L. curvatus"
   },
   {
+    "sourceType": "species",
+    "citeId": "muttaburrasaurus",
+    "alias": "M. langdoni"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "minmi",
+    "alias": "M. paravertebra"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "kronosaurus",
+    "alias": "K. queenslandicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "kentrosaurus",
+    "alias": "K. aethiopicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "sarcosuchus",
+    "alias": "S. imperator"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "massospondylus",
+    "alias": "M. carinatus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "mamenchisaurus",
+    "alias": "M. sinocanadorum"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "dilong",
+    "alias": "D. paradoxus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "qianzhousaurus",
+    "alias": "Q. sinensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "jeholornis",
+    "alias": "J. prima"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "gorgosaurus",
+    "alias": "G. libratus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "sinornithosaurus",
+    "alias": "S. millenii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "kulindadromeus",
+    "alias": "K. zabaikalicus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "falcarius",
+    "alias": "F. utahensis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "repenomamus",
+    "alias": "R. giganticus / R. robustus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "shonisaurus",
+    "alias": "S. popularis"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "saltasaurus",
+    "alias": "S. loricatus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "rapetosaurus",
+    "alias": "R. krausei"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "pentaceratops",
+    "alias": "P. sternbergii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "supersaurus",
+    "alias": "S. vivianae"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "apatosaurus",
+    "alias": "A. louisae"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "camarasaurus",
+    "alias": "C. supremus"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "hadrosaurus",
+    "alias": "H. foulkii"
+  },
+  {
+    "sourceType": "species",
+    "citeId": "ornitholestes",
+    "alias": "O. hermanni"
+  },
+  {
     "sourceType": "glossary",
     "citeId": "adaptive-radiation",
     "alias": "evolutionary radiation"

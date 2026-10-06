@@ -185,7 +185,7 @@ var SPECIES = [
 {
   id:"allosaurus", name:"Allosaurus", epithet:"A. fragilis", pron:"AL-oh-SAW-rus",
   period:"jurassic", clade:"Allosauroid theropod", diet:"carnivore",
-  age:"~155-145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"8.5 m", mass:"~1.7-2.3 t", place:"Western USA",
+  age:"~155-145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"8.5 m", mass:"~1,700-2,300 kg", place:"Western USA",
   img:"images/species/allosaurus.jpg",
   overview:"An allosauroid theropod of the Late Jurassic Morrison Formation, Allosaurus was the most abundant large predator of western North America, reaching around 8-9 metres with a deep skull, blade-like serrated teeth, and three-fingered hands bearing large curved claws. Known from dozens of specimens across a wide size range, it is one of the best-studied large Jurassic carnivores, and its skull biomechanics - a hatchet-strike impact rather than a sustained crushing bite - have been modelled in detail.",
   insights:[
@@ -223,7 +223,7 @@ var SPECIES = [
 {
   id:"stegosaurus", name:"Stegosaurus", epithet:"S. stenops", pron:"STEG-oh-SAW-rus",
   period:"jurassic", clade:"Stegosaurian ornithischian", diet:"herbivore",
-  age:"~155-145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"7 m", mass:"~3.5-4 t", place:"Western USA",
+  age:"~155-145 Ma (Late Jurassic)", startMa:155, endMa:145, length:"7 m", mass:"~3,500-4,000 kg", place:"Western USA",
   img:"images/species/stegosaurus.png",
   overview:"A stegosaurian ornithischian of the Late Jurassic Morrison Formation, Stegosaurus was a large slow-moving herbivore with a distinctive double row of upright bony plates along its back and a cluster of sharp spikes at the tail tip. The function of those plates - whether for thermoregulation, display, species recognition, or some combination - has been debated for decades without a settled answer, partly because no living animal offers a clear anatomical analogue.",
   insights:[
@@ -262,7 +262,7 @@ var SPECIES = [
 {
   id:"brachiosaurus", name:"Brachiosaurus", epithet:"B. altithorax", pron:"BRACK-ee-oh-SAW-rus",
   period:"jurassic", clade:"Macronarian sauropod", diet:"herbivore",
-  age:"~154 Ma (Late Jurassic)", startMa:156, endMa:150, length:"22 m", mass:"~30-50 t", place:"Western USA",
+  age:"~154 Ma (Late Jurassic)", startMa:156, endMa:150, length:"22 m", mass:"~30,000-50,000 kg", place:"Western USA",
   img:"images/species/brachiosaurus.png", cardImgPosition:"right center", modalImgFit:"contain",
   overview:"A large macronarian sauropod of the Late Jurassic Morrison Formation, Brachiosaurus was unusual among sauropods in having forelimbs longer than its hindlimbs, which tilted its body forward and directed its neck steeply upward in the manner of a giraffe. At an estimated 22 metres and up to 50 tonnes, it was one of the heaviest dinosaurs known from North America, and sustaining blood pressure to a head held some 9 metres above the ground would have required a powerful cardiovascular system.",
   insights:[
@@ -300,7 +300,7 @@ var SPECIES = [
 {
   id:"diplodocus", name:"Diplodocus", epithet:"D. carnegii", pron:"dih-PLOD-oh-kus",
   period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
-  age:"~154-152 Ma (Late Jurassic)", startMa:154, endMa:152, length:"26 m", mass:"~12-15 t", place:"Western USA",
+  age:"~154-152 Ma (Late Jurassic)", startMa:154, endMa:152, length:"26 m", mass:"~12,000-15,000 kg", place:"Western USA",
   img:"images/species/diplodocus.jpg",
   overview:"A diplodocid sauropod of the Late Jurassic Morrison Formation, Diplodocus was one of the longest land animals known, stretching around 26 metres with a slender build, an extremely long whip-like tail, and a small head equipped only with pencil-like peg teeth for raking and stripping vegetation rather than chewing it. It is one of the best-known sauropods, thanks in part to Barnum Brown's 1899 excavation; casts of the Carnegie Museum skeleton were distributed to major museums worldwide in the early 20th century.",
   insights:[
@@ -446,7 +446,7 @@ var SPECIES = [
 {
   id:"spinosaurus", name:"Spinosaurus", epithet:"S. aegyptiacus", pron:"SPY-noh-SAW-rus",
   period:"cretaceous", clade:"Spinosaurid theropod", diet:"carnivore",
-  age:"~99-94 Ma (Late Cretaceous)", startMa:99, endMa:94, length:"~15 m", mass:"~6-7 t", place:"North Africa",
+  age:"~99-94 Ma (Late Cretaceous)", startMa:99, endMa:94, length:"~15 m", mass:"~6,000-7,000 kg", place:"North Africa",
   img:"images/species/spinosaurus.png",
   overview:"A spinosaurid theropod from Late Cretaceous North Africa, Spinosaurus reached an estimated 15 metres in length - among the longest known predatory dinosaurs - and is recognised by a long, narrow fish-catching skull, cone-shaped unserrated teeth, and a tall dorsal sail of elongated bony spines. Its bone density and oxygen isotope chemistry both point to a life more closely tied to water than any other large theropod, but whether it was an active swimmer or hunted from the shallows remains one of the most actively contested questions in the field, complicated by the wartime loss of the original type specimen.",
   insights:[
@@ -485,7 +485,7 @@ var SPECIES = [
 {
   id:"tyrannosaurus", name:"Tyrannosaurus rex", epithet:"T. rex", pron:"tie-RAN-oh-SAW-rus",
   period:"cretaceous", clade:"Tyrannosaurid theropod", diet:"carnivore",
-  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~12 m", mass:"~8-9 t", place:"Western North America",
+  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~12 m", mass:"~8,000-9,000 kg", place:"Western North America",
   img:"images/species/tyrannosaurus_rex.jpg",
   overview:"A massive tyrannosaurid theropod of the latest Cretaceous, Tyrannosaurus rex was the apex predator of western North America, built around an enormous skull with thick bone-crushing teeth, binocular vision, and acute olfaction. More than fifty known specimens make it one of the best-quantified Mesozoic animals: its bite force, growth rate, and sensory capabilities have all been measured directly, giving the most iconic predatory dinosaur an unusually rigorous scientific foundation.",
   insights:[
@@ -523,7 +523,7 @@ var SPECIES = [
 {
   id:"giganotosaurus", name:"Giganotosaurus", epithet:"G. carolinii", pron:"jig-a-NOTE-oh-SAW-rus",
   period:"cretaceous", clade:"Carcharodontosaurid theropod", diet:"carnivore",
-  age:"~99 Ma (Late Cretaceous)", startMa:100, endMa:97, length:"~13 m", mass:"~7-8 t", place:"Patagonia, Argentina",
+  age:"~99 Ma (Late Cretaceous)", startMa:100, endMa:97, length:"~13 m", mass:"~7,000-8,000 kg", place:"Patagonia, Argentina",
   img:"images/species/giganotosaurus.jpg",
   overview:"A large carcharodontosaurid theropod from the Late Cretaceous of Patagonia, Giganotosaurus was one of the longest known predatory dinosaurs at an estimated 13 metres, sharing its world with the giant titanosaur sauropods that were likely its main prey. Unlike Tyrannosaurus, it carried narrow blade-like teeth suited to slashing and wounding rather than shattering bone - a different approach to large-prey predation, independently evolved on a different continent.",
   insights:[
@@ -561,7 +561,7 @@ var SPECIES = [
 {
   id:"carnotaurus", name:"Carnotaurus", epithet:"C. sastrei", pron:"KAR-noh-TAW-rus",
   period:"cretaceous", clade:"Abelisaurid theropod", diet:"carnivore",
-  age:"~72-70 Ma (Late Cretaceous)", startMa:72, endMa:70, length:"~8 m", mass:"~1.5 t", place:"Patagonia, Argentina",
+  age:"~72-70 Ma (Late Cretaceous)", startMa:72, endMa:70, length:"~8 m", mass:"~1,500 kg", place:"Patagonia, Argentina",
   img:"images/species/carnotaurus.jpg",
   overview:"An abelisaurid theropod from Late Cretaceous Patagonia, Carnotaurus was a medium-sized predator with two stout brow horns, forelimbs reduced nearly to vestigial stubs, and a build that points to unusual speed for a carnivore its size. Known from a single but exceptionally complete skeleton - one of the few large theropods with extensive fossilised skin impressions - it is the best-documented abelisaurid and the most familiar representative of the large carnivores that dominated Gondwana's southern continents through the Cretaceous.",
   insights:[
@@ -599,7 +599,7 @@ var SPECIES = [
 {
   id:"baryonyx", name:"Baryonyx", epithet:"B. walkeri", pron:"bah-ree-ON-iks",
   period:"cretaceous", clade:"Spinosaurid theropod", diet:"carnivore",
-  age:"~130-125 Ma (Early Cretaceous)", startMa:130, endMa:125, length:"~9 m", mass:"~1.5-2 t", place:"England",
+  age:"~130-125 Ma (Early Cretaceous)", startMa:130, endMa:125, length:"~9 m", mass:"~1,500-2,000 kg", place:"England",
   img:"images/species/baryonyx.jpg",
   overview:"A spinosaurid theropod from the Early Cretaceous of England, Baryonyx was around 9 metres long with a long, narrow, crocodile-like skull, conical teeth, and a large curved thumb claw. Its preserved stomach contents include fish scales and bones of a young Iguanodon, providing direct physical evidence of a mixed diet that placed the spinosaurid fish-eating hypothesis on solid empirical ground.",
   insights:[
@@ -630,7 +630,7 @@ var SPECIES = [
 {
   id:"iguanodon", name:"Iguanodon", epithet:"I. bernissartensis", pron:"ig-WAH-noh-don",
   period:"cretaceous", clade:"Iguanodontian ornithopod", diet:"herbivore",
-  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~10 m", mass:"~3 t", place:"Belgium / England",
+  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~10 m", mass:"~3,000 kg", place:"Belgium / England",
   img:"images/species/iguanodon.png",
   overview:"A large iguanodontian ornithopod of the Early Cretaceous, Iguanodon was around 10 metres long and able to move on two or four legs, processing tough plant material with a well-developed beak and batteries of grinding teeth, plus a distinctive conical thumb spike. One of the first dinosaurs formally described, in 1825, its reconstruction changed dramatically over 150 years - from a four-legged iguana-like monster with a nose horn to a bipedal kangaroo posture to the more accurate modern depiction - tracing the history of how palaeontology built its picture of extinct animals.",
   insights:[
@@ -737,7 +737,7 @@ var SPECIES = [
 {
   id:"therizinosaurus", name:"Therizinosaurus", epithet:"T. cheloniformis", pron:"THER-ih-ZIN-oh-SAW-rus",
   period:"cretaceous", clade:"Therizinosaurid theropod", diet:"herbivore",
-  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~10 m", mass:"~5 t", place:"Mongolia",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~10 m", mass:"~5,000 kg", place:"Mongolia",
   img:"images/species/therizinosaurus.png", cardImgPosition:"50% 100%", modalImgFit:"contain",
   overview:"A large therizinosaurid theropod from the Late Cretaceous of Mongolia, Therizinosaurus belonged to the meat-eating theropod lineage yet evolved into a giant herbivore, with leaf-shaped teeth, a broad barrel torso for fermenting plant matter, and hand claws reaching nearly a metre in length - the longest known of any animal. Those claws were most likely used to hook and pull down vegetation rather than as weapons, though they would also have been formidable in defence against the tyrannosaurids sharing its world.",
   insights:[
@@ -830,7 +830,7 @@ var SPECIES = [
 {
   id:"parasaurolophus", name:"Parasaurolophus", epithet:"P. walkeri", pron:"PAR-ah-saw-ROL-oh-fus",
   period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
-  age:"~77-73 Ma (Late Cretaceous)", startMa:77, endMa:73, length:"~10 m", mass:"~2.5-5 t", place:"North America",
+  age:"~77-73 Ma (Late Cretaceous)", startMa:77, endMa:73, length:"~10 m", mass:"~2,500-5,000 kg", place:"North America",
   img:"images/species/parasaurolophus.jpg",
   overview:"A large hadrosaurid ornithopod of the Late Cretaceous of North America, Parasaurolophus was around 10 metres long and carried a distinctive hollow tube-like crest sweeping backward from its skull - an elongated nasal passage whose internal geometry has been modelled by CT scanning to estimate the resonant sounds it may have produced. Whether the crest served primarily for sound production, species recognition, display, or a combination of these functions is still actively discussed.",
   insights:[
@@ -868,7 +868,7 @@ var SPECIES = [
 {
   id:"triceratops", name:"Triceratops", epithet:"T. horridus", pron:"try-SAIR-uh-tops",
   period:"cretaceous", clade:"Ceratopsid ornithischian", diet:"herbivore",
-  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~9 m", mass:"~6-10 t", place:"Western North America",
+  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~9 m", mass:"~6,000-10,000 kg", place:"Western North America",
   img:"images/species/triceratops.jpg",
   overview:"A large ceratopsian herbivore of the latest Cretaceous, Triceratops was among the most common large dinosaurs of the Hell Creek landscape, carrying two long brow horns, a shorter nasal horn, and a broad bony frill above a beak-and-battery skull built to shear tough vegetation. Healed puncture marks on frill bones suggest its horns were used against other Triceratops as well as in encounters with Tyrannosaurus, whose bite marks are documented on Triceratops bone; its dramatic changes in horn and frill proportions through growth are at the centre of an ongoing debate over whether the related Torosaurus represents a separate genus or simply an old Triceratops.",
   insights:[
@@ -906,7 +906,7 @@ var SPECIES = [
 {
   id:"ankylosaurus", name:"Ankylosaurus", epithet:"A. magniventris", pron:"an-KY-loh-SAW-rus",
   period:"cretaceous", clade:"Ankylosaurid ornithischian", diet:"herbivore",
-  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~6-8 m", mass:"~4-6 t", place:"Western North America",
+  age:"~68-66 Ma (Late Cretaceous)", startMa:68, endMa:66, length:"~6-8 m", mass:"~4,000-6,000 kg", place:"Western North America",
   img:"images/species/ankylosaurus.png",
   overview:"An ankylosaurid ornithischian of the latest Cretaceous Hell Creek ecosystem, Ankylosaurus was a heavily armoured low-grazing herbivore with bony plates and studs covering its body - extending even to the eyelids - and its tail ending in a large fused-bone club capable of delivering a bone-breaking blow. Whether that club was used primarily against predators like Tyrannosaurus or in contests with rival ankylosaurs remains an open question.",
   insights:[
@@ -1052,7 +1052,7 @@ var SPECIES = [
 {
   id:"deinocheirus", name:"Deinocheirus", epithet:"D. mirificus", pron:"DY-noh-KY-rus",
   period:"cretaceous", clade:"Ornithomimosaur theropod", diet:"omnivore",
-  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~11 m", mass:"~6 t", place:"Mongolia",
+  age:"~70 Ma (Late Cretaceous)", startMa:72, endMa:68, length:"~11 m", mass:"~6,000 kg", place:"Mongolia",
   img:"images/species/deinocheirus.jpg", cardImgPosition:"50% 100%", modalImgPosition:"50% 0%",
   overview:"A giant ornithomimosaur theropod from the Late Cretaceous of Mongolia, Deinocheirus reached around 11 metres and weighed an estimated 6 tonnes - by far the largest member of its group - with arms over 2 metres long, a broad hump of elongated vertebral spines, and a wide duckbill-like beak. Known only from those enormous arms for nearly fifty years after its 1965 discovery, the eventual recovery of near-complete skeletons revealed an anatomy that was far stranger than anyone had anticipated.",
   insights:[
@@ -1083,7 +1083,7 @@ var SPECIES = [
 {
   id:"argentinosaurus", name:"Argentinosaurus", epithet:"A. huinculensis", pron:"AR-jen-TEEN-oh-SAW-rus",
   period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
-  age:"~96-92 Ma (Late Cretaceous)", startMa:96, endMa:92, length:"~30-35 m", mass:"~65-75 t", place:"Patagonia, Argentina",
+  age:"~96-92 Ma (Late Cretaceous)", startMa:96, endMa:92, length:"~30-35 m", mass:"~65,000-75,000 kg", place:"Patagonia, Argentina",
   img:"images/species/argentinosaurus.jpg",
   overview:"A titanosaur sauropod from the Late Cretaceous of Patagonia, Argentinosaurus is among the largest land animals for which we have any fossil evidence, with estimates of around 30-35 metres in length and 65-75 tonnes in mass - though those figures carry significant uncertainty because the known material consists mainly of a few vertebrae, partial sacrum, and limb fragments. Its inclusion here is a reminder that even the most extreme body sizes in animal history are often known only from incomplete remains.",
   insights:[
@@ -1121,7 +1121,7 @@ var SPECIES = [
 {
   id:"majungasaurus", name:"Majungasaurus", epithet:"M. crenatissimus", pron:"mah-JUNG-ah-SAW-rus",
   period:"cretaceous", clade:"Abelisaurid theropod", diet:"carnivore",
-  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~6-7 m", mass:"~1.1 t", place:"Madagascar",
+  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~6-7 m", mass:"~1,100 kg", place:"Madagascar",
   img:"images/species/majungasaurus.png",
   overview:"An abelisaurid theropod from the Late Cretaceous of Madagascar, Majungasaurus was a stocky carnivore around 6-7 metres long with a short, deep skull and a single low horn-like dome on its head, characteristic of the abelisaurid lineage. Bite marks on Majungasaurus bones matching the tooth dimensions of the same species are the most widely accepted evidence of dinosaur cannibalism in the fossil record.",
   insights:[
@@ -1283,7 +1283,7 @@ var SPECIES = [
 {
   id:"maiasaura", name:"Maiasaura", epithet:"M. peeblesorum", pron:"MY-ah-SAW-rah",
   period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
-  age:"~76 Ma (Late Cretaceous)", startMa:77, endMa:74, length:"~9 m", mass:"~3 t", place:"Montana, USA",
+  age:"~76 Ma (Late Cretaceous)", startMa:77, endMa:74, length:"~9 m", mass:"~3,000 kg", place:"Montana, USA",
   img:"images/species/maiasaura.jpg",
   overview:"A hadrosaurid ornithopod from the Late Cretaceous of Montana, Maiasaura was a large duck-billed herbivore around 9 metres long whose nesting sites provide the clearest direct evidence of parental care and colonial nesting behaviour in a non-avian dinosaur. Eggs, hatchlings, and juveniles preserved together at Egg Mountain in Montana indicate that young were reared at the nest for an extended period rather than being immediately independent.",
   insights:[
@@ -1314,7 +1314,7 @@ var SPECIES = [
 {
   id:"styracosaurus", name:"Styracosaurus", epithet:"S. albertensis", pron:"sty-RAK-oh-SAW-rus",
   period:"cretaceous", clade:"Ceratopsid ornithischian", diet:"herbivore",
-  age:"~75 Ma (Late Cretaceous)", startMa:76, endMa:73, length:"~5.5 m", mass:"~2.7 t", place:"Alberta, Canada",
+  age:"~75 Ma (Late Cretaceous)", startMa:76, endMa:73, length:"~5.5 m", mass:"~2,700 kg", place:"Alberta, Canada",
   img:"images/species/styracosaurus.jpg",
   overview:"A centrosaurine ceratopsid from the Late Cretaceous of Alberta, Styracosaurus was around 5.5 metres long and carried a single long nasal horn paired with a frill edged by multiple long bony spikes - a more elaborate headgear arrangement than most of its relatives. Those frill spikes are too fragile and variable for effective use in combat, pointing to visual species recognition or mate-attraction as their primary function.",
   insights:[
@@ -1352,7 +1352,7 @@ var SPECIES = [
 {
   id:"edmontosaurus", name:"Edmontosaurus", epithet:"E. regalis", pron:"ed-MON-toh-SAW-rus",
   period:"cretaceous", clade:"Hadrosaurid ornithopod", diet:"herbivore",
-  age:"~73-66 Ma (Late Cretaceous)", startMa:73, endMa:66, length:"~12 m", mass:"~4 t", place:"Western North America",
+  age:"~73-66 Ma (Late Cretaceous)", startMa:73, endMa:66, length:"~12 m", mass:"~4,000 kg", place:"Western North America",
   img:"images/species/edmontosaurus.png",
   overview:"A large hadrosaurid ornithopod of the latest Cretaceous of western North America, Edmontosaurus was one of the biggest duck-billed dinosaurs at around 12 metres, with a toothless beak and hundreds of tightly packed grinding teeth for processing tough vegetation. Several mummified specimens have preserved skin, muscle tissue, and stomach contents in unusual detail, making it one of the most completely understood hadrosaurs anatomically.",
   insights:[
@@ -1821,7 +1821,7 @@ var SPECIES = [
 {
   id:"liopleurodon", name:"Liopleurodon", epithet:"L. ferox", pron:"LY-oh-PLOOR-oh-don",
   period:"jurassic", clade:"Marine reptile (pliosaur) (not a dinosaur)", diet:"carnivore",
-  age:"~160-155 Ma (Late Jurassic)", startMa:160, endMa:155, length:"~5-7 m", mass:"~1-1.7 t", place:"England; France; Germany; Mexico",
+  age:"~160-155 Ma (Late Jurassic)", startMa:160, endMa:155, length:"~5-7 m", mass:"~1,000-1,700 kg", place:"England; France; Germany; Mexico",
   img:"images/species/liopleurodon.jpg",
   overview:"A large pliosaur from the Late Jurassic of England, France, and Germany, Liopleurodon was around 5-7 metres long - a powerfully built, short-necked marine predator with four broad flippers and a large skull bearing interlocking conical teeth for seizing large prey. Its actual documented size is well-supported by fossil evidence; claims of a 25-metre animal broadcast in a 1999 television documentary had no basis in the specimen record.",
   insights:[
@@ -1859,7 +1859,7 @@ var SPECIES = [
 {
   id:"morganucodon", name:"Morganucodon", epithet:"M. oehleri", pron:"mor-GAN-oo-COH-don",
   period:"jurassic", clade:"Mammaliaform (not a dinosaur)", diet:"carnivore",
-  age:"~205-190 Ma (Late Triassic to Early Jurassic)", startMa:205, endMa:190, length:"~10 cm", mass:"~20-40 g", place:"Wales; China; USA",
+  age:"~205-190 Ma (Late Triassic to Early Jurassic)", startMa:205, endMa:190, length:"~0.1 m", mass:"~0.02-0.04 kg", place:"Wales; China; USA",
   img:"images/species/morganucodon.jpg",
   overview:"A tiny mammaliaform from the Late Triassic to Early Jurassic of Wales, China, and the USA, Morganucodon was around 10 centimetres long and one of the earliest animals on or very close to the mammal stem line, with a dentition showing transitional features between the ancestral condition and the differentiated teeth of true mammals. It was contemporaneous with the earliest dinosaurs, representing the lineage that would quietly diversify through the Mesozoic and long outlast them.",
   insights:[
@@ -1890,7 +1890,7 @@ var SPECIES = [
 {
   id:"mosasaurus", name:"Mosasaurus", epithet:"M. hoffmannii", pron:"MOH-zah-SAW-rus",
   period:"cretaceous", clade:"Marine reptile (mosasaur) (not a dinosaur)", diet:"carnivore",
-  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~13-14 m", mass:"~10-15 t", place:"Netherlands; North America",
+  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~13-14 m", mass:"~10,000-15,000 kg", place:"Netherlands; North America",
   img:"images/species/mosasaurus.jpg",
   overview:"A large mosasaur - a giant marine lizard, not a dinosaur or plesiosaur - from the Late Cretaceous of the Netherlands and North America, Mosasaurus was around 13-14 metres long and an apex predator of the terminal Cretaceous seas, with powerful jaws, conical teeth, and a deep laterally compressed tail for propulsion. Jaw fragments found near Maastricht in the 18th century were among the first large extinct reptile bones to be formally examined, and the specimen played a role in the early scientific recognition that species could go extinct.",
   insights:[
@@ -2066,7 +2066,7 @@ var SPECIES = [
 {
   id:"deinosuchus", name:"Deinosuchus", epithet:"D. riograndensis", pron:"DY-noh-SOO-kus",
   period:"cretaceous", clade:"Crocodyliform (not a dinosaur)", diet:"carnivore",
-  age:"~82-75 Ma (Late Cretaceous)", startMa:82, endMa:75, length:"~8-12 m", mass:"~2-5 t", place:"Western North America",
+  age:"~82-75 Ma (Late Cretaceous)", startMa:82, endMa:75, length:"~8-12 m", mass:"~2,000-5,000 kg", place:"Western North America",
   img:"images/species/deinosuchus.png",
   overview:"A giant crocodyliform from the Late Cretaceous of western North America - not a dinosaur - Deinosuchus reached an estimated 8-12 metres and is one of the largest crocodile-line animals known, with a massively muscled jaw and robust blunt teeth capable of taking large vertebrate prey. Bite marks matching its tooth dimensions have been found on hadrosaur and ceratopsian bones, confirming it as a genuine apex predator of coastal and riverine environments alongside the theropods of its time.",
   insights:[
@@ -2104,7 +2104,7 @@ var SPECIES = [
 {
   id:"magyarosaurus", name:"Magyarosaurus", epithet:"M. dacus", pron:"MAD-yar-oh-SAW-rus",
   period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
-  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~5-6 m", mass:"~700 kg-1 t", place:"Transylvania, Romania",
+  age:"~70-66 Ma (Late Cretaceous)", startMa:70, endMa:66, length:"~5-6 m", mass:"~700-1,000 kg", place:"Transylvania, Romania",
   img:"images/species/magyarosaurus.jpeg",
   overview:"A titanosaur sauropod from the latest Cretaceous of the Haţeg Basin, Romania, Magyarosaurus was around 5-6 metres long - dramatically smaller than the multi-tonne giants typical of its lineage - as a result of evolving on an island where limited resources favoured smaller body size over generations. It is one of the best-documented cases of insular dwarfism in a non-avian dinosaur and a clear example of the island rule operating across deep time.",
   insights:[
@@ -2177,7 +2177,7 @@ var SPECIES = [
 {
   id:"brontosaurus", name:"Brontosaurus", epithet:"B. excelsus", pron:"BRON-toh-SAW-rus",
   period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
-  age:"~157-145 Ma (Late Jurassic)", startMa:157, endMa:145, length:"~20-22 m", mass:"~15-20 tonnes", place:"Wyoming, Colorado, Utah, western USA",
+  age:"~157-145 Ma (Late Jurassic)", startMa:157, endMa:145, length:"~20-22 m", mass:"~15,000-20,000 kg", place:"Wyoming, Colorado, Utah, western USA",
   img:"images/species/brontosaurus.png", imgFit:"contain",
   overview:"A large diplodocid sauropod of the Late Jurassic Morrison Formation, Brontosaurus reached around 20-22 metres in length and shared its floodplain ecosystem with Allosaurus, Stegosaurus, and Diplodocus. Long synonymised within Apatosaurus by most palaeontologists, it was reinstated as a valid separate genus in 2015 after a large specimen-level analysis found consistent anatomical differences between the two groups - making it one of palaeontology's more public examples of taxonomy as a revisable, evidence-based process.",
   insights:[
@@ -2215,7 +2215,7 @@ var SPECIES = [
 {
   id:"pachyrhinosaurus", name:"Pachyrhinosaurus", epithet:"P. lakustai", pron:"PAK-ee-RY-noh-SAW-rus",
   period:"cretaceous", clade:"Centrosaurine ceratopsid ornithischian", diet:"herbivore",
-  age:"~73 Ma (Late Cretaceous)", startMa:74, endMa:72, length:"~5.5-6 m", mass:"~2-4 tonnes", place:"Alberta, Canada",
+  age:"~73 Ma (Late Cretaceous)", startMa:74, endMa:72, length:"~5.5-6 m", mass:"~2,000-4,000 kg", place:"Alberta, Canada",
   img:"images/species/pachyrhinosaurus.png", imgFit:"contain",
   overview:"A centrosaurine ceratopsid from the Late Cretaceous of Alberta, Pachyrhinosaurus was around 5.5-6 metres long and distinctive among horned dinosaurs for replacing the expected nasal horn with a thick roughened boss of bone. Mass-accumulation bonebeds dominated by this species, particularly at Pipestone Creek, provide some of the best evidence that ceratopsians lived and moved in large groups.",
   insights:[
@@ -2254,7 +2254,7 @@ var SPECIES = [
 {
   id:"yutyrannus", name:"Yutyrannus", epithet:"Y. huali", pron:"YOO-tee-RAN-us",
   period:"cretaceous", clade:"Basal tyrannosauroid theropod", diet:"carnivore",
-  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~8-9 m", mass:"~1-1.5 tonnes", place:"Liaoning, China",
+  age:"~125 Ma (Early Cretaceous)", startMa:126, endMa:122, length:"~8-9 m", mass:"~1,000-1,500 kg", place:"Liaoning, China",
   img:"images/species/yutyrannus.png", imgFit:"contain",
   overview:"A large basal tyrannosauroid from the Early Cretaceous of Liaoning, China, Yutyrannus reached around 8-9 metres and is preserved with extensive filamentous body covering consistent with simple proto-feathers - making it the largest dinosaur known with direct feather evidence. Its size demonstrates that large-bodied predatory dinosaurs, not just small bird-like theropods, could carry significant insulating plumage.",
   insights:[
@@ -2371,7 +2371,7 @@ var SPECIES = [
 {
   id:"albertosaurus", name:"Albertosaurus", epithet:"A. sarcophagus", pron:"al-BER-toh-SAW-rus",
   period:"cretaceous", clade:"Tyrannosaurid theropod", diet:"carnivore",
-  age:"~71-68 Ma (Late Cretaceous)", startMa:71, endMa:68, length:"~9-10 m", mass:"~1.5-2.5 tonnes", place:"Alberta, Canada",
+  age:"~71-68 Ma (Late Cretaceous)", startMa:71, endMa:68, length:"~9-10 m", mass:"~1,500-2,500 kg", place:"Alberta, Canada",
   img:"images/species/albertosaurus.png", imgFit:"contain",
   overview:"A tyrannosaurid theropod from the Late Cretaceous of Alberta, Albertosaurus was around 9-10 metres long and more slender-built than its close relative Tyrannosaurus, with proportionally longer legs suggesting a faster animal. A bonebed at Dry Island Buffalo Jump containing multiple Albertosaurus individuals of different ages has fuelled ongoing debate over whether tyrannosaurs sometimes travelled or hunted in groups.",
   insights:[
@@ -2410,7 +2410,7 @@ var SPECIES = [
 {
   id:"torvosaurus", name:"Torvosaurus", epithet:"T. tanneri", pron:"TOR-voh-SAW-rus",
   period:"jurassic", clade:"Megalosaurid theropod", diet:"carnivore",
-  age:"~153-145 Ma (Late Jurassic)", startMa:153, endMa:145, length:"~9-10 m", mass:"~2-3 tonnes", place:"Colorado, Wyoming, Utah, USA; Portugal",
+  age:"~153-145 Ma (Late Jurassic)", startMa:153, endMa:145, length:"~9-10 m", mass:"~2,000-3,000 kg", place:"Colorado, Wyoming, Utah, USA; Portugal",
   img:"images/species/torvosaurus.png", imgFit:"contain",
   overview:"A large megalosaurid theropod from the Late Jurassic Morrison Formation of the western USA and Portugal, Torvosaurus was around 9-10 metres long with robust forelimbs and large serrated teeth, and was one of the biggest predators of its time alongside Allosaurus. Its presence in both North America and Portugal reflects a Jurassic faunal connection between the two regions before the Atlantic widened to break them apart.",
   insights:[
@@ -2449,7 +2449,7 @@ var SPECIES = [
 {
   id:"dreadnoughtus", name:"Dreadnoughtus", epithet:"D. schrani", pron:"DRED-naw-tus",
   period:"cretaceous", clade:"Lithostrotian titanosaur sauropod", diet:"herbivore",
-  age:"~77 Ma (Late Cretaceous)", startMa:79, endMa:75, length:"~26 m", mass:"~30-60 tonnes (debated)", place:"Patagonia, Argentina",
+  age:"~77 Ma (Late Cretaceous)", startMa:79, endMa:75, length:"~26 m", mass:"~30,000-60,000 kg (debated)", place:"Patagonia, Argentina",
   img:"images/species/dreadnoughtus.jpg", imgFit:"contain",
   overview:"A large titanosaur sauropod from the Late Cretaceous of Patagonia, Dreadnoughtus is known from one of the most complete titanosaur skeletons yet found, making it a primary reference point for the body proportions of giant sauropods. Mass estimates derived from those bones have varied substantially between analyses, illustrating how difficult it is to translate bone geometry into body weight for animals with no living counterparts of comparable size.",
   insights:[
@@ -2566,7 +2566,7 @@ var SPECIES = [
 {
   id:"elasmosaurus", name:"Elasmosaurus", epithet:"E. platyurus", pron:"ee-LAZ-moh-SAW-rus",
   period:"cretaceous", clade:"Marine reptile, elasmosaurid plesiosaur (not a dinosaur)", diet:"carnivore",
-  age:"~80-77 Ma (Late Cretaceous)", startMa:80, endMa:77, length:"~10-11 m", mass:"~2 tonnes (uncertain)", place:"Western Interior Seaway, North America",
+  age:"~80-77 Ma (Late Cretaceous)", startMa:80, endMa:77, length:"~10-11 m", mass:"~2,000 kg (uncertain)", place:"Western Interior Seaway, North America",
   img:"images/species/elasmosaurus.jpg", imgFit:"contain",
   overview:"An elasmosaurid plesiosaur from the Late Cretaceous Western Interior Seaway, Elasmosaurus was around 10-11 metres long with an extraordinary neck of over 70 vertebrae comprising roughly half its total body length, and a small head at the end of it. Edward Drinker Cope's original reconstruction famously placed the head on the tail end; its correction by rival O.C. Marsh became one of the more memorable episodes in the 19th-century 'Bone Wars.'",
   insights:[
@@ -2793,7 +2793,7 @@ var SPECIES = [
 {
   id:"patagotitan", name:"Patagotitan", epithet:"P. mayorum", pron:"PAT-ah-goh-TY-tan",
   period:"cretaceous", clade:"Lithostrotian titanosaur sauropod", diet:"herbivore",
-  age:"~101 Ma (Early Cretaceous)", startMa:102, endMa:100, length:"~37 m", mass:"~44-70 tonnes (method-dependent)", place:"Chubut Province, Patagonia, Argentina",
+  age:"~101 Ma (Early Cretaceous)", startMa:102, endMa:100, length:"~37 m", mass:"~44,000-70,000 kg (method-dependent)", place:"Chubut Province, Patagonia, Argentina",
   img:"images/species/patagotitan.png",
   overview:"A giant titanosaur from the Albian of Patagonia, Patagotitan mayorum is one of the most complete giant sauropods known and a serious candidate for the largest land animal yet described, with remains of at least six individuals from a single quarry in Chubut Province, Argentina. Its estimated length of around 37 metres and mass somewhere between 44 and 70 tonnes - the range itself the result of different estimation methods giving strikingly different answers - makes it the clearest illustration in the fossil record of how much the question 'how big was it?' depends on which method you trust.",
   insights:[
@@ -3667,7 +3667,7 @@ var SPECIES = [
   startMa:77,
   endMa:75.7,
   length:"~7.7-9 m",
-  mass:"~2.8-3.8 t",
+  mass:"~2,800-3,800 kg",
   place:"Alberta (Canada); Montana (USA)",
   img:"images/species/corythosaurus.png",
   overview:"A large hadrosaurid ornithopod of the Late Cretaceous Dinosaur Park Formation, Corythosaurus carried a tall, hollow, helmet-shaped crest formed by elaborated nasal bones that looped upward above the skull. The crest's internal passages are the primary evidence for acoustic signalling, but visual display and species recognition likely contributed too. Corythosaurus is among the most comprehensively preserved hadrosaurs known: multiple specimens retain articulated skeletons, skin impressions across much of the body, and in at least one case plant material interpreted as gut contents - making it a reference animal for understanding lambeosaurine anatomy and ecology.",
@@ -3770,7 +3770,7 @@ var SPECIES = [
 {
   id:"muttaburrasaurus", name:"Muttaburrasaurus", epithet:"M. langdoni", pron:"MUT-ah-BUR-ah-SAW-rus",
   period:"cretaceous", clade:"Rhabdodontomorph ornithopod (basal iguanodontian)", diet:"herbivore",
-  age:"~96 Ma (mid-Cretaceous, Cenomanian)", startMa:100, endMa:93, length:"~7 m", mass:"~2.8 t", place:"Queensland, Australia",
+  age:"~96 Ma (mid-Cretaceous, Cenomanian)", startMa:100, endMa:93, length:"~7 m", mass:"~2,800 kg", place:"Queensland, Australia",
   img:"images/species/muttaburrasaurus.png",
   overview:"A large-bodied ornithopod from the mid-Cretaceous of central Queensland, Muttaburrasaurus is among the most skeletally complete dinosaurs known from Gondwana and is Queensland's official fossil emblem. It carried an unusual, hollow, upward-bulging bony swelling above the snout, and its exact place on the ornithopod family tree has shifted across several competing analyses since its 1981 description. A 2026 re-study of the original holotype using CT, neutron, and synchrotron scanning substantially revised what is known of its skull and feeding habits.",
   insights:[
@@ -3852,7 +3852,7 @@ var SPECIES = [
 {
   id:"kronosaurus", name:"Kronosaurus", epithet:"K. queenslandicus", pron:"KROH-noh-SAW-rus",
   period:"cretaceous", clade:"Marine reptile (pliosaur) (not a dinosaur)", diet:"carnivore",
-  age:"~125-100 Ma (Early Cretaceous, Aptian-Albian)", startMa:125, endMa:100, length:"~9-10.5 m", mass:"~10.6-12.1 t", place:"Queensland, Australia",
+  age:"~125-100 Ma (Early Cretaceous, Aptian-Albian)", startMa:125, endMa:100, length:"~9-10.5 m", mass:"~10,600-12,100 kg", place:"Queensland, Australia",
   img:"images/species/kronosaurus.jpg",
   overview:"A massive short-necked pliosaur from the Early Cretaceous Eromanga Sea that once covered much of inland Australia, Kronosaurus is known for a skull that could exceed two metres in length, armed with large conical teeth suited to crushing rather than slicing. A famous 1959 mounted skeleton at Harvard's Museum of Comparative Zoology, long the public face of the animal, is now known to have been reconstructed with several extra vertebrae, inflating its apparent length by roughly a quarter over current estimates - and the mounted specimen's own generic identity is itself the subject of an active, unresolved naming dispute.",
   insights:[
@@ -3895,7 +3895,7 @@ var SPECIES = [
 {
   id:"kentrosaurus", name:"Kentrosaurus", epithet:"K. aethiopicus", pron:"KEN-troh-SAW-rus",
   period:"jurassic", clade:"Stegosaurid ornithischian", diet:"herbivore",
-  age:"~154-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:154, endMa:150, length:"~4.5-5.5 m", mass:"~1-1.5 t", place:"Tanzania",
+  age:"~154-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:154, endMa:150, length:"~4.5-5.5 m", mass:"~1,000-1,500 kg", place:"Tanzania",
   img:"images/species/kentrosaurus.png",
   overview:"A small stegosaur from the Late Jurassic Tendaguru Formation of Tanzania, Kentrosaurus carried a double row of plates along its neck and shoulders that transitioned into long, sharp paired spikes down its back, hips, and tail. Excavated by German expeditions before the First World War from a bonebed representing dozens of individuals, most of the original material was destroyed in the bombing of Berlin during the Second World War, leaving the animal's detailed anatomy dependent on pre-war records, photographs, and the roughly one third of specimens that survived.",
   insights:[
@@ -3932,7 +3932,7 @@ var SPECIES = [
 {
   id:"sarcosuchus", name:"Sarcosuchus", epithet:"S. imperator", pron:"SAR-koh-SOO-kus",
   period:"cretaceous", clade:"Pholidosaurid crocodyliform (not a dinosaur)", diet:"carnivore",
-  age:"~112 Ma (Early Cretaceous, Aptian-Albian)", startMa:113, endMa:110, length:"~9-9.5 m", mass:"~3.5-4.3 t", place:"Niger",
+  age:"~112 Ma (Early Cretaceous, Aptian-Albian)", startMa:113, endMa:110, length:"~9-9.5 m", mass:"~3,500-4,300 kg", place:"Niger",
   img:"images/species/sarcosuchus.jpg",
   overview:"A giant crocodyliform from the Early Cretaceous of Niger, Sarcosuchus was among the largest crocodile-line predators to have lived, with an elongated skull bearing over a hundred stout, conical teeth and a bulbous swelling at the tip of the snout. Popularised as 'SuperCroc' following a well-publicised 2001 description, its estimated maximum size has since been substantially revised downward as researchers applied different scaling methods to its unusual long-snouted skull.",
   insights:[
@@ -3969,7 +3969,7 @@ var SPECIES = [
 {
   id:"massospondylus", name:"Massospondylus", epithet:"M. carinatus", pron:"MASS-oh-SPON-dih-lus",
   period:"jurassic", clade:"Basal sauropodomorph", diet:"herbivore",
-  age:"~200-183 Ma (Early Jurassic, Hettangian-Pliensbachian)", startMa:200, endMa:183, length:"~6 m", mass:"~1 t", place:"South Africa; Lesotho; Zimbabwe",
+  age:"~200-183 Ma (Early Jurassic, Hettangian-Pliensbachian)", startMa:200, endMa:183, length:"~6 m", mass:"~1,000 kg", place:"South Africa; Lesotho; Zimbabwe",
   img:"images/species/massospondylus.png",
   overview:"A basal sauropodomorph from the Early Jurassic of southern Africa, Massospondylus was among the first dinosaur genera ever named, described by Richard Owen in 1854 from fragmentary material. It is known from an exceptional range of growth stages, from the oldest confirmed dinosaur embryos yet found to fully grown adults, and this ontogenetic series has become a central battleground for a long-running and still-unsettled question: whether hatchlings moved on all fours before adopting the bipedal stance seen in adults.",
   insights:[
@@ -4006,7 +4006,7 @@ var SPECIES = [
 {
   id:"mamenchisaurus", name:"Mamenchisaurus", epithet:"M. sinocanadorum", pron:"mah-MEN-chi-SAW-rus",
   period:"jurassic", clade:"Mamenchisaurid sauropod", diet:"herbivore",
-  age:"~162 Ma (Late Jurassic, Oxfordian)", startMa:163, endMa:161, length:"~24-26 m (neck alone ~14.4-15.1 m)", mass:"~15-25 t", place:"Xinjiang, China",
+  age:"~162 Ma (Late Jurassic, Oxfordian)", startMa:163, endMa:161, length:"~24-26 m (neck alone ~14.4-15.1 m)", mass:"~15,000-25,000 kg", place:"Xinjiang, China",
   img:"images/species/mamenchisaurus.png",
   overview:"A sauropod genus spanning several named species across Late Jurassic to Early Cretaceous China, Mamenchisaurus is defined by necks that made up close to half the total body length. The best-studied species, M. sinocanadorum, is known from only a handful of bones, yet a detailed 2023 re-analysis used that limited material to establish the longest neck confidently measured for any sauropod. Recent phylogenetic work has also found that the genus, as currently used, does not represent a single natural group.",
   insights:[
@@ -4123,7 +4123,7 @@ var SPECIES = [
 {
   id:"jeholornis", name:"Jeholornis", epithet:"J. prima", pron:"jeh-HOL-or-nis",
   period:"cretaceous", clade:"Basal avialan (early bird)", diet:"herbivore",
-  age:"~121-120 Ma (Early Cretaceous)", startMa:121, endMa:120, length:"~70-80 cm", mass:"~0.5-1 kg", place:"Liaoning; Hebei, China",
+  age:"~121-120 Ma (Early Cretaceous)", startMa:121, endMa:120, length:"~0.7-0.8 m", mass:"~0.5-1 kg", place:"Liaoning; Hebei, China",
   img:"images/species/jeholornis.jpg",
   overview:"An early bird from the Jehol Biota of northeastern China, Jeholornis retained a long, bony, ancestral theropod-style tail closely resembling those of dromaeosaurids, while its shoulder and wing anatomy suggest it was capable of genuine powered flight. Its holotype preserved dozens of seeds in its crop, the first direct evidence of seed-eating in any Mesozoic bird, and roughly a hundred specimens are now known, making it one of the better-sampled birds of the Early Cretaceous.",
   insights:[
@@ -4160,7 +4160,7 @@ var SPECIES = [
 {
   id:"gorgosaurus", name:"Gorgosaurus", epithet:"G. libratus", pron:"GOR-goh-SAW-rus",
   period:"cretaceous", clade:"Tyrannosaurid theropod (albertosaurine)", diet:"carnivore",
-  age:"~76.6-75.1 Ma (Late Cretaceous, Campanian)", startMa:76.6, endMa:75.1, length:"~8-9 m", mass:"~2-2.5 t", place:"Alberta, Canada",
+  age:"~76.6-75.1 Ma (Late Cretaceous, Campanian)", startMa:76.6, endMa:75.1, length:"~8-9 m", mass:"~2,000-2,500 kg", place:"Alberta, Canada",
   img:"images/species/gorgosaurus.png",
   overview:"A tyrannosaurid from the Campanian Dinosaur Park Formation of Alberta, Gorgosaurus is the best-represented tyrannosaurid in the fossil record, known from dozens of specimens spanning a near-complete growth series. It coexisted with the larger, more robust Daspletosaurus in the same formation, and is closely related to Albertosaurus - so closely that whether Gorgosaurus deserves its own genus at all remains an active point of disagreement.",
   insights:[
@@ -4345,7 +4345,7 @@ var SPECIES = [
 {
   id:"shonisaurus", name:"Shonisaurus", epithet:"S. popularis", pron:"SHOH-nee-SAW-rus",
   period:"triassic", clade:"Ichthyosaur (not a dinosaur)", diet:"carnivore",
-  age:"~227-215 Ma (Late Triassic, Carnian-Norian)", startMa:227, endMa:215, length:"~13.5-15 m", mass:"~22-30 t", place:"Nevada, USA",
+  age:"~227-215 Ma (Late Triassic, Carnian-Norian)", startMa:227, endMa:215, length:"~13.5-15 m", mass:"~22,000-30,000 kg", place:"Nevada, USA",
   img:"images/species/shonisaurus.jpg",
   overview:"A giant ichthyosaur from the Late Triassic of Nevada, Shonisaurus is the state fossil of Nevada and one of the largest marine reptiles known from its time. Its most striking feature is not any single specimen but the site itself: at least 37 individuals were found concentrated in one small area of rock, a genuine mystery that has never been fully resolved.",
   insights:[
@@ -4382,7 +4382,7 @@ var SPECIES = [
 {
   id:"saltasaurus", name:"Saltasaurus", epithet:"S. loricatus", pron:"SAL-tah-SAW-rus",
   period:"cretaceous", clade:"Saltasaurine titanosaur sauropod", diet:"herbivore",
-  age:"~70-66 Ma (Late Cretaceous, early Maastrichtian)", startMa:70, endMa:66, length:"~6-12.8 m", mass:"~2.5-7 t", place:"Argentina",
+  age:"~70-66 Ma (Late Cretaceous, early Maastrichtian)", startMa:70, endMa:66, length:"~6-12.8 m", mass:"~2,500-7,000 kg", place:"Argentina",
   img:"images/species/saltasaurus.png",
   overview:"A small titanosaur from the Late Cretaceous of Argentina, Saltasaurus was the first sauropod ever shown to carry bony dermal armour - small oval plates and pebble-like ossicles embedded directly in its skin. The discovery, described in 1980, overturned the long-standing assumption that a giant sauropod's size alone was sufficient protection against predators.",
   insights:[
@@ -4419,7 +4419,7 @@ var SPECIES = [
 {
   id:"rapetosaurus", name:"Rapetosaurus", epithet:"R. krausei", pron:"rah-PEH-toh-SAW-rus",
   period:"cretaceous", clade:"Titanosaur sauropod", diet:"herbivore",
-  age:"~70-66 Ma (Late Cretaceous, Maastrichtian)", startMa:70, endMa:66, length:"~15 m", mass:"~10 t", place:"Madagascar",
+  age:"~70-66 Ma (Late Cretaceous, Maastrichtian)", startMa:70, endMa:66, length:"~15 m", mass:"~10,000 kg", place:"Madagascar",
   img:"images/species/rapetosaurus.png",
   overview:"A titanosaur from the Late Cretaceous of Madagascar, Rapetosaurus is the best-preserved and most complete titanosaur skull ever described, a rare find given that most titanosaurs are known only from fragmentary body material with no head at all. A juvenile skeleton found with its skull still attached, along with material spanning multiple growth stages, has made Rapetosaurus a key reference point for understanding titanosaur anatomy generally.",
   insights:[
@@ -4456,7 +4456,7 @@ var SPECIES = [
 {
   id:"pentaceratops", name:"Pentaceratops", epithet:"P. sternbergii", pron:"PEN-tah-SERR-ah-tops",
   period:"cretaceous", clade:"Chasmosaurine ceratopsid", diet:"herbivore",
-  age:"~76-73 Ma (Late Cretaceous, Campanian)", startMa:76, endMa:73, length:"~5.5-6.8 m", mass:"~2.5-6 t", place:"New Mexico, USA",
+  age:"~76-73 Ma (Late Cretaceous, Campanian)", startMa:76, endMa:73, length:"~5.5-6.8 m", mass:"~2,500-6,000 kg", place:"New Mexico, USA",
   img:"images/species/pentaceratops.jpg",
   overview:"A chasmosaurine ceratopsid from the Late Cretaceous of New Mexico, Pentaceratops is known for an unusually large skull and frill relative to its body. For years the species was credited with the largest skull of any land vertebrate, based on an exceptional specimen - but that specimen was reassigned to a new genus in 2011, leaving the true record holder for Pentaceratops itself a step smaller, if still enormous.",
   insights:[
@@ -4493,7 +4493,7 @@ var SPECIES = [
 {
   id:"supersaurus", name:"Supersaurus", epithet:"S. vivianae", pron:"SOO-per-SAW-rus",
   period:"jurassic", clade:"Diplodocid sauropod", diet:"herbivore",
-  age:"~153-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:153, endMa:150, length:"~33-40 m", mass:"~35-40 t", place:"Colorado, USA",
+  age:"~153-150 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:153, endMa:150, length:"~33-40 m", mass:"~35,000-40,000 kg", place:"Colorado, USA",
   img:"images/species/supersaurus.png",
   overview:"A diplodocid sauropod from the Late Jurassic Morrison Formation of Colorado, Supersaurus is among the strongest candidates for the longest dinosaur known by total body length. Known mostly from a giant shoulder girdle and a handful of enormous vertebrae rather than a complete skeleton, its exact length remains an open question - and the same 1985 discovery briefly produced two other 'giant' sauropod names that both turned out to be Supersaurus all along.",
   insights:[
@@ -4530,7 +4530,7 @@ var SPECIES = [
 {
   id:"apatosaurus", name:"Apatosaurus", epithet:"A. louisae", pron:"ah-PAT-oh-SAW-rus",
   period:"jurassic", clade:"Apatosaurine diplodocid sauropod", diet:"herbivore",
-  age:"~152-150 Ma (Late Jurassic, Tithonian)", startMa:152, endMa:150, length:"~21-23 m", mass:"~16-25 t", place:"Colorado; Utah; Wyoming; Oklahoma, USA",
+  age:"~152-150 Ma (Late Jurassic, Tithonian)", startMa:152, endMa:150, length:"~21-23 m", mass:"~16,000-25,000 kg", place:"Colorado; Utah; Wyoming; Oklahoma, USA",
   img:"images/species/apatosaurus.png",
   overview:"A massive diplodocid sauropod from the Late Jurassic Morrison Formation, Apatosaurus is the senior name in one of palaeontology's most famous naming disputes: Brontosaurus, described two years later from a different specimen, was folded into Apatosaurus in 1903 and stayed that way for over a century before a 2015 study split the two genera apart again. Less well known is a second mix-up specific to Apatosaurus itself - for decades, mounted skeletons carried entirely the wrong head.",
   insights:[
@@ -4567,7 +4567,7 @@ var SPECIES = [
 {
   id:"camarasaurus", name:"Camarasaurus", epithet:"C. supremus", pron:"KAM-ah-rah-SAW-rus",
   period:"jurassic", clade:"Camarasaurid macronarian sauropod", diet:"herbivore",
-  age:"~155-145 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:155, endMa:145, length:"~15-18 m", mass:"~15-20 t", place:"Colorado; Utah; Wyoming; New Mexico, USA",
+  age:"~155-145 Ma (Late Jurassic, Kimmeridgian-Tithonian)", startMa:155, endMa:145, length:"~15-18 m", mass:"~15,000-20,000 kg", place:"Colorado; Utah; Wyoming; New Mexico, USA",
   img:"images/species/camarasaurus.png",
   overview:"The single most common sauropod fossil in the Morrison Formation, Camarasaurus is also among the best-known sauropods overall, with more complete skulls and skeletons documented than for almost any other genus in the group. Four recognised species trace a rare, directly observable evolutionary sequence through the rock layers of the formation, offering a genuine window into how one sauropod lineage changed over several million years.",
   insights:[
@@ -4604,7 +4604,7 @@ var SPECIES = [
 {
   id:"hadrosaurus", name:"Hadrosaurus", epithet:"H. foulkii", pron:"HAD-roh-SAW-rus",
   period:"cretaceous", clade:"Basal hadrosaurid ornithopod", diet:"herbivore",
-  age:"~83.6-77.9 Ma (Late Cretaceous, Campanian)", startMa:83.6, endMa:77.9, length:"~7-8 m", mass:"~3-4 t", place:"New Jersey, USA",
+  age:"~83.6-77.9 Ma (Late Cretaceous, Campanian)", startMa:83.6, endMa:77.9, length:"~7-8 m", mass:"~3,000-4,000 kg", place:"New Jersey, USA",
   img:"images/species/hadrosaurus.png",
   overview:"Excavated from a New Jersey marl pit in 1858, Hadrosaurus foulkii was the first dinosaur skeleton found anywhere outside Europe known from more than isolated teeth, and in 1868 it became the first dinosaur skeleton ever mounted for public display. It also lends its name to the entire hadrosaurid family - even though the specimen that started it all is now regarded by most specialists as too incomplete to diagnose with confidence.",
   insights:[

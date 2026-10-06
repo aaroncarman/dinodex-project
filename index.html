@@ -4557,18 +4557,38 @@ function parseNumericRange(text){
   const s = clean.match(/([\d.]+)/);
   return s ? parseFloat(s[1]) : null;
 }
-function parseLengthM(t){
-  if(!t) return null;
-  const v = parseNumericRange(t);
-  return v;
+// Unit tables (factor to metres / kilograms). "ton"/"tons" is deliberately absent:
+// short vs long vs metric is ambiguous, so it parses as null rather than a guess.
+const LENGTH_UNITS = {
+  mm:0.001, millimetre:0.001, millimetres:0.001, millimeter:0.001, millimeters:0.001,
+  cm:0.01, centimetre:0.01, centimetres:0.01, centimeter:0.01, centimeters:0.01,
+  m:1, metre:1, metres:1, meter:1, meters:1,
+  km:1000, kilometre:1000, kilometres:1000, kilometer:1000, kilometers:1000,
+  ft:0.3048, foot:0.3048, feet:0.3048
+};
+const MASS_UNITS = {
+  mg:1e-6,
+  g:0.001, gram:0.001, grams:0.001, gramme:0.001, grammes:0.001,
+  kg:1, kilogram:1, kilograms:1, kilogramme:1, kilogrammes:1,
+  t:1000, tonne:1000, tonnes:1000,
+  lb:0.45359237, lbs:0.45359237, pound:0.45359237, pounds:0.45359237
+};
+// Unit-aware: reads "N unit" or "N-M unit" (a unit on either side of a range covers
+// both numbers; mixed units like "700 kg-1 t" work). Ranges sort by midpoint.
+// Returns null (sorts last, never 0) for no number, no unit, or an unrecognised unit.
+function parseQuantity(text, units){
+  if(!text) return null;
+  const clean = text.replace(/\([^)]*\)/g,'').split(';')[0].replace(/[~,]/g,'');
+  const m = clean.match(/(\d+(?:\.\d+)?)\s*([a-z]+)?\s*(?:[–-]\s*(\d+(?:\.\d+)?)\s*([a-z]+)?)?/i);
+  if(!m) return null;
+  const f1 = units[(m[2]||m[4]||'').toLowerCase()];
+  const f2 = units[(m[4]||m[2]||'').toLowerCase()];
+  if(f1===undefined || f2===undefined) return null;
+  const a = parseFloat(m[1])*f1;
+  return m[3]===undefined ? a : (a + parseFloat(m[3])*f2)/2;
 }
-function parseMassKg(t){
-  if(!t) return null;
-  const isTonne = /[0-9]\s*t(?:onnes?)?(?:\b|$)/i.test(t.replace(/\([^)]*\)/g,''));
-  const v = parseNumericRange(t);
-  if(v===null) return null;
-  return isTonne ? v*1000 : v;
-}
+function parseLengthM(t){ return parseQuantity(t, LENGTH_UNITS); }
+function parseMassKg(t){ return parseQuantity(t, MASS_UNITS); }
 function parseAgeMa(t){
   if(!t) return null;
   return parseNumericRange(t);
