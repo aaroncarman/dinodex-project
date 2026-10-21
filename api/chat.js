@@ -16,8 +16,8 @@ const fs = require('fs');
 const path = require('path');
 
 const MODEL = 'claude-haiku-4-5-20251001';
-const MAX_TOKENS = 1024;
-const DAILY_LIMIT = 10;
+const MAX_TOKENS = 3072;
+const DAILY_LIMIT = 30;
 const MIN_SCORE = 3; // a single generic shared word (e.g. "world", "good") shouldn't count as relevant
 const MIN_DISTINCT_MATCHES = 2; // require overlap on more than one distinct query token
 const MAX_PASSAGES = 8;
